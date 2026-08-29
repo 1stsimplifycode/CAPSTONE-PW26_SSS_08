@@ -1,0 +1,15 @@
+key,value
+ece,0.12269750280082656
+detection.n,3855.0
+detection.positive_rate,0.2438391699092088
+detection.auprc,0.9411660307392683
+detection.auroc,0.9650571147038429
+detection.brier,0.07134809576450829
+detection.ece,0.12269750280082656
+detection.threshold,0.35666802507205675
+detection.precision,0.9425287356321839
+detection.recall,0.8723404255319149
+detection.f1,0.9060773480662984
+detection.auprc_lift,3.8597819664892334
+caveat,The risk score is not a calibrated probability (L-10).
+selective_risk_rows,9

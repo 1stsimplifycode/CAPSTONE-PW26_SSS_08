@@ -1,0 +1,4 @@
+source,licence,coverage,status,block
+NSE daily cash bhavcopy,NSE public archive; see docs/DATA_LICENSING.md,2005-01-03 .. 2026-08-14,USED,market
+Historical Nifty-50 membership,no licence-clear source located,n/a,NOT OBTAINED (limitation L-01),universe
+NSE order-book depth,not published openly,n/a,NOT MEASURED (limitation L-02),microstructure

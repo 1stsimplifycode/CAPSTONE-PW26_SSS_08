@@ -1,0 +1,63 @@
+{
+  "experiment_id": "ablation",
+  "run_id": "ablation__NO_UNCERTAINTY_20260818",
+  "seed": 20260818,
+  "config": {
+    "experiment_id": "ablation",
+    "hypothesis": "uncertainty-aware weighting reduces false positives (RQ8)",
+    "arm": "NO_UNCERTAINTY",
+    "blocks": [
+      "market",
+      "microstructure",
+      "regime",
+      "propagation"
+    ],
+    "combination_rule": "static_attention",
+    "dataset_path": "market_dataset.parquet",
+    "train_split": "train",
+    "eval_split": "validation",
+    "seed": 20260818,
+    "baseline": "FULL",
+    "metrics": [
+      "auprc",
+      "auroc",
+      "f1",
+      "brier",
+      "ece"
+    ],
+    "state_config": {},
+    "notes": [
+      "uncertainty is still reported, it is simply not used for weighting"
+    ]
+  },
+  "dataset_version": null,
+  "dataset_hash": null,
+  "model_versions": {
+    "risk_model": "aegis-risk-v1"
+  },
+  "xai_versions": {},
+  "feature_version": "dataset-v1",
+  "git_commit": "8774260d10598ac24607a03326727e9f56c05c25",
+  "git_dirty": true,
+  "python_version": "3.12.10",
+  "node_version": null,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "statsmodels": "0.14.6",
+    "networkx": "3.6.1",
+    "shap": "0.52.0",
+    "pyarrow": "25.0.1",
+    "duckdb": "1.5.5",
+    "PIL": "12.3.0",
+    "soundfile": "0.14.0",
+    "imageio": "2.37.4"
+  },
+  "timestamp": "2026-08-18T18:07:21.507244+00:00",
+  "notes": [],
+  "config_hash": "67c9028f7ceb2e70e9c5b0983d7b32601a973215aab753252a759195efc74e66"
+}

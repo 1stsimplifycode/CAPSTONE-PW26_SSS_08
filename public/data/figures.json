@@ -1,0 +1,583 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [
+    {
+      "figureId": "fig01_architecture",
+      "number": "Figure 1",
+      "title": "System architecture",
+      "caption": "AEGIS-Market architecture. Evidence enters a bitemporal store that answers every query as of a stated knowledge cutoff; block extractors, market and regime features and the propagation graph feed a combination layer whose output is an integrity-risk estimate with uncertainty and coverage. The research exposure gate and the paper-artifact pipeline are downstream consumers.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "schematic; no data plotted",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig04_state_machine",
+      "number": "Figure 2",
+      "title": "Temporal integrity-risk state machine",
+      "caption": "States used to characterise an episode over time. Entry and exit are governed by separate thresholds with persistence requirements; states may be skipped and any elevated state may return to NORMAL without reaching PEAK.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "schematic; no data plotted",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig06_universe",
+      "number": "Figure 3",
+      "title": "Point-in-time research universe",
+      "caption": "Membership and churn of the point-in-time liquidity-proxy universe (top 50 by trailing median traded value, rebalanced monthly, estimated only from sessions preceding each rebalance). Non-zero churn is direct evidence that the universe is not a survivorship-biased snapshot. This is not the Nifty 50: no licence-clear point-in-time constituent history was available (limitation L-01).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/universe.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig07_regimes",
+      "number": "Figure 4",
+      "title": "Market regimes",
+      "caption": "Equal-weighted market descriptors coloured by the fitted Gaussian-mixture regime. The mixture is fitted on the training window only and applied forward; the number of components is chosen by BIC subject to a pre-declared admissibility rule on minimum occupancy and persistence.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig13_precision_recall",
+      "number": "Figure 5",
+      "title": "Detection precision-recall",
+      "caption": "Precision-recall on the validation split for the full evidence stack and comparison arms. The dotted line is the no-skill baseline, equal to the positive rate (0.244); AUPRC must be read against it because it has no fixed chance level. Positives are injected synthetic episodes (limitation L-04).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig14_calibration",
+      "number": "Figure 6",
+      "title": "Calibration",
+      "caption": "Reliability diagram with equal-mass bins. Expected calibration error is 0.1227; deviation above the diagonal indicates under-confidence and below it over-confidence.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig15_lead_time",
+      "number": "Figure 7",
+      "title": "Detection lead time",
+      "caption": "Distribution of lead time in trading sessions between the predicted and the true episode entry, over 33 matched windows. Positive values indicate detection before the injected onset; median -10.0 sessions.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig05_risk_window",
+      "number": "Figure 8",
+      "title": "Risk window",
+      "caption": "Integrity-risk trace for instrument TATASTEEL around injected episode EP0139. The shaded band is the injected risk window; the dashed and dash-dotted lines are the entry and exit produced by the temporal state machine, and the light band is the model's uncertainty. Points are the sampled decision rows for this instrument rather than every trading session, so segments between sparse background rows are interpolated.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figS_state_occupancy",
+      "number": "Fig. S1",
+      "title": "Predicted state occupancy",
+      "caption": "Number of instrument-days assigned to each risk state on the validation split (log scale).",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figS_component_ablation",
+      "number": "Fig. S2",
+      "title": "Component ablation",
+      "caption": "Component ablation on the validation split. Bars are AUPRC with 95% percentile intervals from a cluster bootstrap that resamples whole episodes, so within-episode dependence is respected. The dashed line marks the full evidence stack.",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/experiments/ablation_results.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig12b_regime_degeneracy",
+      "number": "Figure 12",
+      "title": "Regime-conditioned combination: inherited vs corrected",
+      "caption": "Mean combination weight per block within each regime. The inherited formulation is indistinguishable from static attention because a regime term shared by all softmax numerators cancels under normalisation (maximum absolute weight difference 1.11e-16); the corrected formulation uses a block-specific regime bias and a regime temperature and does vary across regimes.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig22_global_importance",
+      "number": "Figure 13",
+      "title": "Global feature importance",
+      "caption": "Permutation importance measured as the drop in AUPRC when a feature is shuffled (3 repeats). Computed on the validation split. attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig23_local_occlusion",
+      "number": "Fig. S3",
+      "title": "Local explanation: occlusion",
+      "caption": "Attribution for the highest-risk instrument-day in the validation split, method occlusion. Positive values push the score up. attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig23_local_kernel_shap",
+      "number": "Figure 14",
+      "title": "Local explanation: kernel_shap",
+      "caption": "Attribution for the highest-risk instrument-day in the validation split, method kernel_shap. Positive values push the score up. attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig23_local_lime",
+      "number": "Fig. S4",
+      "title": "Local explanation: lime",
+      "caption": "Attribution for the highest-risk instrument-day in the validation split, method lime. Positive values push the score up. attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig23_local_counterfactual",
+      "number": "Fig. S5",
+      "title": "Local explanation: counterfactual",
+      "caption": "Attribution for the highest-risk instrument-day in the validation split, method counterfactual. Positive values push the score up. attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig33_faithfulness",
+      "number": "Figure 16",
+      "title": "Explanation faithfulness",
+      "caption": "Deletion and insertion AUC per explanation method (deletion lower is better, insertion higher is better). Features are removed or restored in attribution order and replaced by the background median.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig32_agreement",
+      "number": "Figure 17",
+      "title": "Cross-explainer agreement",
+      "caption": "Spearman rank correlation between the attribution vectors of each pair of methods. Agreement is descriptive: methods can share a bias, so high agreement is not evidence of correctness and disagreement is not proof of error.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig18_propagation",
+      "number": "Figure 18",
+      "title": "Propagation graph",
+      "caption": "Instrument graph on 2023-12-29: an edge joins two instruments whose trailing 126-session return correlation exceeds 0.25, estimated strictly before the date shown. Node colour is the integrity-risk estimate. Edges are statistical co-movement only and imply no economic relationship (limitation L-07).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/cash_panel.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig19_capital",
+      "number": "Figure 19",
+      "title": "Capital consequence",
+      "caption": "Cumulative growth of one unit under a fixed equal-weight research policy without (control) and with (treatment) the integrity gate. Released capital is not redeployed. This is a hypothetical research exposure policy applied to historical data and is not investment advice, not a strategy and not an achievable return.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig21_drawdown",
+      "number": "Figure 20",
+      "title": "Drawdown comparison",
+      "caption": "Drawdown of the control and treatment series. Maximum drawdown -0.5336 (control) versus -0.4740 (treatment).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig20_cvar",
+      "number": "Figure 21",
+      "title": "Tail loss comparison",
+      "caption": "Daily 5% conditional value at risk under the control and gated policies (493 sessions).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figS_return_distribution",
+      "number": "Fig. S10",
+      "title": "Return distributions",
+      "caption": "Daily net return distributions with the 5% quantile marked for each arm.",
+      "placement": "SUPPLEMENTARY",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig35_uncertainty",
+      "number": "Figure 22",
+      "title": "Uncertainty vs performance",
+      "caption": "AUPRC within uncertainty quintiles. A downward trend is the expected behaviour: the model should be less accurate exactly where it reports being less certain.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig36_coverage",
+      "number": "Figure 23",
+      "title": "Coverage vs reliability",
+      "caption": "Selective-prediction curve: AUPRC on the most-certain fraction of rows. Rising accuracy as coverage falls means the uncertainty estimate is usable for abstention.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "fig38_errors",
+      "number": "Figure 25",
+      "title": "Error taxonomy",
+      "caption": "Distribution of outcome classes on the validation split at the training-selected operating threshold 0.351. Data problems are diagnosed before model problems: a row with no evidence is a coverage failure, not a model failure.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "data/panel/market_dataset.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figN03_lead_time_frontier",
+      "number": "Figure 27",
+      "title": "Detection timing versus precision frontier",
+      "caption": "Window precision against median lead time as the state machine entry threshold is swept from 0.20 to 0.90, labelled at each point. No operating point reaches positive lead time, so the lateness reported elsewhere is a property of when the evidence arrives rather than of how conservatively the detector is tuned.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/research_angles/exp_n03_lead_time_frontier.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figL10_calibration_by_uncertainty",
+      "number": "Figure 29",
+      "title": "Calibration against reported uncertainty",
+      "caption": "Expected calibration error and Brier score within equal-mass uncertainty quintiles of 771 rows each. Error rises with the uncertainty the model itself reports, which is the behaviour an uncertainty estimate should show. The corresponding analysis against coverage is NOT MEASURABLE on this dataset: coverage takes only two well-populated values.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/research_angles/exp_l10_calibration_by_uncertainty.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figN04_selective_risk",
+      "number": "Figure 30",
+      "title": "Selective risk versus coverage",
+      "caption": "Error rate on the most-certain fraction of rows for the static and uncertainty-weighted combination arms. The uncertainty-weighted arm is lower at every coverage level despite showing no AUPRC advantage, which is why it is reported as PARTIAL rather than NOT SUPPORTED. Each arm ranks rows by its own uncertainty, so the comparison flatters an arm whose uncertainty is merely self-consistent.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/research_angles/exp_n04_selective_risk.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figN01_lime_stability",
+      "number": "Figure 32",
+      "title": "Explanation stability against cost",
+      "caption": "LIME sign consistency across three seeds as the perturbation count grows, with runtime on the right axis. The pre-declared 0.80 threshold is crossed at 6400 perturbations, still below the runtime of occlusion. Stability is not agreement: the rank correlation against occlusion stays near zero throughout.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/research_angles/exp_n01_lime_stability.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figLC1_lifecycle_phases",
+      "number": "Figure 33",
+      "title": "Position lifecycle as an observational segmentation",
+      "caption": "The analysis window is segmented into ENTRY, HOLDING and RESOLUTION by position, and each session carries one of six observed states. The terminal node is RESOLUTION, not an instruction: no entry price, exit price, target or position size exists anywhere in this framework. Phases are analytical and no real holding period is observed (L-15).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research/lifecycle/states.py",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figLC2_lifecycle_trajectory",
+      "number": "Figure 34",
+      "title": "Risk profile across the analysis window",
+      "caption": "Integrity risk for CDSL, the cohort instrument with the most out-of-sample sessions, selected by count rather than by appearance. Shading marks the phase, dashed lines mark detected change points, dotted lines mark the band edges. The series is a model estimate on validation and holdout rows only.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/lifecycle/lifecycle_trajectories.parquet",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figLC3_transitions",
+      "number": "Figure 35",
+      "title": "Risk-band transitions",
+      "caption": "Band-to-band movements across 3089 instrument-sessions: 654 transitions, 346 escalation, 308 de-escalation. Bands exist only so a movement can be named; the underlying risk estimate stays continuous.",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/lifecycle/transition_matrix.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    },
+    {
+      "figureId": "figLC6_conflict_stratified",
+      "number": "Figure 38",
+      "title": "Conflict effect before and after holding risk fixed",
+      "caption": "Difference in the forward material-change rate between rows with and without block conflict. The unconditional difference collapses once the risk decile is held fixed, because conflict is defined against the same 0.5 threshold that separates the MODERATE and ELEVATED bands and therefore occurs almost only at high risk (N-07).",
+      "placement": "MAIN",
+      "experimentId": "aegis_main",
+      "runId": "paper_20260819T101248Z",
+      "commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "sourceData": "research_artifacts/lifecycle/conflict_risk_stratified.csv",
+      "generationScript": "scripts/generate_paper_artifacts.py",
+      "outputFormats": [
+        "png",
+        "pdf",
+        "svg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+id,index,category,name,slug,route,icon,product_name,product_question
+STATS-01,1,STATS,Data and integrity profile,data_integrity_profile,/stats/data-integrity,▤,What the data contains,Is the data underneath every other number complete enough to build on?
+STATS-02,2,STATS,Universe and survivorship statistics,universe_survivorship,/stats/universe,◎,Which instruments are covered,"How much does the research universe turn over, and what does that mean for a result read as applying to a stable index?"
+STATS-03,3,STATS,Descriptive and distributional statistics,descriptive_distributions,/stats/distributions,∑,How the numbers behave,"Which features actually vary, and which are so degenerate that any importance attributed to them should be discounted?"
+STATS-04,4,STATS,Market and microstructure-proxy statistics,market_microstructure,/stats/microstructure,⌗,Liquidity and trading conditions,"How much microstructure information do daily proxies retain, and what is provably absent?"
+STATS-05,5,STATS,Regime statistics,regime_statistics,/stats/regimes,◑,Market regimes,Are the detected regimes stable and well-populated enough for a regime-conditioned result to be interpretable?
+STATS-06,6,STATS,Dependence and propagation statistics,dependence_propagation,/stats/propagation,⬡,How instruments move together,Do cross-instrument co-movement features carry information beyond the instrument's own series?
+STATS-07,7,STATS,Tail and extreme-risk statistics,tail_extreme_risk,/stats/tail-risk,◤,Extreme moves,What does the tail of the realised return distribution look like over the rows this system scores?
+STATS-08,8,STATS,Episode and event statistics,episode_event_statistics,/stats/episodes,⚡,Unusual market events,"How many integrity episodes exist, how intense are they, and how are they distributed across instruments?"
+STATS-09,9,STATS,Leakage and split verification,leakage_verification,/stats/leakage,⛨,Timing integrity,"Does any feature, split or threshold use information that was not available at the time of the decision?"
+STATS-10,10,STATS,Validation and verification metrics,validation_verification,/stats/validation,✓,How accurate the signal is,"How often is the model right, how often is it wrong, and in which direction?"
+STATS-11,11,STATS,Calibration and uncertainty,calibration_uncertainty,/stats/calibration,◔,How confident the signal is,"When the model reports a high score, is it right that often?"
+STATS-12,12,STATS,Error analysis,error_analysis,/stats/errors,✖,Where the signal gets it wrong,"What kind of rows does the model get wrong, and is the error concentrated anywhere?"
+STATS-13,13,STATS,Baseline comparison,baseline_comparison,/stats/baselines,⚖,Compared with simpler methods,Does the evidence stack outperform a simple statistical detector on the same rows and the same metric?
+STATS-14,14,STATS,Ablation study,ablation_study,/stats/ablation,◫,What each component contributes,"Which components carry the result, and which could be removed without changing it?"
+STATS-15,15,STATS,Robustness and generalization,robustness_generalization,/stats/robustness,⊘,What happens when data degrades,"How much does performance fall when features are noisy, stale, missing, or when there is less training data?"
+STATS-16,16,STATS,Multi-seed and statistical significance,multiseed_significance,/stats/multi-seed,⊛,What counts as a real difference,Is an observed difference between two arms bigger than what re-seeding alone produces?

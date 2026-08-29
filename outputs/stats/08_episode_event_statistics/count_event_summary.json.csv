@@ -1,0 +1,21 @@
+key,value
+count_events_version,count-events-v1
+built_at,2026-08-27T22:02:28.200655+00:00
+rows_scored,151648
+events_detected,2081
+event_rate,0.013722568052331716
+events_a_poisson_detector_would_have_raised,72642
+poisson_event_rate,0.4790171977210382
+false_alarm_reduction,0.9713526609950166
+detector.count_events_version,count-events-v1
+detector.z,3.0
+detector.band,lambda + z * sqrt(lambda) * sd_inflation
+detector.sd_inflation,205.72215417161613
+detector.week2_input.fano_factor,42321.604717010196
+detector.week2_input.overdispersed,True
+detector.week2_input.model_selected,negative_binomial
+detector.week2_input.source,cash_panel.trades
+detector.week2_input.computed_at,2026-08-25T13:24:56.995507+00:00
+detector.week2_input.basis,DERIVED_FROM_EXCHANGE_DATA
+detector.dependency,research.market.arrival -> data/reference/week2_overdispersion.json -> this detector. Constructing without the Week 2 result raises MissingWeek2Input; there is no Poisson fallback.
+interpretation,The Poisson band would have called 72642 of 151648 scored sessions an event. Widening it by the Week 2 dispersion factor of 205.7 leaves 2081. The difference is the Week 2 result doing work.

@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [
+    {
+      "arm": "MARKET_ONLY",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.125198,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "MARKET_MICRO",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.124409,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "NO_MARKET",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.113076,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "NO_MICROSTRUCTURE",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.000178,
+      "pValue": 0.06,
+      "adjustedP": 0.068889,
+      "significant": false,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "NO_REGIME",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.005969,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "NO_UNCERTAINTY",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.006867,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "NO_PROPAGATION",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.000502,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_EARLY",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.006575,
+      "pValue": 0.11,
+      "adjustedP": 0.117586,
+      "significant": false,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_LATE",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.006575,
+      "pValue": 0.11,
+      "adjustedP": 0.117586,
+      "significant": false,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_STATIC",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.006867,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_REGIME_INHERITED",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.006867,
+      "pValue": 0.001664,
+      "adjustedP": 0.002063,
+      "significant": true,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_REGIME_CORRECTED",
+      "comparison": "FULL - arm",
+      "deltaAuprc": 0.0,
+      "pValue": 1.0,
+      "adjustedP": 1.0,
+      "significant": false,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    },
+    {
+      "arm": "COMBINER_UNCERTAINTY",
+      "comparison": "FULL - arm",
+      "deltaAuprc": -0.004302,
+      "pValue": 0.303333,
+      "adjustedP": 0.313444,
+      "significant": false,
+      "test": "paired_cluster_bootstrap",
+      "description": "paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero"
+    }
+  ]
+}

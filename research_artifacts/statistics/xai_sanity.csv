@@ -1,0 +1,4 @@
+check,statistic,threshold,passed,detail
+attribution_sparsity,0.9976553321513454,0.25,True,share of absolute attribution mass carried by the top 10 features; a flat attribution explains nothing
+model_randomisation,0.013429745060494108,0.5,True,Spearman between attributions from the fitted model and from a model refitted on shuffled targets; a high value means the explanation ignores the model
+sign_consistency,0.7800687285223368,0.8,False,mean fraction of runs agreeing with the majority sign per feature

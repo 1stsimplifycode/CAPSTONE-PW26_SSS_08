@@ -1,0 +1,14 @@
+figure,available,url,caption,source_data,source_dir,git_commit,bytes
+fig05_risk_window,True,/figures/fig05_risk_window.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,152318
+fig06_universe,True,/figures/fig06_universe.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,177274
+fig07_regimes,True,/figures/fig07_regimes.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,239437
+fig12b_regime_degeneracy,True,/figures/fig12b_regime_degeneracy.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,211282
+fig13_precision_recall,True,/figures/fig13_precision_recall.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,89182
+fig14_calibration,True,/figures/fig14_calibration.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,96987
+fig18_propagation,True,/figures/fig18_propagation.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,208333
+fig20_cvar,True,/figures/fig20_cvar.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,40022
+fig21_drawdown,True,/figures/fig21_drawdown.png,Generated figure; caption recorded in the paper package.,,research_artifacts/figures,,150065
+figR04_stats_input_robustness,True,/figures/figR04_stats_input_robustness.png,AUPRC under each input degradation. Noise is the worst failure and a stale feed the mildest; a single robustness number would hide the distinction.,outputs/stats/15_robustness_generalization/robustness.csv,outputs/research_figures,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b,86803
+figR05_stats_learning_curve,True,/figures/figR05_stats_learning_curve.png,"Learning curve over training-set size, subsampled by instrument rather than by row because rows from one instrument are not independent.",outputs/stats/15_robustness_generalization/robustness.csv,outputs/research_figures,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b,63142
+figR06_stats_generalization,True,/figures/figR06_stats_generalization.png,Forward-in-time transfer rises across folds as history accumulates; transfer to disjoint instruments is close to in-sample performance.,outputs/stats/15_robustness_generalization/generalization.csv,outputs/research_figures,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b,47806
+figR07_seed_variability,True,/figures/figR07_seed_variability.png,"Mean AUPRC over ten seeds with the observed range, for the strongest arms. The spread is what a single-run difference has to exceed.",outputs/stats/16_multiseed_significance/seed_table.csv,outputs/research_figures,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b,84373

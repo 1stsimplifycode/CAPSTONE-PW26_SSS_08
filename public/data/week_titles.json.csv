@@ -1,0 +1,66 @@
+key,value
+generated_at,2026-08-23T04:35:36.950798+00:00
+rows[0].week,1
+rows[0].title,What the evidence base is made of
+rows[0].question,"Before any result: what rows exist, how completely are they covered, and how large is each split?"
+rows[0].route,/weeks/1
+rows[1].week,2
+rows[1].title,Which instruments the analysis covers
+rows[1].question,"Is the instrument universe point-in-time, and how did its membership change?"
+rows[1].route,/weeks/2
+rows[2].week,3
+rows[2].title,Distributions and feature behaviour
+rows[2].question,"What do the numeric distributions look like, and which features cannot vary on the rows selected?"
+rows[2].route,/weeks/3
+rows[3].week,4
+rows[3].title,Microstructure and liquidity proxies
+rows[3].question,"What do the liquidity and microstructure proxies show, and which quantities does this data source simply not express?"
+rows[3].route,/weeks/4
+rows[4].week,5
+rows[4].title,Regime statistics
+rows[4].question,"How are regimes distributed over the sample, and how thin is the smallest of them?"
+rows[4].route,/weeks/5
+rows[5].week,6
+rows[5].title,Dependence and propagation
+rows[5].question,"How does movement propagate across instruments, and how strong is the typical association?"
+rows[5].route,/weeks/6
+rows[6].week,7
+rows[6].title,Tails and extreme risk
+rows[6].question,"How heavy are the tails on your slice, and how deep did the drawdowns get?"
+rows[6].route,/weeks/7
+rows[7].week,8
+rows[7].title,Episode and event statistics
+rows[7].question,How are the injected episodes distributed across instruments and sessions?
+rows[7].route,/weeks/8
+rows[8].week,9
+rows[8].title,Leakage verification
+rows[8].question,Can information from after a decision time reach a feature?
+rows[8].route,/weeks/9
+rows[9].week,10
+rows[9].title,Validation metrics at a threshold you choose
+rows[9].question,What do the validation metrics say at a threshold you choose?
+rows[9].route,/weeks/10
+rows[10].week,11
+rows[10].title,Calibration and uncertainty
+rows[10].question,Are the scores calibrated at the bin count you choose?
+rows[10].route,/weeks/11
+rows[11].week,12
+rows[11].title,Error analysis
+rows[11].question,"Where does the scoring fail, and what kind of failure is each mistake?"
+rows[11].route,/weeks/12
+rows[12].week,13
+rows[12].title,Baseline comparison
+rows[12].question,"How do the baselines compare, and is the full stack better than something simpler?"
+rows[12].route,/weeks/13
+rows[13].week,14
+rows[13].title,Ablation study
+rows[13].question,"Which components carry the result, and how much does removing each one cost?"
+rows[13].route,/weeks/14
+rows[14].week,15
+rows[14].title,Robustness and generalisation
+rows[14].question,"What survives perturbation, and how much quality is lost when the inputs degrade?"
+rows[14].route,/weeks/15
+rows[15].week,16
+rows[15].title,Seeds and significance
+rows[15].question,How much of the difference between arms is seed noise?
+rows[15].route,/weeks/16

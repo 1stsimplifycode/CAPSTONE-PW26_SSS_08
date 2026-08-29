@@ -1,0 +1,65 @@
+{
+  "control": {
+    "n": 493,
+    "mean": -0.0006690185422705703,
+    "total_return": -0.3141033916233211,
+    "vol_annual": 0.21822951462296022,
+    "downside_vol": 0.18078348502441705,
+    "var": -0.026044457512601853,
+    "cvar": -0.03641004834118846,
+    "max_drawdown": -0.5336291427017821,
+    "worst_day": -0.09554918142208332
+  },
+  "treatment": {
+    "n": 493,
+    "mean": -0.0007419147950017275,
+    "total_return": -0.32971710564584067,
+    "vol_annual": 0.18585769600645288,
+    "downside_vol": 0.15609027460259844,
+    "var": -0.02000602520393453,
+    "cvar": -0.031211297286837515,
+    "max_drawdown": -0.4739798675800362,
+    "worst_day": -0.09144347963924482
+  },
+  "delta": {
+    "mean": -7.289625273115721e-05,
+    "total_return": -0.015613714022519543,
+    "vol_annual": -0.03237181861650734,
+    "downside_vol": -0.0246932104218186,
+    "var": 0.006038432308667324,
+    "cvar": 0.005198751054350945,
+    "max_drawdown": 0.05964927512174589,
+    "worst_day": 0.004105701782838506
+  },
+  "opportunity_cost_total_return": 0.015613714022519543,
+  "mean_cap": 0.8281399907066479,
+  "mean_gated_exposure": 0.8253841861640854,
+  "policy": {
+    "full_allowance_below": 0.3,
+    "zero_allowance_above": 0.8,
+    "floor": 0.0,
+    "uncertainty_penalty": 0.5,
+    "cost_bps": 25.0
+  },
+  "disclaimer": "hypothetical research exposure policy applied to historical data; not advice, not a strategy, and not an achievable return",
+  "significance": [
+    {
+      "metric": "cvar_delta",
+      "mean_delta": 0.005081372006910403,
+      "ci_low": 0.002560077337017972,
+      "ci_high": 0.007846945630078704,
+      "p_value": 0.0004997501249375312,
+      "n_resamples": 2000,
+      "test": "moving-block bootstrap (21-session blocks) on the paired daily net-return series; positive delta means the gated arm has the less negative tail"
+    },
+    {
+      "metric": "max_drawdown_delta",
+      "mean_delta": 0.02531231434953817,
+      "ci_low": -0.053098560917270186,
+      "ci_high": 0.08979859806519001,
+      "p_value": 0.412,
+      "n_resamples": 2000,
+      "test": "moving-block bootstrap (21-session blocks) on the paired daily net-return series; positive delta means the gated arm has the less negative tail"
+    }
+  ]
+}

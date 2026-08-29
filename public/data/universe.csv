@@ -1,0 +1,13 @@
+key,value
+generated_at,2026-08-23T04:35:34.526981+00:00
+rows[0].id,pit_liquidity_proxy_top50
+rows[0].name,Point-in-time liquidity proxy (top 50 by traded value)
+rows[0].kind,point_in_time_proxy
+rows[0].effectiveDate,2026-08-03
+rows[0].datasetVersion,dataset-v1
+rows[0].memberCount,50
+rows[0].distinctMembersEver,270
+rows[0].rebalances,257
+rows[0].meanEntriesPerRebalance,2.589844
+rows[0].isIndexMembership,False
+rows[0].caveat,"Membership is recomputed at each monthly rebalance from trailing median traded value, using only sessions that precede the rebalance. It is survivorship-safe by construction and is NOT the Nifty 50: no licence-clear point-in-time constituent history was available, and inventing one is prohibited."

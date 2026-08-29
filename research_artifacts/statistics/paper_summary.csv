@@ -1,0 +1,95 @@
+key,value
+run_id,paper_20260819T101248Z
+generated_at,2026-08-19T10:14:57.386437+00:00
+figures.MAIN,38
+figures.SUPPLEMENTARY,10
+figures.total,48
+tables,19
+not_generated,0
+detection_full_stack.n,3855.0
+detection_full_stack.positive_rate,0.2438391699092088
+detection_full_stack.auprc,0.9411660307392683
+detection_full_stack.auroc,0.9650571147038429
+detection_full_stack.brier,0.07134809576450829
+detection_full_stack.ece,0.12269750280082656
+detection_full_stack.threshold,0.3510382470491706
+detection_full_stack.precision,0.9393592677345538
+detection_full_stack.recall,0.8734042553191489
+detection_full_stack.f1,0.9051819184123484
+detection_full_stack.auprc_lift,3.8597819664892334
+temporal.n_true_windows,36
+temporal.n_pred_windows,56
+temporal.n_matched,33
+temporal.detection_rate,0.9166666666666666
+temporal.false_alarm_windows,23
+temporal.mean_lead_time,-8.454545454545455
+temporal.median_lead_time,-10.0
+temporal.mean_onset_error,12.393939393939394
+temporal.mean_abs_onset_error,13.181818181818182
+temporal.mean_resolution_error,4.0476190476190474
+temporal.mean_temporal_iou,0.3912575437895692
+temporal.mean_duration_error,-6.619047619047619
+temporal.premature_resolution_rate,0.030303030303030304
+temporal.delayed_resolution_rate,0.5757575757575758
+xai.sanity_all_passed,False
+xai.note,"attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412"
+xai.methods_run[0],occlusion
+xai.methods_run[1],kernel_shap
+xai.methods_run[2],lime
+xai.methods_run[3],counterfactual
+xai.not_applicable.deep_shap,requires a differentiable deep network; the risk model is tree-based
+xai.not_applicable.grad_cam,requires convolutional feature maps; no CNN is used
+xai.not_applicable.guided_grad_cam,requires a CNN
+xai.not_applicable.tcav,requires a differentiable network with concept activation vectors
+xai.not_applicable.deeplift,requires a differentiable deep network
+xai.not_applicable.tree_shap,"the per-block learners are wrapped in a probability calibrator, so the tree structure is not directly exposed; KernelSHAP is used instead and this substitution is reported"
+capital.control.n,493
+capital.control.mean,-0.0006690185422705703
+capital.control.total_return,-0.3141033916233211
+capital.control.vol_annual,0.21822951462296022
+capital.control.downside_vol,0.18078348502441705
+capital.control.var,-0.026044457512601853
+capital.control.cvar,-0.03641004834118846
+capital.control.max_drawdown,-0.5336291427017821
+capital.control.worst_day,-0.09554918142208332
+capital.treatment.n,493
+capital.treatment.mean,-0.0007419147950017275
+capital.treatment.total_return,-0.32971710564584067
+capital.treatment.vol_annual,0.18585769600645288
+capital.treatment.downside_vol,0.15609027460259844
+capital.treatment.var,-0.02000602520393453
+capital.treatment.cvar,-0.031211297286837515
+capital.treatment.max_drawdown,-0.4739798675800362
+capital.treatment.worst_day,-0.09144347963924482
+capital.delta.mean,-7.289625273115721e-05
+capital.delta.total_return,-0.015613714022519543
+capital.delta.vol_annual,-0.03237181861650734
+capital.delta.downside_vol,-0.0246932104218186
+capital.delta.var,0.006038432308667324
+capital.delta.cvar,0.005198751054350945
+capital.delta.max_drawdown,0.05964927512174589
+capital.delta.worst_day,0.004105701782838506
+capital.opportunity_cost_total_return,0.015613714022519543
+capital.mean_cap,0.8281399907066479
+environment.python,"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+environment.executable,C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Scripts\python.exe
+environment.platform,Windows-11-10.0.26200-SP0
+environment.processor,"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+environment.cpu_count,8
+environment.packages.numpy,2.5.2
+environment.packages.pandas,3.0.5
+environment.packages.scipy,1.18.0
+environment.packages.sklearn,1.9.0
+environment.packages.matplotlib,3.11.1
+environment.packages.statsmodels,0.14.6
+environment.packages.networkx,3.6.1
+environment.packages.shap,0.52.0
+environment.packages.pyarrow,25.0.1
+environment.packages.duckdb,1.5.5
+environment.packages.PIL,12.3.0
+environment.packages.soundfile,0.14.0
+environment.packages.imageio,2.37.4
+environment.node,
+environment.git_commit,8774260d10598ac24607a03326727e9f56c05c25
+environment.git_dirty,True
+environment.timestamp,2026-08-19T10:14:57.457349+00:00

@@ -1,0 +1,26 @@
+{
+  "experiment_id": "ablation",
+  "hypothesis": "the complete evidence stack detects injected integrity episodes better than any subset",
+  "arm": "FULL",
+  "blocks": [
+    "market",
+    "microstructure",
+    "regime",
+    "propagation"
+  ],
+  "combination_rule": "regime_corrected",
+  "dataset_path": "market_dataset.parquet",
+  "train_split": "train",
+  "eval_split": "validation",
+  "seed": 20260818,
+  "baseline": "FULL",
+  "metrics": [
+    "auprc",
+    "auroc",
+    "f1",
+    "brier",
+    "ece"
+  ],
+  "state_config": {},
+  "notes": []
+}

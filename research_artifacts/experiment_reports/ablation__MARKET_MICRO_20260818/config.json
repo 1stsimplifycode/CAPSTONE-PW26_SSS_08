@@ -1,0 +1,24 @@
+{
+  "experiment_id": "ablation",
+  "hypothesis": "arm MARKET_MICRO vs FULL",
+  "arm": "MARKET_MICRO",
+  "blocks": [
+    "market",
+    "microstructure"
+  ],
+  "combination_rule": "regime_corrected",
+  "dataset_path": "market_dataset.parquet",
+  "train_split": "train",
+  "eval_split": "validation",
+  "seed": 20260818,
+  "baseline": "FULL",
+  "metrics": [
+    "auprc",
+    "auroc",
+    "f1",
+    "brier",
+    "ece"
+  ],
+  "state_config": {},
+  "notes": []
+}

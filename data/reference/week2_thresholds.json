@@ -1,0 +1,64 @@
+{
+  "thresholds_version": "thresholds-v1",
+  "features": [
+    "realised_variance"
+  ],
+  "false_alarm_budget": {
+    "alpha": 0.01,
+    "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+    "min_calibration": 200
+  },
+  "budget_declared_before_fitting": true,
+  "method": "conformal empirical quantile (distribution-free)",
+  "thresholds": {
+    "realised_variance": {
+      "feature": "realised_variance",
+      "method": "conformal empirical quantile",
+      "distribution_free": true,
+      "budget": {
+        "alpha": 0.01,
+        "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+        "min_calibration": 200
+      },
+      "threshold": 0.001333700970992161,
+      "direction": "upper",
+      "n_calibration": 1559,
+      "order_statistic_index": 1545,
+      "realised_false_alarm_rate": 0.008980115458627326,
+      "coverage": 0.9910198845413727,
+      "fitted_at": "2026-08-25T13:24:57.527826+00:00",
+      "gaussian_threshold": 0.0008084893098736515,
+      "gaussian_realised_rate": 0.023733162283515075
+    }
+  },
+  "applied_to": {
+    "rows": 1559,
+    "anomalies": 14,
+    "realised_rate": 0.008980115458627326
+  },
+  "stress_gate_threshold": {
+    "feature": "stress_score",
+    "method": "conformal empirical quantile",
+    "distribution_free": true,
+    "budget": {
+      "alpha": 0.01,
+      "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+      "min_calibration": 200
+    },
+    "threshold": 6.613877393039332,
+    "direction": "upper",
+    "n_calibration": 1559,
+    "order_statistic_index": 1545,
+    "realised_false_alarm_rate": 0.008980115458627326,
+    "coverage": 0.9910198845413727,
+    "fitted_at": "2026-08-25T13:24:57.403557+00:00",
+    "gaussian_threshold": 4.754190877941412,
+    "gaussian_realised_rate": 0.040410519563822966
+  },
+  "features_in_state_vector": [
+    "realised_variance",
+    "price_impact_lambda",
+    "amihud",
+    "arrival_fano"
+  ]
+}

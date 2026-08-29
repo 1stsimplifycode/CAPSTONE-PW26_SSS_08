@@ -1,0 +1,11 @@
+{
+  "not_measured": {
+    "order_book_imbalance": "NSE does not publish historical L2 depth openly",
+    "order_flow_imbalance": "requires signed trade-level data; not in daily bhavcopy",
+    "depth": "requires L2 book snapshots",
+    "vpin": "requires trade-level volume buckets",
+    "cancellation_rate": "requires order-level messages",
+    "execution_aggression": "requires trade-side flags"
+  },
+  "caveat": "Daily-bar proxies are not order-book microstructure (L-02)."
+}

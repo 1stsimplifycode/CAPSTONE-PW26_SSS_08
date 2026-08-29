@@ -1,0 +1,106 @@
+key,value
+generated_at,2026-08-23T04:35:34.526981+00:00
+rows[0].arm,MARKET_ONLY
+rows[0].comparison,FULL - arm
+rows[0].deltaAuprc,0.125198
+rows[0].pValue,0.001664
+rows[0].adjustedP,0.002063
+rows[0].significant,True
+rows[0].test,paired_cluster_bootstrap
+rows[0].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[1].arm,MARKET_MICRO
+rows[1].comparison,FULL - arm
+rows[1].deltaAuprc,0.124409
+rows[1].pValue,0.001664
+rows[1].adjustedP,0.002063
+rows[1].significant,True
+rows[1].test,paired_cluster_bootstrap
+rows[1].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[2].arm,NO_MARKET
+rows[2].comparison,FULL - arm
+rows[2].deltaAuprc,0.113076
+rows[2].pValue,0.001664
+rows[2].adjustedP,0.002063
+rows[2].significant,True
+rows[2].test,paired_cluster_bootstrap
+rows[2].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[3].arm,NO_MICROSTRUCTURE
+rows[3].comparison,FULL - arm
+rows[3].deltaAuprc,0.000178
+rows[3].pValue,0.06
+rows[3].adjustedP,0.068889
+rows[3].significant,False
+rows[3].test,paired_cluster_bootstrap
+rows[3].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[4].arm,NO_REGIME
+rows[4].comparison,FULL - arm
+rows[4].deltaAuprc,-0.005969
+rows[4].pValue,0.001664
+rows[4].adjustedP,0.002063
+rows[4].significant,True
+rows[4].test,paired_cluster_bootstrap
+rows[4].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[5].arm,NO_UNCERTAINTY
+rows[5].comparison,FULL - arm
+rows[5].deltaAuprc,-0.006867
+rows[5].pValue,0.001664
+rows[5].adjustedP,0.002063
+rows[5].significant,True
+rows[5].test,paired_cluster_bootstrap
+rows[5].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[6].arm,NO_PROPAGATION
+rows[6].comparison,FULL - arm
+rows[6].deltaAuprc,0.000502
+rows[6].pValue,0.001664
+rows[6].adjustedP,0.002063
+rows[6].significant,True
+rows[6].test,paired_cluster_bootstrap
+rows[6].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[7].arm,COMBINER_EARLY
+rows[7].comparison,FULL - arm
+rows[7].deltaAuprc,-0.006575
+rows[7].pValue,0.11
+rows[7].adjustedP,0.117586
+rows[7].significant,False
+rows[7].test,paired_cluster_bootstrap
+rows[7].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[8].arm,COMBINER_LATE
+rows[8].comparison,FULL - arm
+rows[8].deltaAuprc,-0.006575
+rows[8].pValue,0.11
+rows[8].adjustedP,0.117586
+rows[8].significant,False
+rows[8].test,paired_cluster_bootstrap
+rows[8].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[9].arm,COMBINER_STATIC
+rows[9].comparison,FULL - arm
+rows[9].deltaAuprc,-0.006867
+rows[9].pValue,0.001664
+rows[9].adjustedP,0.002063
+rows[9].significant,True
+rows[9].test,paired_cluster_bootstrap
+rows[9].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[10].arm,COMBINER_REGIME_INHERITED
+rows[10].comparison,FULL - arm
+rows[10].deltaAuprc,-0.006867
+rows[10].pValue,0.001664
+rows[10].adjustedP,0.002063
+rows[10].significant,True
+rows[10].test,paired_cluster_bootstrap
+rows[10].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[11].arm,COMBINER_REGIME_CORRECTED
+rows[11].comparison,FULL - arm
+rows[11].deltaAuprc,0.0
+rows[11].pValue,1.0
+rows[11].adjustedP,1.0
+rows[11].significant,False
+rows[11].test,paired_cluster_bootstrap
+rows[11].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero
+rows[12].arm,COMBINER_UNCERTAINTY
+rows[12].comparison,FULL - arm
+rows[12].deltaAuprc,-0.004302
+rows[12].pValue,0.303333
+rows[12].adjustedP,0.313444
+rows[12].significant,False
+rows[12].test,paired_cluster_bootstrap
+rows[12].description,paired percentile bootstrap over 600 resamples of 'cluster' clusters; p is the two-sided proportion of resampled differences on the opposite side of zero

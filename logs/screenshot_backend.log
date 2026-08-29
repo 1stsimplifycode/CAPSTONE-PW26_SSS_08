@@ -1,0 +1,10 @@
+[backend] aegis backend-v1 on http://127.0.0.1:8787 — 16 weeks, 16 modules, 15 live-capable
+[backend] origins allowed: http://localhost:3000, http://127.0.0.1:3000
+[backend] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[backend] 127.0.0.1 "GET /api/market/overview HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/indices/NIFTY50 HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/evidence/NIFTY50 HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/market/attention?limit=6 HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/market/overview HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/instruments/BHARTIARTL HTTP/1.1" 404 -
+[backend] 127.0.0.1 "GET /api/instruments/BHARTIARTL HTTP/1.1" 404 -

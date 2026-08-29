@@ -1,0 +1,2943 @@
+key,value
+generated_at,2026-08-23T04:35:36.950798+00:00
+git_commit,
+meta.n_weeks,16
+meta.n_live_capable,15
+meta.n_artifact_only,1
+meta.output_schema[0],backend_version
+meta.output_schema[1],module_id
+meta.output_schema[2],week
+meta.output_schema[3],category
+meta.output_schema[4],name
+meta.output_schema[5],status
+meta.output_schema[6],mode
+meta.output_schema[7],mode_label
+meta.output_schema[8],mode_meaning
+meta.output_schema[9],experiment_id
+meta.output_schema[10],dataset
+meta.output_schema[11],inputs
+meta.output_schema[12],metrics
+meta.output_schema[13],series
+meta.output_schema[14],uncertainty
+meta.output_schema[15],observations
+meta.output_schema[16],figures
+meta.output_schema[17],tables
+meta.output_schema[18],provenance
+meta.output_schema[19],limitations
+meta.output_schema[20],message
+meta.output_schema[21],elapsed_s
+meta.output_schema[22],error
+rows[0].week,1
+rows[0].title,What the evidence base is made of
+rows[0].question,"Before any result: what rows exist, how completely are they covered, and how large is each split?"
+rows[0].stats_module,STATS-01
+rows[0].summary,"Structure first. The panel is profiled for coverage, key uniqueness and split sizes. It runs over the slice you select rather than over a stored whole-panel figure."
+rows[0].feature.product_question,What is every other number here built on?
+rows[0].feature.story,"Profiles the rows behind the analysis, so the size and completeness of the evidence base is known before anything is concluded from it."
+rows[0].feature.headline[0].module,STATS-01
+rows[0].feature.headline[0].metric,rows
+rows[0].feature.headline[0].label,Instrument-sessions
+rows[0].feature.headline[1].module,STATS-01
+rows[0].feature.headline[1].metric,instruments
+rows[0].feature.headline[1].label,Instruments
+rows[0].feature.headline[2].module,STATS-01
+rows[0].feature.headline[2].metric,positive_rate
+rows[0].feature.headline[2].label,Sessions inside an episode
+rows[0].feature.primary_visual.module,STATS-01
+rows[0].feature.primary_visual.series,block_coverage
+rows[0].feature.primary_visual.label_column,block
+rows[0].feature.primary_visual.value_column,mean_non_null_fraction
+rows[0].feature.primary_visual.kind,bars
+rows[0].feature.primary_visual.caption,How completely each kind of evidence is present on these rows.
+rows[0].gate.capability,evidence-base
+rows[0].gate.enabled_from_week,1
+rows[0].backend_routes.week,/api/weeks/1
+rows[0].backend_routes.run_week,/api/weeks/1/run
+rows[0].backend_routes.modules.STATS-01,/api/modules/STATS-01
+rows[0].backend_routes.run_module.STATS-01,/api/modules/STATS-01/run
+rows[0].input_schema.STATS-01[0].name,date_from
+rows[0].input_schema.STATS-01[0].kind,date
+rows[0].input_schema.STATS-01[0].label,From
+rows[0].input_schema.STATS-01[0].default,2022-01-01
+rows[0].input_schema.STATS-01[0].note,first session included in the profile
+rows[0].input_schema.STATS-01[0].options,
+rows[0].input_schema.STATS-01[0].minimum,2015-04-07
+rows[0].input_schema.STATS-01[0].maximum,2026-08-14
+rows[0].input_schema.STATS-01[0].max_items,
+rows[0].input_schema.STATS-01[0].required,False
+rows[0].input_schema.STATS-01[1].name,date_to
+rows[0].input_schema.STATS-01[1].kind,date
+rows[0].input_schema.STATS-01[1].label,To
+rows[0].input_schema.STATS-01[1].default,2024-12-31
+rows[0].input_schema.STATS-01[1].note,last session included in the profile
+rows[0].input_schema.STATS-01[1].options,
+rows[0].input_schema.STATS-01[1].minimum,2015-04-07
+rows[0].input_schema.STATS-01[1].maximum,2026-08-14
+rows[0].input_schema.STATS-01[1].max_items,
+rows[0].input_schema.STATS-01[1].required,False
+rows[0].input_schema.STATS-01[2].name,instruments
+rows[0].input_schema.STATS-01[2].kind,symbols
+rows[0].input_schema.STATS-01[2].label,Instruments
+rows[0].input_schema.STATS-01[2].default,
+rows[0].input_schema.STATS-01[2].note,leave empty to profile every instrument in the range
+rows[0].input_schema.STATS-01[2].options,
+rows[0].input_schema.STATS-01[2].minimum,
+rows[0].input_schema.STATS-01[2].maximum,
+rows[0].input_schema.STATS-01[2].max_items,60
+rows[0].input_schema.STATS-01[2].required,False
+rows[0].input_schema.STATS-01[3].name,split
+rows[0].input_schema.STATS-01[3].kind,select
+rows[0].input_schema.STATS-01[3].label,Split
+rows[0].input_schema.STATS-01[3].default,all
+rows[0].input_schema.STATS-01[3].note,the holdout is included in counts and is never scored; selecting it profiles its structure only
+rows[0].input_schema.STATS-01[3].options[0],all
+rows[0].input_schema.STATS-01[3].options[1],train
+rows[0].input_schema.STATS-01[3].options[2],validation
+rows[0].input_schema.STATS-01[3].options[3],holdout
+rows[0].input_schema.STATS-01[3].minimum,
+rows[0].input_schema.STATS-01[3].maximum,
+rows[0].input_schema.STATS-01[3].max_items,
+rows[0].input_schema.STATS-01[3].required,False
+rows[0].output_schema[0],backend_version
+rows[0].output_schema[1],module_id
+rows[0].output_schema[2],week
+rows[0].output_schema[3],category
+rows[0].output_schema[4],name
+rows[0].output_schema[5],status
+rows[0].output_schema[6],mode
+rows[0].output_schema[7],mode_label
+rows[0].output_schema[8],mode_meaning
+rows[0].output_schema[9],experiment_id
+rows[0].output_schema[10],dataset
+rows[0].output_schema[11],inputs
+rows[0].output_schema[12],metrics
+rows[0].output_schema[13],series
+rows[0].output_schema[14],uncertainty
+rows[0].output_schema[15],observations
+rows[0].output_schema[16],figures
+rows[0].output_schema[17],tables
+rows[0].output_schema[18],provenance
+rows[0].output_schema[19],limitations
+rows[0].output_schema[20],message
+rows[0].output_schema[21],elapsed_s
+rows[0].output_schema[22],error
+rows[0].product_view.STATS-01,/stats/data-integrity?mode=product
+rows[0].research_view.STATS-01,/stats/data-integrity?mode=research
+rows[0].route,/weeks/1
+rows[0].artifact_sources.STATS-01[0],outputs/stats/01_data_integrity_profile/profile.json
+rows[0].artifact_sources.STATS-01[1],outputs/stats/01_data_integrity_profile/block_coverage.csv
+rows[0].execution.STATS-01.mode,LIVE
+rows[0].execution.STATS-01.is_live,True
+rows[0].execution.STATS-01.protected,False
+rows[0].execution.STATS-01.typical_seconds,1.5
+rows[0].execution.STATS-01.artifact_reason,
+rows[0].modules[0].module_id,STATS-01
+rows[0].modules[0].index,1
+rows[0].modules[0].category,STATS
+rows[0].modules[0].slug,data_integrity_profile
+rows[0].modules[0].name,Data and integrity profile
+rows[0].modules[0].purpose,"Report what the assembled dataset actually contains before any result is computed from it: row and column counts, per-block coverage, missing values, duplicate keys, class balance and the train/validation/holdout split sizes."
+rows[0].modules[0].research_question,"Does the dataset satisfy the structural preconditions every downstream claim assumes, and where is coverage thin enough to bound a conclusion?"
+rows[0].modules[0].adapter,scripts.stages.stats:data_integrity_profile
+rows[0].modules[0].wrapper_status,WRAPS_EXISTING
+rows[0].modules[0].status,PARTIAL
+rows[0].modules[0].experiment_id,
+rows[0].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[0].modules[0].outputs[0],outputs/stats/01_data_integrity_profile/profile.json
+rows[0].modules[0].outputs[1],outputs/stats/01_data_integrity_profile/block_coverage.csv
+rows[0].modules[0].canonical[0],research/market/features.py::coverage_report
+rows[0].modules[0].canonical[1],research/data/dataset.py::FEATURE_BLOCKS
+rows[0].modules[0].limitations[0],L-12
+rows[0].modules[0].notes,Reports counts and coverage only. Formal leakage verification is STATS-09; the confusion-matrix-level validation suite is STATS-10 and is not implemented yet.
+rows[0].modules[0].route,/stats/data-integrity
+rows[0].modules[0].icon,▤
+rows[0].modules[0].product_name,What the data contains
+rows[0].modules[0].week,1
+rows[0].modules[0].protected,False
+rows[0].modules[0].analysis.mode,LIVE
+rows[0].modules[0].analysis.is_live,True
+rows[0].modules[0].analysis.adapter,scripts.stages.stats:analyse_data_integrity
+rows[0].modules[0].analysis.typical_seconds,1.5
+rows[0].modules[0].analysis.summary,"Profiles the rows you select, now. Block coverage, key uniqueness, split sizes and episode rate are recomputed over the selected slice by the same functions the regenerating adapter uses; nothing is read from a stored profile."
+rows[0].modules[0].analysis.inputs[0].name,date_from
+rows[0].modules[0].analysis.inputs[0].kind,date
+rows[0].modules[0].analysis.inputs[0].label,From
+rows[0].modules[0].analysis.inputs[0].default,2022-01-01
+rows[0].modules[0].analysis.inputs[0].note,first session included in the profile
+rows[0].modules[0].analysis.inputs[0].options,
+rows[0].modules[0].analysis.inputs[0].minimum,2015-04-07
+rows[0].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[0].modules[0].analysis.inputs[0].max_items,
+rows[0].modules[0].analysis.inputs[0].required,False
+rows[0].modules[0].analysis.inputs[1].name,date_to
+rows[0].modules[0].analysis.inputs[1].kind,date
+rows[0].modules[0].analysis.inputs[1].label,To
+rows[0].modules[0].analysis.inputs[1].default,2024-12-31
+rows[0].modules[0].analysis.inputs[1].note,last session included in the profile
+rows[0].modules[0].analysis.inputs[1].options,
+rows[0].modules[0].analysis.inputs[1].minimum,2015-04-07
+rows[0].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[0].modules[0].analysis.inputs[1].max_items,
+rows[0].modules[0].analysis.inputs[1].required,False
+rows[0].modules[0].analysis.inputs[2].name,instruments
+rows[0].modules[0].analysis.inputs[2].kind,symbols
+rows[0].modules[0].analysis.inputs[2].label,Instruments
+rows[0].modules[0].analysis.inputs[2].default,
+rows[0].modules[0].analysis.inputs[2].note,leave empty to profile every instrument in the range
+rows[0].modules[0].analysis.inputs[2].options,
+rows[0].modules[0].analysis.inputs[2].minimum,
+rows[0].modules[0].analysis.inputs[2].maximum,
+rows[0].modules[0].analysis.inputs[2].max_items,60
+rows[0].modules[0].analysis.inputs[2].required,False
+rows[0].modules[0].analysis.inputs[3].name,split
+rows[0].modules[0].analysis.inputs[3].kind,select
+rows[0].modules[0].analysis.inputs[3].label,Split
+rows[0].modules[0].analysis.inputs[3].default,all
+rows[0].modules[0].analysis.inputs[3].note,the holdout is included in counts and is never scored; selecting it profiles its structure only
+rows[0].modules[0].analysis.inputs[3].options[0],all
+rows[0].modules[0].analysis.inputs[3].options[1],train
+rows[0].modules[0].analysis.inputs[3].options[2],validation
+rows[0].modules[0].analysis.inputs[3].options[3],holdout
+rows[0].modules[0].analysis.inputs[3].minimum,
+rows[0].modules[0].analysis.inputs[3].maximum,
+rows[0].modules[0].analysis.inputs[3].max_items,
+rows[0].modules[0].analysis.inputs[3].required,False
+rows[0].modules[0].analysis.artifact_reason,
+rows[1].week,2
+rows[1].title,Which instruments the analysis covers
+rows[1].question,"Is the instrument universe point-in-time, and how did its membership change?"
+rows[1].stats_module,STATS-02
+rows[1].summary,"Universe membership and survivorship: who was in the sample, and when. Together they bound every population statement made anywhere else."
+rows[1].feature.product_question,Which instruments does the analysis actually cover?
+rows[1].feature.story,"Reconstructs which instruments were in the sample at each point in time, and how much the membership turned over between reconstitutions."
+rows[1].feature.headline[0].module,STATS-02
+rows[1].feature.headline[0].metric,ever
+rows[1].feature.headline[0].label,Instruments ever covered
+rows[1].feature.headline[1].module,STATS-02
+rows[1].feature.headline[1].metric,always
+rows[1].feature.headline[1].label,Covered throughout
+rows[1].feature.headline[2].module,STATS-02
+rows[1].feature.headline[2].metric,rebalances
+rows[1].feature.headline[2].label,Reconstitutions
+rows[1].feature.primary_visual.module,STATS-02
+rows[1].feature.primary_visual.series,churn
+rows[1].feature.primary_visual.label_column,rebalance_date
+rows[1].feature.primary_visual.value_column,members
+rows[1].feature.primary_visual.kind,line
+rows[1].feature.primary_visual.caption,How many instruments were in the sample at each reconstitution.
+rows[1].gate.capability,return-behaviour
+rows[1].gate.enabled_from_week,2
+rows[1].backend_routes.week,/api/weeks/2
+rows[1].backend_routes.run_week,/api/weeks/2/run
+rows[1].backend_routes.modules.STATS-02,/api/modules/STATS-02
+rows[1].backend_routes.run_module.STATS-02,/api/modules/STATS-02/run
+rows[1].input_schema.STATS-02[0].name,date_from
+rows[1].input_schema.STATS-02[0].kind,date
+rows[1].input_schema.STATS-02[0].label,From
+rows[1].input_schema.STATS-02[0].default,2018-01-01
+rows[1].input_schema.STATS-02[0].note,first rebalance included
+rows[1].input_schema.STATS-02[0].options,
+rows[1].input_schema.STATS-02[0].minimum,2015-01-01
+rows[1].input_schema.STATS-02[0].maximum,2026-08-14
+rows[1].input_schema.STATS-02[0].max_items,
+rows[1].input_schema.STATS-02[0].required,False
+rows[1].input_schema.STATS-02[1].name,date_to
+rows[1].input_schema.STATS-02[1].kind,date
+rows[1].input_schema.STATS-02[1].label,To
+rows[1].input_schema.STATS-02[1].default,2024-12-31
+rows[1].input_schema.STATS-02[1].note,last rebalance included
+rows[1].input_schema.STATS-02[1].options,
+rows[1].input_schema.STATS-02[1].minimum,2015-01-01
+rows[1].input_schema.STATS-02[1].maximum,2026-08-14
+rows[1].input_schema.STATS-02[1].max_items,
+rows[1].input_schema.STATS-02[1].required,False
+rows[1].output_schema[0],backend_version
+rows[1].output_schema[1],module_id
+rows[1].output_schema[2],week
+rows[1].output_schema[3],category
+rows[1].output_schema[4],name
+rows[1].output_schema[5],status
+rows[1].output_schema[6],mode
+rows[1].output_schema[7],mode_label
+rows[1].output_schema[8],mode_meaning
+rows[1].output_schema[9],experiment_id
+rows[1].output_schema[10],dataset
+rows[1].output_schema[11],inputs
+rows[1].output_schema[12],metrics
+rows[1].output_schema[13],series
+rows[1].output_schema[14],uncertainty
+rows[1].output_schema[15],observations
+rows[1].output_schema[16],figures
+rows[1].output_schema[17],tables
+rows[1].output_schema[18],provenance
+rows[1].output_schema[19],limitations
+rows[1].output_schema[20],message
+rows[1].output_schema[21],elapsed_s
+rows[1].output_schema[22],error
+rows[1].product_view.STATS-02,/stats/universe?mode=product
+rows[1].research_view.STATS-02,/stats/universe?mode=research
+rows[1].route,/weeks/2
+rows[1].artifact_sources.STATS-02[0],outputs/stats/02_universe_survivorship/universe_summary.json
+rows[1].artifact_sources.STATS-02[1],outputs/stats/02_universe_survivorship/churn.csv
+rows[1].execution.STATS-02.mode,LIVE
+rows[1].execution.STATS-02.is_live,True
+rows[1].execution.STATS-02.protected,False
+rows[1].execution.STATS-02.typical_seconds,0.6
+rows[1].execution.STATS-02.artifact_reason,
+rows[1].modules[0].module_id,STATS-02
+rows[1].modules[0].index,2
+rows[1].modules[0].category,STATS
+rows[1].modules[0].slug,universe_survivorship
+rows[1].modules[0].name,Universe and survivorship statistics
+rows[1].modules[0].purpose,"Characterise the point-in-time liquidity-proxy universe: membership over time, churn per rebalance, distinct members ever selected, and the turnover statistics that make the construction survivorship-safe."
+rows[1].modules[0].research_question,"How much does the research universe turn over, and what does that imply for any result read as applying to a stable large-cap index?"
+rows[1].modules[0].adapter,scripts.stages.stats:universe_survivorship
+rows[1].modules[0].wrapper_status,WRAPS_EXISTING
+rows[1].modules[0].status,SUPPORTED
+rows[1].modules[0].experiment_id,
+rows[1].modules[0].declared_inputs[0],data/panel/universe.parquet
+rows[1].modules[0].outputs[0],outputs/stats/02_universe_survivorship/universe_summary.json
+rows[1].modules[0].outputs[1],outputs/stats/02_universe_survivorship/churn.csv
+rows[1].modules[0].canonical[0],research/data/universe.py::LiquidityProxyUniverse.churn
+rows[1].modules[0].canonical[1],research/data/universe.py::LiquidityProxyUniverse.turnover_stats
+rows[1].modules[0].limitations[0],L-01
+rows[1].modules[0].notes,"The universe is a liquidity proxy, never the Nifty 50. L-01 records why licence-clear point-in-time index membership was not obtainable."
+rows[1].modules[0].route,/stats/universe
+rows[1].modules[0].icon,◎
+rows[1].modules[0].product_name,Which instruments are covered
+rows[1].modules[0].week,2
+rows[1].modules[0].protected,False
+rows[1].modules[0].analysis.mode,LIVE
+rows[1].modules[0].analysis.is_live,True
+rows[1].modules[0].analysis.adapter,scripts.stages.stats:analyse_universe
+rows[1].modules[0].analysis.typical_seconds,0.6
+rows[1].modules[0].analysis.summary,"Reconstructs membership and churn across the rebalances inside your window. Survivorship is a property of a window rather than of a dataset, so the answer changes with the window and is computed for the one you choose."
+rows[1].modules[0].analysis.inputs[0].name,date_from
+rows[1].modules[0].analysis.inputs[0].kind,date
+rows[1].modules[0].analysis.inputs[0].label,From
+rows[1].modules[0].analysis.inputs[0].default,2018-01-01
+rows[1].modules[0].analysis.inputs[0].note,first rebalance included
+rows[1].modules[0].analysis.inputs[0].options,
+rows[1].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[1].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[1].modules[0].analysis.inputs[0].max_items,
+rows[1].modules[0].analysis.inputs[0].required,False
+rows[1].modules[0].analysis.inputs[1].name,date_to
+rows[1].modules[0].analysis.inputs[1].kind,date
+rows[1].modules[0].analysis.inputs[1].label,To
+rows[1].modules[0].analysis.inputs[1].default,2024-12-31
+rows[1].modules[0].analysis.inputs[1].note,last rebalance included
+rows[1].modules[0].analysis.inputs[1].options,
+rows[1].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[1].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[1].modules[0].analysis.inputs[1].max_items,
+rows[1].modules[0].analysis.inputs[1].required,False
+rows[1].modules[0].analysis.artifact_reason,
+rows[2].week,3
+rows[2].title,Distributions and feature behaviour
+rows[2].question,"What do the numeric distributions look like, and which features cannot vary on the rows selected?"
+rows[2].stats_module,STATS-03
+rows[2].summary,"Descriptive and distributional statistics with per-feature presence, so a distribution is never read without knowing how many rows carry it."
+rows[2].feature.product_question,How do the underlying measurements behave?
+rows[2].feature.story,"Describes every feature on the selected rows and names the ones that are constant there, alongside how completely each is populated."
+rows[2].feature.headline[0].module,STATS-03
+rows[2].feature.headline[0].metric,features
+rows[2].feature.headline[0].label,Features described
+rows[2].feature.headline[1].module,STATS-03
+rows[2].feature.headline[1].metric,degenerate
+rows[2].feature.headline[1].label,Constant on this slice
+rows[2].feature.headline[2].module,STATS-03
+rows[2].feature.headline[2].metric,mean_fill
+rows[2].feature.headline[2].label,Average completeness
+rows[2].feature.primary_visual.module,STATS-03
+rows[2].feature.primary_visual.series,features
+rows[2].feature.primary_visual.label_column,feature
+rows[2].feature.primary_visual.value_column,non_null_fraction
+rows[2].feature.primary_visual.kind,bars
+rows[2].feature.primary_visual.caption,"How completely each feature is populated, widest variation first."
+rows[2].gate.capability,cross-section
+rows[2].gate.enabled_from_week,3
+rows[2].backend_routes.week,/api/weeks/3
+rows[2].backend_routes.run_week,/api/weeks/3/run
+rows[2].backend_routes.modules.STATS-03,/api/modules/STATS-03
+rows[2].backend_routes.run_module.STATS-03,/api/modules/STATS-03/run
+rows[2].input_schema.STATS-03[0].name,date_from
+rows[2].input_schema.STATS-03[0].kind,date
+rows[2].input_schema.STATS-03[0].label,From
+rows[2].input_schema.STATS-03[0].default,2022-01-01
+rows[2].input_schema.STATS-03[0].note,first session described
+rows[2].input_schema.STATS-03[0].options,
+rows[2].input_schema.STATS-03[0].minimum,2015-01-01
+rows[2].input_schema.STATS-03[0].maximum,2026-08-14
+rows[2].input_schema.STATS-03[0].max_items,
+rows[2].input_schema.STATS-03[0].required,False
+rows[2].input_schema.STATS-03[1].name,date_to
+rows[2].input_schema.STATS-03[1].kind,date
+rows[2].input_schema.STATS-03[1].label,To
+rows[2].input_schema.STATS-03[1].default,2024-12-31
+rows[2].input_schema.STATS-03[1].note,last session described
+rows[2].input_schema.STATS-03[1].options,
+rows[2].input_schema.STATS-03[1].minimum,2015-01-01
+rows[2].input_schema.STATS-03[1].maximum,2026-08-14
+rows[2].input_schema.STATS-03[1].max_items,
+rows[2].input_schema.STATS-03[1].required,False
+rows[2].input_schema.STATS-03[2].name,instruments
+rows[2].input_schema.STATS-03[2].kind,symbols
+rows[2].input_schema.STATS-03[2].label,Instruments
+rows[2].input_schema.STATS-03[2].default,
+rows[2].input_schema.STATS-03[2].note,leave empty for every instrument in the range
+rows[2].input_schema.STATS-03[2].options,
+rows[2].input_schema.STATS-03[2].minimum,
+rows[2].input_schema.STATS-03[2].maximum,
+rows[2].input_schema.STATS-03[2].max_items,60
+rows[2].input_schema.STATS-03[2].required,False
+rows[2].input_schema.STATS-03[3].name,block
+rows[2].input_schema.STATS-03[3].kind,select
+rows[2].input_schema.STATS-03[3].label,Feature block
+rows[2].input_schema.STATS-03[3].default,all
+rows[2].input_schema.STATS-03[3].note,restrict the description to one feature block
+rows[2].input_schema.STATS-03[3].options[0],all
+rows[2].input_schema.STATS-03[3].options[1],text
+rows[2].input_schema.STATS-03[3].options[2],image
+rows[2].input_schema.STATS-03[3].options[3],audio
+rows[2].input_schema.STATS-03[3].options[4],video
+rows[2].input_schema.STATS-03[3].options[5],market
+rows[2].input_schema.STATS-03[3].options[6],microstructure
+rows[2].input_schema.STATS-03[3].options[7],regime
+rows[2].input_schema.STATS-03[3].options[8],propagation
+rows[2].input_schema.STATS-03[3].minimum,
+rows[2].input_schema.STATS-03[3].maximum,
+rows[2].input_schema.STATS-03[3].max_items,
+rows[2].input_schema.STATS-03[3].required,False
+rows[2].input_schema.STATS-03[4].name,split
+rows[2].input_schema.STATS-03[4].kind,select
+rows[2].input_schema.STATS-03[4].label,Split
+rows[2].input_schema.STATS-03[4].default,all
+rows[2].input_schema.STATS-03[4].note,the frozen holdout is described but never scored
+rows[2].input_schema.STATS-03[4].options[0],all
+rows[2].input_schema.STATS-03[4].options[1],train
+rows[2].input_schema.STATS-03[4].options[2],validation
+rows[2].input_schema.STATS-03[4].options[3],holdout
+rows[2].input_schema.STATS-03[4].minimum,
+rows[2].input_schema.STATS-03[4].maximum,
+rows[2].input_schema.STATS-03[4].max_items,
+rows[2].input_schema.STATS-03[4].required,False
+rows[2].output_schema[0],backend_version
+rows[2].output_schema[1],module_id
+rows[2].output_schema[2],week
+rows[2].output_schema[3],category
+rows[2].output_schema[4],name
+rows[2].output_schema[5],status
+rows[2].output_schema[6],mode
+rows[2].output_schema[7],mode_label
+rows[2].output_schema[8],mode_meaning
+rows[2].output_schema[9],experiment_id
+rows[2].output_schema[10],dataset
+rows[2].output_schema[11],inputs
+rows[2].output_schema[12],metrics
+rows[2].output_schema[13],series
+rows[2].output_schema[14],uncertainty
+rows[2].output_schema[15],observations
+rows[2].output_schema[16],figures
+rows[2].output_schema[17],tables
+rows[2].output_schema[18],provenance
+rows[2].output_schema[19],limitations
+rows[2].output_schema[20],message
+rows[2].output_schema[21],elapsed_s
+rows[2].output_schema[22],error
+rows[2].product_view.STATS-03,/stats/distributions?mode=product
+rows[2].research_view.STATS-03,/stats/distributions?mode=research
+rows[2].route,/weeks/3
+rows[2].artifact_sources.STATS-03[0],outputs/stats/03_descriptive_distributions/feature_summary.csv
+rows[2].artifact_sources.STATS-03[1],outputs/stats/03_descriptive_distributions/degenerate_features.csv
+rows[2].execution.STATS-03.mode,LIVE
+rows[2].execution.STATS-03.is_live,True
+rows[2].execution.STATS-03.protected,False
+rows[2].execution.STATS-03.typical_seconds,1.5
+rows[2].execution.STATS-03.artifact_reason,
+rows[2].modules[0].module_id,STATS-03
+rows[2].modules[0].index,3
+rows[2].modules[0].category,STATS
+rows[2].modules[0].slug,descriptive_distributions
+rows[2].modules[0].name,Descriptive and distributional statistics
+rows[2].modules[0].purpose,"Per-feature descriptive statistics across all 99 features, grouped by feature block, with the fraction present and the number of distinct values so degenerate features are visible rather than silently averaged into a model."
+rows[2].modules[0].research_question,"Which features carry usable variation, and which are so degenerate that any importance attributed to them should be discounted?"
+rows[2].modules[0].adapter,scripts.stages.stats:descriptive_distributions
+rows[2].modules[0].wrapper_status,WRAPS_EXISTING
+rows[2].modules[0].status,SUPPORTED
+rows[2].modules[0].experiment_id,
+rows[2].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[2].modules[0].outputs[0],outputs/stats/03_descriptive_distributions/feature_summary.csv
+rows[2].modules[0].outputs[1],outputs/stats/03_descriptive_distributions/degenerate_features.csv
+rows[2].modules[0].canonical[0],research/data/dataset.py::FEATURE_BLOCKS
+rows[2].modules[0].canonical[1],research/data/dataset.py::ALL_FEATURES
+rows[2].modules[0].limitations,
+rows[2].modules[0].notes,A degenerate entropy feature was found this way once before: quantile binning had pinned it near-constant. Reporting distinct-value counts keeps that failure visible.
+rows[2].modules[0].route,/stats/distributions
+rows[2].modules[0].icon,∑
+rows[2].modules[0].product_name,How the numbers behave
+rows[2].modules[0].week,3
+rows[2].modules[0].protected,False
+rows[2].modules[0].analysis.mode,LIVE
+rows[2].modules[0].analysis.is_live,True
+rows[2].modules[0].analysis.adapter,scripts.stages.stats:analyse_distributions
+rows[2].modules[0].analysis.typical_seconds,1.5
+rows[2].modules[0].analysis.summary,"Describes every numeric feature on the rows you select, and names the ones that are constant there. A feature that cannot vary on this slice cannot inform anything computed from it, however useful it is elsewhere."
+rows[2].modules[0].analysis.inputs[0].name,date_from
+rows[2].modules[0].analysis.inputs[0].kind,date
+rows[2].modules[0].analysis.inputs[0].label,From
+rows[2].modules[0].analysis.inputs[0].default,2022-01-01
+rows[2].modules[0].analysis.inputs[0].note,first session described
+rows[2].modules[0].analysis.inputs[0].options,
+rows[2].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[2].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[2].modules[0].analysis.inputs[0].max_items,
+rows[2].modules[0].analysis.inputs[0].required,False
+rows[2].modules[0].analysis.inputs[1].name,date_to
+rows[2].modules[0].analysis.inputs[1].kind,date
+rows[2].modules[0].analysis.inputs[1].label,To
+rows[2].modules[0].analysis.inputs[1].default,2024-12-31
+rows[2].modules[0].analysis.inputs[1].note,last session described
+rows[2].modules[0].analysis.inputs[1].options,
+rows[2].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[2].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[2].modules[0].analysis.inputs[1].max_items,
+rows[2].modules[0].analysis.inputs[1].required,False
+rows[2].modules[0].analysis.inputs[2].name,instruments
+rows[2].modules[0].analysis.inputs[2].kind,symbols
+rows[2].modules[0].analysis.inputs[2].label,Instruments
+rows[2].modules[0].analysis.inputs[2].default,
+rows[2].modules[0].analysis.inputs[2].note,leave empty for every instrument in the range
+rows[2].modules[0].analysis.inputs[2].options,
+rows[2].modules[0].analysis.inputs[2].minimum,
+rows[2].modules[0].analysis.inputs[2].maximum,
+rows[2].modules[0].analysis.inputs[2].max_items,60
+rows[2].modules[0].analysis.inputs[2].required,False
+rows[2].modules[0].analysis.inputs[3].name,block
+rows[2].modules[0].analysis.inputs[3].kind,select
+rows[2].modules[0].analysis.inputs[3].label,Feature block
+rows[2].modules[0].analysis.inputs[3].default,all
+rows[2].modules[0].analysis.inputs[3].note,restrict the description to one feature block
+rows[2].modules[0].analysis.inputs[3].options[0],all
+rows[2].modules[0].analysis.inputs[3].options[1],text
+rows[2].modules[0].analysis.inputs[3].options[2],image
+rows[2].modules[0].analysis.inputs[3].options[3],audio
+rows[2].modules[0].analysis.inputs[3].options[4],video
+rows[2].modules[0].analysis.inputs[3].options[5],market
+rows[2].modules[0].analysis.inputs[3].options[6],microstructure
+rows[2].modules[0].analysis.inputs[3].options[7],regime
+rows[2].modules[0].analysis.inputs[3].options[8],propagation
+rows[2].modules[0].analysis.inputs[3].minimum,
+rows[2].modules[0].analysis.inputs[3].maximum,
+rows[2].modules[0].analysis.inputs[3].max_items,
+rows[2].modules[0].analysis.inputs[3].required,False
+rows[2].modules[0].analysis.inputs[4].name,split
+rows[2].modules[0].analysis.inputs[4].kind,select
+rows[2].modules[0].analysis.inputs[4].label,Split
+rows[2].modules[0].analysis.inputs[4].default,all
+rows[2].modules[0].analysis.inputs[4].note,the frozen holdout is described but never scored
+rows[2].modules[0].analysis.inputs[4].options[0],all
+rows[2].modules[0].analysis.inputs[4].options[1],train
+rows[2].modules[0].analysis.inputs[4].options[2],validation
+rows[2].modules[0].analysis.inputs[4].options[3],holdout
+rows[2].modules[0].analysis.inputs[4].minimum,
+rows[2].modules[0].analysis.inputs[4].maximum,
+rows[2].modules[0].analysis.inputs[4].max_items,
+rows[2].modules[0].analysis.inputs[4].required,False
+rows[2].modules[0].analysis.artifact_reason,
+rows[3].week,4
+rows[3].title,Microstructure and liquidity proxies
+rows[3].question,"What do the liquidity and microstructure proxies show, and which quantities does this data source simply not express?"
+rows[3].stats_module,STATS-04
+rows[3].summary,Microstructure-proxy statistics with an explicit register of what is not measurable. A proxy is named as a proxy wherever it appears.
+rows[3].feature.product_question,What were trading conditions like?
+rows[3].feature.story,"Reads the liquidity and microstructure proxies on the selected rows, and records which order-book quantities the source cannot express at all."
+rows[3].feature.headline[0].module,STATS-04
+rows[3].feature.headline[0].metric,market_features
+rows[3].feature.headline[0].label,Market measures
+rows[3].feature.headline[1].module,STATS-04
+rows[3].feature.headline[1].metric,proxy_features
+rows[3].feature.headline[1].label,Liquidity proxies
+rows[3].feature.headline[2].module,STATS-04
+rows[3].feature.headline[2].metric,not_measured
+rows[3].feature.headline[2].label,Recorded as unmeasurable
+rows[3].feature.primary_visual.module,STATS-04
+rows[3].feature.primary_visual.series,coverage
+rows[3].feature.primary_visual.label_column,feature
+rows[3].feature.primary_visual.value_column,non_null_fraction
+rows[3].feature.primary_visual.kind,bars
+rows[3].feature.primary_visual.caption,How completely each market and liquidity proxy is populated on these rows.
+rows[3].gate.capability,regimes
+rows[3].gate.enabled_from_week,4
+rows[3].backend_routes.week,/api/weeks/4
+rows[3].backend_routes.run_week,/api/weeks/4/run
+rows[3].backend_routes.modules.STATS-04,/api/modules/STATS-04
+rows[3].backend_routes.run_module.STATS-04,/api/modules/STATS-04/run
+rows[3].input_schema.STATS-04[0].name,date_from
+rows[3].input_schema.STATS-04[0].kind,date
+rows[3].input_schema.STATS-04[0].label,From
+rows[3].input_schema.STATS-04[0].default,2022-01-01
+rows[3].input_schema.STATS-04[0].note,first session described
+rows[3].input_schema.STATS-04[0].options,
+rows[3].input_schema.STATS-04[0].minimum,2015-01-01
+rows[3].input_schema.STATS-04[0].maximum,2026-08-14
+rows[3].input_schema.STATS-04[0].max_items,
+rows[3].input_schema.STATS-04[0].required,False
+rows[3].input_schema.STATS-04[1].name,date_to
+rows[3].input_schema.STATS-04[1].kind,date
+rows[3].input_schema.STATS-04[1].label,To
+rows[3].input_schema.STATS-04[1].default,2024-12-31
+rows[3].input_schema.STATS-04[1].note,last session described
+rows[3].input_schema.STATS-04[1].options,
+rows[3].input_schema.STATS-04[1].minimum,2015-01-01
+rows[3].input_schema.STATS-04[1].maximum,2026-08-14
+rows[3].input_schema.STATS-04[1].max_items,
+rows[3].input_schema.STATS-04[1].required,False
+rows[3].input_schema.STATS-04[2].name,instruments
+rows[3].input_schema.STATS-04[2].kind,symbols
+rows[3].input_schema.STATS-04[2].label,Instruments
+rows[3].input_schema.STATS-04[2].default,
+rows[3].input_schema.STATS-04[2].note,leave empty for every instrument in the range
+rows[3].input_schema.STATS-04[2].options,
+rows[3].input_schema.STATS-04[2].minimum,
+rows[3].input_schema.STATS-04[2].maximum,
+rows[3].input_schema.STATS-04[2].max_items,60
+rows[3].input_schema.STATS-04[2].required,False
+rows[3].output_schema[0],backend_version
+rows[3].output_schema[1],module_id
+rows[3].output_schema[2],week
+rows[3].output_schema[3],category
+rows[3].output_schema[4],name
+rows[3].output_schema[5],status
+rows[3].output_schema[6],mode
+rows[3].output_schema[7],mode_label
+rows[3].output_schema[8],mode_meaning
+rows[3].output_schema[9],experiment_id
+rows[3].output_schema[10],dataset
+rows[3].output_schema[11],inputs
+rows[3].output_schema[12],metrics
+rows[3].output_schema[13],series
+rows[3].output_schema[14],uncertainty
+rows[3].output_schema[15],observations
+rows[3].output_schema[16],figures
+rows[3].output_schema[17],tables
+rows[3].output_schema[18],provenance
+rows[3].output_schema[19],limitations
+rows[3].output_schema[20],message
+rows[3].output_schema[21],elapsed_s
+rows[3].output_schema[22],error
+rows[3].product_view.STATS-04,/stats/microstructure?mode=product
+rows[3].research_view.STATS-04,/stats/microstructure?mode=research
+rows[3].route,/weeks/4
+rows[3].artifact_sources.STATS-04[0],outputs/stats/04_market_microstructure/market_coverage.csv
+rows[3].artifact_sources.STATS-04[1],outputs/stats/04_market_microstructure/not_measured.json
+rows[3].execution.STATS-04.mode,LIVE
+rows[3].execution.STATS-04.is_live,True
+rows[3].execution.STATS-04.protected,False
+rows[3].execution.STATS-04.typical_seconds,1.2
+rows[3].execution.STATS-04.artifact_reason,
+rows[3].modules[0].module_id,STATS-04
+rows[3].modules[0].index,4
+rows[3].modules[0].category,STATS
+rows[3].modules[0].slug,market_microstructure
+rows[3].modules[0].name,Market and microstructure-proxy statistics
+rows[3].modules[0].purpose,"Coverage and behaviour of the 18 market features and the 4 microstructure proxies, together with the explicit register of microstructure quantities that are NOT MEASURED because daily bhavcopy cannot support them."
+rows[3].modules[0].research_question,"How much microstructure information do daily proxies retain relative to genuine order-book data, and what is provably absent?"
+rows[3].modules[0].adapter,scripts.stages.stats:market_microstructure
+rows[3].modules[0].wrapper_status,WRAPS_EXISTING
+rows[3].modules[0].status,PARTIAL
+rows[3].modules[0].experiment_id,
+rows[3].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[3].modules[0].outputs[0],outputs/stats/04_market_microstructure/market_coverage.csv
+rows[3].modules[0].outputs[1],outputs/stats/04_market_microstructure/not_measured.json
+rows[3].modules[0].canonical[0],research/market/features.py::MARKET_FEATURES
+rows[3].modules[0].canonical[1],research/market/features.py::MICROSTRUCTURE_PROXIES
+rows[3].modules[0].canonical[2],research/market/features.py::MICROSTRUCTURE_NOT_MEASURED
+rows[3].modules[0].canonical[3],research/market/features.py::coverage_report
+rows[3].modules[0].limitations[0],L-02
+rows[3].modules[0].notes,Daily-bar proxies must never be described as true order-book microstructure (L-02).
+rows[3].modules[0].route,/stats/microstructure
+rows[3].modules[0].icon,⌗
+rows[3].modules[0].product_name,Liquidity and trading conditions
+rows[3].modules[0].week,4
+rows[3].modules[0].protected,False
+rows[3].modules[0].analysis.mode,LIVE
+rows[3].modules[0].analysis.is_live,True
+rows[3].modules[0].analysis.adapter,scripts.stages.stats:analyse_microstructure
+rows[3].modules[0].analysis.typical_seconds,1.2
+rows[3].modules[0].analysis.summary,"Coverage and dispersion of the market and microstructure-proxy features on your rows, beside the register of order-book quantities daily bars cannot express at all. The second list is the boundary of the first."
+rows[3].modules[0].analysis.inputs[0].name,date_from
+rows[3].modules[0].analysis.inputs[0].kind,date
+rows[3].modules[0].analysis.inputs[0].label,From
+rows[3].modules[0].analysis.inputs[0].default,2022-01-01
+rows[3].modules[0].analysis.inputs[0].note,first session described
+rows[3].modules[0].analysis.inputs[0].options,
+rows[3].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[3].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[3].modules[0].analysis.inputs[0].max_items,
+rows[3].modules[0].analysis.inputs[0].required,False
+rows[3].modules[0].analysis.inputs[1].name,date_to
+rows[3].modules[0].analysis.inputs[1].kind,date
+rows[3].modules[0].analysis.inputs[1].label,To
+rows[3].modules[0].analysis.inputs[1].default,2024-12-31
+rows[3].modules[0].analysis.inputs[1].note,last session described
+rows[3].modules[0].analysis.inputs[1].options,
+rows[3].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[3].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[3].modules[0].analysis.inputs[1].max_items,
+rows[3].modules[0].analysis.inputs[1].required,False
+rows[3].modules[0].analysis.inputs[2].name,instruments
+rows[3].modules[0].analysis.inputs[2].kind,symbols
+rows[3].modules[0].analysis.inputs[2].label,Instruments
+rows[3].modules[0].analysis.inputs[2].default,
+rows[3].modules[0].analysis.inputs[2].note,leave empty for every instrument in the range
+rows[3].modules[0].analysis.inputs[2].options,
+rows[3].modules[0].analysis.inputs[2].minimum,
+rows[3].modules[0].analysis.inputs[2].maximum,
+rows[3].modules[0].analysis.inputs[2].max_items,60
+rows[3].modules[0].analysis.inputs[2].required,False
+rows[3].modules[0].analysis.artifact_reason,
+rows[4].week,5
+rows[4].title,Regime statistics
+rows[4].question,"How are regimes distributed over the sample, and how thin is the smallest of them?"
+rows[4].stats_module,STATS-05
+rows[4].summary,"Regime occupancy over your slice, so a regime-conditional reading knows how many sessions each conditional statement rests on."
+rows[4].feature.product_question,What kind of market was this?
+rows[4].feature.story,"Shows how the selected sessions distribute across market regimes, and how few sessions the smallest regime carries."
+rows[4].feature.headline[0].module,STATS-05
+rows[4].feature.headline[0].metric,regimes
+rows[4].feature.headline[0].label,Regimes present
+rows[4].feature.headline[1].module,STATS-05
+rows[4].feature.headline[1].metric,largest_share
+rows[4].feature.headline[1].label,Largest regime
+rows[4].feature.headline[2].module,STATS-05
+rows[4].feature.headline[2].metric,smallest_rows
+rows[4].feature.headline[2].label,"Smallest regime, sessions"
+rows[4].feature.primary_visual.module,STATS-05
+rows[4].feature.primary_visual.series,occupancy
+rows[4].feature.primary_visual.label_column,regime_id
+rows[4].feature.primary_visual.value_column,share
+rows[4].feature.primary_visual.kind,bars
+rows[4].feature.primary_visual.caption,How the selected sessions divide between regimes.
+rows[4].gate.capability,propagation
+rows[4].gate.enabled_from_week,5
+rows[4].backend_routes.week,/api/weeks/5
+rows[4].backend_routes.run_week,/api/weeks/5/run
+rows[4].backend_routes.modules.STATS-05,/api/modules/STATS-05
+rows[4].backend_routes.run_module.STATS-05,/api/modules/STATS-05/run
+rows[4].input_schema.STATS-05[0].name,date_from
+rows[4].input_schema.STATS-05[0].kind,date
+rows[4].input_schema.STATS-05[0].label,From
+rows[4].input_schema.STATS-05[0].default,2022-01-01
+rows[4].input_schema.STATS-05[0].note,first session included
+rows[4].input_schema.STATS-05[0].options,
+rows[4].input_schema.STATS-05[0].minimum,2015-01-01
+rows[4].input_schema.STATS-05[0].maximum,2026-08-14
+rows[4].input_schema.STATS-05[0].max_items,
+rows[4].input_schema.STATS-05[0].required,False
+rows[4].input_schema.STATS-05[1].name,date_to
+rows[4].input_schema.STATS-05[1].kind,date
+rows[4].input_schema.STATS-05[1].label,To
+rows[4].input_schema.STATS-05[1].default,2024-12-31
+rows[4].input_schema.STATS-05[1].note,last session included
+rows[4].input_schema.STATS-05[1].options,
+rows[4].input_schema.STATS-05[1].minimum,2015-01-01
+rows[4].input_schema.STATS-05[1].maximum,2026-08-14
+rows[4].input_schema.STATS-05[1].max_items,
+rows[4].input_schema.STATS-05[1].required,False
+rows[4].input_schema.STATS-05[2].name,instruments
+rows[4].input_schema.STATS-05[2].kind,symbols
+rows[4].input_schema.STATS-05[2].label,Instruments
+rows[4].input_schema.STATS-05[2].default,
+rows[4].input_schema.STATS-05[2].note,leave empty for every instrument in the range
+rows[4].input_schema.STATS-05[2].options,
+rows[4].input_schema.STATS-05[2].minimum,
+rows[4].input_schema.STATS-05[2].maximum,
+rows[4].input_schema.STATS-05[2].max_items,60
+rows[4].input_schema.STATS-05[2].required,False
+rows[4].input_schema.STATS-05[3].name,split
+rows[4].input_schema.STATS-05[3].kind,select
+rows[4].input_schema.STATS-05[3].label,Split
+rows[4].input_schema.STATS-05[3].default,all
+rows[4].input_schema.STATS-05[3].note,"regime occupancy can differ between splits, which is worth checking"
+rows[4].input_schema.STATS-05[3].options[0],all
+rows[4].input_schema.STATS-05[3].options[1],train
+rows[4].input_schema.STATS-05[3].options[2],validation
+rows[4].input_schema.STATS-05[3].options[3],holdout
+rows[4].input_schema.STATS-05[3].minimum,
+rows[4].input_schema.STATS-05[3].maximum,
+rows[4].input_schema.STATS-05[3].max_items,
+rows[4].input_schema.STATS-05[3].required,False
+rows[4].output_schema[0],backend_version
+rows[4].output_schema[1],module_id
+rows[4].output_schema[2],week
+rows[4].output_schema[3],category
+rows[4].output_schema[4],name
+rows[4].output_schema[5],status
+rows[4].output_schema[6],mode
+rows[4].output_schema[7],mode_label
+rows[4].output_schema[8],mode_meaning
+rows[4].output_schema[9],experiment_id
+rows[4].output_schema[10],dataset
+rows[4].output_schema[11],inputs
+rows[4].output_schema[12],metrics
+rows[4].output_schema[13],series
+rows[4].output_schema[14],uncertainty
+rows[4].output_schema[15],observations
+rows[4].output_schema[16],figures
+rows[4].output_schema[17],tables
+rows[4].output_schema[18],provenance
+rows[4].output_schema[19],limitations
+rows[4].output_schema[20],message
+rows[4].output_schema[21],elapsed_s
+rows[4].output_schema[22],error
+rows[4].product_view.STATS-05,/stats/regimes?mode=product
+rows[4].research_view.STATS-05,/stats/regimes?mode=research
+rows[4].route,/weeks/5
+rows[4].artifact_sources.STATS-05[0],outputs/stats/05_regime_statistics/regime_occupancy.csv
+rows[4].execution.STATS-05.mode,LIVE
+rows[4].execution.STATS-05.is_live,True
+rows[4].execution.STATS-05.protected,False
+rows[4].execution.STATS-05.typical_seconds,1.2
+rows[4].execution.STATS-05.artifact_reason,
+rows[4].modules[0].module_id,STATS-05
+rows[4].modules[0].index,5
+rows[4].modules[0].category,STATS
+rows[4].modules[0].slug,regime_statistics
+rows[4].modules[0].name,Regime statistics
+rows[4].modules[0].purpose,"Occupancy, persistence and transition structure of the detected market regimes as they appear in the assembled dataset."
+rows[4].modules[0].research_question,Are the detected regimes stable and well-populated enough for regime-conditioned results to be interpretable?
+rows[4].modules[0].adapter,scripts.stages.stats:regime_statistics
+rows[4].modules[0].wrapper_status,WRAPS_EXISTING
+rows[4].modules[0].status,PARTIAL
+rows[4].modules[0].experiment_id,EXP-N02-1
+rows[4].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[4].modules[0].outputs[0],outputs/stats/05_regime_statistics/regime_occupancy.csv
+rows[4].modules[0].canonical[0],research/regime/detection.py::index_descriptors
+rows[4].modules[0].canonical[1],research/regime/detection.py::select_order
+rows[4].modules[0].canonical[2],research/regime/detection.py::bootstrap_stability
+rows[4].modules[0].limitations,
+rows[4].modules[0].notes,"Regime-conditioned combination is a measured negative result (N-02); this module reports the regime structure, not the combination outcome."
+rows[4].modules[0].route,/stats/regimes
+rows[4].modules[0].icon,◑
+rows[4].modules[0].product_name,Market regimes
+rows[4].modules[0].week,5
+rows[4].modules[0].protected,False
+rows[4].modules[0].analysis.mode,LIVE
+rows[4].modules[0].analysis.is_live,True
+rows[4].modules[0].analysis.adapter,scripts.stages.stats:analyse_regimes
+rows[4].modules[0].analysis.typical_seconds,1.2
+rows[4].modules[0].analysis.summary,"How the rows you selected distribute across regimes, and the episode rate inside each. A regime holding thirty rows supports very little on its own, so the row count is reported beside every share."
+rows[4].modules[0].analysis.inputs[0].name,date_from
+rows[4].modules[0].analysis.inputs[0].kind,date
+rows[4].modules[0].analysis.inputs[0].label,From
+rows[4].modules[0].analysis.inputs[0].default,2022-01-01
+rows[4].modules[0].analysis.inputs[0].note,first session included
+rows[4].modules[0].analysis.inputs[0].options,
+rows[4].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[4].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[4].modules[0].analysis.inputs[0].max_items,
+rows[4].modules[0].analysis.inputs[0].required,False
+rows[4].modules[0].analysis.inputs[1].name,date_to
+rows[4].modules[0].analysis.inputs[1].kind,date
+rows[4].modules[0].analysis.inputs[1].label,To
+rows[4].modules[0].analysis.inputs[1].default,2024-12-31
+rows[4].modules[0].analysis.inputs[1].note,last session included
+rows[4].modules[0].analysis.inputs[1].options,
+rows[4].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[4].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[4].modules[0].analysis.inputs[1].max_items,
+rows[4].modules[0].analysis.inputs[1].required,False
+rows[4].modules[0].analysis.inputs[2].name,instruments
+rows[4].modules[0].analysis.inputs[2].kind,symbols
+rows[4].modules[0].analysis.inputs[2].label,Instruments
+rows[4].modules[0].analysis.inputs[2].default,
+rows[4].modules[0].analysis.inputs[2].note,leave empty for every instrument in the range
+rows[4].modules[0].analysis.inputs[2].options,
+rows[4].modules[0].analysis.inputs[2].minimum,
+rows[4].modules[0].analysis.inputs[2].maximum,
+rows[4].modules[0].analysis.inputs[2].max_items,60
+rows[4].modules[0].analysis.inputs[2].required,False
+rows[4].modules[0].analysis.inputs[3].name,split
+rows[4].modules[0].analysis.inputs[3].kind,select
+rows[4].modules[0].analysis.inputs[3].label,Split
+rows[4].modules[0].analysis.inputs[3].default,all
+rows[4].modules[0].analysis.inputs[3].note,"regime occupancy can differ between splits, which is worth checking"
+rows[4].modules[0].analysis.inputs[3].options[0],all
+rows[4].modules[0].analysis.inputs[3].options[1],train
+rows[4].modules[0].analysis.inputs[3].options[2],validation
+rows[4].modules[0].analysis.inputs[3].options[3],holdout
+rows[4].modules[0].analysis.inputs[3].minimum,
+rows[4].modules[0].analysis.inputs[3].maximum,
+rows[4].modules[0].analysis.inputs[3].max_items,
+rows[4].modules[0].analysis.inputs[3].required,False
+rows[4].modules[0].analysis.artifact_reason,
+rows[5].week,6
+rows[5].title,Dependence and propagation
+rows[5].question,"How does movement propagate across instruments, and how strong is the typical association?"
+rows[5].stats_module,STATS-06
+rows[5].summary,"Dependence and propagation statistics over the instruments you select. Association is measured, not interpreted as an economic channel."
+rows[5].feature.product_question,Did these instruments move together?
+rows[5].feature.story,"Measures contemporaneous co-movement between the instruments you select, and reports the strongest associations it finds."
+rows[5].feature.headline[0].module,STATS-06
+rows[5].feature.headline[0].metric,pairs
+rows[5].feature.headline[0].label,Instrument pairs measured
+rows[5].feature.headline[1].module,STATS-06
+rows[5].feature.headline[1].metric,median_abs_corr
+rows[5].feature.headline[1].label,Typical association
+rows[5].feature.headline[2].module,STATS-06
+rows[5].feature.headline[2].metric,sessions
+rows[5].feature.headline[2].label,Sessions measured
+rows[5].feature.primary_visual.module,STATS-06
+rows[5].feature.primary_visual.series,pairs
+rows[5].feature.primary_visual.label_column,instrument_b
+rows[5].feature.primary_visual.value_column,correlation
+rows[5].feature.primary_visual.kind,bars
+rows[5].feature.primary_visual.caption,The strongest associations on the sessions selected.
+rows[5].gate.capability,co-movement
+rows[5].gate.enabled_from_week,6
+rows[5].backend_routes.week,/api/weeks/6
+rows[5].backend_routes.run_week,/api/weeks/6/run
+rows[5].backend_routes.modules.STATS-06,/api/modules/STATS-06
+rows[5].backend_routes.run_module.STATS-06,/api/modules/STATS-06/run
+rows[5].input_schema.STATS-06[0].name,date_from
+rows[5].input_schema.STATS-06[0].kind,date
+rows[5].input_schema.STATS-06[0].label,From
+rows[5].input_schema.STATS-06[0].default,2022-01-01
+rows[5].input_schema.STATS-06[0].note,first session correlated
+rows[5].input_schema.STATS-06[0].options,
+rows[5].input_schema.STATS-06[0].minimum,2015-01-01
+rows[5].input_schema.STATS-06[0].maximum,2026-08-14
+rows[5].input_schema.STATS-06[0].max_items,
+rows[5].input_schema.STATS-06[0].required,False
+rows[5].input_schema.STATS-06[1].name,date_to
+rows[5].input_schema.STATS-06[1].kind,date
+rows[5].input_schema.STATS-06[1].label,To
+rows[5].input_schema.STATS-06[1].default,2024-12-31
+rows[5].input_schema.STATS-06[1].note,last session correlated
+rows[5].input_schema.STATS-06[1].options,
+rows[5].input_schema.STATS-06[1].minimum,2015-01-01
+rows[5].input_schema.STATS-06[1].maximum,2026-08-14
+rows[5].input_schema.STATS-06[1].max_items,
+rows[5].input_schema.STATS-06[1].required,False
+rows[5].input_schema.STATS-06[2].name,instruments
+rows[5].input_schema.STATS-06[2].kind,symbols
+rows[5].input_schema.STATS-06[2].label,Instruments
+rows[5].input_schema.STATS-06[2].default,
+rows[5].input_schema.STATS-06[2].note,choose a handful; every pair among them is measured
+rows[5].input_schema.STATS-06[2].options,
+rows[5].input_schema.STATS-06[2].minimum,
+rows[5].input_schema.STATS-06[2].maximum,
+rows[5].input_schema.STATS-06[2].max_items,60
+rows[5].input_schema.STATS-06[2].required,False
+rows[5].input_schema.STATS-06[3].name,top_n
+rows[5].input_schema.STATS-06[3].kind,int
+rows[5].input_schema.STATS-06[3].label,Pairs to show
+rows[5].input_schema.STATS-06[3].default,15
+rows[5].input_schema.STATS-06[3].note,how many of the strongest associations to list
+rows[5].input_schema.STATS-06[3].options,
+rows[5].input_schema.STATS-06[3].minimum,5
+rows[5].input_schema.STATS-06[3].maximum,60
+rows[5].input_schema.STATS-06[3].max_items,
+rows[5].input_schema.STATS-06[3].required,False
+rows[5].output_schema[0],backend_version
+rows[5].output_schema[1],module_id
+rows[5].output_schema[2],week
+rows[5].output_schema[3],category
+rows[5].output_schema[4],name
+rows[5].output_schema[5],status
+rows[5].output_schema[6],mode
+rows[5].output_schema[7],mode_label
+rows[5].output_schema[8],mode_meaning
+rows[5].output_schema[9],experiment_id
+rows[5].output_schema[10],dataset
+rows[5].output_schema[11],inputs
+rows[5].output_schema[12],metrics
+rows[5].output_schema[13],series
+rows[5].output_schema[14],uncertainty
+rows[5].output_schema[15],observations
+rows[5].output_schema[16],figures
+rows[5].output_schema[17],tables
+rows[5].output_schema[18],provenance
+rows[5].output_schema[19],limitations
+rows[5].output_schema[20],message
+rows[5].output_schema[21],elapsed_s
+rows[5].output_schema[22],error
+rows[5].product_view.STATS-06,/stats/propagation?mode=product
+rows[5].research_view.STATS-06,/stats/propagation?mode=research
+rows[5].route,/weeks/6
+rows[5].artifact_sources.STATS-06[0],outputs/stats/06_dependence_propagation/graph_summary.json
+rows[5].execution.STATS-06.mode,LIVE
+rows[5].execution.STATS-06.is_live,True
+rows[5].execution.STATS-06.protected,False
+rows[5].execution.STATS-06.typical_seconds,9.0
+rows[5].execution.STATS-06.artifact_reason,
+rows[5].modules[0].module_id,STATS-06
+rows[5].modules[0].index,6
+rows[5].modules[0].category,STATS
+rows[5].modules[0].slug,dependence_propagation
+rows[5].modules[0].name,Dependence and propagation statistics
+rows[5].modules[0].purpose,"Structure of the statistical co-movement graph: edge counts, degree distribution and neighbour counts per instrument-day."
+rows[5].modules[0].research_question,"What dependence structure exists between instruments, and how far can it be read without a causal identification strategy?"
+rows[5].modules[0].adapter,scripts.stages.stats:dependence_propagation
+rows[5].modules[0].wrapper_status,WRAPS_EXISTING
+rows[5].modules[0].status,PARTIAL
+rows[5].modules[0].experiment_id,EXP-N05-1
+rows[5].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[5].modules[0].outputs[0],outputs/stats/06_dependence_propagation/graph_summary.json
+rows[5].modules[0].canonical[0],research/propagation/graph.py::correlation_graph
+rows[5].modules[0].canonical[1],research/propagation/graph.py::PROPAGATION_FEATURES
+rows[5].modules[0].limitations[0],L-07
+rows[5].modules[0].notes,"Statistical co-movement, never causal propagation (L-07). The propagation block's contribution is a measured near-null (N-05)."
+rows[5].modules[0].route,/stats/propagation
+rows[5].modules[0].icon,⬡
+rows[5].modules[0].product_name,How instruments move together
+rows[5].modules[0].week,6
+rows[5].modules[0].protected,False
+rows[5].modules[0].analysis.mode,LIVE
+rows[5].modules[0].analysis.is_live,True
+rows[5].modules[0].analysis.adapter,scripts.stages.stats:analyse_dependence
+rows[5].modules[0].analysis.typical_seconds,9.0
+rows[5].modules[0].analysis.summary,"Contemporaneous co-movement between the instruments you select, measured on their return series over the sessions you choose, beside the propagation feature block. Association only: nothing here identifies which instrument moved first."
+rows[5].modules[0].analysis.inputs[0].name,date_from
+rows[5].modules[0].analysis.inputs[0].kind,date
+rows[5].modules[0].analysis.inputs[0].label,From
+rows[5].modules[0].analysis.inputs[0].default,2022-01-01
+rows[5].modules[0].analysis.inputs[0].note,first session correlated
+rows[5].modules[0].analysis.inputs[0].options,
+rows[5].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[5].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[5].modules[0].analysis.inputs[0].max_items,
+rows[5].modules[0].analysis.inputs[0].required,False
+rows[5].modules[0].analysis.inputs[1].name,date_to
+rows[5].modules[0].analysis.inputs[1].kind,date
+rows[5].modules[0].analysis.inputs[1].label,To
+rows[5].modules[0].analysis.inputs[1].default,2024-12-31
+rows[5].modules[0].analysis.inputs[1].note,last session correlated
+rows[5].modules[0].analysis.inputs[1].options,
+rows[5].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[5].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[5].modules[0].analysis.inputs[1].max_items,
+rows[5].modules[0].analysis.inputs[1].required,False
+rows[5].modules[0].analysis.inputs[2].name,instruments
+rows[5].modules[0].analysis.inputs[2].kind,symbols
+rows[5].modules[0].analysis.inputs[2].label,Instruments
+rows[5].modules[0].analysis.inputs[2].default,
+rows[5].modules[0].analysis.inputs[2].note,choose a handful; every pair among them is measured
+rows[5].modules[0].analysis.inputs[2].options,
+rows[5].modules[0].analysis.inputs[2].minimum,
+rows[5].modules[0].analysis.inputs[2].maximum,
+rows[5].modules[0].analysis.inputs[2].max_items,60
+rows[5].modules[0].analysis.inputs[2].required,False
+rows[5].modules[0].analysis.inputs[3].name,top_n
+rows[5].modules[0].analysis.inputs[3].kind,int
+rows[5].modules[0].analysis.inputs[3].label,Pairs to show
+rows[5].modules[0].analysis.inputs[3].default,15
+rows[5].modules[0].analysis.inputs[3].note,how many of the strongest associations to list
+rows[5].modules[0].analysis.inputs[3].options,
+rows[5].modules[0].analysis.inputs[3].minimum,5
+rows[5].modules[0].analysis.inputs[3].maximum,60
+rows[5].modules[0].analysis.inputs[3].max_items,
+rows[5].modules[0].analysis.inputs[3].required,False
+rows[5].modules[0].analysis.artifact_reason,
+rows[6].week,7
+rows[6].title,Tails and extreme risk
+rows[6].question,"How heavy are the tails on your slice, and how deep did the drawdowns get?"
+rows[6].stats_module,STATS-07
+rows[6].summary,Tail and extreme-risk statistics on the realised next-session return. Every quantity is an in-sample description of the window selected.
+rows[6].feature.product_question,How extreme did moves get?
+rows[6].feature.story,"Measures the tails of the realised next-session return over the selected window, including conditional loss and the deepest drawdown."
+rows[6].feature.headline[0].module,STATS-07
+rows[6].feature.headline[0].metric,n
+rows[6].feature.headline[0].label,Returns measured
+rows[6].feature.headline[1].module,STATS-07
+rows[6].feature.headline[1].metric,cvar
+rows[6].feature.headline[1].label,Average loss in the worst 5%
+rows[6].feature.headline[2].module,STATS-07
+rows[6].feature.headline[2].metric,vol_annual
+rows[6].feature.headline[2].label,Annualised volatility
+rows[6].feature.headline[3].module,STATS-07
+rows[6].feature.headline[3].metric,max_drawdown
+rows[6].feature.headline[3].label,Deepest drawdown
+rows[6].feature.primary_visual.module,STATS-07
+rows[6].feature.primary_visual.series,tail
+rows[6].feature.primary_visual.label_column,statistic
+rows[6].feature.primary_visual.value_column,value
+rows[6].feature.primary_visual.kind,bars
+rows[6].feature.primary_visual.caption,Tail statistics over the sessions selected.
+rows[6].gate.capability,tails
+rows[6].gate.enabled_from_week,7
+rows[6].backend_routes.week,/api/weeks/7
+rows[6].backend_routes.run_week,/api/weeks/7/run
+rows[6].backend_routes.modules.STATS-07,/api/modules/STATS-07
+rows[6].backend_routes.run_module.STATS-07,/api/modules/STATS-07/run
+rows[6].input_schema.STATS-07[0].name,date_from
+rows[6].input_schema.STATS-07[0].kind,date
+rows[6].input_schema.STATS-07[0].label,From
+rows[6].input_schema.STATS-07[0].default,2022-01-01
+rows[6].input_schema.STATS-07[0].note,first session in the return series
+rows[6].input_schema.STATS-07[0].options,
+rows[6].input_schema.STATS-07[0].minimum,2015-01-01
+rows[6].input_schema.STATS-07[0].maximum,2026-08-14
+rows[6].input_schema.STATS-07[0].max_items,
+rows[6].input_schema.STATS-07[0].required,False
+rows[6].input_schema.STATS-07[1].name,date_to
+rows[6].input_schema.STATS-07[1].kind,date
+rows[6].input_schema.STATS-07[1].label,To
+rows[6].input_schema.STATS-07[1].default,2024-12-31
+rows[6].input_schema.STATS-07[1].note,last session in the return series
+rows[6].input_schema.STATS-07[1].options,
+rows[6].input_schema.STATS-07[1].minimum,2015-01-01
+rows[6].input_schema.STATS-07[1].maximum,2026-08-14
+rows[6].input_schema.STATS-07[1].max_items,
+rows[6].input_schema.STATS-07[1].required,False
+rows[6].input_schema.STATS-07[2].name,instruments
+rows[6].input_schema.STATS-07[2].kind,symbols
+rows[6].input_schema.STATS-07[2].label,Instruments
+rows[6].input_schema.STATS-07[2].default,
+rows[6].input_schema.STATS-07[2].note,leave empty for every instrument in the range
+rows[6].input_schema.STATS-07[2].options,
+rows[6].input_schema.STATS-07[2].minimum,
+rows[6].input_schema.STATS-07[2].maximum,
+rows[6].input_schema.STATS-07[2].max_items,60
+rows[6].input_schema.STATS-07[2].required,False
+rows[6].input_schema.STATS-07[3].name,alpha
+rows[6].input_schema.STATS-07[3].kind,float
+rows[6].input_schema.STATS-07[3].label,Tail probability
+rows[6].input_schema.STATS-07[3].default,0.05
+rows[6].input_schema.STATS-07[3].note,the quantile VaR and CVaR are measured at
+rows[6].input_schema.STATS-07[3].options,
+rows[6].input_schema.STATS-07[3].minimum,0.01
+rows[6].input_schema.STATS-07[3].maximum,0.25
+rows[6].input_schema.STATS-07[3].max_items,
+rows[6].input_schema.STATS-07[3].required,False
+rows[6].output_schema[0],backend_version
+rows[6].output_schema[1],module_id
+rows[6].output_schema[2],week
+rows[6].output_schema[3],category
+rows[6].output_schema[4],name
+rows[6].output_schema[5],status
+rows[6].output_schema[6],mode
+rows[6].output_schema[7],mode_label
+rows[6].output_schema[8],mode_meaning
+rows[6].output_schema[9],experiment_id
+rows[6].output_schema[10],dataset
+rows[6].output_schema[11],inputs
+rows[6].output_schema[12],metrics
+rows[6].output_schema[13],series
+rows[6].output_schema[14],uncertainty
+rows[6].output_schema[15],observations
+rows[6].output_schema[16],figures
+rows[6].output_schema[17],tables
+rows[6].output_schema[18],provenance
+rows[6].output_schema[19],limitations
+rows[6].output_schema[20],message
+rows[6].output_schema[21],elapsed_s
+rows[6].output_schema[22],error
+rows[6].product_view.STATS-07,/stats/tail-risk?mode=product
+rows[6].research_view.STATS-07,/stats/tail-risk?mode=research
+rows[6].route,/weeks/7
+rows[6].artifact_sources.STATS-07[0],outputs/stats/07_tail_extreme_risk/tail_metrics.json
+rows[6].execution.STATS-07.mode,LIVE
+rows[6].execution.STATS-07.is_live,True
+rows[6].execution.STATS-07.protected,False
+rows[6].execution.STATS-07.typical_seconds,2.0
+rows[6].execution.STATS-07.artifact_reason,
+rows[6].modules[0].module_id,STATS-07
+rows[6].modules[0].index,7
+rows[6].modules[0].category,STATS
+rows[6].modules[0].slug,tail_extreme_risk
+rows[6].modules[0].name,Tail and extreme-risk statistics
+rows[6].modules[0].purpose,"Tail behaviour of the exposure-gate research instrument: CVaR, maximum drawdown and the distribution of the net series it produces."
+rows[6].modules[0].research_question,"What are the tail characteristics of the research exposure policy, treated strictly as a measurement instrument rather than as a strategy?"
+rows[6].modules[0].adapter,scripts.stages.stats:tail_extreme_risk
+rows[6].modules[0].wrapper_status,WRAPS_EXISTING
+rows[6].modules[0].status,PARTIAL
+rows[6].modules[0].experiment_id,
+rows[6].modules[0].declared_inputs[0],research_artifacts/experiments/per_row_FULL.parquet
+rows[6].modules[0].outputs[0],outputs/stats/07_tail_extreme_risk/tail_metrics.json
+rows[6].modules[0].canonical[0],research/risk/gate.py::tail_metrics
+rows[6].modules[0].canonical[1],research/risk/gate.py::capital_consequence
+rows[6].modules[0].limitations,
+rows[6].modules[0].notes,The exposure policy is a research instrument and is never an allocation. Nothing in this module produces a position size.
+rows[6].modules[0].route,/stats/tail-risk
+rows[6].modules[0].icon,◤
+rows[6].modules[0].product_name,Extreme moves
+rows[6].modules[0].week,7
+rows[6].modules[0].protected,False
+rows[6].modules[0].analysis.mode,LIVE
+rows[6].modules[0].analysis.is_live,True
+rows[6].modules[0].analysis.adapter,scripts.stages.stats:analyse_tail_risk
+rows[6].modules[0].analysis.typical_seconds,2.0
+rows[6].modules[0].analysis.summary,"Tail statistics of the realised next-session return over your slice, computed by the same function the exposure gate reads. This is the input distribution, not the result of acting on it, and no position size is produced anywhere."
+rows[6].modules[0].analysis.inputs[0].name,date_from
+rows[6].modules[0].analysis.inputs[0].kind,date
+rows[6].modules[0].analysis.inputs[0].label,From
+rows[6].modules[0].analysis.inputs[0].default,2022-01-01
+rows[6].modules[0].analysis.inputs[0].note,first session in the return series
+rows[6].modules[0].analysis.inputs[0].options,
+rows[6].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[6].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[6].modules[0].analysis.inputs[0].max_items,
+rows[6].modules[0].analysis.inputs[0].required,False
+rows[6].modules[0].analysis.inputs[1].name,date_to
+rows[6].modules[0].analysis.inputs[1].kind,date
+rows[6].modules[0].analysis.inputs[1].label,To
+rows[6].modules[0].analysis.inputs[1].default,2024-12-31
+rows[6].modules[0].analysis.inputs[1].note,last session in the return series
+rows[6].modules[0].analysis.inputs[1].options,
+rows[6].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[6].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[6].modules[0].analysis.inputs[1].max_items,
+rows[6].modules[0].analysis.inputs[1].required,False
+rows[6].modules[0].analysis.inputs[2].name,instruments
+rows[6].modules[0].analysis.inputs[2].kind,symbols
+rows[6].modules[0].analysis.inputs[2].label,Instruments
+rows[6].modules[0].analysis.inputs[2].default,
+rows[6].modules[0].analysis.inputs[2].note,leave empty for every instrument in the range
+rows[6].modules[0].analysis.inputs[2].options,
+rows[6].modules[0].analysis.inputs[2].minimum,
+rows[6].modules[0].analysis.inputs[2].maximum,
+rows[6].modules[0].analysis.inputs[2].max_items,60
+rows[6].modules[0].analysis.inputs[2].required,False
+rows[6].modules[0].analysis.inputs[3].name,alpha
+rows[6].modules[0].analysis.inputs[3].kind,float
+rows[6].modules[0].analysis.inputs[3].label,Tail probability
+rows[6].modules[0].analysis.inputs[3].default,0.05
+rows[6].modules[0].analysis.inputs[3].note,the quantile VaR and CVaR are measured at
+rows[6].modules[0].analysis.inputs[3].options,
+rows[6].modules[0].analysis.inputs[3].minimum,0.01
+rows[6].modules[0].analysis.inputs[3].maximum,0.25
+rows[6].modules[0].analysis.inputs[3].max_items,
+rows[6].modules[0].analysis.inputs[3].required,False
+rows[6].modules[0].analysis.artifact_reason,
+rows[7].week,8
+rows[7].title,Episode and event statistics
+rows[7].question,How are the injected episodes distributed across instruments and sessions?
+rows[7].stats_module,STATS-08
+rows[7].summary,"Episode and event statistics over the window you select. Episodes are injected by this project (L-04); they are labels of a construction, not observed incidents."
+rows[7].feature.product_question,"What unusual periods are in this data, and how were they constructed?"
+rows[7].feature.story,"Summarises the injected episodes overlapping the window, their intensity and how many sessions each one labels."
+rows[7].feature.headline[0].module,STATS-08
+rows[7].feature.headline[0].metric,episodes
+rows[7].feature.headline[0].label,Episodes in this window
+rows[7].feature.headline[1].module,STATS-08
+rows[7].feature.headline[1].metric,instruments
+rows[7].feature.headline[1].label,Instruments affected
+rows[7].feature.headline[2].module,STATS-08
+rows[7].feature.headline[2].metric,label_rows
+rows[7].feature.headline[2].label,Labelled sessions
+rows[7].feature.headline[3].module,STATS-08
+rows[7].feature.headline[3].metric,intensity
+rows[7].feature.headline[3].label,Mean injected intensity
+rows[7].feature.primary_visual.module,STATS-08
+rows[7].feature.primary_visual.series,episode_summary
+rows[7].feature.primary_visual.label_column,quantity
+rows[7].feature.primary_visual.value_column,value
+rows[7].feature.primary_visual.kind,bars
+rows[7].feature.primary_visual.caption,What the episode labels record.
+rows[7].gate.capability,detection
+rows[7].gate.enabled_from_week,8
+rows[7].backend_routes.week,/api/weeks/8
+rows[7].backend_routes.run_week,/api/weeks/8/run
+rows[7].backend_routes.modules.STATS-08,/api/modules/STATS-08
+rows[7].backend_routes.run_module.STATS-08,/api/modules/STATS-08/run
+rows[7].input_schema.STATS-08[0].name,date_from
+rows[7].input_schema.STATS-08[0].kind,date
+rows[7].input_schema.STATS-08[0].label,From
+rows[7].input_schema.STATS-08[0].default,2022-01-01
+rows[7].input_schema.STATS-08[0].note,first labelled session
+rows[7].input_schema.STATS-08[0].options,
+rows[7].input_schema.STATS-08[0].minimum,2015-01-01
+rows[7].input_schema.STATS-08[0].maximum,2026-08-14
+rows[7].input_schema.STATS-08[0].max_items,
+rows[7].input_schema.STATS-08[0].required,False
+rows[7].input_schema.STATS-08[1].name,date_to
+rows[7].input_schema.STATS-08[1].kind,date
+rows[7].input_schema.STATS-08[1].label,To
+rows[7].input_schema.STATS-08[1].default,2024-12-31
+rows[7].input_schema.STATS-08[1].note,last labelled session
+rows[7].input_schema.STATS-08[1].options,
+rows[7].input_schema.STATS-08[1].minimum,2015-01-01
+rows[7].input_schema.STATS-08[1].maximum,2026-08-14
+rows[7].input_schema.STATS-08[1].max_items,
+rows[7].input_schema.STATS-08[1].required,False
+rows[7].input_schema.STATS-08[2].name,instruments
+rows[7].input_schema.STATS-08[2].kind,symbols
+rows[7].input_schema.STATS-08[2].label,Instruments
+rows[7].input_schema.STATS-08[2].default,
+rows[7].input_schema.STATS-08[2].note,leave empty for every instrument in the range
+rows[7].input_schema.STATS-08[2].options,
+rows[7].input_schema.STATS-08[2].minimum,
+rows[7].input_schema.STATS-08[2].maximum,
+rows[7].input_schema.STATS-08[2].max_items,60
+rows[7].input_schema.STATS-08[2].required,False
+rows[7].output_schema[0],backend_version
+rows[7].output_schema[1],module_id
+rows[7].output_schema[2],week
+rows[7].output_schema[3],category
+rows[7].output_schema[4],name
+rows[7].output_schema[5],status
+rows[7].output_schema[6],mode
+rows[7].output_schema[7],mode_label
+rows[7].output_schema[8],mode_meaning
+rows[7].output_schema[9],experiment_id
+rows[7].output_schema[10],dataset
+rows[7].output_schema[11],inputs
+rows[7].output_schema[12],metrics
+rows[7].output_schema[13],series
+rows[7].output_schema[14],uncertainty
+rows[7].output_schema[15],observations
+rows[7].output_schema[16],figures
+rows[7].output_schema[17],tables
+rows[7].output_schema[18],provenance
+rows[7].output_schema[19],limitations
+rows[7].output_schema[20],message
+rows[7].output_schema[21],elapsed_s
+rows[7].output_schema[22],error
+rows[7].product_view.STATS-08,/stats/episodes?mode=product
+rows[7].research_view.STATS-08,/stats/episodes?mode=research
+rows[7].route,/weeks/8
+rows[7].artifact_sources.STATS-08[0],outputs/stats/08_episode_event_statistics/episode_summary.json
+rows[7].execution.STATS-08.mode,LIVE
+rows[7].execution.STATS-08.is_live,True
+rows[7].execution.STATS-08.protected,False
+rows[7].execution.STATS-08.typical_seconds,1.0
+rows[7].execution.STATS-08.artifact_reason,
+rows[7].modules[0].module_id,STATS-08
+rows[7].modules[0].index,8
+rows[7].modules[0].category,STATS
+rows[7].modules[0].slug,episode_event_statistics
+rows[7].modules[0].name,Episode and event statistics
+rows[7].modules[0].purpose,"Counts, durations, intensities and per-instrument distribution of the injected integrity-risk episodes that every detection result is measured against."
+rows[7].modules[0].research_question,"What is the effective sample of episodes, and is it large enough to support the effect sizes being claimed?"
+rows[7].modules[0].adapter,scripts.stages.stats:episode_event_statistics
+rows[7].modules[0].wrapper_status,WRAPS_EXISTING
+rows[7].modules[0].status,SUPPORTED
+rows[7].modules[0].experiment_id,
+rows[7].modules[0].declared_inputs[0],data/panel/episode_labels.parquet
+rows[7].modules[0].outputs[0],outputs/stats/08_episode_event_statistics/episode_summary.json
+rows[7].modules[0].canonical[0],research/detection/episodes.py::GeneratorConfig
+rows[7].modules[0].canonical[1],research/detection/state.py::windows_from_frame
+rows[7].modules[0].limitations[0],L-04
+rows[7].modules[0].limitations[1],L-12
+rows[7].modules[0].notes,Episodes are synthetic and injected into real price data (L-04). No result from them may be described as real-world manipulation detection.
+rows[7].modules[0].route,/stats/episodes
+rows[7].modules[0].icon,⚡
+rows[7].modules[0].product_name,Unusual market events
+rows[7].modules[0].week,8
+rows[7].modules[0].protected,False
+rows[7].modules[0].analysis.mode,LIVE
+rows[7].modules[0].analysis.is_live,True
+rows[7].modules[0].analysis.adapter,scripts.stages.stats:analyse_episodes
+rows[7].modules[0].analysis.typical_seconds,1.0
+rows[7].modules[0].analysis.summary,"Summarises the injected episodes overlapping your window: how many, on which instruments, at what intensity. These are a construction with known parameters, not observed market manipulation."
+rows[7].modules[0].analysis.inputs[0].name,date_from
+rows[7].modules[0].analysis.inputs[0].kind,date
+rows[7].modules[0].analysis.inputs[0].label,From
+rows[7].modules[0].analysis.inputs[0].default,2022-01-01
+rows[7].modules[0].analysis.inputs[0].note,first labelled session
+rows[7].modules[0].analysis.inputs[0].options,
+rows[7].modules[0].analysis.inputs[0].minimum,2015-01-01
+rows[7].modules[0].analysis.inputs[0].maximum,2026-08-14
+rows[7].modules[0].analysis.inputs[0].max_items,
+rows[7].modules[0].analysis.inputs[0].required,False
+rows[7].modules[0].analysis.inputs[1].name,date_to
+rows[7].modules[0].analysis.inputs[1].kind,date
+rows[7].modules[0].analysis.inputs[1].label,To
+rows[7].modules[0].analysis.inputs[1].default,2024-12-31
+rows[7].modules[0].analysis.inputs[1].note,last labelled session
+rows[7].modules[0].analysis.inputs[1].options,
+rows[7].modules[0].analysis.inputs[1].minimum,2015-01-01
+rows[7].modules[0].analysis.inputs[1].maximum,2026-08-14
+rows[7].modules[0].analysis.inputs[1].max_items,
+rows[7].modules[0].analysis.inputs[1].required,False
+rows[7].modules[0].analysis.inputs[2].name,instruments
+rows[7].modules[0].analysis.inputs[2].kind,symbols
+rows[7].modules[0].analysis.inputs[2].label,Instruments
+rows[7].modules[0].analysis.inputs[2].default,
+rows[7].modules[0].analysis.inputs[2].note,leave empty for every instrument in the range
+rows[7].modules[0].analysis.inputs[2].options,
+rows[7].modules[0].analysis.inputs[2].minimum,
+rows[7].modules[0].analysis.inputs[2].maximum,
+rows[7].modules[0].analysis.inputs[2].max_items,60
+rows[7].modules[0].analysis.inputs[2].required,False
+rows[7].modules[0].analysis.artifact_reason,
+rows[8].week,9
+rows[8].title,Leakage verification
+rows[8].question,Can information from after a decision time reach a feature?
+rows[8].stats_module,STATS-09
+rows[8].summary,The leakage suite run over your slice. A leakage check that passes on the whole panel can still be worth re-running on a subset.
+rows[8].feature.product_question,Could the analysis have seen the future?
+rows[8].feature.story,"Runs the timing-integrity suite now and reports what it found, check by check."
+rows[8].feature.headline[0].module,STATS-09
+rows[8].feature.headline[0].metric,passed
+rows[8].feature.headline[0].label,Checks passed
+rows[8].feature.headline[1].module,STATS-09
+rows[8].feature.headline[1].metric,failed
+rows[8].feature.headline[1].label,Checks failed
+rows[8].gate.capability,leakage
+rows[8].gate.enabled_from_week,9
+rows[8].backend_routes.week,/api/weeks/9
+rows[8].backend_routes.run_week,/api/weeks/9/run
+rows[8].backend_routes.modules.STATS-09,/api/modules/STATS-09
+rows[8].backend_routes.run_module.STATS-09,/api/modules/STATS-09/run
+rows[8].input_schema.STATS-09,
+rows[8].output_schema[0],backend_version
+rows[8].output_schema[1],module_id
+rows[8].output_schema[2],week
+rows[8].output_schema[3],category
+rows[8].output_schema[4],name
+rows[8].output_schema[5],status
+rows[8].output_schema[6],mode
+rows[8].output_schema[7],mode_label
+rows[8].output_schema[8],mode_meaning
+rows[8].output_schema[9],experiment_id
+rows[8].output_schema[10],dataset
+rows[8].output_schema[11],inputs
+rows[8].output_schema[12],metrics
+rows[8].output_schema[13],series
+rows[8].output_schema[14],uncertainty
+rows[8].output_schema[15],observations
+rows[8].output_schema[16],figures
+rows[8].output_schema[17],tables
+rows[8].output_schema[18],provenance
+rows[8].output_schema[19],limitations
+rows[8].output_schema[20],message
+rows[8].output_schema[21],elapsed_s
+rows[8].output_schema[22],error
+rows[8].product_view.STATS-09,/stats/leakage?mode=product
+rows[8].research_view.STATS-09,/stats/leakage?mode=research
+rows[8].route,/weeks/9
+rows[8].artifact_sources.STATS-09[0],outputs/stats/09_leakage_verification/leakage_report.json
+rows[8].execution.STATS-09.mode,LIVE
+rows[8].execution.STATS-09.is_live,True
+rows[8].execution.STATS-09.protected,False
+rows[8].execution.STATS-09.typical_seconds,10.0
+rows[8].execution.STATS-09.artifact_reason,
+rows[8].modules[0].module_id,STATS-09
+rows[8].modules[0].index,9
+rows[8].modules[0].category,STATS
+rows[8].modules[0].slug,leakage_verification
+rows[8].modules[0].name,Leakage and split verification
+rows[8].modules[0].purpose,"Execute the L1-L6 leakage suite: randomised as-of, future shift, restatement, survivorship, coverage substitution and threshold provenance."
+rows[8].modules[0].research_question,Can any information unavailable at decision time reach a historical prediction?
+rows[8].modules[0].adapter,scripts.stages.stats:leakage_verification
+rows[8].modules[0].wrapper_status,WRAPS_EXISTING
+rows[8].modules[0].status,SUPPORTED
+rows[8].modules[0].experiment_id,
+rows[8].modules[0].declared_inputs[0],tests/leakage
+rows[8].modules[0].outputs[0],outputs/stats/09_leakage_verification/leakage_report.json
+rows[8].modules[0].canonical[0],tests/leakage/test_leakage_suite.py
+rows[8].modules[0].limitations,
+rows[8].modules[0].notes,This suite is blocking in CI and decides whether any other result may be believed. It runs read-only and writes no research artifact.
+rows[8].modules[0].route,/stats/leakage
+rows[8].modules[0].icon,⛨
+rows[8].modules[0].product_name,Timing integrity
+rows[8].modules[0].week,9
+rows[8].modules[0].protected,False
+rows[8].modules[0].analysis.mode,LIVE
+rows[8].modules[0].analysis.is_live,True
+rows[8].modules[0].analysis.adapter,scripts.stages.stats:analyse_leakage
+rows[8].modules[0].analysis.typical_seconds,10.0
+rows[8].modules[0].analysis.summary,Runs the L1-L6 leakage suite now and reports what it found. No parameters: a leakage check whose scope the requester can narrow is not a leakage check.
+rows[8].modules[0].analysis.inputs,
+rows[8].modules[0].analysis.artifact_reason,
+rows[9].week,10
+rows[9].title,Validation metrics at a threshold you choose
+rows[9].question,What do the validation metrics say at a threshold you choose?
+rows[9].stats_module,STATS-10
+rows[9].summary,"Threshold-interactive validation metrics: the confusion matrix and everything derived from it, recomputed as you move the operating point."
+rows[9].feature.product_question,How accurate is the signal?
+rows[9].feature.story,"Reports the confusion matrix at a threshold you choose, with balanced accuracy and the per-class breakdown beside it."
+rows[9].feature.headline[0].module,STATS-10
+rows[9].feature.headline[0].metric,n
+rows[9].feature.headline[0].label,Sessions assessed
+rows[9].feature.headline[1].module,STATS-10
+rows[9].feature.headline[1].metric,balanced_accuracy
+rows[9].feature.headline[1].label,Balanced accuracy
+rows[9].feature.headline[2].module,STATS-10
+rows[9].feature.headline[2].metric,mcc
+rows[9].feature.headline[2].label,Matthews correlation
+rows[9].feature.headline[3].module,STATS-10
+rows[9].feature.headline[3].metric,threshold
+rows[9].feature.headline[3].label,Threshold applied
+rows[9].feature.primary_visual.module,STATS-10
+rows[9].feature.primary_visual.series,per_class
+rows[9].feature.primary_visual.label_column,class_name
+rows[9].feature.primary_visual.value_column,f1
+rows[9].feature.primary_visual.kind,bars
+rows[9].feature.primary_visual.caption,How well each class is recovered at this threshold.
+rows[9].gate.capability,attribution
+rows[9].gate.enabled_from_week,10
+rows[9].backend_routes.week,/api/weeks/10
+rows[9].backend_routes.run_week,/api/weeks/10/run
+rows[9].backend_routes.modules.STATS-10,/api/modules/STATS-10
+rows[9].backend_routes.run_module.STATS-10,/api/modules/STATS-10/run
+rows[9].input_schema.STATS-10[0].name,arm
+rows[9].input_schema.STATS-10[0].kind,select
+rows[9].input_schema.STATS-10[0].label,Arm
+rows[9].input_schema.STATS-10[0].default,FULL
+rows[9].input_schema.STATS-10[0].note,which experimental arm's per-row scores to read
+rows[9].input_schema.STATS-10[0].options[0],FULL
+rows[9].input_schema.STATS-10[0].options[1],NO_TEXT
+rows[9].input_schema.STATS-10[0].options[2],NO_IMAGE
+rows[9].input_schema.STATS-10[0].options[3],NO_AUDIO
+rows[9].input_schema.STATS-10[0].options[4],NO_VIDEO
+rows[9].input_schema.STATS-10[0].options[5],NO_MARKET
+rows[9].input_schema.STATS-10[0].options[6],NO_MICROSTRUCTURE
+rows[9].input_schema.STATS-10[0].options[7],NO_REGIME
+rows[9].input_schema.STATS-10[0].options[8],NO_PROPAGATION
+rows[9].input_schema.STATS-10[0].options[9],NO_AFFECTIVE
+rows[9].input_schema.STATS-10[0].options[10],NO_UNCERTAINTY
+rows[9].input_schema.STATS-10[0].options[11],TEXT_ONLY
+rows[9].input_schema.STATS-10[0].options[12],IMAGE_ONLY
+rows[9].input_schema.STATS-10[0].options[13],AUDIO_ONLY
+rows[9].input_schema.STATS-10[0].options[14],VIDEO_ONLY
+rows[9].input_schema.STATS-10[0].options[15],MARKET_ONLY
+rows[9].input_schema.STATS-10[0].options[16],MARKET_MICRO
+rows[9].input_schema.STATS-10[0].options[17],ALL_MEDIA
+rows[9].input_schema.STATS-10[0].options[18],ALL_MEDIA_MARKET
+rows[9].input_schema.STATS-10[0].options[19],COMBINER_STATIC
+rows[9].input_schema.STATS-10[0].options[20],COMBINER_EARLY
+rows[9].input_schema.STATS-10[0].options[21],COMBINER_LATE
+rows[9].input_schema.STATS-10[0].options[22],COMBINER_UNCERTAINTY
+rows[9].input_schema.STATS-10[0].options[23],COMBINER_REGIME_INHERITED
+rows[9].input_schema.STATS-10[0].options[24],COMBINER_REGIME_CORRECTED
+rows[9].input_schema.STATS-10[0].minimum,
+rows[9].input_schema.STATS-10[0].maximum,
+rows[9].input_schema.STATS-10[0].max_items,
+rows[9].input_schema.STATS-10[0].required,False
+rows[9].input_schema.STATS-10[1].name,threshold
+rows[9].input_schema.STATS-10[1].kind,float
+rows[9].input_schema.STATS-10[1].label,Threshold
+rows[9].input_schema.STATS-10[1].default,
+rows[9].input_schema.STATS-10[1].note,leave empty to use the training-selected threshold
+rows[9].input_schema.STATS-10[1].options,
+rows[9].input_schema.STATS-10[1].minimum,0.0
+rows[9].input_schema.STATS-10[1].maximum,1.0
+rows[9].input_schema.STATS-10[1].max_items,
+rows[9].input_schema.STATS-10[1].required,False
+rows[9].input_schema.STATS-10[2].name,date_from
+rows[9].input_schema.STATS-10[2].kind,date
+rows[9].input_schema.STATS-10[2].label,From
+rows[9].input_schema.STATS-10[2].default,2019-01-01
+rows[9].input_schema.STATS-10[2].note,first scored session
+rows[9].input_schema.STATS-10[2].options,
+rows[9].input_schema.STATS-10[2].minimum,2015-01-01
+rows[9].input_schema.STATS-10[2].maximum,2026-08-14
+rows[9].input_schema.STATS-10[2].max_items,
+rows[9].input_schema.STATS-10[2].required,False
+rows[9].input_schema.STATS-10[3].name,date_to
+rows[9].input_schema.STATS-10[3].kind,date
+rows[9].input_schema.STATS-10[3].label,To
+rows[9].input_schema.STATS-10[3].default,2026-08-14
+rows[9].input_schema.STATS-10[3].note,last scored session
+rows[9].input_schema.STATS-10[3].options,
+rows[9].input_schema.STATS-10[3].minimum,2015-01-01
+rows[9].input_schema.STATS-10[3].maximum,2026-08-14
+rows[9].input_schema.STATS-10[3].max_items,
+rows[9].input_schema.STATS-10[3].required,False
+rows[9].input_schema.STATS-10[4].name,instruments
+rows[9].input_schema.STATS-10[4].kind,symbols
+rows[9].input_schema.STATS-10[4].label,Instruments
+rows[9].input_schema.STATS-10[4].default,
+rows[9].input_schema.STATS-10[4].note,leave empty for every instrument in the range
+rows[9].input_schema.STATS-10[4].options,
+rows[9].input_schema.STATS-10[4].minimum,
+rows[9].input_schema.STATS-10[4].maximum,
+rows[9].input_schema.STATS-10[4].max_items,60
+rows[9].input_schema.STATS-10[4].required,False
+rows[9].output_schema[0],backend_version
+rows[9].output_schema[1],module_id
+rows[9].output_schema[2],week
+rows[9].output_schema[3],category
+rows[9].output_schema[4],name
+rows[9].output_schema[5],status
+rows[9].output_schema[6],mode
+rows[9].output_schema[7],mode_label
+rows[9].output_schema[8],mode_meaning
+rows[9].output_schema[9],experiment_id
+rows[9].output_schema[10],dataset
+rows[9].output_schema[11],inputs
+rows[9].output_schema[12],metrics
+rows[9].output_schema[13],series
+rows[9].output_schema[14],uncertainty
+rows[9].output_schema[15],observations
+rows[9].output_schema[16],figures
+rows[9].output_schema[17],tables
+rows[9].output_schema[18],provenance
+rows[9].output_schema[19],limitations
+rows[9].output_schema[20],message
+rows[9].output_schema[21],elapsed_s
+rows[9].output_schema[22],error
+rows[9].product_view.STATS-10,/stats/validation?mode=product
+rows[9].research_view.STATS-10,/stats/validation?mode=research
+rows[9].route,/weeks/10
+rows[9].artifact_sources.STATS-10[0],outputs/stats/10_validation_verification/confusion_matrix.csv
+rows[9].artifact_sources.STATS-10[1],outputs/stats/10_validation_verification/per_class.csv
+rows[9].artifact_sources.STATS-10[2],outputs/stats/10_validation_verification/verification_metrics.json
+rows[9].execution.STATS-10.mode,LIVE
+rows[9].execution.STATS-10.is_live,True
+rows[9].execution.STATS-10.protected,False
+rows[9].execution.STATS-10.typical_seconds,2.0
+rows[9].execution.STATS-10.artifact_reason,
+rows[9].modules[0].module_id,STATS-10
+rows[9].modules[0].index,10
+rows[9].modules[0].category,STATS
+rows[9].modules[0].slug,validation_verification
+rows[9].modules[0].name,Validation and verification metrics
+rows[9].modules[0].purpose,"The full classification verification suite the current metrics module lacks: confusion matrix with TP/TN/FP/FN, accuracy, balanced accuracy, specificity, Matthews correlation coefficient, false-positive and false-negative rates, and per-class performance."
+rows[9].modules[0].research_question,"Beyond ranking quality, how does the detector behave at its operating point, and how is that behaviour distributed across the error types?"
+rows[9].modules[0].adapter,scripts.stages.stats:validation_verification
+rows[9].modules[0].wrapper_status,WRAPS_EXISTING
+rows[9].modules[0].status,SUPPORTED
+rows[9].modules[0].experiment_id,
+rows[9].modules[0].declared_inputs[0],research_artifacts/experiments/per_row_FULL.parquet
+rows[9].modules[0].outputs[0],outputs/stats/10_validation_verification/confusion_matrix.csv
+rows[9].modules[0].outputs[1],outputs/stats/10_validation_verification/per_class.csv
+rows[9].modules[0].outputs[2],outputs/stats/10_validation_verification/verification_metrics.json
+rows[9].modules[0].canonical[0],research/evaluation/metrics.py::classification_metrics
+rows[9].modules[0].canonical[1],research/evaluation/metrics.py::confusion_counts
+rows[9].modules[0].canonical[2],research/evaluation/metrics.py::confusion_matrix_frame
+rows[9].modules[0].canonical[3],research/evaluation/metrics.py::per_class_report
+rows[9].modules[0].canonical[4],research/evaluation/metrics.py::verification_report
+rows[9].modules[0].limitations[0],L-04
+rows[9].modules[0].limitations[1],L-11
+rows[9].modules[0].notes,"Implemented in the metrics commit. The suite lives in the canonical metrics module alongside the detection metrics, not in a parallel framework, and reproduces the precision, recall and F1 already recorded in the FULL experiment bundle to within 1e-12. The operating threshold is read from that bundle, where it was chosen on the training split: recomputing it from the evaluation scores would be threshold provenance leakage (L6). Results describe synthetic episodes on the validation split; the holdout remains frozen (L-11)."
+rows[9].modules[0].route,/stats/validation
+rows[9].modules[0].icon,✓
+rows[9].modules[0].product_name,How accurate the signal is
+rows[9].modules[0].week,10
+rows[9].modules[0].protected,False
+rows[9].modules[0].analysis.mode,LIVE
+rows[9].modules[0].analysis.is_live,True
+rows[9].modules[0].analysis.adapter,scripts.stages.stats:analyse_validation
+rows[9].modules[0].analysis.typical_seconds,2.0
+rows[9].modules[0].analysis.summary,"The confusion matrix and its metrics at a threshold you choose. The default is the threshold selected on the training split; override it and the response says so, because a threshold picked by looking at evaluation metrics is not a selection procedure."
+rows[9].modules[0].analysis.inputs[0].name,arm
+rows[9].modules[0].analysis.inputs[0].kind,select
+rows[9].modules[0].analysis.inputs[0].label,Arm
+rows[9].modules[0].analysis.inputs[0].default,FULL
+rows[9].modules[0].analysis.inputs[0].note,which experimental arm's per-row scores to read
+rows[9].modules[0].analysis.inputs[0].options[0],FULL
+rows[9].modules[0].analysis.inputs[0].options[1],NO_TEXT
+rows[9].modules[0].analysis.inputs[0].options[2],NO_IMAGE
+rows[9].modules[0].analysis.inputs[0].options[3],NO_AUDIO
+rows[9].modules[0].analysis.inputs[0].options[4],NO_VIDEO
+rows[9].modules[0].analysis.inputs[0].options[5],NO_MARKET
+rows[9].modules[0].analysis.inputs[0].options[6],NO_MICROSTRUCTURE
+rows[9].modules[0].analysis.inputs[0].options[7],NO_REGIME
+rows[9].modules[0].analysis.inputs[0].options[8],NO_PROPAGATION
+rows[9].modules[0].analysis.inputs[0].options[9],NO_AFFECTIVE
+rows[9].modules[0].analysis.inputs[0].options[10],NO_UNCERTAINTY
+rows[9].modules[0].analysis.inputs[0].options[11],TEXT_ONLY
+rows[9].modules[0].analysis.inputs[0].options[12],IMAGE_ONLY
+rows[9].modules[0].analysis.inputs[0].options[13],AUDIO_ONLY
+rows[9].modules[0].analysis.inputs[0].options[14],VIDEO_ONLY
+rows[9].modules[0].analysis.inputs[0].options[15],MARKET_ONLY
+rows[9].modules[0].analysis.inputs[0].options[16],MARKET_MICRO
+rows[9].modules[0].analysis.inputs[0].options[17],ALL_MEDIA
+rows[9].modules[0].analysis.inputs[0].options[18],ALL_MEDIA_MARKET
+rows[9].modules[0].analysis.inputs[0].options[19],COMBINER_STATIC
+rows[9].modules[0].analysis.inputs[0].options[20],COMBINER_EARLY
+rows[9].modules[0].analysis.inputs[0].options[21],COMBINER_LATE
+rows[9].modules[0].analysis.inputs[0].options[22],COMBINER_UNCERTAINTY
+rows[9].modules[0].analysis.inputs[0].options[23],COMBINER_REGIME_INHERITED
+rows[9].modules[0].analysis.inputs[0].options[24],COMBINER_REGIME_CORRECTED
+rows[9].modules[0].analysis.inputs[0].minimum,
+rows[9].modules[0].analysis.inputs[0].maximum,
+rows[9].modules[0].analysis.inputs[0].max_items,
+rows[9].modules[0].analysis.inputs[0].required,False
+rows[9].modules[0].analysis.inputs[1].name,threshold
+rows[9].modules[0].analysis.inputs[1].kind,float
+rows[9].modules[0].analysis.inputs[1].label,Threshold
+rows[9].modules[0].analysis.inputs[1].default,
+rows[9].modules[0].analysis.inputs[1].note,leave empty to use the training-selected threshold
+rows[9].modules[0].analysis.inputs[1].options,
+rows[9].modules[0].analysis.inputs[1].minimum,0.0
+rows[9].modules[0].analysis.inputs[1].maximum,1.0
+rows[9].modules[0].analysis.inputs[1].max_items,
+rows[9].modules[0].analysis.inputs[1].required,False
+rows[9].modules[0].analysis.inputs[2].name,date_from
+rows[9].modules[0].analysis.inputs[2].kind,date
+rows[9].modules[0].analysis.inputs[2].label,From
+rows[9].modules[0].analysis.inputs[2].default,2019-01-01
+rows[9].modules[0].analysis.inputs[2].note,first scored session
+rows[9].modules[0].analysis.inputs[2].options,
+rows[9].modules[0].analysis.inputs[2].minimum,2015-01-01
+rows[9].modules[0].analysis.inputs[2].maximum,2026-08-14
+rows[9].modules[0].analysis.inputs[2].max_items,
+rows[9].modules[0].analysis.inputs[2].required,False
+rows[9].modules[0].analysis.inputs[3].name,date_to
+rows[9].modules[0].analysis.inputs[3].kind,date
+rows[9].modules[0].analysis.inputs[3].label,To
+rows[9].modules[0].analysis.inputs[3].default,2026-08-14
+rows[9].modules[0].analysis.inputs[3].note,last scored session
+rows[9].modules[0].analysis.inputs[3].options,
+rows[9].modules[0].analysis.inputs[3].minimum,2015-01-01
+rows[9].modules[0].analysis.inputs[3].maximum,2026-08-14
+rows[9].modules[0].analysis.inputs[3].max_items,
+rows[9].modules[0].analysis.inputs[3].required,False
+rows[9].modules[0].analysis.inputs[4].name,instruments
+rows[9].modules[0].analysis.inputs[4].kind,symbols
+rows[9].modules[0].analysis.inputs[4].label,Instruments
+rows[9].modules[0].analysis.inputs[4].default,
+rows[9].modules[0].analysis.inputs[4].note,leave empty for every instrument in the range
+rows[9].modules[0].analysis.inputs[4].options,
+rows[9].modules[0].analysis.inputs[4].minimum,
+rows[9].modules[0].analysis.inputs[4].maximum,
+rows[9].modules[0].analysis.inputs[4].max_items,60
+rows[9].modules[0].analysis.inputs[4].required,False
+rows[9].modules[0].analysis.artifact_reason,
+rows[10].week,11
+rows[10].title,Calibration and uncertainty
+rows[10].question,Are the scores calibrated at the bin count you choose?
+rows[10].stats_module,STATS-11
+rows[10].summary,"Reliability computed over your chosen binning, with the selective-risk curve. Both let you change one parameter and watch the number move."
+rows[10].feature.product_question,How confident should the signal be taken to be?
+rows[10].feature.story,"Draws the reliability curve at a binning you choose, and shows what accuracy is bought by declining to score the least certain rows."
+rows[10].feature.headline[0].module,STATS-11
+rows[10].feature.headline[0].metric,ece
+rows[10].feature.headline[0].label,Calibration error
+rows[10].feature.headline[1].module,STATS-11
+rows[10].feature.headline[1].metric,bins
+rows[10].feature.headline[1].label,Bins
+rows[10].feature.headline[2].module,STATS-11
+rows[10].feature.headline[2].metric,n
+rows[10].feature.headline[2].label,Sessions assessed
+rows[10].feature.primary_visual.module,STATS-11
+rows[10].feature.primary_visual.series,reliability
+rows[10].feature.primary_visual.label_column,mean_pred
+rows[10].feature.primary_visual.value_column,observed
+rows[10].feature.primary_visual.kind,line
+rows[10].feature.primary_visual.caption,Predicted score against observed rate. A calibrated score would track the diagonal.
+rows[10].gate.capability,forecasting
+rows[10].gate.enabled_from_week,11
+rows[10].backend_routes.week,/api/weeks/11
+rows[10].backend_routes.run_week,/api/weeks/11/run
+rows[10].backend_routes.modules.STATS-11,/api/modules/STATS-11
+rows[10].backend_routes.run_module.STATS-11,/api/modules/STATS-11/run
+rows[10].input_schema.STATS-11[0].name,arm
+rows[10].input_schema.STATS-11[0].kind,select
+rows[10].input_schema.STATS-11[0].label,Arm
+rows[10].input_schema.STATS-11[0].default,FULL
+rows[10].input_schema.STATS-11[0].note,whose scores to assess
+rows[10].input_schema.STATS-11[0].options[0],FULL
+rows[10].input_schema.STATS-11[0].options[1],NO_TEXT
+rows[10].input_schema.STATS-11[0].options[2],NO_IMAGE
+rows[10].input_schema.STATS-11[0].options[3],NO_AUDIO
+rows[10].input_schema.STATS-11[0].options[4],NO_VIDEO
+rows[10].input_schema.STATS-11[0].options[5],NO_MARKET
+rows[10].input_schema.STATS-11[0].options[6],NO_MICROSTRUCTURE
+rows[10].input_schema.STATS-11[0].options[7],NO_REGIME
+rows[10].input_schema.STATS-11[0].options[8],NO_PROPAGATION
+rows[10].input_schema.STATS-11[0].options[9],NO_AFFECTIVE
+rows[10].input_schema.STATS-11[0].options[10],NO_UNCERTAINTY
+rows[10].input_schema.STATS-11[0].options[11],TEXT_ONLY
+rows[10].input_schema.STATS-11[0].options[12],IMAGE_ONLY
+rows[10].input_schema.STATS-11[0].options[13],AUDIO_ONLY
+rows[10].input_schema.STATS-11[0].options[14],VIDEO_ONLY
+rows[10].input_schema.STATS-11[0].options[15],MARKET_ONLY
+rows[10].input_schema.STATS-11[0].options[16],MARKET_MICRO
+rows[10].input_schema.STATS-11[0].options[17],ALL_MEDIA
+rows[10].input_schema.STATS-11[0].options[18],ALL_MEDIA_MARKET
+rows[10].input_schema.STATS-11[0].options[19],COMBINER_STATIC
+rows[10].input_schema.STATS-11[0].options[20],COMBINER_EARLY
+rows[10].input_schema.STATS-11[0].options[21],COMBINER_LATE
+rows[10].input_schema.STATS-11[0].options[22],COMBINER_UNCERTAINTY
+rows[10].input_schema.STATS-11[0].options[23],COMBINER_REGIME_INHERITED
+rows[10].input_schema.STATS-11[0].options[24],COMBINER_REGIME_CORRECTED
+rows[10].input_schema.STATS-11[0].minimum,
+rows[10].input_schema.STATS-11[0].maximum,
+rows[10].input_schema.STATS-11[0].max_items,
+rows[10].input_schema.STATS-11[0].required,False
+rows[10].input_schema.STATS-11[1].name,bins
+rows[10].input_schema.STATS-11[1].kind,int
+rows[10].input_schema.STATS-11[1].label,Bins
+rows[10].input_schema.STATS-11[1].default,10
+rows[10].input_schema.STATS-11[1].note,few bins hide miscalibration inside them; many put too few rows in each
+rows[10].input_schema.STATS-11[1].options,
+rows[10].input_schema.STATS-11[1].minimum,2
+rows[10].input_schema.STATS-11[1].maximum,50
+rows[10].input_schema.STATS-11[1].max_items,
+rows[10].input_schema.STATS-11[1].required,False
+rows[10].input_schema.STATS-11[2].name,date_from
+rows[10].input_schema.STATS-11[2].kind,date
+rows[10].input_schema.STATS-11[2].label,From
+rows[10].input_schema.STATS-11[2].default,2019-01-01
+rows[10].input_schema.STATS-11[2].note,first scored session
+rows[10].input_schema.STATS-11[2].options,
+rows[10].input_schema.STATS-11[2].minimum,2015-01-01
+rows[10].input_schema.STATS-11[2].maximum,2026-08-14
+rows[10].input_schema.STATS-11[2].max_items,
+rows[10].input_schema.STATS-11[2].required,False
+rows[10].input_schema.STATS-11[3].name,date_to
+rows[10].input_schema.STATS-11[3].kind,date
+rows[10].input_schema.STATS-11[3].label,To
+rows[10].input_schema.STATS-11[3].default,2026-08-14
+rows[10].input_schema.STATS-11[3].note,last scored session
+rows[10].input_schema.STATS-11[3].options,
+rows[10].input_schema.STATS-11[3].minimum,2015-01-01
+rows[10].input_schema.STATS-11[3].maximum,2026-08-14
+rows[10].input_schema.STATS-11[3].max_items,
+rows[10].input_schema.STATS-11[3].required,False
+rows[10].input_schema.STATS-11[4].name,instruments
+rows[10].input_schema.STATS-11[4].kind,symbols
+rows[10].input_schema.STATS-11[4].label,Instruments
+rows[10].input_schema.STATS-11[4].default,
+rows[10].input_schema.STATS-11[4].note,leave empty for every instrument in the range
+rows[10].input_schema.STATS-11[4].options,
+rows[10].input_schema.STATS-11[4].minimum,
+rows[10].input_schema.STATS-11[4].maximum,
+rows[10].input_schema.STATS-11[4].max_items,60
+rows[10].input_schema.STATS-11[4].required,False
+rows[10].output_schema[0],backend_version
+rows[10].output_schema[1],module_id
+rows[10].output_schema[2],week
+rows[10].output_schema[3],category
+rows[10].output_schema[4],name
+rows[10].output_schema[5],status
+rows[10].output_schema[6],mode
+rows[10].output_schema[7],mode_label
+rows[10].output_schema[8],mode_meaning
+rows[10].output_schema[9],experiment_id
+rows[10].output_schema[10],dataset
+rows[10].output_schema[11],inputs
+rows[10].output_schema[12],metrics
+rows[10].output_schema[13],series
+rows[10].output_schema[14],uncertainty
+rows[10].output_schema[15],observations
+rows[10].output_schema[16],figures
+rows[10].output_schema[17],tables
+rows[10].output_schema[18],provenance
+rows[10].output_schema[19],limitations
+rows[10].output_schema[20],message
+rows[10].output_schema[21],elapsed_s
+rows[10].output_schema[22],error
+rows[10].product_view.STATS-11,/stats/calibration?mode=product
+rows[10].research_view.STATS-11,/stats/calibration?mode=research
+rows[10].route,/weeks/11
+rows[10].artifact_sources.STATS-11[0],outputs/stats/11_calibration_uncertainty/reliability.csv
+rows[10].artifact_sources.STATS-11[1],outputs/stats/11_calibration_uncertainty/calibration.json
+rows[10].execution.STATS-11.mode,LIVE
+rows[10].execution.STATS-11.is_live,True
+rows[10].execution.STATS-11.protected,False
+rows[10].execution.STATS-11.typical_seconds,2.0
+rows[10].execution.STATS-11.artifact_reason,
+rows[10].modules[0].module_id,STATS-11
+rows[10].modules[0].index,11
+rows[10].modules[0].category,STATS
+rows[10].modules[0].slug,calibration_uncertainty
+rows[10].modules[0].name,Calibration and uncertainty
+rows[10].modules[0].purpose,"Reliability curve, expected calibration error, Brier score, calibration conditioned on uncertainty and on coverage, and the selective-risk curve."
+rows[10].modules[0].research_question,"Is the risk score interpretable as a probability, and does the model's own uncertainty identify the rows where it should not be trusted?"
+rows[10].modules[0].adapter,scripts.stages.stats:calibration_uncertainty
+rows[10].modules[0].wrapper_status,WRAPS_EXISTING
+rows[10].modules[0].status,PARTIAL
+rows[10].modules[0].experiment_id,EXP-L10-1
+rows[10].modules[0].declared_inputs[0],research_artifacts/experiments/per_row_FULL.parquet
+rows[10].modules[0].outputs[0],outputs/stats/11_calibration_uncertainty/reliability.csv
+rows[10].modules[0].outputs[1],outputs/stats/11_calibration_uncertainty/calibration.json
+rows[10].modules[0].canonical[0],research/evaluation/metrics.py::expected_calibration_error
+rows[10].modules[0].canonical[1],research/evaluation/metrics.py::reliability_curve
+rows[10].modules[0].canonical[2],research/evaluation/information.py::selective_risk
+rows[10].modules[0].canonical[3],research/evaluation/information.py::calibration_by_bucket
+rows[10].modules[0].limitations[0],L-10
+rows[10].modules[0].notes,The risk score is not a calibrated probability and is never described as one (L-10).
+rows[10].modules[0].route,/stats/calibration
+rows[10].modules[0].icon,◔
+rows[10].modules[0].product_name,How confident the signal is
+rows[10].modules[0].week,11
+rows[10].modules[0].protected,False
+rows[10].modules[0].analysis.mode,LIVE
+rows[10].modules[0].analysis.is_live,True
+rows[10].modules[0].analysis.adapter,scripts.stages.stats:analyse_calibration
+rows[10].modules[0].analysis.typical_seconds,2.0
+rows[10].modules[0].analysis.summary,"The reliability curve at a binning you choose. Expected calibration error depends on the bin count, so the control is exposed rather than fixed: an ECE quoted without its binning is a number nobody can check."
+rows[10].modules[0].analysis.inputs[0].name,arm
+rows[10].modules[0].analysis.inputs[0].kind,select
+rows[10].modules[0].analysis.inputs[0].label,Arm
+rows[10].modules[0].analysis.inputs[0].default,FULL
+rows[10].modules[0].analysis.inputs[0].note,whose scores to assess
+rows[10].modules[0].analysis.inputs[0].options[0],FULL
+rows[10].modules[0].analysis.inputs[0].options[1],NO_TEXT
+rows[10].modules[0].analysis.inputs[0].options[2],NO_IMAGE
+rows[10].modules[0].analysis.inputs[0].options[3],NO_AUDIO
+rows[10].modules[0].analysis.inputs[0].options[4],NO_VIDEO
+rows[10].modules[0].analysis.inputs[0].options[5],NO_MARKET
+rows[10].modules[0].analysis.inputs[0].options[6],NO_MICROSTRUCTURE
+rows[10].modules[0].analysis.inputs[0].options[7],NO_REGIME
+rows[10].modules[0].analysis.inputs[0].options[8],NO_PROPAGATION
+rows[10].modules[0].analysis.inputs[0].options[9],NO_AFFECTIVE
+rows[10].modules[0].analysis.inputs[0].options[10],NO_UNCERTAINTY
+rows[10].modules[0].analysis.inputs[0].options[11],TEXT_ONLY
+rows[10].modules[0].analysis.inputs[0].options[12],IMAGE_ONLY
+rows[10].modules[0].analysis.inputs[0].options[13],AUDIO_ONLY
+rows[10].modules[0].analysis.inputs[0].options[14],VIDEO_ONLY
+rows[10].modules[0].analysis.inputs[0].options[15],MARKET_ONLY
+rows[10].modules[0].analysis.inputs[0].options[16],MARKET_MICRO
+rows[10].modules[0].analysis.inputs[0].options[17],ALL_MEDIA
+rows[10].modules[0].analysis.inputs[0].options[18],ALL_MEDIA_MARKET
+rows[10].modules[0].analysis.inputs[0].options[19],COMBINER_STATIC
+rows[10].modules[0].analysis.inputs[0].options[20],COMBINER_EARLY
+rows[10].modules[0].analysis.inputs[0].options[21],COMBINER_LATE
+rows[10].modules[0].analysis.inputs[0].options[22],COMBINER_UNCERTAINTY
+rows[10].modules[0].analysis.inputs[0].options[23],COMBINER_REGIME_INHERITED
+rows[10].modules[0].analysis.inputs[0].options[24],COMBINER_REGIME_CORRECTED
+rows[10].modules[0].analysis.inputs[0].minimum,
+rows[10].modules[0].analysis.inputs[0].maximum,
+rows[10].modules[0].analysis.inputs[0].max_items,
+rows[10].modules[0].analysis.inputs[0].required,False
+rows[10].modules[0].analysis.inputs[1].name,bins
+rows[10].modules[0].analysis.inputs[1].kind,int
+rows[10].modules[0].analysis.inputs[1].label,Bins
+rows[10].modules[0].analysis.inputs[1].default,10
+rows[10].modules[0].analysis.inputs[1].note,few bins hide miscalibration inside them; many put too few rows in each
+rows[10].modules[0].analysis.inputs[1].options,
+rows[10].modules[0].analysis.inputs[1].minimum,2
+rows[10].modules[0].analysis.inputs[1].maximum,50
+rows[10].modules[0].analysis.inputs[1].max_items,
+rows[10].modules[0].analysis.inputs[1].required,False
+rows[10].modules[0].analysis.inputs[2].name,date_from
+rows[10].modules[0].analysis.inputs[2].kind,date
+rows[10].modules[0].analysis.inputs[2].label,From
+rows[10].modules[0].analysis.inputs[2].default,2019-01-01
+rows[10].modules[0].analysis.inputs[2].note,first scored session
+rows[10].modules[0].analysis.inputs[2].options,
+rows[10].modules[0].analysis.inputs[2].minimum,2015-01-01
+rows[10].modules[0].analysis.inputs[2].maximum,2026-08-14
+rows[10].modules[0].analysis.inputs[2].max_items,
+rows[10].modules[0].analysis.inputs[2].required,False
+rows[10].modules[0].analysis.inputs[3].name,date_to
+rows[10].modules[0].analysis.inputs[3].kind,date
+rows[10].modules[0].analysis.inputs[3].label,To
+rows[10].modules[0].analysis.inputs[3].default,2026-08-14
+rows[10].modules[0].analysis.inputs[3].note,last scored session
+rows[10].modules[0].analysis.inputs[3].options,
+rows[10].modules[0].analysis.inputs[3].minimum,2015-01-01
+rows[10].modules[0].analysis.inputs[3].maximum,2026-08-14
+rows[10].modules[0].analysis.inputs[3].max_items,
+rows[10].modules[0].analysis.inputs[3].required,False
+rows[10].modules[0].analysis.inputs[4].name,instruments
+rows[10].modules[0].analysis.inputs[4].kind,symbols
+rows[10].modules[0].analysis.inputs[4].label,Instruments
+rows[10].modules[0].analysis.inputs[4].default,
+rows[10].modules[0].analysis.inputs[4].note,leave empty for every instrument in the range
+rows[10].modules[0].analysis.inputs[4].options,
+rows[10].modules[0].analysis.inputs[4].minimum,
+rows[10].modules[0].analysis.inputs[4].maximum,
+rows[10].modules[0].analysis.inputs[4].max_items,60
+rows[10].modules[0].analysis.inputs[4].required,False
+rows[10].modules[0].analysis.artifact_reason,
+rows[11].week,12
+rows[11].title,Error analysis
+rows[11].question,"Where does the scoring fail, and what kind of failure is each mistake?"
+rows[11].stats_module,STATS-12
+rows[11].summary,"Error analysis by segment, so a failure mode can be traced to the rows that produced it rather than to an aggregate rate."
+rows[11].feature.product_question,Where does the signal get it wrong?
+rows[11].feature.story,"Classifies every mistake by kind, diagnosing missing evidence before model error, and segments the result by whichever column you choose."
+rows[11].feature.headline[0].module,STATS-12
+rows[11].feature.headline[0].metric,wrong
+rows[11].feature.headline[0].label,Sessions misclassified
+rows[11].feature.headline[1].module,STATS-12
+rows[11].feature.headline[1].metric,error_rate
+rows[11].feature.headline[1].label,Error rate
+rows[11].feature.headline[2].module,STATS-12
+rows[11].feature.headline[2].metric,classes
+rows[11].feature.headline[2].label,Distinct failure modes
+rows[11].feature.primary_visual.module,STATS-12
+rows[11].feature.primary_visual.series,taxonomy
+rows[11].feature.primary_visual.label_column,error_class
+rows[11].feature.primary_visual.value_column,rows
+rows[11].feature.primary_visual.kind,bars
+rows[11].feature.primary_visual.caption,"What kind of mistake, and how often."
+rows[11].gate.capability,calibration
+rows[11].gate.enabled_from_week,12
+rows[11].backend_routes.week,/api/weeks/12
+rows[11].backend_routes.run_week,/api/weeks/12/run
+rows[11].backend_routes.modules.STATS-12,/api/modules/STATS-12
+rows[11].backend_routes.run_module.STATS-12,/api/modules/STATS-12/run
+rows[11].input_schema.STATS-12[0].name,arm
+rows[11].input_schema.STATS-12[0].kind,select
+rows[11].input_schema.STATS-12[0].label,Arm
+rows[11].input_schema.STATS-12[0].default,FULL
+rows[11].input_schema.STATS-12[0].note,whose scores to examine
+rows[11].input_schema.STATS-12[0].options[0],FULL
+rows[11].input_schema.STATS-12[0].options[1],NO_TEXT
+rows[11].input_schema.STATS-12[0].options[2],NO_IMAGE
+rows[11].input_schema.STATS-12[0].options[3],NO_AUDIO
+rows[11].input_schema.STATS-12[0].options[4],NO_VIDEO
+rows[11].input_schema.STATS-12[0].options[5],NO_MARKET
+rows[11].input_schema.STATS-12[0].options[6],NO_MICROSTRUCTURE
+rows[11].input_schema.STATS-12[0].options[7],NO_REGIME
+rows[11].input_schema.STATS-12[0].options[8],NO_PROPAGATION
+rows[11].input_schema.STATS-12[0].options[9],NO_AFFECTIVE
+rows[11].input_schema.STATS-12[0].options[10],NO_UNCERTAINTY
+rows[11].input_schema.STATS-12[0].options[11],TEXT_ONLY
+rows[11].input_schema.STATS-12[0].options[12],IMAGE_ONLY
+rows[11].input_schema.STATS-12[0].options[13],AUDIO_ONLY
+rows[11].input_schema.STATS-12[0].options[14],VIDEO_ONLY
+rows[11].input_schema.STATS-12[0].options[15],MARKET_ONLY
+rows[11].input_schema.STATS-12[0].options[16],MARKET_MICRO
+rows[11].input_schema.STATS-12[0].options[17],ALL_MEDIA
+rows[11].input_schema.STATS-12[0].options[18],ALL_MEDIA_MARKET
+rows[11].input_schema.STATS-12[0].options[19],COMBINER_STATIC
+rows[11].input_schema.STATS-12[0].options[20],COMBINER_EARLY
+rows[11].input_schema.STATS-12[0].options[21],COMBINER_LATE
+rows[11].input_schema.STATS-12[0].options[22],COMBINER_UNCERTAINTY
+rows[11].input_schema.STATS-12[0].options[23],COMBINER_REGIME_INHERITED
+rows[11].input_schema.STATS-12[0].options[24],COMBINER_REGIME_CORRECTED
+rows[11].input_schema.STATS-12[0].minimum,
+rows[11].input_schema.STATS-12[0].maximum,
+rows[11].input_schema.STATS-12[0].max_items,
+rows[11].input_schema.STATS-12[0].required,False
+rows[11].input_schema.STATS-12[1].name,threshold
+rows[11].input_schema.STATS-12[1].kind,float
+rows[11].input_schema.STATS-12[1].label,Threshold
+rows[11].input_schema.STATS-12[1].default,
+rows[11].input_schema.STATS-12[1].note,leave empty to use the training-selected threshold
+rows[11].input_schema.STATS-12[1].options,
+rows[11].input_schema.STATS-12[1].minimum,0.0
+rows[11].input_schema.STATS-12[1].maximum,1.0
+rows[11].input_schema.STATS-12[1].max_items,
+rows[11].input_schema.STATS-12[1].required,False
+rows[11].input_schema.STATS-12[2].name,segment_by
+rows[11].input_schema.STATS-12[2].kind,select
+rows[11].input_schema.STATS-12[2].label,Segment by
+rows[11].input_schema.STATS-12[2].default,error_class
+rows[11].input_schema.STATS-12[2].note,cross the failure modes against another column
+rows[11].input_schema.STATS-12[2].options[0],error_class
+rows[11].input_schema.STATS-12[2].options[1],risk_state
+rows[11].input_schema.STATS-12[2].options[2],state
+rows[11].input_schema.STATS-12[2].options[3],symbol
+rows[11].input_schema.STATS-12[2].minimum,
+rows[11].input_schema.STATS-12[2].maximum,
+rows[11].input_schema.STATS-12[2].max_items,
+rows[11].input_schema.STATS-12[2].required,False
+rows[11].input_schema.STATS-12[3].name,date_from
+rows[11].input_schema.STATS-12[3].kind,date
+rows[11].input_schema.STATS-12[3].label,From
+rows[11].input_schema.STATS-12[3].default,2019-01-01
+rows[11].input_schema.STATS-12[3].note,first scored session
+rows[11].input_schema.STATS-12[3].options,
+rows[11].input_schema.STATS-12[3].minimum,2015-01-01
+rows[11].input_schema.STATS-12[3].maximum,2026-08-14
+rows[11].input_schema.STATS-12[3].max_items,
+rows[11].input_schema.STATS-12[3].required,False
+rows[11].input_schema.STATS-12[4].name,date_to
+rows[11].input_schema.STATS-12[4].kind,date
+rows[11].input_schema.STATS-12[4].label,To
+rows[11].input_schema.STATS-12[4].default,2026-08-14
+rows[11].input_schema.STATS-12[4].note,last scored session
+rows[11].input_schema.STATS-12[4].options,
+rows[11].input_schema.STATS-12[4].minimum,2015-01-01
+rows[11].input_schema.STATS-12[4].maximum,2026-08-14
+rows[11].input_schema.STATS-12[4].max_items,
+rows[11].input_schema.STATS-12[4].required,False
+rows[11].input_schema.STATS-12[5].name,instruments
+rows[11].input_schema.STATS-12[5].kind,symbols
+rows[11].input_schema.STATS-12[5].label,Instruments
+rows[11].input_schema.STATS-12[5].default,
+rows[11].input_schema.STATS-12[5].note,leave empty for every instrument in the range
+rows[11].input_schema.STATS-12[5].options,
+rows[11].input_schema.STATS-12[5].minimum,
+rows[11].input_schema.STATS-12[5].maximum,
+rows[11].input_schema.STATS-12[5].max_items,60
+rows[11].input_schema.STATS-12[5].required,False
+rows[11].output_schema[0],backend_version
+rows[11].output_schema[1],module_id
+rows[11].output_schema[2],week
+rows[11].output_schema[3],category
+rows[11].output_schema[4],name
+rows[11].output_schema[5],status
+rows[11].output_schema[6],mode
+rows[11].output_schema[7],mode_label
+rows[11].output_schema[8],mode_meaning
+rows[11].output_schema[9],experiment_id
+rows[11].output_schema[10],dataset
+rows[11].output_schema[11],inputs
+rows[11].output_schema[12],metrics
+rows[11].output_schema[13],series
+rows[11].output_schema[14],uncertainty
+rows[11].output_schema[15],observations
+rows[11].output_schema[16],figures
+rows[11].output_schema[17],tables
+rows[11].output_schema[18],provenance
+rows[11].output_schema[19],limitations
+rows[11].output_schema[20],message
+rows[11].output_schema[21],elapsed_s
+rows[11].output_schema[22],error
+rows[11].product_view.STATS-12,/stats/errors?mode=product
+rows[11].research_view.STATS-12,/stats/errors?mode=research
+rows[11].route,/weeks/12
+rows[11].artifact_sources.STATS-12[0],outputs/stats/12_error_analysis/error_taxonomy.csv
+rows[11].execution.STATS-12.mode,LIVE
+rows[11].execution.STATS-12.is_live,True
+rows[11].execution.STATS-12.protected,False
+rows[11].execution.STATS-12.typical_seconds,2.0
+rows[11].execution.STATS-12.artifact_reason,
+rows[11].modules[0].module_id,STATS-12
+rows[11].modules[0].index,12
+rows[11].modules[0].category,STATS
+rows[11].modules[0].slug,error_analysis
+rows[11].modules[0].name,Error analysis
+rows[11].modules[0].purpose,"Classify predictions at the operating threshold into true and false positives and negatives, and describe how the errors are distributed across instruments, regimes, coverage levels and time."
+rows[11].modules[0].research_question,"Where does the detector fail, and what characterises those failures?"
+rows[11].modules[0].adapter,scripts.stages.stats:error_analysis
+rows[11].modules[0].wrapper_status,WRAPS_EXISTING
+rows[11].modules[0].status,PARTIAL
+rows[11].modules[0].experiment_id,
+rows[11].modules[0].declared_inputs[0],research_artifacts/experiments/per_row_FULL.parquet
+rows[11].modules[0].outputs[0],outputs/stats/12_error_analysis/error_taxonomy.csv
+rows[11].modules[0].canonical[0],research/evaluation/metrics.py::classify_errors
+rows[11].modules[0].limitations,
+rows[11].modules[0].notes,Descriptive only. Nothing here supports a causal statement about why an error occurred.
+rows[11].modules[0].route,/stats/errors
+rows[11].modules[0].icon,✖
+rows[11].modules[0].product_name,Where the signal gets it wrong
+rows[11].modules[0].week,12
+rows[11].modules[0].protected,False
+rows[11].modules[0].analysis.mode,LIVE
+rows[11].modules[0].analysis.is_live,True
+rows[11].modules[0].analysis.adapter,scripts.stages.stats:analyse_errors
+rows[11].modules[0].analysis.typical_seconds,2.0
+rows[11].modules[0].analysis.summary,"Where the scoring goes wrong on your rows and how, with data problems diagnosed before model problems. A row with no evidence under it is not a model failure and is not counted as one."
+rows[11].modules[0].analysis.inputs[0].name,arm
+rows[11].modules[0].analysis.inputs[0].kind,select
+rows[11].modules[0].analysis.inputs[0].label,Arm
+rows[11].modules[0].analysis.inputs[0].default,FULL
+rows[11].modules[0].analysis.inputs[0].note,whose scores to examine
+rows[11].modules[0].analysis.inputs[0].options[0],FULL
+rows[11].modules[0].analysis.inputs[0].options[1],NO_TEXT
+rows[11].modules[0].analysis.inputs[0].options[2],NO_IMAGE
+rows[11].modules[0].analysis.inputs[0].options[3],NO_AUDIO
+rows[11].modules[0].analysis.inputs[0].options[4],NO_VIDEO
+rows[11].modules[0].analysis.inputs[0].options[5],NO_MARKET
+rows[11].modules[0].analysis.inputs[0].options[6],NO_MICROSTRUCTURE
+rows[11].modules[0].analysis.inputs[0].options[7],NO_REGIME
+rows[11].modules[0].analysis.inputs[0].options[8],NO_PROPAGATION
+rows[11].modules[0].analysis.inputs[0].options[9],NO_AFFECTIVE
+rows[11].modules[0].analysis.inputs[0].options[10],NO_UNCERTAINTY
+rows[11].modules[0].analysis.inputs[0].options[11],TEXT_ONLY
+rows[11].modules[0].analysis.inputs[0].options[12],IMAGE_ONLY
+rows[11].modules[0].analysis.inputs[0].options[13],AUDIO_ONLY
+rows[11].modules[0].analysis.inputs[0].options[14],VIDEO_ONLY
+rows[11].modules[0].analysis.inputs[0].options[15],MARKET_ONLY
+rows[11].modules[0].analysis.inputs[0].options[16],MARKET_MICRO
+rows[11].modules[0].analysis.inputs[0].options[17],ALL_MEDIA
+rows[11].modules[0].analysis.inputs[0].options[18],ALL_MEDIA_MARKET
+rows[11].modules[0].analysis.inputs[0].options[19],COMBINER_STATIC
+rows[11].modules[0].analysis.inputs[0].options[20],COMBINER_EARLY
+rows[11].modules[0].analysis.inputs[0].options[21],COMBINER_LATE
+rows[11].modules[0].analysis.inputs[0].options[22],COMBINER_UNCERTAINTY
+rows[11].modules[0].analysis.inputs[0].options[23],COMBINER_REGIME_INHERITED
+rows[11].modules[0].analysis.inputs[0].options[24],COMBINER_REGIME_CORRECTED
+rows[11].modules[0].analysis.inputs[0].minimum,
+rows[11].modules[0].analysis.inputs[0].maximum,
+rows[11].modules[0].analysis.inputs[0].max_items,
+rows[11].modules[0].analysis.inputs[0].required,False
+rows[11].modules[0].analysis.inputs[1].name,threshold
+rows[11].modules[0].analysis.inputs[1].kind,float
+rows[11].modules[0].analysis.inputs[1].label,Threshold
+rows[11].modules[0].analysis.inputs[1].default,
+rows[11].modules[0].analysis.inputs[1].note,leave empty to use the training-selected threshold
+rows[11].modules[0].analysis.inputs[1].options,
+rows[11].modules[0].analysis.inputs[1].minimum,0.0
+rows[11].modules[0].analysis.inputs[1].maximum,1.0
+rows[11].modules[0].analysis.inputs[1].max_items,
+rows[11].modules[0].analysis.inputs[1].required,False
+rows[11].modules[0].analysis.inputs[2].name,segment_by
+rows[11].modules[0].analysis.inputs[2].kind,select
+rows[11].modules[0].analysis.inputs[2].label,Segment by
+rows[11].modules[0].analysis.inputs[2].default,error_class
+rows[11].modules[0].analysis.inputs[2].note,cross the failure modes against another column
+rows[11].modules[0].analysis.inputs[2].options[0],error_class
+rows[11].modules[0].analysis.inputs[2].options[1],risk_state
+rows[11].modules[0].analysis.inputs[2].options[2],state
+rows[11].modules[0].analysis.inputs[2].options[3],symbol
+rows[11].modules[0].analysis.inputs[2].minimum,
+rows[11].modules[0].analysis.inputs[2].maximum,
+rows[11].modules[0].analysis.inputs[2].max_items,
+rows[11].modules[0].analysis.inputs[2].required,False
+rows[11].modules[0].analysis.inputs[3].name,date_from
+rows[11].modules[0].analysis.inputs[3].kind,date
+rows[11].modules[0].analysis.inputs[3].label,From
+rows[11].modules[0].analysis.inputs[3].default,2019-01-01
+rows[11].modules[0].analysis.inputs[3].note,first scored session
+rows[11].modules[0].analysis.inputs[3].options,
+rows[11].modules[0].analysis.inputs[3].minimum,2015-01-01
+rows[11].modules[0].analysis.inputs[3].maximum,2026-08-14
+rows[11].modules[0].analysis.inputs[3].max_items,
+rows[11].modules[0].analysis.inputs[3].required,False
+rows[11].modules[0].analysis.inputs[4].name,date_to
+rows[11].modules[0].analysis.inputs[4].kind,date
+rows[11].modules[0].analysis.inputs[4].label,To
+rows[11].modules[0].analysis.inputs[4].default,2026-08-14
+rows[11].modules[0].analysis.inputs[4].note,last scored session
+rows[11].modules[0].analysis.inputs[4].options,
+rows[11].modules[0].analysis.inputs[4].minimum,2015-01-01
+rows[11].modules[0].analysis.inputs[4].maximum,2026-08-14
+rows[11].modules[0].analysis.inputs[4].max_items,
+rows[11].modules[0].analysis.inputs[4].required,False
+rows[11].modules[0].analysis.inputs[5].name,instruments
+rows[11].modules[0].analysis.inputs[5].kind,symbols
+rows[11].modules[0].analysis.inputs[5].label,Instruments
+rows[11].modules[0].analysis.inputs[5].default,
+rows[11].modules[0].analysis.inputs[5].note,leave empty for every instrument in the range
+rows[11].modules[0].analysis.inputs[5].options,
+rows[11].modules[0].analysis.inputs[5].minimum,
+rows[11].modules[0].analysis.inputs[5].maximum,
+rows[11].modules[0].analysis.inputs[5].max_items,60
+rows[11].modules[0].analysis.inputs[5].required,False
+rows[11].modules[0].analysis.artifact_reason,
+rows[12].week,13
+rows[12].title,Baseline comparison
+rows[12].question,"How do the baselines compare, and is the full stack better than something simpler?"
+rows[12].stats_module,STATS-13
+rows[12].summary,The baseline comparison recomputed from its per-row score files on the rows you select. The arms are not refitted here; only their metrics are recomputed.
+rows[12].feature.product_question,Is this better than something simpler?
+rows[12].feature.story,"Recomputes detection quality for every arm on the rows you select, and reports each one's gap against the reference arm."
+rows[12].feature.headline[0].module,STATS-13
+rows[12].feature.headline[0].metric,arms
+rows[12].feature.headline[0].label,Arms compared
+rows[12].feature.headline[1].module,STATS-13
+rows[12].feature.headline[1].metric,best_auprc
+rows[12].feature.headline[1].label,Best quality
+rows[12].feature.headline[2].module,STATS-13
+rows[12].feature.headline[2].metric,spread
+rows[12].feature.headline[2].label,Spread across arms
+rows[12].feature.headline[3].module,STATS-13
+rows[12].feature.headline[3].metric,rows
+rows[12].feature.headline[3].label,Rows per arm
+rows[12].feature.primary_visual.module,STATS-13
+rows[12].feature.primary_visual.series,arms
+rows[12].feature.primary_visual.label_column,arm
+rows[12].feature.primary_visual.value_column,auprc
+rows[12].feature.primary_visual.kind,bars
+rows[12].feature.primary_visual.caption,"Detection quality per arm, on the rows selected."
+rows[12].gate.capability,robustness
+rows[12].gate.enabled_from_week,13
+rows[12].backend_routes.week,/api/weeks/13
+rows[12].backend_routes.run_week,/api/weeks/13/run
+rows[12].backend_routes.modules.STATS-13,/api/modules/STATS-13
+rows[12].backend_routes.run_module.STATS-13,/api/modules/STATS-13/run
+rows[12].input_schema.STATS-13,
+rows[12].output_schema[0],backend_version
+rows[12].output_schema[1],module_id
+rows[12].output_schema[2],week
+rows[12].output_schema[3],category
+rows[12].output_schema[4],name
+rows[12].output_schema[5],status
+rows[12].output_schema[6],mode
+rows[12].output_schema[7],mode_label
+rows[12].output_schema[8],mode_meaning
+rows[12].output_schema[9],experiment_id
+rows[12].output_schema[10],dataset
+rows[12].output_schema[11],inputs
+rows[12].output_schema[12],metrics
+rows[12].output_schema[13],series
+rows[12].output_schema[14],uncertainty
+rows[12].output_schema[15],observations
+rows[12].output_schema[16],figures
+rows[12].output_schema[17],tables
+rows[12].output_schema[18],provenance
+rows[12].output_schema[19],limitations
+rows[12].output_schema[20],message
+rows[12].output_schema[21],elapsed_s
+rows[12].output_schema[22],error
+rows[12].product_view.STATS-13,/stats/baselines?mode=product
+rows[12].research_view.STATS-13,/stats/baselines?mode=research
+rows[12].route,/weeks/13
+rows[12].artifact_sources.STATS-13[0],research_artifacts/experiments/baseline_results.csv
+rows[12].artifact_sources.STATS-13[1],research_artifacts/experiments/per_row_FULL.parquet
+rows[12].execution.STATS-13.mode,ARTIFACT
+rows[12].execution.STATS-13.is_live,False
+rows[12].execution.STATS-13.protected,True
+rows[12].execution.STATS-13.typical_seconds,0.5
+rows[12].execution.STATS-13.artifact_reason,"Regenerating the baseline comparison refits every arm and overwrites artifacts the claim ledger cites, which no request may do."
+rows[12].modules[0].module_id,STATS-13
+rows[12].modules[0].index,13
+rows[12].modules[0].category,STATS
+rows[12].modules[0].slug,baseline_comparison
+rows[12].modules[0].name,Baseline comparison
+rows[12].modules[0].purpose,"Six baselines under one protocol: statistical anomaly, sentiment-only, text-only, market-only, image-only, audio-only and video-only, evaluated against the proposed full-stack model on the same split with the same preprocessing."
+rows[12].modules[0].research_question,"Does the proposed full-stack model outperform simple, conventional and single-block baselines under a fair protocol?"
+rows[12].modules[0].adapter,scripts.stages.stats:baseline_comparison
+rows[12].modules[0].wrapper_status,WRAPS_EXISTING_PROTECTED
+rows[12].modules[0].status,SUPPORTED
+rows[12].modules[0].experiment_id,EXP-BASE-1
+rows[12].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[12].modules[0].outputs[0],research_artifacts/experiments/baseline_results.csv
+rows[12].modules[0].outputs[1],research_artifacts/experiments/per_row_FULL.parquet
+rows[12].modules[0].canonical[0],research/models/baselines.py::run_all
+rows[12].modules[0].canonical[1],scripts/run_experiments.py
+rows[12].modules[0].limitations[0],L-04
+rows[12].modules[0].limitations[1],L-11
+rows[12].modules[0].notes,Regenerating overwrites artifacts the claim ledger cites. Requires --force.
+rows[12].modules[0].route,/stats/baselines
+rows[12].modules[0].icon,⚖
+rows[12].modules[0].product_name,Compared with simpler methods
+rows[12].modules[0].week,13
+rows[12].modules[0].protected,True
+rows[12].modules[0].analysis.mode,ARTIFACT
+rows[12].modules[0].analysis.is_live,False
+rows[12].modules[0].analysis.adapter,
+rows[12].modules[0].analysis.typical_seconds,0.5
+rows[12].modules[0].analysis.summary,"The verified baseline comparison, replayed from the artifact the experiment runner produced, with the run identifier and commit that produced it."
+rows[12].modules[0].analysis.inputs,
+rows[12].modules[0].analysis.artifact_reason,"Regenerating the baseline comparison refits every arm and overwrites artifacts the claim ledger cites, which no request may do."
+rows[13].week,14
+rows[13].title,Ablation study
+rows[13].question,"Which components carry the result, and how much does removing each one cost?"
+rows[13].stats_module,STATS-14
+rows[13].summary,"Ablation arms recomputed from their per-row score files, so the spread between configurations is measured on the same rows for all of them."
+rows[13].feature.product_question,What is each part of the system actually contributing?
+rows[13].feature.story,"Recomputes each configuration's quality on the rows you select, and reports the spread between the best and the worst."
+rows[13].feature.headline[0].module,STATS-14
+rows[13].feature.headline[0].metric,arms
+rows[13].feature.headline[0].label,Configurations compared
+rows[13].feature.headline[1].module,STATS-14
+rows[13].feature.headline[1].metric,best_auprc
+rows[13].feature.headline[1].label,Best quality
+rows[13].feature.headline[2].module,STATS-14
+rows[13].feature.headline[2].metric,spread
+rows[13].feature.headline[2].label,Spread across configurations
+rows[13].feature.primary_visual.module,STATS-14
+rows[13].feature.primary_visual.series,arms
+rows[13].feature.primary_visual.label_column,arm
+rows[13].feature.primary_visual.value_column,auprc
+rows[13].feature.primary_visual.kind,bars
+rows[13].feature.primary_visual.caption,"Detection quality per configuration, on the rows selected."
+rows[13].gate.capability,causal-reading
+rows[13].gate.enabled_from_week,14
+rows[13].backend_routes.week,/api/weeks/14
+rows[13].backend_routes.run_week,/api/weeks/14/run
+rows[13].backend_routes.modules.STATS-14,/api/modules/STATS-14
+rows[13].backend_routes.run_module.STATS-14,/api/modules/STATS-14/run
+rows[13].input_schema.STATS-14[0].name,arms
+rows[13].input_schema.STATS-14[0].kind,multiselect
+rows[13].input_schema.STATS-14[0].label,Arms
+rows[13].input_schema.STATS-14[0].default[0],FULL
+rows[13].input_schema.STATS-14[0].default[1],NO_TEXT
+rows[13].input_schema.STATS-14[0].default[2],NO_MARKET
+rows[13].input_schema.STATS-14[0].default[3],TEXT_ONLY
+rows[13].input_schema.STATS-14[0].note,two or more arms to compare on the same rows
+rows[13].input_schema.STATS-14[0].options[0],FULL
+rows[13].input_schema.STATS-14[0].options[1],NO_TEXT
+rows[13].input_schema.STATS-14[0].options[2],NO_IMAGE
+rows[13].input_schema.STATS-14[0].options[3],NO_AUDIO
+rows[13].input_schema.STATS-14[0].options[4],NO_VIDEO
+rows[13].input_schema.STATS-14[0].options[5],NO_MARKET
+rows[13].input_schema.STATS-14[0].options[6],NO_MICROSTRUCTURE
+rows[13].input_schema.STATS-14[0].options[7],NO_REGIME
+rows[13].input_schema.STATS-14[0].options[8],NO_PROPAGATION
+rows[13].input_schema.STATS-14[0].options[9],NO_AFFECTIVE
+rows[13].input_schema.STATS-14[0].options[10],NO_UNCERTAINTY
+rows[13].input_schema.STATS-14[0].options[11],TEXT_ONLY
+rows[13].input_schema.STATS-14[0].options[12],IMAGE_ONLY
+rows[13].input_schema.STATS-14[0].options[13],AUDIO_ONLY
+rows[13].input_schema.STATS-14[0].options[14],VIDEO_ONLY
+rows[13].input_schema.STATS-14[0].options[15],MARKET_ONLY
+rows[13].input_schema.STATS-14[0].options[16],MARKET_MICRO
+rows[13].input_schema.STATS-14[0].options[17],ALL_MEDIA
+rows[13].input_schema.STATS-14[0].options[18],ALL_MEDIA_MARKET
+rows[13].input_schema.STATS-14[0].options[19],COMBINER_STATIC
+rows[13].input_schema.STATS-14[0].options[20],COMBINER_EARLY
+rows[13].input_schema.STATS-14[0].options[21],COMBINER_LATE
+rows[13].input_schema.STATS-14[0].options[22],COMBINER_UNCERTAINTY
+rows[13].input_schema.STATS-14[0].options[23],COMBINER_REGIME_INHERITED
+rows[13].input_schema.STATS-14[0].options[24],COMBINER_REGIME_CORRECTED
+rows[13].input_schema.STATS-14[0].minimum,
+rows[13].input_schema.STATS-14[0].maximum,
+rows[13].input_schema.STATS-14[0].max_items,40
+rows[13].input_schema.STATS-14[0].required,False
+rows[13].input_schema.STATS-14[1].name,reference
+rows[13].input_schema.STATS-14[1].kind,select
+rows[13].input_schema.STATS-14[1].label,Reference arm
+rows[13].input_schema.STATS-14[1].default,FULL
+rows[13].input_schema.STATS-14[1].note,every difference is reported against this arm
+rows[13].input_schema.STATS-14[1].options[0],FULL
+rows[13].input_schema.STATS-14[1].options[1],NO_TEXT
+rows[13].input_schema.STATS-14[1].options[2],NO_IMAGE
+rows[13].input_schema.STATS-14[1].options[3],NO_AUDIO
+rows[13].input_schema.STATS-14[1].options[4],NO_VIDEO
+rows[13].input_schema.STATS-14[1].options[5],NO_MARKET
+rows[13].input_schema.STATS-14[1].options[6],NO_MICROSTRUCTURE
+rows[13].input_schema.STATS-14[1].options[7],NO_REGIME
+rows[13].input_schema.STATS-14[1].options[8],NO_PROPAGATION
+rows[13].input_schema.STATS-14[1].options[9],NO_AFFECTIVE
+rows[13].input_schema.STATS-14[1].options[10],NO_UNCERTAINTY
+rows[13].input_schema.STATS-14[1].options[11],TEXT_ONLY
+rows[13].input_schema.STATS-14[1].options[12],IMAGE_ONLY
+rows[13].input_schema.STATS-14[1].options[13],AUDIO_ONLY
+rows[13].input_schema.STATS-14[1].options[14],VIDEO_ONLY
+rows[13].input_schema.STATS-14[1].options[15],MARKET_ONLY
+rows[13].input_schema.STATS-14[1].options[16],MARKET_MICRO
+rows[13].input_schema.STATS-14[1].options[17],ALL_MEDIA
+rows[13].input_schema.STATS-14[1].options[18],ALL_MEDIA_MARKET
+rows[13].input_schema.STATS-14[1].options[19],COMBINER_STATIC
+rows[13].input_schema.STATS-14[1].options[20],COMBINER_EARLY
+rows[13].input_schema.STATS-14[1].options[21],COMBINER_LATE
+rows[13].input_schema.STATS-14[1].options[22],COMBINER_UNCERTAINTY
+rows[13].input_schema.STATS-14[1].options[23],COMBINER_REGIME_INHERITED
+rows[13].input_schema.STATS-14[1].options[24],COMBINER_REGIME_CORRECTED
+rows[13].input_schema.STATS-14[1].minimum,
+rows[13].input_schema.STATS-14[1].maximum,
+rows[13].input_schema.STATS-14[1].max_items,
+rows[13].input_schema.STATS-14[1].required,False
+rows[13].input_schema.STATS-14[2].name,date_from
+rows[13].input_schema.STATS-14[2].kind,date
+rows[13].input_schema.STATS-14[2].label,From
+rows[13].input_schema.STATS-14[2].default,2019-01-01
+rows[13].input_schema.STATS-14[2].note,first scored session
+rows[13].input_schema.STATS-14[2].options,
+rows[13].input_schema.STATS-14[2].minimum,2015-01-01
+rows[13].input_schema.STATS-14[2].maximum,2026-08-14
+rows[13].input_schema.STATS-14[2].max_items,
+rows[13].input_schema.STATS-14[2].required,False
+rows[13].input_schema.STATS-14[3].name,date_to
+rows[13].input_schema.STATS-14[3].kind,date
+rows[13].input_schema.STATS-14[3].label,To
+rows[13].input_schema.STATS-14[3].default,2026-08-14
+rows[13].input_schema.STATS-14[3].note,last scored session
+rows[13].input_schema.STATS-14[3].options,
+rows[13].input_schema.STATS-14[3].minimum,2015-01-01
+rows[13].input_schema.STATS-14[3].maximum,2026-08-14
+rows[13].input_schema.STATS-14[3].max_items,
+rows[13].input_schema.STATS-14[3].required,False
+rows[13].output_schema[0],backend_version
+rows[13].output_schema[1],module_id
+rows[13].output_schema[2],week
+rows[13].output_schema[3],category
+rows[13].output_schema[4],name
+rows[13].output_schema[5],status
+rows[13].output_schema[6],mode
+rows[13].output_schema[7],mode_label
+rows[13].output_schema[8],mode_meaning
+rows[13].output_schema[9],experiment_id
+rows[13].output_schema[10],dataset
+rows[13].output_schema[11],inputs
+rows[13].output_schema[12],metrics
+rows[13].output_schema[13],series
+rows[13].output_schema[14],uncertainty
+rows[13].output_schema[15],observations
+rows[13].output_schema[16],figures
+rows[13].output_schema[17],tables
+rows[13].output_schema[18],provenance
+rows[13].output_schema[19],limitations
+rows[13].output_schema[20],message
+rows[13].output_schema[21],elapsed_s
+rows[13].output_schema[22],error
+rows[13].product_view.STATS-14,/stats/ablation?mode=product
+rows[13].research_view.STATS-14,/stats/ablation?mode=research
+rows[13].route,/weeks/14
+rows[13].artifact_sources.STATS-14[0],research_artifacts/experiments/ablation_results.csv
+rows[13].artifact_sources.STATS-14[1],research_artifacts/experiments/ablation_statistics.csv
+rows[13].execution.STATS-14.mode,LIVE
+rows[13].execution.STATS-14.is_live,True
+rows[13].execution.STATS-14.protected,True
+rows[13].execution.STATS-14.typical_seconds,3.0
+rows[13].execution.STATS-14.artifact_reason,
+rows[13].modules[0].module_id,STATS-14
+rows[13].modules[0].index,14
+rows[13].modules[0].category,STATS
+rows[13].modules[0].slug,ablation_study
+rows[13].modules[0].name,Ablation study
+rows[13].modules[0].purpose,"All 32 declared arms: single-block, pairwise, leave-one-out, component removal and the six combination rules, each with its own hypothesis and artifact bundle."
+rows[13].modules[0].research_question,"Which components of the proposed architecture actually contribute, and which are redundant or harmful?"
+rows[13].modules[0].adapter,scripts.stages.stats:ablation_study
+rows[13].modules[0].wrapper_status,WRAPS_EXISTING_PROTECTED
+rows[13].modules[0].status,SUPPORTED
+rows[13].modules[0].experiment_id,EXP-ABL-1
+rows[13].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[13].modules[0].outputs[0],research_artifacts/experiments/ablation_results.csv
+rows[13].modules[0].outputs[1],research_artifacts/experiments/ablation_statistics.csv
+rows[13].modules[0].canonical[0],research/evaluation/ablations.py::all_arms
+rows[13].modules[0].canonical[1],research/evaluation/experiment.py::run
+rows[13].modules[0].canonical[2],scripts/run_experiments.py
+rows[13].modules[0].limitations[0],L-12
+rows[13].modules[0].notes,Shares one runner with STATS-13; both are produced by a single invocation of scripts/run_experiments.py. Requires --force.
+rows[13].modules[0].route,/stats/ablation
+rows[13].modules[0].icon,◫
+rows[13].modules[0].product_name,What each component contributes
+rows[13].modules[0].week,14
+rows[13].modules[0].protected,True
+rows[13].modules[0].analysis.mode,LIVE
+rows[13].modules[0].analysis.is_live,True
+rows[13].modules[0].analysis.adapter,scripts.stages.stats:analyse_ablation
+rows[13].modules[0].analysis.typical_seconds,3.0
+rows[13].modules[0].analysis.summary,"Recomputes each arm's detection metrics on the rows you select. The arms were fitted once by the experiment runner and are not refitted here, because refitting on request would let an arm ranking be chosen after seeing the evaluation data."
+rows[13].modules[0].analysis.inputs[0].name,arms
+rows[13].modules[0].analysis.inputs[0].kind,multiselect
+rows[13].modules[0].analysis.inputs[0].label,Arms
+rows[13].modules[0].analysis.inputs[0].default[0],FULL
+rows[13].modules[0].analysis.inputs[0].default[1],NO_TEXT
+rows[13].modules[0].analysis.inputs[0].default[2],NO_MARKET
+rows[13].modules[0].analysis.inputs[0].default[3],TEXT_ONLY
+rows[13].modules[0].analysis.inputs[0].note,two or more arms to compare on the same rows
+rows[13].modules[0].analysis.inputs[0].options[0],FULL
+rows[13].modules[0].analysis.inputs[0].options[1],NO_TEXT
+rows[13].modules[0].analysis.inputs[0].options[2],NO_IMAGE
+rows[13].modules[0].analysis.inputs[0].options[3],NO_AUDIO
+rows[13].modules[0].analysis.inputs[0].options[4],NO_VIDEO
+rows[13].modules[0].analysis.inputs[0].options[5],NO_MARKET
+rows[13].modules[0].analysis.inputs[0].options[6],NO_MICROSTRUCTURE
+rows[13].modules[0].analysis.inputs[0].options[7],NO_REGIME
+rows[13].modules[0].analysis.inputs[0].options[8],NO_PROPAGATION
+rows[13].modules[0].analysis.inputs[0].options[9],NO_AFFECTIVE
+rows[13].modules[0].analysis.inputs[0].options[10],NO_UNCERTAINTY
+rows[13].modules[0].analysis.inputs[0].options[11],TEXT_ONLY
+rows[13].modules[0].analysis.inputs[0].options[12],IMAGE_ONLY
+rows[13].modules[0].analysis.inputs[0].options[13],AUDIO_ONLY
+rows[13].modules[0].analysis.inputs[0].options[14],VIDEO_ONLY
+rows[13].modules[0].analysis.inputs[0].options[15],MARKET_ONLY
+rows[13].modules[0].analysis.inputs[0].options[16],MARKET_MICRO
+rows[13].modules[0].analysis.inputs[0].options[17],ALL_MEDIA
+rows[13].modules[0].analysis.inputs[0].options[18],ALL_MEDIA_MARKET
+rows[13].modules[0].analysis.inputs[0].options[19],COMBINER_STATIC
+rows[13].modules[0].analysis.inputs[0].options[20],COMBINER_EARLY
+rows[13].modules[0].analysis.inputs[0].options[21],COMBINER_LATE
+rows[13].modules[0].analysis.inputs[0].options[22],COMBINER_UNCERTAINTY
+rows[13].modules[0].analysis.inputs[0].options[23],COMBINER_REGIME_INHERITED
+rows[13].modules[0].analysis.inputs[0].options[24],COMBINER_REGIME_CORRECTED
+rows[13].modules[0].analysis.inputs[0].minimum,
+rows[13].modules[0].analysis.inputs[0].maximum,
+rows[13].modules[0].analysis.inputs[0].max_items,40
+rows[13].modules[0].analysis.inputs[0].required,False
+rows[13].modules[0].analysis.inputs[1].name,reference
+rows[13].modules[0].analysis.inputs[1].kind,select
+rows[13].modules[0].analysis.inputs[1].label,Reference arm
+rows[13].modules[0].analysis.inputs[1].default,FULL
+rows[13].modules[0].analysis.inputs[1].note,every difference is reported against this arm
+rows[13].modules[0].analysis.inputs[1].options[0],FULL
+rows[13].modules[0].analysis.inputs[1].options[1],NO_TEXT
+rows[13].modules[0].analysis.inputs[1].options[2],NO_IMAGE
+rows[13].modules[0].analysis.inputs[1].options[3],NO_AUDIO
+rows[13].modules[0].analysis.inputs[1].options[4],NO_VIDEO
+rows[13].modules[0].analysis.inputs[1].options[5],NO_MARKET
+rows[13].modules[0].analysis.inputs[1].options[6],NO_MICROSTRUCTURE
+rows[13].modules[0].analysis.inputs[1].options[7],NO_REGIME
+rows[13].modules[0].analysis.inputs[1].options[8],NO_PROPAGATION
+rows[13].modules[0].analysis.inputs[1].options[9],NO_AFFECTIVE
+rows[13].modules[0].analysis.inputs[1].options[10],NO_UNCERTAINTY
+rows[13].modules[0].analysis.inputs[1].options[11],TEXT_ONLY
+rows[13].modules[0].analysis.inputs[1].options[12],IMAGE_ONLY
+rows[13].modules[0].analysis.inputs[1].options[13],AUDIO_ONLY
+rows[13].modules[0].analysis.inputs[1].options[14],VIDEO_ONLY
+rows[13].modules[0].analysis.inputs[1].options[15],MARKET_ONLY
+rows[13].modules[0].analysis.inputs[1].options[16],MARKET_MICRO
+rows[13].modules[0].analysis.inputs[1].options[17],ALL_MEDIA
+rows[13].modules[0].analysis.inputs[1].options[18],ALL_MEDIA_MARKET
+rows[13].modules[0].analysis.inputs[1].options[19],COMBINER_STATIC
+rows[13].modules[0].analysis.inputs[1].options[20],COMBINER_EARLY
+rows[13].modules[0].analysis.inputs[1].options[21],COMBINER_LATE
+rows[13].modules[0].analysis.inputs[1].options[22],COMBINER_UNCERTAINTY
+rows[13].modules[0].analysis.inputs[1].options[23],COMBINER_REGIME_INHERITED
+rows[13].modules[0].analysis.inputs[1].options[24],COMBINER_REGIME_CORRECTED
+rows[13].modules[0].analysis.inputs[1].minimum,
+rows[13].modules[0].analysis.inputs[1].maximum,
+rows[13].modules[0].analysis.inputs[1].max_items,
+rows[13].modules[0].analysis.inputs[1].required,False
+rows[13].modules[0].analysis.inputs[2].name,date_from
+rows[13].modules[0].analysis.inputs[2].kind,date
+rows[13].modules[0].analysis.inputs[2].label,From
+rows[13].modules[0].analysis.inputs[2].default,2019-01-01
+rows[13].modules[0].analysis.inputs[2].note,first scored session
+rows[13].modules[0].analysis.inputs[2].options,
+rows[13].modules[0].analysis.inputs[2].minimum,2015-01-01
+rows[13].modules[0].analysis.inputs[2].maximum,2026-08-14
+rows[13].modules[0].analysis.inputs[2].max_items,
+rows[13].modules[0].analysis.inputs[2].required,False
+rows[13].modules[0].analysis.inputs[3].name,date_to
+rows[13].modules[0].analysis.inputs[3].kind,date
+rows[13].modules[0].analysis.inputs[3].label,To
+rows[13].modules[0].analysis.inputs[3].default,2026-08-14
+rows[13].modules[0].analysis.inputs[3].note,last scored session
+rows[13].modules[0].analysis.inputs[3].options,
+rows[13].modules[0].analysis.inputs[3].minimum,2015-01-01
+rows[13].modules[0].analysis.inputs[3].maximum,2026-08-14
+rows[13].modules[0].analysis.inputs[3].max_items,
+rows[13].modules[0].analysis.inputs[3].required,False
+rows[13].modules[0].analysis.artifact_reason,
+rows[14].week,15
+rows[14].title,Robustness and generalisation
+rows[14].question,"What survives perturbation, and how much quality is lost when the inputs degrade?"
+rows[14].stats_module,STATS-15
+rows[14].summary,One perturbation condition run live against a clean reference. Both are stress tests; neither is evidence of performance under a distribution not sampled here.
+rows[14].feature.product_question,What happens when the data gets worse?
+rows[14].feature.story,"Degrades the inputs one named failure mode at a time and measures what the degradation costs, against an undegraded reference fitted on clean data."
+rows[14].feature.headline[0].module,STATS-15
+rows[14].feature.headline[0].metric,clean_auprc
+rows[14].feature.headline[0].label,Quality on clean data
+rows[14].feature.headline[1].module,STATS-15
+rows[14].feature.headline[1].metric,degraded_auprc
+rows[14].feature.headline[1].label,Quality when degraded
+rows[14].feature.headline[2].module,STATS-15
+rows[14].feature.headline[2].metric,relative
+rows[14].feature.headline[2].label,Share of quality lost
+rows[14].feature.primary_visual.module,STATS-15
+rows[14].feature.primary_visual.series,conditions
+rows[14].feature.primary_visual.label_column,condition
+rows[14].feature.primary_visual.value_column,auprc
+rows[14].feature.primary_visual.kind,bars
+rows[14].feature.primary_visual.caption,"Clean against degraded, measured the same way."
+rows[14].gate.capability,aggregation
+rows[14].gate.enabled_from_week,15
+rows[14].backend_routes.week,/api/weeks/15
+rows[14].backend_routes.run_week,/api/weeks/15/run
+rows[14].backend_routes.modules.STATS-15,/api/modules/STATS-15
+rows[14].backend_routes.run_module.STATS-15,/api/modules/STATS-15/run
+rows[14].input_schema.STATS-15[0].name,corruption
+rows[14].input_schema.STATS-15[0].kind,select
+rows[14].input_schema.STATS-15[0].label,Failure mode
+rows[14].input_schema.STATS-15[0].default,gaussian
+rows[14].input_schema.STATS-15[0].note,"stale is a delayed feed, which is more common in production than noise and invisible to a null check"
+rows[14].input_schema.STATS-15[0].options[0],gaussian
+rows[14].input_schema.STATS-15[0].options[1],dropout
+rows[14].input_schema.STATS-15[0].options[2],stale
+rows[14].input_schema.STATS-15[0].options[3],outliers
+rows[14].input_schema.STATS-15[0].minimum,
+rows[14].input_schema.STATS-15[0].maximum,
+rows[14].input_schema.STATS-15[0].max_items,
+rows[14].input_schema.STATS-15[0].required,False
+rows[14].input_schema.STATS-15[1].name,severity
+rows[14].input_schema.STATS-15[1].kind,float
+rows[14].input_schema.STATS-15[1].label,Severity
+rows[14].input_schema.STATS-15[1].default,0.1
+rows[14].input_schema.STATS-15[1].note,"the fraction of values affected, or the noise scale"
+rows[14].input_schema.STATS-15[1].options,
+rows[14].input_schema.STATS-15[1].minimum,0.01
+rows[14].input_schema.STATS-15[1].maximum,0.5
+rows[14].input_schema.STATS-15[1].max_items,
+rows[14].input_schema.STATS-15[1].required,False
+rows[14].input_schema.STATS-15[2].name,block
+rows[14].input_schema.STATS-15[2].kind,select
+rows[14].input_schema.STATS-15[2].label,Applied to
+rows[14].input_schema.STATS-15[2].default,all
+rows[14].input_schema.STATS-15[2].note,"degrade every feature, or only one block's"
+rows[14].input_schema.STATS-15[2].options[0],all
+rows[14].input_schema.STATS-15[2].options[1],text
+rows[14].input_schema.STATS-15[2].options[2],image
+rows[14].input_schema.STATS-15[2].options[3],audio
+rows[14].input_schema.STATS-15[2].options[4],video
+rows[14].input_schema.STATS-15[2].options[5],market
+rows[14].input_schema.STATS-15[2].options[6],microstructure
+rows[14].input_schema.STATS-15[2].options[7],regime
+rows[14].input_schema.STATS-15[2].options[8],propagation
+rows[14].input_schema.STATS-15[2].minimum,
+rows[14].input_schema.STATS-15[2].maximum,
+rows[14].input_schema.STATS-15[2].max_items,
+rows[14].input_schema.STATS-15[2].required,False
+rows[14].input_schema.STATS-15[3].name,seed
+rows[14].input_schema.STATS-15[3].kind,int
+rows[14].input_schema.STATS-15[3].label,Seed
+rows[14].input_schema.STATS-15[3].default,20260818
+rows[14].input_schema.STATS-15[3].note,changing it changes which values are hit
+rows[14].input_schema.STATS-15[3].options,
+rows[14].input_schema.STATS-15[3].minimum,1
+rows[14].input_schema.STATS-15[3].maximum,99999999
+rows[14].input_schema.STATS-15[3].max_items,
+rows[14].input_schema.STATS-15[3].required,False
+rows[14].output_schema[0],backend_version
+rows[14].output_schema[1],module_id
+rows[14].output_schema[2],week
+rows[14].output_schema[3],category
+rows[14].output_schema[4],name
+rows[14].output_schema[5],status
+rows[14].output_schema[6],mode
+rows[14].output_schema[7],mode_label
+rows[14].output_schema[8],mode_meaning
+rows[14].output_schema[9],experiment_id
+rows[14].output_schema[10],dataset
+rows[14].output_schema[11],inputs
+rows[14].output_schema[12],metrics
+rows[14].output_schema[13],series
+rows[14].output_schema[14],uncertainty
+rows[14].output_schema[15],observations
+rows[14].output_schema[16],figures
+rows[14].output_schema[17],tables
+rows[14].output_schema[18],provenance
+rows[14].output_schema[19],limitations
+rows[14].output_schema[20],message
+rows[14].output_schema[21],elapsed_s
+rows[14].output_schema[22],error
+rows[14].product_view.STATS-15,/stats/robustness?mode=product
+rows[14].research_view.STATS-15,/stats/robustness?mode=research
+rows[14].route,/weeks/15
+rows[14].artifact_sources.STATS-15[0],outputs/stats/15_robustness_generalization/robustness.csv
+rows[14].artifact_sources.STATS-15[1],outputs/stats/15_robustness_generalization/generalization.csv
+rows[14].artifact_sources.STATS-15[2],outputs/stats/15_robustness_generalization/run.json
+rows[14].execution.STATS-15.mode,LIVE
+rows[14].execution.STATS-15.is_live,True
+rows[14].execution.STATS-15.protected,False
+rows[14].execution.STATS-15.typical_seconds,65.0
+rows[14].execution.STATS-15.artifact_reason,
+rows[14].modules[0].module_id,STATS-15
+rows[14].modules[0].index,15
+rows[14].modules[0].category,STATS
+rows[14].modules[0].slug,robustness_generalization
+rows[14].modules[0].name,Robustness and generalization
+rows[14].modules[0].purpose,"Performance under feature noise, input corruption, induced missingness and reduced training data, and transfer across time periods and across disjoint instrument sets."
+rows[14].modules[0].research_question,"Where does the detector stop being reliable, and does it transfer beyond the instruments and period it was fitted on?"
+rows[14].modules[0].adapter,scripts.stages.stats:robustness_generalization
+rows[14].modules[0].wrapper_status,WRAPS_EXISTING
+rows[14].modules[0].status,PARTIAL
+rows[14].modules[0].experiment_id,
+rows[14].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[14].modules[0].outputs[0],outputs/stats/15_robustness_generalization/robustness.csv
+rows[14].modules[0].outputs[1],outputs/stats/15_robustness_generalization/generalization.csv
+rows[14].modules[0].outputs[2],outputs/stats/15_robustness_generalization/run.json
+rows[14].modules[0].canonical[0],research/evaluation/robustness.py
+rows[14].modules[0].canonical[1],scripts/run_robustness_generalization.py
+rows[14].modules[0].limitations[0],L-11
+rows[14].modules[0].notes,"Five axes execute: additive noise, value dropout, stale feed, outlier injection and per-block blackout on the evaluation inputs; a symbol-level training-size curve; expanding-window transfer forward in time; and transfer to disjoint tickers. The model is fitted once on clean data for the input-degradation axis, because refitting on corrupted data measures whether the learner adapts, which is an easier and different question than what a deployed model does when its feed degrades. Training subsampling drops whole symbols rather than random rows: rows from one instrument are serially dependent, so row-level dropping leaves nearly every instrument represented and understates how much the model depends on breadth. The frozen holdout is never read -- assert_no_holdout() raises on any frame carrying holdout rows and every fit passes through it. Cross-dataset transfer remains BLOCKED and is reported as such, because only one dataset exists. Adversarial robustness is NOT RUN: every corruption here is random, and an adversarial claim needs a threat model."
+rows[14].modules[0].route,/stats/robustness
+rows[14].modules[0].icon,⊘
+rows[14].modules[0].product_name,What happens when data degrades
+rows[14].modules[0].week,15
+rows[14].modules[0].protected,False
+rows[14].modules[0].analysis.mode,LIVE
+rows[14].modules[0].analysis.is_live,True
+rows[14].modules[0].analysis.adapter,scripts.stages.stats:analyse_robustness
+rows[14].modules[0].analysis.typical_seconds,65.0
+rows[14].modules[0].analysis.summary,"One perturbation condition, run now: the model is fitted on clean data and scored on degraded inputs. Fitting once is the point — refitting on corrupted data asks whether the learner adapts, which is not what a degraded feed does to a deployed model."
+rows[14].modules[0].analysis.inputs[0].name,corruption
+rows[14].modules[0].analysis.inputs[0].kind,select
+rows[14].modules[0].analysis.inputs[0].label,Failure mode
+rows[14].modules[0].analysis.inputs[0].default,gaussian
+rows[14].modules[0].analysis.inputs[0].note,"stale is a delayed feed, which is more common in production than noise and invisible to a null check"
+rows[14].modules[0].analysis.inputs[0].options[0],gaussian
+rows[14].modules[0].analysis.inputs[0].options[1],dropout
+rows[14].modules[0].analysis.inputs[0].options[2],stale
+rows[14].modules[0].analysis.inputs[0].options[3],outliers
+rows[14].modules[0].analysis.inputs[0].minimum,
+rows[14].modules[0].analysis.inputs[0].maximum,
+rows[14].modules[0].analysis.inputs[0].max_items,
+rows[14].modules[0].analysis.inputs[0].required,False
+rows[14].modules[0].analysis.inputs[1].name,severity
+rows[14].modules[0].analysis.inputs[1].kind,float
+rows[14].modules[0].analysis.inputs[1].label,Severity
+rows[14].modules[0].analysis.inputs[1].default,0.1
+rows[14].modules[0].analysis.inputs[1].note,"the fraction of values affected, or the noise scale"
+rows[14].modules[0].analysis.inputs[1].options,
+rows[14].modules[0].analysis.inputs[1].minimum,0.01
+rows[14].modules[0].analysis.inputs[1].maximum,0.5
+rows[14].modules[0].analysis.inputs[1].max_items,
+rows[14].modules[0].analysis.inputs[1].required,False
+rows[14].modules[0].analysis.inputs[2].name,block
+rows[14].modules[0].analysis.inputs[2].kind,select
+rows[14].modules[0].analysis.inputs[2].label,Applied to
+rows[14].modules[0].analysis.inputs[2].default,all
+rows[14].modules[0].analysis.inputs[2].note,"degrade every feature, or only one block's"
+rows[14].modules[0].analysis.inputs[2].options[0],all
+rows[14].modules[0].analysis.inputs[2].options[1],text
+rows[14].modules[0].analysis.inputs[2].options[2],image
+rows[14].modules[0].analysis.inputs[2].options[3],audio
+rows[14].modules[0].analysis.inputs[2].options[4],video
+rows[14].modules[0].analysis.inputs[2].options[5],market
+rows[14].modules[0].analysis.inputs[2].options[6],microstructure
+rows[14].modules[0].analysis.inputs[2].options[7],regime
+rows[14].modules[0].analysis.inputs[2].options[8],propagation
+rows[14].modules[0].analysis.inputs[2].minimum,
+rows[14].modules[0].analysis.inputs[2].maximum,
+rows[14].modules[0].analysis.inputs[2].max_items,
+rows[14].modules[0].analysis.inputs[2].required,False
+rows[14].modules[0].analysis.inputs[3].name,seed
+rows[14].modules[0].analysis.inputs[3].kind,int
+rows[14].modules[0].analysis.inputs[3].label,Seed
+rows[14].modules[0].analysis.inputs[3].default,20260818
+rows[14].modules[0].analysis.inputs[3].note,changing it changes which values are hit
+rows[14].modules[0].analysis.inputs[3].options,
+rows[14].modules[0].analysis.inputs[3].minimum,1
+rows[14].modules[0].analysis.inputs[3].maximum,99999999
+rows[14].modules[0].analysis.inputs[3].max_items,
+rows[14].modules[0].analysis.inputs[3].required,False
+rows[14].modules[0].analysis.artifact_reason,
+rows[15].week,16
+rows[15].title,Seeds and significance
+rows[15].question,How much of the difference between arms is seed noise?
+rows[15].stats_module,STATS-16
+rows[15].summary,The multi-seed noise floor recomputed over the seed table. A gap smaller than the noise floor is not a finding.
+rows[15].feature.product_question,Which differences are real?
+rows[15].feature.story,"Measures how much of the difference between configurations is just the random seed, and reports which comparisons survive that floor."
+rows[15].feature.headline[0].module,STATS-16
+rows[15].feature.headline[0].metric,floor
+rows[15].feature.headline[0].label,Noise floor
+rows[15].feature.headline[1].module,STATS-16
+rows[15].feature.headline[1].metric,pairs
+rows[15].feature.headline[1].label,Comparisons tested
+rows[15].feature.headline[2].module,STATS-16
+rows[15].feature.headline[2].metric,resolved
+rows[15].feature.headline[2].label,Comparisons resolved
+rows[15].feature.headline[3].module,STATS-16
+rows[15].feature.headline[3].metric,seeds
+rows[15].feature.headline[3].label,Seeds per configuration
+rows[15].feature.primary_visual.module,STATS-16
+rows[15].feature.primary_visual.series,per_arm
+rows[15].feature.primary_visual.label_column,arm
+rows[15].feature.primary_visual.value_column,auprc_mean
+rows[15].feature.primary_visual.kind,bars
+rows[15].feature.primary_visual.caption,Average quality per configuration across seeds.
+rows[15].gate.capability,the-whole-picture
+rows[15].gate.enabled_from_week,16
+rows[15].backend_routes.week,/api/weeks/16
+rows[15].backend_routes.run_week,/api/weeks/16/run
+rows[15].backend_routes.modules.STATS-16,/api/modules/STATS-16
+rows[15].backend_routes.run_module.STATS-16,/api/modules/STATS-16/run
+rows[15].input_schema.STATS-16[0].name,arms
+rows[15].input_schema.STATS-16[0].kind,multiselect
+rows[15].input_schema.STATS-16[0].label,Arms
+rows[15].input_schema.STATS-16[0].default,
+rows[15].input_schema.STATS-16[0].note,leave empty to use every arm with completed seed fits
+rows[15].input_schema.STATS-16[0].options[0],FULL
+rows[15].input_schema.STATS-16[0].options[1],NO_TEXT
+rows[15].input_schema.STATS-16[0].options[2],NO_IMAGE
+rows[15].input_schema.STATS-16[0].options[3],NO_AUDIO
+rows[15].input_schema.STATS-16[0].options[4],NO_VIDEO
+rows[15].input_schema.STATS-16[0].options[5],NO_MARKET
+rows[15].input_schema.STATS-16[0].options[6],NO_MICROSTRUCTURE
+rows[15].input_schema.STATS-16[0].options[7],NO_REGIME
+rows[15].input_schema.STATS-16[0].options[8],NO_PROPAGATION
+rows[15].input_schema.STATS-16[0].options[9],NO_AFFECTIVE
+rows[15].input_schema.STATS-16[0].options[10],NO_UNCERTAINTY
+rows[15].input_schema.STATS-16[0].options[11],TEXT_ONLY
+rows[15].input_schema.STATS-16[0].options[12],IMAGE_ONLY
+rows[15].input_schema.STATS-16[0].options[13],AUDIO_ONLY
+rows[15].input_schema.STATS-16[0].options[14],VIDEO_ONLY
+rows[15].input_schema.STATS-16[0].options[15],MARKET_ONLY
+rows[15].input_schema.STATS-16[0].options[16],MARKET_MICRO
+rows[15].input_schema.STATS-16[0].options[17],ALL_MEDIA
+rows[15].input_schema.STATS-16[0].options[18],ALL_MEDIA_MARKET
+rows[15].input_schema.STATS-16[0].options[19],COMBINER_STATIC
+rows[15].input_schema.STATS-16[0].options[20],COMBINER_EARLY
+rows[15].input_schema.STATS-16[0].options[21],COMBINER_LATE
+rows[15].input_schema.STATS-16[0].options[22],COMBINER_UNCERTAINTY
+rows[15].input_schema.STATS-16[0].options[23],COMBINER_REGIME_INHERITED
+rows[15].input_schema.STATS-16[0].options[24],COMBINER_REGIME_CORRECTED
+rows[15].input_schema.STATS-16[0].minimum,
+rows[15].input_schema.STATS-16[0].maximum,
+rows[15].input_schema.STATS-16[0].max_items,40
+rows[15].input_schema.STATS-16[0].required,False
+rows[15].input_schema.STATS-16[1].name,alpha
+rows[15].input_schema.STATS-16[1].kind,float
+rows[15].input_schema.STATS-16[1].label,Alpha
+rows[15].input_schema.STATS-16[1].default,0.05
+rows[15].input_schema.STATS-16[1].note,the level the Benjamini-Hochberg correction controls at
+rows[15].input_schema.STATS-16[1].options,
+rows[15].input_schema.STATS-16[1].minimum,0.01
+rows[15].input_schema.STATS-16[1].maximum,0.2
+rows[15].input_schema.STATS-16[1].max_items,
+rows[15].input_schema.STATS-16[1].required,False
+rows[15].output_schema[0],backend_version
+rows[15].output_schema[1],module_id
+rows[15].output_schema[2],week
+rows[15].output_schema[3],category
+rows[15].output_schema[4],name
+rows[15].output_schema[5],status
+rows[15].output_schema[6],mode
+rows[15].output_schema[7],mode_label
+rows[15].output_schema[8],mode_meaning
+rows[15].output_schema[9],experiment_id
+rows[15].output_schema[10],dataset
+rows[15].output_schema[11],inputs
+rows[15].output_schema[12],metrics
+rows[15].output_schema[13],series
+rows[15].output_schema[14],uncertainty
+rows[15].output_schema[15],observations
+rows[15].output_schema[16],figures
+rows[15].output_schema[17],tables
+rows[15].output_schema[18],provenance
+rows[15].output_schema[19],limitations
+rows[15].output_schema[20],message
+rows[15].output_schema[21],elapsed_s
+rows[15].output_schema[22],error
+rows[15].product_view.STATS-16,/stats/multi-seed?mode=product
+rows[15].research_view.STATS-16,/stats/multi-seed?mode=research
+rows[15].route,/weeks/16
+rows[15].artifact_sources.STATS-16[0],outputs/stats/16_multiseed_significance/seed_table.csv
+rows[15].artifact_sources.STATS-16[1],outputs/stats/16_multiseed_significance/significance.json
+rows[15].artifact_sources.STATS-16[2],outputs/stats/16_multiseed_significance/seed_summary.csv
+rows[15].artifact_sources.STATS-16[3],outputs/stats/16_multiseed_significance/paired_tests.csv
+rows[15].execution.STATS-16.mode,LIVE
+rows[15].execution.STATS-16.is_live,True
+rows[15].execution.STATS-16.protected,False
+rows[15].execution.STATS-16.typical_seconds,50.0
+rows[15].execution.STATS-16.artifact_reason,
+rows[15].modules[0].module_id,STATS-16
+rows[15].modules[0].index,16
+rows[15].modules[0].category,STATS
+rows[15].modules[0].slug,multiseed_significance
+rows[15].modules[0].name,Multi-seed and statistical significance
+rows[15].modules[0].purpose,"Repeat the stochastic parts of the pipeline across seeds and report mean, standard deviation, minimum, maximum and 95% confidence interval, then apply the existing cluster bootstrap, paired permutation, Benjamini-Hochberg correction and power analysis to the repeated measurements."
+rows[15].modules[0].research_question,How much of the reported difference between arms is seed variance rather than signal?
+rows[15].modules[0].adapter,scripts.stages.stats:multiseed_significance
+rows[15].modules[0].wrapper_status,WRAPS_EXISTING
+rows[15].modules[0].status,SUPPORTED
+rows[15].modules[0].experiment_id,
+rows[15].modules[0].declared_inputs[0],data/panel/market_dataset.parquet
+rows[15].modules[0].outputs[0],outputs/stats/16_multiseed_significance/seed_table.csv
+rows[15].modules[0].outputs[1],outputs/stats/16_multiseed_significance/significance.json
+rows[15].modules[0].outputs[2],outputs/stats/16_multiseed_significance/seed_summary.csv
+rows[15].modules[0].outputs[3],outputs/stats/16_multiseed_significance/paired_tests.csv
+rows[15].modules[0].canonical[0],research/evaluation/multiseed.py
+rows[15].modules[0].canonical[1],scripts/run_multiseed.py
+rows[15].modules[0].canonical[2],research/statistics/tests.py
+rows[15].modules[0].canonical[3],research/statistics/power.py
+rows[15].modules[0].limitations[0],L-12
+rows[15].modules[0].notes,"Every ablation arm is refitted across a declared seed ladder and the repeated measurements are handed to the machinery that already existed: cluster bootstrap, paired sign-flip permutation and Benjamini-Hochberg. Two sources of variation are kept apart, because conflating them is how a seed study overstates its own precision -- spread across seeds on one fixed evaluation set is seed variance, and the cluster bootstrap interval within one run is sampling variance of the evaluation set. A pooled seed noise floor is reported, and an arm difference smaller than that floor is recorded as not established however it looked in a single run. Differences that dissolve are listed alongside the ones that survive rather than filtered out. Validation only: repeating a measurement on the frozen holdout across ten seeds would be ten looks at the data the freeze exists to protect."
+rows[15].modules[0].route,/stats/multi-seed
+rows[15].modules[0].icon,⊛
+rows[15].modules[0].product_name,What counts as a real difference
+rows[15].modules[0].week,16
+rows[15].modules[0].protected,False
+rows[15].modules[0].analysis.mode,LIVE
+rows[15].modules[0].analysis.is_live,True
+rows[15].modules[0].analysis.adapter,scripts.stages.stats:analyse_seed_noise
+rows[15].modules[0].analysis.typical_seconds,50.0
+rows[15].modules[0].analysis.summary,Derives the seed noise floor over the arms you select and tests every pair against it. A difference smaller than the floor is not a small effect: it is not distinguishable from rerunning the same arm with a different seed.
+rows[15].modules[0].analysis.inputs[0].name,arms
+rows[15].modules[0].analysis.inputs[0].kind,multiselect
+rows[15].modules[0].analysis.inputs[0].label,Arms
+rows[15].modules[0].analysis.inputs[0].default,
+rows[15].modules[0].analysis.inputs[0].note,leave empty to use every arm with completed seed fits
+rows[15].modules[0].analysis.inputs[0].options[0],FULL
+rows[15].modules[0].analysis.inputs[0].options[1],NO_TEXT
+rows[15].modules[0].analysis.inputs[0].options[2],NO_IMAGE
+rows[15].modules[0].analysis.inputs[0].options[3],NO_AUDIO
+rows[15].modules[0].analysis.inputs[0].options[4],NO_VIDEO
+rows[15].modules[0].analysis.inputs[0].options[5],NO_MARKET
+rows[15].modules[0].analysis.inputs[0].options[6],NO_MICROSTRUCTURE
+rows[15].modules[0].analysis.inputs[0].options[7],NO_REGIME
+rows[15].modules[0].analysis.inputs[0].options[8],NO_PROPAGATION
+rows[15].modules[0].analysis.inputs[0].options[9],NO_AFFECTIVE
+rows[15].modules[0].analysis.inputs[0].options[10],NO_UNCERTAINTY
+rows[15].modules[0].analysis.inputs[0].options[11],TEXT_ONLY
+rows[15].modules[0].analysis.inputs[0].options[12],IMAGE_ONLY
+rows[15].modules[0].analysis.inputs[0].options[13],AUDIO_ONLY
+rows[15].modules[0].analysis.inputs[0].options[14],VIDEO_ONLY
+rows[15].modules[0].analysis.inputs[0].options[15],MARKET_ONLY
+rows[15].modules[0].analysis.inputs[0].options[16],MARKET_MICRO
+rows[15].modules[0].analysis.inputs[0].options[17],ALL_MEDIA
+rows[15].modules[0].analysis.inputs[0].options[18],ALL_MEDIA_MARKET
+rows[15].modules[0].analysis.inputs[0].options[19],COMBINER_STATIC
+rows[15].modules[0].analysis.inputs[0].options[20],COMBINER_EARLY
+rows[15].modules[0].analysis.inputs[0].options[21],COMBINER_LATE
+rows[15].modules[0].analysis.inputs[0].options[22],COMBINER_UNCERTAINTY
+rows[15].modules[0].analysis.inputs[0].options[23],COMBINER_REGIME_INHERITED
+rows[15].modules[0].analysis.inputs[0].options[24],COMBINER_REGIME_CORRECTED
+rows[15].modules[0].analysis.inputs[0].minimum,
+rows[15].modules[0].analysis.inputs[0].maximum,
+rows[15].modules[0].analysis.inputs[0].max_items,40
+rows[15].modules[0].analysis.inputs[0].required,False
+rows[15].modules[0].analysis.inputs[1].name,alpha
+rows[15].modules[0].analysis.inputs[1].kind,float
+rows[15].modules[0].analysis.inputs[1].label,Alpha
+rows[15].modules[0].analysis.inputs[1].default,0.05
+rows[15].modules[0].analysis.inputs[1].note,the level the Benjamini-Hochberg correction controls at
+rows[15].modules[0].analysis.inputs[1].options,
+rows[15].modules[0].analysis.inputs[1].minimum,0.01
+rows[15].modules[0].analysis.inputs[1].maximum,0.2
+rows[15].modules[0].analysis.inputs[1].max_items,
+rows[15].modules[0].analysis.inputs[1].required,False
+rows[15].modules[0].analysis.artifact_reason,

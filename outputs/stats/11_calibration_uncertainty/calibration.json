@@ -1,0 +1,18 @@
+{
+  "ece": 0.12269750280082656,
+  "detection": {
+    "n": 3855.0,
+    "positive_rate": 0.2438391699092088,
+    "auprc": 0.9411660307392683,
+    "auroc": 0.9650571147038429,
+    "brier": 0.07134809576450829,
+    "ece": 0.12269750280082656,
+    "threshold": 0.35666802507205675,
+    "precision": 0.9425287356321839,
+    "recall": 0.8723404255319149,
+    "f1": 0.9060773480662984,
+    "auprc_lift": 3.8597819664892334
+  },
+  "caveat": "The risk score is not a calibrated probability (L-10).",
+  "selective_risk_rows": 9
+}

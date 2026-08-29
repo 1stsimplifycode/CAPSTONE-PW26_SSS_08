@@ -1,0 +1,19 @@
+key,value
+experiment_id,ablation
+hypothesis,regime conditioning improves combination (RQ9)
+arm,NO_REGIME
+blocks[4],market
+blocks[5],microstructure
+blocks[6],propagation
+dataset_path,market_dataset.parquet
+train_split,train
+eval_split,validation
+seed,20260818
+baseline,FULL
+metrics[0],auprc
+metrics[1],auroc
+metrics[2],f1
+metrics[3],brier
+metrics[4],ece
+state_config,
+notes,

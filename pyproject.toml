@@ -1,0 +1,48 @@
+[project]
+name = "aegis-market"
+version = "0.1.0"
+description = "Adaptive Evidence-Gated Integrity System for Rare-Event Market Risk"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = [
+  "ignore::PendingDeprecationWarning",
+  "ignore::DeprecationWarning",
+]
+markers = [
+  "slow: requires the full dataset to be built",
+]
+
+[tool.ruff]
+line-length = 90
+target-version = "py312"
+exclude = [".venv", "node_modules", ".next", "research_artifacts", "paper_package"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = [
+  "E731",    # a one-line predict wrapper reads better as a lambda
+  "B008",    # dataclass field defaults use factory calls deliberately
+  "SIM108",  # an explicit if/else is clearer than a nested ternary here
+  # printf-style formatting is used throughout for error and log messages, where it
+  # composes better with the "%s: %s" % (type, exc) idiom. Consistency beats the
+  # marginal readability win of f-strings, and a 200-site rewrite would obscure the diff.
+  "UP031",
+  "UP032",
+  "B905",    # zip(...) over equal-length arrays built together; strict= adds noise
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501", "B017"]
+# Every script must insert the repository root on sys.path before importing `research`,
+# which necessarily puts imports after a statement.
+"scripts/*" = ["E402"]
+# The limitations registry and the claim ledger are prose-heavy data
+# literals: every field is a sentence a reader will see in the UI or the
+# paper. Wrapping those strings to 90 columns fragments them across lines
+# and makes review harder, which is the opposite of the point.
+"research/limitations/registry.py" = ["E501"]
+"research/claims/ledger.py" = ["E501"]
+"tests/*.py" = ["E402"]

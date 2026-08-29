@@ -1,0 +1,146 @@
+key,value
+generated_at,2026-08-23T04:35:36.950798+00:00
+rows[0].id,STATS-01
+rows[0].index,1
+rows[0].category,STATS
+rows[0].name,Data and integrity profile
+rows[0].slug,data_integrity_profile
+rows[0].route,/stats/data-integrity
+rows[0].icon,▤
+rows[0].product_name,What the data contains
+rows[0].product_question,Is the data underneath every other number complete enough to build on?
+rows[1].id,STATS-02
+rows[1].index,2
+rows[1].category,STATS
+rows[1].name,Universe and survivorship statistics
+rows[1].slug,universe_survivorship
+rows[1].route,/stats/universe
+rows[1].icon,◎
+rows[1].product_name,Which instruments are covered
+rows[1].product_question,"How much does the research universe turn over, and what does that mean for a result read as applying to a stable index?"
+rows[2].id,STATS-03
+rows[2].index,3
+rows[2].category,STATS
+rows[2].name,Descriptive and distributional statistics
+rows[2].slug,descriptive_distributions
+rows[2].route,/stats/distributions
+rows[2].icon,∑
+rows[2].product_name,How the numbers behave
+rows[2].product_question,"Which features actually vary, and which are so degenerate that any importance attributed to them should be discounted?"
+rows[3].id,STATS-04
+rows[3].index,4
+rows[3].category,STATS
+rows[3].name,Market and microstructure-proxy statistics
+rows[3].slug,market_microstructure
+rows[3].route,/stats/microstructure
+rows[3].icon,⌗
+rows[3].product_name,Liquidity and trading conditions
+rows[3].product_question,"How much microstructure information do daily proxies retain, and what is provably absent?"
+rows[4].id,STATS-05
+rows[4].index,5
+rows[4].category,STATS
+rows[4].name,Regime statistics
+rows[4].slug,regime_statistics
+rows[4].route,/stats/regimes
+rows[4].icon,◑
+rows[4].product_name,Market regimes
+rows[4].product_question,Are the detected regimes stable and well-populated enough for a regime-conditioned result to be interpretable?
+rows[5].id,STATS-06
+rows[5].index,6
+rows[5].category,STATS
+rows[5].name,Dependence and propagation statistics
+rows[5].slug,dependence_propagation
+rows[5].route,/stats/propagation
+rows[5].icon,⬡
+rows[5].product_name,How instruments move together
+rows[5].product_question,Do cross-instrument co-movement features carry information beyond the instrument's own series?
+rows[6].id,STATS-07
+rows[6].index,7
+rows[6].category,STATS
+rows[6].name,Tail and extreme-risk statistics
+rows[6].slug,tail_extreme_risk
+rows[6].route,/stats/tail-risk
+rows[6].icon,◤
+rows[6].product_name,Extreme moves
+rows[6].product_question,What does the tail of the realised return distribution look like over the rows this system scores?
+rows[7].id,STATS-08
+rows[7].index,8
+rows[7].category,STATS
+rows[7].name,Episode and event statistics
+rows[7].slug,episode_event_statistics
+rows[7].route,/stats/episodes
+rows[7].icon,⚡
+rows[7].product_name,Unusual market events
+rows[7].product_question,"How many integrity episodes exist, how intense are they, and how are they distributed across instruments?"
+rows[8].id,STATS-09
+rows[8].index,9
+rows[8].category,STATS
+rows[8].name,Leakage and split verification
+rows[8].slug,leakage_verification
+rows[8].route,/stats/leakage
+rows[8].icon,⛨
+rows[8].product_name,Timing integrity
+rows[8].product_question,"Does any feature, split or threshold use information that was not available at the time of the decision?"
+rows[9].id,STATS-10
+rows[9].index,10
+rows[9].category,STATS
+rows[9].name,Validation and verification metrics
+rows[9].slug,validation_verification
+rows[9].route,/stats/validation
+rows[9].icon,✓
+rows[9].product_name,How accurate the signal is
+rows[9].product_question,"How often is the model right, how often is it wrong, and in which direction?"
+rows[10].id,STATS-11
+rows[10].index,11
+rows[10].category,STATS
+rows[10].name,Calibration and uncertainty
+rows[10].slug,calibration_uncertainty
+rows[10].route,/stats/calibration
+rows[10].icon,◔
+rows[10].product_name,How confident the signal is
+rows[10].product_question,"When the model reports a high score, is it right that often?"
+rows[11].id,STATS-12
+rows[11].index,12
+rows[11].category,STATS
+rows[11].name,Error analysis
+rows[11].slug,error_analysis
+rows[11].route,/stats/errors
+rows[11].icon,✖
+rows[11].product_name,Where the signal gets it wrong
+rows[11].product_question,"What kind of rows does the model get wrong, and is the error concentrated anywhere?"
+rows[12].id,STATS-13
+rows[12].index,13
+rows[12].category,STATS
+rows[12].name,Baseline comparison
+rows[12].slug,baseline_comparison
+rows[12].route,/stats/baselines
+rows[12].icon,⚖
+rows[12].product_name,Compared with simpler methods
+rows[12].product_question,Does the evidence stack outperform a simple statistical detector on the same rows and the same metric?
+rows[13].id,STATS-14
+rows[13].index,14
+rows[13].category,STATS
+rows[13].name,Ablation study
+rows[13].slug,ablation_study
+rows[13].route,/stats/ablation
+rows[13].icon,◫
+rows[13].product_name,What each component contributes
+rows[13].product_question,"Which components carry the result, and which could be removed without changing it?"
+rows[14].id,STATS-15
+rows[14].index,15
+rows[14].category,STATS
+rows[14].name,Robustness and generalization
+rows[14].slug,robustness_generalization
+rows[14].route,/stats/robustness
+rows[14].icon,⊘
+rows[14].product_name,What happens when data degrades
+rows[14].product_question,"How much does performance fall when features are noisy, stale, missing, or when there is less training data?"
+rows[15].id,STATS-16
+rows[15].index,16
+rows[15].category,STATS
+rows[15].name,Multi-seed and statistical significance
+rows[15].slug,multiseed_significance
+rows[15].route,/stats/multi-seed
+rows[15].icon,⊛
+rows[15].product_name,What counts as a real difference
+rows[15].product_question,Is an observed difference between two arms bigger than what re-seeding alone produces?

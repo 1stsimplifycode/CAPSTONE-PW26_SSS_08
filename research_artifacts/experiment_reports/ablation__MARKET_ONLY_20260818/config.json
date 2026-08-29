@@ -1,0 +1,23 @@
+{
+  "experiment_id": "ablation",
+  "hypothesis": "arm MARKET_ONLY vs FULL",
+  "arm": "MARKET_ONLY",
+  "blocks": [
+    "market"
+  ],
+  "combination_rule": "regime_corrected",
+  "dataset_path": "market_dataset.parquet",
+  "train_split": "train",
+  "eval_split": "validation",
+  "seed": 20260818,
+  "baseline": "FULL",
+  "metrics": [
+    "auprc",
+    "auroc",
+    "f1",
+    "brier",
+    "ece"
+  ],
+  "state_config": {},
+  "notes": []
+}

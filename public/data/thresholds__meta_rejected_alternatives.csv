@@ -1,0 +1,4 @@
+method,why_not
+mean +/- k sigma,"Assumes symmetry and a finite, well-estimated variance. Amihud illiquidity is right-skewed by construction (a ratio with turnover in the denominator), so a symmetric band is wrong on both sides at once."
+Gaussian z-scores,Assume a normality that intraday variance and trade counts visibly do not have; the tail probability would be understated by orders of magnitude.
+a round percentage,Is not a guarantee about anything.

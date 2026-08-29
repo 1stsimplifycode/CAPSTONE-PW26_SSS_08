@@ -1,0 +1,5 @@
+block,declared_features,present_in_dataset,mean_non_null_fraction
+market,18,18,0.9996074405121392
+microstructure,4,4,1.0
+regime,7,7,0.7142857142857143
+propagation,5,5,0.9850223456939243

@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-23T04:35:36.950798+00:00",
+  "meta": {
+    "n": 17
+  },
+  "rows": [
+    {
+      "figure": "fig05_risk_window",
+      "available": true,
+      "url": "/figures/fig05_risk_window.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 152318
+    },
+    {
+      "figure": "fig06_universe",
+      "available": true,
+      "url": "/figures/fig06_universe.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 177274
+    },
+    {
+      "figure": "fig07_regimes",
+      "available": true,
+      "url": "/figures/fig07_regimes.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 239437
+    },
+    {
+      "figure": "fig12b_regime_degeneracy",
+      "available": true,
+      "url": "/figures/fig12b_regime_degeneracy.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 211282
+    },
+    {
+      "figure": "fig13_precision_recall",
+      "available": true,
+      "url": "/figures/fig13_precision_recall.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 89182
+    },
+    {
+      "figure": "fig14_calibration",
+      "available": true,
+      "url": "/figures/fig14_calibration.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 96987
+    },
+    {
+      "figure": "fig18_propagation",
+      "available": true,
+      "url": "/figures/fig18_propagation.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 208333
+    },
+    {
+      "figure": "fig20_cvar",
+      "available": true,
+      "url": "/figures/fig20_cvar.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 40022
+    },
+    {
+      "figure": "fig21_drawdown",
+      "available": true,
+      "url": "/figures/fig21_drawdown.png",
+      "caption": "Generated figure; caption recorded in the paper package.",
+      "source_data": null,
+      "source_dir": "research_artifacts/figures",
+      "git_commit": null,
+      "bytes": 150065
+    },
+    {
+      "figure": "figR04_stats_input_robustness",
+      "available": true,
+      "url": "/figures/figR04_stats_input_robustness.png",
+      "caption": "AUPRC under each input degradation. Noise is the worst failure and a stale feed the mildest; a single robustness number would hide the distinction.",
+      "source_data": "outputs/stats/15_robustness_generalization/robustness.csv",
+      "source_dir": "outputs/research_figures",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "bytes": 86803
+    },
+    {
+      "figure": "figR05_stats_learning_curve",
+      "available": true,
+      "url": "/figures/figR05_stats_learning_curve.png",
+      "caption": "Learning curve over training-set size, subsampled by instrument rather than by row because rows from one instrument are not independent.",
+      "source_data": "outputs/stats/15_robustness_generalization/robustness.csv",
+      "source_dir": "outputs/research_figures",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "bytes": 63142
+    },
+    {
+      "figure": "figR06_stats_generalization",
+      "available": true,
+      "url": "/figures/figR06_stats_generalization.png",
+      "caption": "Forward-in-time transfer rises across folds as history accumulates; transfer to disjoint instruments is close to in-sample performance.",
+      "source_data": "outputs/stats/15_robustness_generalization/generalization.csv",
+      "source_dir": "outputs/research_figures",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "bytes": 47806
+    },
+    {
+      "figure": "figR07_seed_variability",
+      "available": true,
+      "url": "/figures/figR07_seed_variability.png",
+      "caption": "Mean AUPRC over ten seeds with the observed range, for the strongest arms. The spread is what a single-run difference has to exceed.",
+      "source_data": "outputs/stats/16_multiseed_significance/seed_table.csv",
+      "source_dir": "outputs/research_figures",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "bytes": 84373
+    }
+  ]
+}

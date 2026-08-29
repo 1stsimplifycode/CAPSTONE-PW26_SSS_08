@@ -1,0 +1,307 @@
+{
+  "built_at": "2026-08-25T13:24:45.106514+00:00",
+  "intraday": {
+    "available": true,
+    "bars": 626856,
+    "symbols": 50,
+    "per_interval": {
+      "1m": {
+        "bars": 126880,
+        "sessions": 7
+      },
+      "2m": {
+        "bars": 282755,
+        "sessions": 32
+      },
+      "5m": {
+        "bars": 217221,
+        "sessions": 59
+      }
+    },
+    "basis": "THIRD_PARTY_REDISTRIBUTOR (not an NSE publication)"
+  },
+  "c1_realised_variance": {
+    "realised_variance_version": "realised-variance-v1",
+    "built_at": "2026-08-25T13:24:53.552683+00:00",
+    "estimator": "RV_t = sum_i r_{t,i}^2 with r = ln(P_i / P_{i-1})",
+    "precision_target": {
+      "max_relative_standard_error": 0.25,
+      "max_noise_share": 0.1
+    },
+    "target_declared_before_selection": true,
+    "selection_rule": "Reject any frequency whose noise share exceeds 0.10 or whose relative standard error exceeds 0.25, then take the finest survivor. Declared before evaluation; no downstream metric participates.",
+    "selected_sampling_minutes": 2,
+    "measured_relative_standard_error": 0.10511766624552733,
+    "measured_noise_share": 0.06251082695346784,
+    "candidates_evaluated": [
+      1,
+      2,
+      5,
+      10,
+      15,
+      30
+    ],
+    "rejected": {
+      "1": "noise share 0.121 exceeds 0.100",
+      "15": "relative standard error 0.289 exceeds 0.250",
+      "30": "relative standard error 0.408 exceeds 0.250"
+    },
+    "rows": 1559,
+    "symbols": 50,
+    "sessions": 32,
+    "mean_annualised_realised_volatility": 0.20523577487342,
+    "data_basis": "THIRD_PARTY_REDISTRIBUTOR (not an NSE publication)"
+  },
+  "c2_price_impact": {
+    "price_impact_version": "price-impact-v1",
+    "built_at": "2026-08-25T13:24:55.818642+00:00",
+    "specification": "r_i = alpha + lambda * S_i + e_i",
+    "dependent_variable": "bar log return, ln(P_i / P_{i-1}), within session only",
+    "independent_variable": "signed volume S_i = tick_rule_sign_i * volume_i",
+    "fitting_procedure": "ordinary least squares, HC1 heteroskedasticity-robust SE",
+    "sampling_minutes": 2,
+    "estimates": 50,
+    "estimates_with_uncertainty": 50,
+    "uncertainty_emitted_for_every_estimate": true,
+    "median_lambda": 6.363657238388921e-09,
+    "median_standard_error": 1.1902072038997483e-09,
+    "median_t_stat": 4.259821837819614,
+    "significant_at_5pct": 47,
+    "median_r_squared": 0.33940917454189273,
+    "median_n_obs": 5556,
+    "mean_sign_carried_forward_share": 0.07511205396256533,
+    "signing_basis": "INFERRED_BY_PUBLISHED_RULE",
+    "signing_caveat": "Trade direction is not published by NSE. Signs are inferred by the tick test, which misclassifies some bars and attenuates lambda toward zero. These coefficients are therefore conservative, and are not an exchange statement about order flow.",
+    "price_basis": "THIRD_PARTY_REDISTRIBUTOR"
+  },
+  "c5_arrival": {
+    "arrival_version": "arrival-v1",
+    "built_at": "2026-08-25T13:24:56.995507+00:00",
+    "data": "NSE bhavcopy trade counts (TOTALTRADES / TtlNbOfTxsExctd)",
+    "resolution": "daily counts; NSE publishes no trade timestamps in any dataset obtained here, so inter-arrival times are not observable",
+    "estimator": "Poisson MLE lambda = mean daily count; negative binomial by method of moments Var = mu + mu^2/k",
+    "dispersion_test": "chi-squared (n-1)*Var/Mean against the Poisson null, one-sided at alpha=0.05",
+    "symbols_fitted": 50,
+    "overdispersed_symbols": 50,
+    "overdispersed_share": 1.0,
+    "median_fano_factor": 42321.604717010196,
+    "min_fano_factor": 13410.589578673269,
+    "max_fano_factor": 347967.00853639643,
+    "median_daily_trades": 118969.30185758515,
+    "aggregate_for_week8": {
+      "fano_factor": 42321.604717010196,
+      "nb_dispersion_k": 3.1562096489010694,
+      "overdispersed": true,
+      "model_selected": "negative_binomial",
+      "n_symbols": 50,
+      "n_sessions": 646,
+      "median_daily_trades": 118969.30185758515,
+      "source": "cash_panel.trades",
+      "computed_at": "2026-08-25T13:24:56.995507+00:00",
+      "basis": "DERIVED_FROM_EXCHANGE_DATA",
+      "variance_inflation": 42321.604717010196,
+      "sd_inflation": 205.72215417161613
+    },
+    "basis": "DERIVED_FROM_EXCHANGE_DATA",
+    "published_for_week8": "data/reference/week2_overdispersion.json"
+  },
+  "c3_amihud": {
+    "formula": "mean over the window of |r_t| / turnover_t",
+    "window_sessions": 21,
+    "cross_section_window": "2024-01-01 .. 2026-08-14",
+    "fields": [
+      "close -> ret_1d",
+      "turnover (TOTTRDVAL / TtlTrfVal)"
+    ],
+    "securities": 50,
+    "median": 3.2186253626556292e-12,
+    "basis": "DERIVED_FROM_EXCHANGE_DATA"
+  },
+  "c3_cross_check": {
+    "measure_a": "amihud",
+    "measure_b": "price_impact_lambda",
+    "n": 50,
+    "spearman_rho": 0.28902761104441776,
+    "spearman_p_value": 0.04177888231159168,
+    "spearman_ci_low": 0.0031629997060892536,
+    "spearman_ci_high": 0.5312225586171772,
+    "kendall_tau": 0.21959183673469387,
+    "kendall_p_value": 0.024439631918335605,
+    "interpretation": "The two rankings agree (rho=0.289, p=0.04178, n=50): securities the daily Amihud proxy calls illiquid are the ones the intraday regression finds have the largest price impact.",
+    "computed_at": "2026-08-25T13:24:57.340190+00:00"
+  },
+  "c6_liquidity_state": {
+    "liquidity_version": "liquidity-v1",
+    "built_at": "2026-08-25T13:24:57.518851+00:00",
+    "state_vector": "L = [realised_variance, price_impact_lambda, amihud, arrival_fano]",
+    "components": [
+      "realised_variance",
+      "price_impact_lambda",
+      "amihud",
+      "arrival_fano"
+    ],
+    "normalisation": "robust z, (x - median) / (1.4826 * MAD)",
+    "securities": 1559,
+    "stress_threshold": 6.613877393039332,
+    "false_alarm_budget": {
+      "alpha": 0.01,
+      "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+      "min_calibration": 200
+    },
+    "threshold_method": "conformal empirical quantile",
+    "distribution_free": true,
+    "gate_fired": 14,
+    "attribution_rule": "contribution_j = z_j / sum over components with z_k > 0. Computed from the state vector's own z-scores; no hardcoded explanation.",
+    "primary_drivers": {
+      "realised_variance": 8,
+      "price_impact_lambda": 6
+    },
+    "fired_symbols": [
+      "BHEL",
+      "DIXON",
+      "ETERNAL",
+      "GROWW",
+      "HFCL",
+      "KAYNES",
+      "NETWEB",
+      "NETWEB",
+      "NETWEB",
+      "POWERINDIA",
+      "POWERINDIA",
+      "POWERINDIA",
+      "POWERINDIA",
+      "POWERINDIA"
+    ],
+    "amihud_vs_price_impact": {
+      "measure_a": "amihud",
+      "measure_b": "price_impact_lambda",
+      "n": 50,
+      "spearman_rho": 0.28902761104441776,
+      "spearman_p_value": 0.04177888231159168,
+      "spearman_ci_low": 0.0031629997060892536,
+      "spearman_ci_high": 0.5312225586171772,
+      "kendall_tau": 0.21959183673469387,
+      "kendall_p_value": 0.024439631918335605,
+      "interpretation": "The two rankings agree (rho=0.289, p=0.04178, n=50): securities the daily Amihud proxy calls illiquid are the ones the intraday regression finds have the largest price impact.",
+      "computed_at": "2026-08-25T13:24:57.340190+00:00"
+    },
+    "band_hit_validation": {
+      "available": true,
+      "observations": 1559,
+      "gate_fired": 14,
+      "band_hit_base_rate": 0.028864656831302116,
+      "band_hit_rate_when_gate_fired": 0.07142857142857142,
+      "band_hit_rate_when_gate_quiet": 0.0284789644012945,
+      "lift": 2.4746031746031747,
+      "source": "NSE PR bundle bh member (exchange-published band hits)",
+      "interpretation": "Securities the gate called stressed hit a circuit band on 7.14% of those sessions, against a 2.89% base rate across the window."
+    }
+  },
+  "c4_thresholds": {
+    "thresholds_version": "thresholds-v1",
+    "features": [
+      "realised_variance"
+    ],
+    "false_alarm_budget": {
+      "alpha": 0.01,
+      "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+      "min_calibration": 200
+    },
+    "budget_declared_before_fitting": true,
+    "method": "conformal empirical quantile (distribution-free)",
+    "thresholds": {
+      "realised_variance": {
+        "feature": "realised_variance",
+        "method": "conformal empirical quantile",
+        "distribution_free": true,
+        "budget": {
+          "alpha": 0.01,
+          "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+          "min_calibration": 200
+        },
+        "threshold": 0.001333700970992161,
+        "direction": "upper",
+        "n_calibration": 1559,
+        "order_statistic_index": 1545,
+        "realised_false_alarm_rate": 0.008980115458627326,
+        "coverage": 0.9910198845413727,
+        "fitted_at": "2026-08-25T13:24:57.527826+00:00",
+        "gaussian_threshold": 0.0008084893098736515,
+        "gaussian_realised_rate": 0.023733162283515075
+      }
+    },
+    "applied_to": {
+      "rows": 1559,
+      "anomalies": 14,
+      "realised_rate": 0.008980115458627326
+    },
+    "stress_gate_threshold": {
+      "feature": "stress_score",
+      "method": "conformal empirical quantile",
+      "distribution_free": true,
+      "budget": {
+        "alpha": 0.01,
+        "rationale": "Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate.",
+        "min_calibration": 200
+      },
+      "threshold": 6.613877393039332,
+      "direction": "upper",
+      "n_calibration": 1559,
+      "order_statistic_index": 1545,
+      "realised_false_alarm_rate": 0.008980115458627326,
+      "coverage": 0.9910198845413727,
+      "fitted_at": "2026-08-25T13:24:57.403557+00:00",
+      "gaussian_threshold": 4.754190877941412,
+      "gaussian_realised_rate": 0.040410519563822966
+    },
+    "features_in_state_vector": [
+      "realised_variance",
+      "price_impact_lambda",
+      "amihud",
+      "arrival_fano"
+    ]
+  },
+  "circuit_band_history": {
+    "price_bands_version": "price-bands-v1",
+    "built_at": "2026-08-25T13:24:57.546518+00:00",
+    "source": "NSE PR bundle, bh member (securities that hit their price bands)",
+    "basis": "EXCHANGE_PUBLISHED",
+    "rows": 50382,
+    "sessions": 254,
+    "distinct_symbols": 2393,
+    "first_session": "2025-08-01",
+    "last_session": "2026-08-14",
+    "upper_band_hits": 27524,
+    "lower_band_hits": 22858,
+    "mean_hits_per_session": 198.35433070866142,
+    "archive_first_session": "2010-01-04",
+    "what_this_is": "the historical realisation of the circuit regime",
+    "what_this_is_not": "the band width schedule; no historical width series was obtainable and none is attached to a past session"
+  },
+  "week8_integration": {
+    "count_events_version": "count-events-v1",
+    "built_at": "2026-08-25T13:24:58.010781+00:00",
+    "rows_scored": 151648,
+    "events_detected": 2081,
+    "event_rate": 0.013722568052331716,
+    "events_a_poisson_detector_would_have_raised": 72642,
+    "poisson_event_rate": 0.4790171977210382,
+    "false_alarm_reduction": 0.9713526609950166,
+    "detector": {
+      "count_events_version": "count-events-v1",
+      "z": 3.0,
+      "band": "lambda + z * sqrt(lambda) * sd_inflation",
+      "sd_inflation": 205.72215417161613,
+      "week2_input": {
+        "fano_factor": 42321.604717010196,
+        "overdispersed": true,
+        "model_selected": "negative_binomial",
+        "source": "cash_panel.trades",
+        "computed_at": "2026-08-25T13:24:56.995507+00:00",
+        "basis": "DERIVED_FROM_EXCHANGE_DATA"
+      },
+      "dependency": "research.market.arrival -> data/reference/week2_overdispersion.json -> this detector. Constructing without the Week 2 result raises MissingWeek2Input; there is no Poisson fallback."
+    },
+    "interpretation": "The Poisson band would have called 72642 of 151648 scored sessions an event. Widening it by the Week 2 dispersion factor of 205.7 leaves 2081. The difference is the Week 2 result doing work."
+  }
+}

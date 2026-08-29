@@ -1,0 +1,181 @@
+   ▲ Next.js 15.5.23
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.102:3000
+
+ ✓ Starting...
+ ✓ Ready in 4.7s
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 2.7s (615 modules)
+ GET /stats 200 in 5358ms
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 1803ms (622 modules)
+ GET /markets 200 in 5948ms
+ ○ Compiling /research/limitations ...
+ ✓ Compiled /research/limitations in 679ms (624 modules)
+ GET /research/limitations 200 in 2056ms
+ ○ Compiling / ...
+ ✓ Compiled / in 795ms (636 modules)
+ GET / 200 in 6890ms
+ ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 5357ms
+ GET /markets 200 in 3311ms
+ ○ Compiling /instruments/[symbol] ...
+ ✓ Compiled /instruments/[symbol] in 962ms (650 modules)
+ GET /instruments/ADANIENT 200 in 6200ms
+ ○ Compiling /api/aegis/[...path] ...
+ ✓ Compiled /api/aegis/[...path] in 633ms (674 modules)
+ GET /api/aegis/watchlists 404 in 2016ms
+ ✓ Compiled /stats in 394ms (448 modules)
+ GET /stats 200 in 1720ms
+ ○ Compiling /stats/[slug] ...
+ ✓ Compiled /stats/[slug] in 2s (706 modules)
+ GET /stats/ablation 200 in 5762ms
+ GET /stats/baselines 200 in 1403ms
+ GET /stats/calibration 200 in 1276ms
+ GET /stats/data-integrity 200 in 1316ms
+ GET /stats/distributions 200 in 843ms
+ GET /stats/episodes 200 in 738ms
+ GET /stats/errors 200 in 1517ms
+ GET /stats/leakage 200 in 736ms
+ GET /stats/microstructure 200 in 898ms
+ GET /stats/multi-seed 200 in 1644ms
+ GET /stats/propagation 200 in 763ms
+ GET /stats/regimes 200 in 915ms
+ GET /stats/robustness 200 in 1720ms
+ GET /stats/tail-risk 200 in 850ms
+ GET /stats/universe 200 in 1373ms
+ GET /stats/validation 200 in 2196ms
+ ○ Compiling /research ...
+ ✓ Compiled /research in 1289ms (692 modules)
+ GET /research 200 in 2757ms
+ ○ Compiling /research/ablations ...
+ ✓ Compiled /research/ablations in 987ms (691 modules)
+ GET /research/ablations 200 in 2471ms
+ ○ Compiling /research/artifacts ...
+ ✓ Compiled /research/artifacts in 915ms (693 modules)
+ GET /research/artifacts 200 in 2175ms
+ ○ Compiling /research/claims ...
+ ✓ Compiled /research/claims in 985ms (695 modules)
+ GET /research/claims 200 in 2429ms
+ ○ Compiling /research/datasets ...
+ ✓ Compiled /research/datasets in 855ms (675 modules)
+ GET /research/datasets 200 in 1668ms
+ ○ Compiling /research/experiments ...
+ ✓ Compiled /research/experiments in 853ms (675 modules)
+ GET /research/experiments 200 in 2081ms
+ ○ Compiling /research/figures ...
+ ✓ Compiled /research/figures in 820ms (677 modules)
+ GET /research/figures 200 in 2298ms
+ ○ Compiling /research/limitations ...
+ ✓ Compiled /research/limitations in 970ms (432 modules)
+ GET /research/limitations 200 in 2333ms
+ ○ Compiling /research/paper-lab ...
+ ✓ Compiled /research/paper-lab in 823ms (681 modules)
+ GET /research/paper-lab 200 in 1624ms
+ ○ Compiling /research/reproducibility ...
+ ✓ Compiled /research/reproducibility in 1062ms (683 modules)
+ GET /research/reproducibility 200 in 1882ms
+ ○ Compiling /research/statistics ...
+ ✓ Compiled /research/statistics in 1353ms (686 modules)
+ GET /research/statistics 200 in 2606ms
+ ○ Compiling /research/tables ...
+ ✓ Compiled /research/tables in 1074ms (688 modules)
+ GET /research/tables 200 in 1806ms
+ ○ Compiling /research/thresholds ...
+ ✓ Compiled /research/thresholds in 1225ms (658 modules)
+ GET /research/thresholds 200 in 2817ms
+ ○ Compiling /research/xai ...
+ ✓ Compiled /research/xai in 1221ms (654 modules)
+ GET /research/xai 200 in 2614ms
+ ○ Compiling /research/limitations/[id] ...
+ ✓ Compiled /research/limitations/[id] in 1224ms (664 modules)
+ GET /research/limitations/L-01 200 in 3418ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1241ms (421 modules)
+ GET / 200 in 5772ms
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 1098ms (415 modules)
+ GET /markets 200 in 5271ms
+ GET / 200 in 5049ms
+ GET /markets 200 in 3683ms
+ ○ Compiling /instruments/[symbol] ...
+ ✓ Compiled /instruments/[symbol] in 1335ms (423 modules)
+ GET /instruments/ADANIENT 200 in 4307ms
+ ○ Compiling /api/aegis/[...path] ...
+ ✓ Compiled /api/aegis/[...path] in 679ms (446 modules)
+ GET /api/aegis/watchlists 404 in 1072ms
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 645ms (457 modules)
+ GET /stats 200 in 2208ms
+ ○ Compiling /stats/[slug] ...
+ ✓ Compiled /stats/[slug] in 708ms (470 modules)
+ GET /stats/ablation 200 in 2973ms
+ GET /stats/baselines 200 in 1273ms
+ GET /stats/calibration 200 in 896ms
+ GET /stats/data-integrity 200 in 904ms
+ GET /stats/distributions 200 in 1244ms
+ GET /stats/episodes 200 in 725ms
+ GET /stats/errors 200 in 1298ms
+ GET /stats/leakage 200 in 715ms
+ GET /stats/microstructure 200 in 817ms
+ GET /stats/multi-seed 200 in 1585ms
+ GET /stats/propagation 200 in 769ms
+ GET /stats/regimes 200 in 846ms
+ GET /stats/robustness 200 in 1590ms
+ GET /stats/tail-risk 200 in 804ms
+ GET /stats/universe 200 in 1076ms
+ GET /stats/validation 200 in 823ms
+ ○ Compiling /research ...
+ ✓ Compiled /research in 1265ms (446 modules)
+ GET /research 200 in 2707ms
+ ○ Compiling /research/ablations ...
+ ✓ Compiled /research/ablations in 623ms (451 modules)
+ GET /research/ablations 200 in 2115ms
+ ○ Compiling /research/artifacts ...
+ ✓ Compiled /research/artifacts in 540ms (446 modules)
+ GET /research/artifacts 200 in 1636ms
+ ○ Compiling /research/claims ...
+ ✓ Compiled /research/claims in 720ms (426 modules)
+ GET /research/claims 200 in 2017ms
+ ○ Compiling /research/datasets ...
+ ✓ Compiled /research/datasets in 531ms (428 modules)
+ GET /research/datasets 200 in 1133ms
+ ✓ Compiled /research/experiments in 496ms (428 modules)
+ GET /research/experiments 200 in 1520ms
+ ○ Compiling /research/figures ...
+ ✓ Compiled /research/figures in 586ms (430 modules)
+ GET /research/figures 200 in 1880ms
+ ○ Compiling /research/limitations ...
+ ✓ Compiled /research/limitations in 874ms (432 modules)
+ GET /research/limitations 200 in 2149ms
+ ○ Compiling /research/paper-lab ...
+ ✓ Compiled /research/paper-lab in 715ms (434 modules)
+ GET /research/paper-lab 200 in 1448ms
+ ○ Compiling /research/reproducibility ...
+ ✓ Compiled /research/reproducibility in 730ms (436 modules)
+ GET /research/reproducibility 200 in 1530ms
+ ○ Compiling /research/statistics ...
+ ✓ Compiled /research/statistics in 1141ms (439 modules)
+ GET /research/statistics 200 in 2250ms
+ ○ Compiling /research/tables ...
+ ✓ Compiled /research/tables in 860ms (441 modules)
+ GET /research/tables 200 in 1755ms
+ ○ Compiling /research/thresholds ...
+ ✓ Compiled /research/thresholds in 1210ms (443 modules)
+ GET /research/thresholds 200 in 2603ms
+ ○ Compiling /research/xai ...
+ ✓ Compiled /research/xai in 1256ms (445 modules)
+ GET /research/xai 200 in 2366ms
+ ○ Compiling /research/limitations/[id] ...
+ ✓ Compiled /research/limitations/[id] in 867ms (423 modules)
+ GET /research/limitations/L-01 200 in 2103ms
+ ○ Compiling /stats ...
+ ✓ Compiled /stats in 2.8s (409 modules)
+ GET /stats 200 in 4851ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1432ms (420 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.9s (672 modules)
+ GET / 404 in 4777ms
+ GET / 200 in 6776ms

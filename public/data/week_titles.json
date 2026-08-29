@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-08-23T04:35:36.950798+00:00",
+  "rows": [
+    {
+      "week": 1,
+      "title": "What the evidence base is made of",
+      "question": "Before any result: what rows exist, how completely are they covered, and how large is each split?",
+      "route": "/weeks/1"
+    },
+    {
+      "week": 2,
+      "title": "Which instruments the analysis covers",
+      "question": "Is the instrument universe point-in-time, and how did its membership change?",
+      "route": "/weeks/2"
+    },
+    {
+      "week": 3,
+      "title": "Distributions and feature behaviour",
+      "question": "What do the numeric distributions look like, and which features cannot vary on the rows selected?",
+      "route": "/weeks/3"
+    },
+    {
+      "week": 4,
+      "title": "Microstructure and liquidity proxies",
+      "question": "What do the liquidity and microstructure proxies show, and which quantities does this data source simply not express?",
+      "route": "/weeks/4"
+    },
+    {
+      "week": 5,
+      "title": "Regime statistics",
+      "question": "How are regimes distributed over the sample, and how thin is the smallest of them?",
+      "route": "/weeks/5"
+    },
+    {
+      "week": 6,
+      "title": "Dependence and propagation",
+      "question": "How does movement propagate across instruments, and how strong is the typical association?",
+      "route": "/weeks/6"
+    },
+    {
+      "week": 7,
+      "title": "Tails and extreme risk",
+      "question": "How heavy are the tails on your slice, and how deep did the drawdowns get?",
+      "route": "/weeks/7"
+    },
+    {
+      "week": 8,
+      "title": "Episode and event statistics",
+      "question": "How are the injected episodes distributed across instruments and sessions?",
+      "route": "/weeks/8"
+    },
+    {
+      "week": 9,
+      "title": "Leakage verification",
+      "question": "Can information from after a decision time reach a feature?",
+      "route": "/weeks/9"
+    },
+    {
+      "week": 10,
+      "title": "Validation metrics at a threshold you choose",
+      "question": "What do the validation metrics say at a threshold you choose?",
+      "route": "/weeks/10"
+    },
+    {
+      "week": 11,
+      "title": "Calibration and uncertainty",
+      "question": "Are the scores calibrated at the bin count you choose?",
+      "route": "/weeks/11"
+    },
+    {
+      "week": 12,
+      "title": "Error analysis",
+      "question": "Where does the scoring fail, and what kind of failure is each mistake?",
+      "route": "/weeks/12"
+    },
+    {
+      "week": 13,
+      "title": "Baseline comparison",
+      "question": "How do the baselines compare, and is the full stack better than something simpler?",
+      "route": "/weeks/13"
+    },
+    {
+      "week": 14,
+      "title": "Ablation study",
+      "question": "Which components carry the result, and how much does removing each one cost?",
+      "route": "/weeks/14"
+    },
+    {
+      "week": 15,
+      "title": "Robustness and generalisation",
+      "question": "What survives perturbation, and how much quality is lost when the inputs degrade?",
+      "route": "/weeks/15"
+    },
+    {
+      "week": 16,
+      "title": "Seeds and significance",
+      "question": "How much of the difference between arms is seed noise?",
+      "route": "/weeks/16"
+    }
+  ]
+}

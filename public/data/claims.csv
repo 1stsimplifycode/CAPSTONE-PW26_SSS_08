@@ -1,0 +1,345 @@
+key,value
+generated_at,2026-08-23T04:35:34.526981+00:00
+rows[0].id,CLAIM-01
+rows[0].claim,Affective representation of financial text substantially outperforms sentiment polarity alone for detecting injected integrity episodes.
+rows[0].status,SUPPORTED
+rows[0].scope,SYNTHETIC_VALIDATION
+rows[0].evidence,"AUPRC 0.7973 for the full affective text block versus 0.6042 for valence alone; removing affective features from the full stack costs 0.0888 AUPRC (95% CI 0.0632-0.1163, BH-adjusted p 0.0021)."
+rows[0].dataset,"NSE cash panel 2015-2026 with injected episodes, validation split"
+rows[0].experiment,ablation: TEXT_ONLY vs sentiment_only baseline; NO_AFFECTIVE arm
+rows[0].limitations[0],L-04
+rows[0].limitations[1],L-01
+rows[0].limitations[2],L-11
+rows[0].limitations[3],L-05
+rows[0].overclaim_examples[0],Affective AI improves manipulation detection.
+rows[0].overclaim_examples[1],Emotion analysis detects market fraud.
+rows[0].figure_ids[0],fig13_precision_recall
+rows[0].note,"The comparison is between two text representations on the same rows, which is the cleanest contrast in the study."
+rows[0].metric,AUPRC
+rows[0].statistical_test,"paired cluster bootstrap over episodes, Benjamini-Hochberg adjusted"
+rows[0].evidence_artifact[0],research_artifacts/experiments/ablation_results.csv
+rows[0].evidence_artifact[1],research_artifacts/experiments/ablation_statistics.csv
+rows[0].evidence_artifact[2],research_artifacts/experiments/baseline_results.csv
+rows[0].table_ids[0],table04_baseline_comparison
+rows[0].table_ids[1],table05_ablation
+rows[0].table_ids[2],table05b_ablation_statistics
+rows[1].id,CLAIM-02
+rows[1].claim,"A regime term added identically to every softmax numerator cancels under normalisation, making the inherited regime-conditioned combination algebraically identical to static attention."
+rows[1].status,SUPPORTED
+rows[1].scope,ANALYTIC
+rows[1].evidence,"Proved in closed form; verified numerically below 1e-12 across 27 parameter combinations; confirmed empirically, with the two arms agreeing to six decimals on independently executed runs (0.948033 / 0.967259 / 0.905158)."
+rows[1].dataset,analytic; empirical confirmation on the validation split
+rows[1].experiment,tests/property/test_regime_degeneracy.py; COMBINER_REGIME_INHERITED vs COMBINER_STATIC
+rows[1].limitations,
+rows[1].overclaim_examples[0],Regime-aware combination does not work.
+rows[1].figure_ids[0],fig12b_regime_degeneracy
+rows[1].note,"This is the one claim in the project that does not depend on the dataset at all, and is therefore the least fragile."
+rows[1].metric,absolute difference in fused posterior
+rows[1].statistical_test,closed-form proof plus exact numerical comparison below 1e-12 over 27 parameter combinations
+rows[1].evidence_artifact[0],research_artifacts/statistics/regime_degeneracy.json
+rows[1].evidence_artifact[1],tests/property/test_regime_degeneracy.py
+rows[1].table_ids[0],table05_ablation
+rows[2].id,CLAIM-03
+rows[2].claim,The corrected regime-conditioned combination reduces detection performance relative to static attention on this evaluation.
+rows[2].status,NOT_SUPPORTED
+rows[2].scope,SYNTHETIC_VALIDATION
+rows[2].evidence,"AUPRC 0.9412 versus 0.9480; removing regime conditioning improves AUPRC by 0.0060 (95% CI 0.0022-0.0110, BH-adjusted p 0.0021). The gap narrows as episode clusters increase (trend +5.1e-06 per cluster), and the smallest regime holds only 17 validation episodes, which is consistent with variance inflation from per-regime parameters."
+rows[2].dataset,validation split
+rows[2].experiment,COMBINER_REGIME_CORRECTED vs COMBINER_STATIC; EXP-N02-1
+rows[2].limitations[0],L-04
+rows[2].limitations[1],L-12
+rows[2].limitations[2],N-02
+rows[2].overclaim_examples[0],Regime conditioning is useless.
+rows[2].overclaim_examples[1],Market regimes carry no information.
+rows[2].figure_ids,
+rows[2].note,"RQ9 is not supported. The mechanism is measured, not merely asserted."
+rows[2].metric,AUPRC
+rows[2].statistical_test,"paired cluster bootstrap over episodes, Benjamini-Hochberg adjusted"
+rows[2].evidence_artifact[0],research_artifacts/experiments/ablation_results.csv
+rows[2].evidence_artifact[1],research_artifacts/research_angles/exp_n02_regime_gap_vs_sample.csv
+rows[2].table_ids[0],table05_ablation
+rows[2].table_ids[1],table05b_ablation_statistics
+rows[3].id,CLAIM-04
+rows[3].claim,"Detection of injected episodes lags their onset, and no operating point on the threshold sweep achieves positive median lead time."
+rows[3].status,SUPPORTED
+rows[3].scope,SYNTHETIC_VALIDATION
+rows[3].evidence,Median lead time -10.0 sessions at the operating threshold. Sweeping the entry threshold from 0.20 to 0.90 moves median lead time only within -10.0 to 0.0 sessions while window precision varies 0.384 to 0.653: no setting buys positive lead time.
+rows[3].dataset,validation split
+rows[3].experiment,EXP-N03-1 lead-time/precision frontier
+rows[3].limitations[0],L-04
+rows[3].limitations[1],L-12
+rows[3].limitations[2],N-03
+rows[3].overclaim_examples[0],The system provides early warning.
+rows[3].overclaim_examples[1],AEGIS detects events before they happen.
+rows[3].figure_ids[0],fig15_lead_time
+rows[3].figure_ids[1],figN03_lead_time_frontier
+rows[3].note,"This is the strongest negative result in the study: lateness is a property of when the evidence arrives, not of how the detector is tuned."
+rows[3].metric,median lead time in sessions
+rows[3].statistical_test,"threshold sweep with per-window precision reported at each operating point; descriptive, no null hypothesis"
+rows[3].evidence_artifact[0],research_artifacts/research_angles/exp_n03_lead_time_frontier.csv
+rows[3].evidence_artifact[1],research_artifacts/research_angles/exp_n03_lead_lag_curves.json
+rows[3].table_ids[0],table11_temporal_metrics
+rows[4].id,CLAIM-05
+rows[4].claim,"Calibration error grows with the model's own reported uncertainty, so the uncertainty estimate identifies where the probability output should not be trusted."
+rows[4].status,SUPPORTED
+rows[4].scope,SYNTHETIC_VALIDATION
+rows[4].evidence,"ECE rises monotonically across uncertainty quintiles from 0.0835 to 0.3273 (slope +0.638 per unit uncertainty), on equal-mass buckets of 771 rows each."
+rows[4].dataset,validation split
+rows[4].experiment,EXP-L10-1
+rows[4].limitations[0],L-04
+rows[4].limitations[1],L-10
+rows[4].limitations[2],L-11
+rows[4].overclaim_examples[0],The model is well calibrated.
+rows[4].figure_ids[0],figL10_calibration_by_uncertainty
+rows[4].note,The corresponding coverage analysis is NOT MEASURABLE here: coverage takes only two well-populated values on this dataset.
+rows[4].metric,expected calibration error
+rows[4].statistical_test,equal-mass quintiles of 771 rows each; monotonicity and slope reported rather than a significance test
+rows[4].evidence_artifact[0],research_artifacts/research_angles/exp_l10_calibration_by_uncertainty.csv
+rows[4].evidence_artifact[1],research_artifacts/statistics/uncertainty_bins.csv
+rows[4].table_ids[0],table05_ablation
+rows[5].id,CLAIM-06
+rows[5].claim,"Uncertainty-weighted combination achieves lower selective risk than static attention at every coverage level tested, despite showing no AUPRC advantage."
+rows[5].status,PARTIAL
+rows[5].scope,SYNTHETIC_VALIDATION
+rows[5].evidence,Selective risk lower at all 9 coverage levels (mean difference -0.038); ECE 0.0631 versus 0.1227; AUPRC -0.0043 with an interval spanning zero (p 0.303).
+rows[5].dataset,validation split
+rows[5].experiment,EXP-N04-1
+rows[5].limitations[0],L-04
+rows[5].limitations[1],L-10
+rows[5].limitations[2],L-11
+rows[5].limitations[3],N-04
+rows[5].overclaim_examples[0],Uncertainty-aware combination is better.
+rows[5].overclaim_examples[1],Uncertainty combination reduces false positives.
+rows[5].figure_ids[0],figN04_selective_risk
+rows[5].note,"Marked PARTIAL deliberately: each arm ranks rows by its own uncertainty, so an arm whose uncertainty is merely self-consistent flatters itself here. Most of the coverage-1.0 gap is an operating-point effect, not selection."
+rows[5].metric,selective risk at fixed coverage; AUPRC; expected calibration error
+rows[5].statistical_test,paired cluster bootstrap for AUPRC; per-coverage differences reported directly
+rows[5].evidence_artifact[0],research_artifacts/research_angles/exp_n04_selective_risk.csv
+rows[5].evidence_artifact[1],research_artifacts/statistics/coverage_bins.csv
+rows[5].table_ids[0],table05_ablation
+rows[6].id,CLAIM-07
+rows[6].claim,"The non-significant microstructure ablation is uninformative rather than evidence that the contribution is zero, because the observed difference is smaller than the minimum detectable effect at this episode count."
+rows[6].status,SUPPORTED
+rows[6].scope,SYNTHETIC_VALIDATION
+rows[6].evidence,"Minimum detectable effect 0.000185 against an observed difference of 0.000176. The bootstrap half-width scales with an exponent of -0.59, close to the textbook -0.5."
+rows[6].dataset,validation split
+rows[6].experiment,EXP-L12-1 power analysis
+rows[6].limitations[0],L-02
+rows[6].limitations[1],L-12
+rows[6].overclaim_examples[0],Microstructure does not help.
+rows[6].overclaim_examples[1],Microstructure features carry no information.
+rows[6].figure_ids,
+rows[6].note,This is what a power analysis is for: it converts a null result into a statement about what the study could have seen.
+rows[6].metric,minimum detectable effect in AUPRC
+rows[6].statistical_test,bootstrap power curve; half-width scaling exponent estimated by log-log regression
+rows[6].evidence_artifact[0],research_artifacts/research_angles/exp_l12_power_curves.csv
+rows[6].table_ids[0],table05b_ablation_statistics
+rows[6].table_ids[1],table06_multiseed
+rows[6].table_ids[2],table13_statistical_significance
+rows[7].id,CLAIM-09
+rows[7].claim,"LIME attributions become self-consistent at 6400 perturbations while still costing less than occlusion, while its feature ranking stays uncorrelated with occlusion's at every perturbation count tested."
+rows[7].status,SUPPORTED
+rows[7].scope,SYNTHETIC_VALIDATION
+rows[7].evidence,"Sign consistency rises 0.770 -> 0.804 across 400 to 6400 perturbations, crossing the pre-declared 0.80 threshold at 6400 (0.169 s per run versus occlusion's 0.397 s). Spearman correlation with occlusion stays within -0.054 to +0.260 and is -0.018 at the crossing point."
+rows[7].dataset,"validation split, highest-risk row"
+rows[7].experiment,EXP-N01-1
+rows[7].limitations[0],L-04
+rows[7].limitations[1],N-01
+rows[7].overclaim_examples[0],LIME is unreliable.
+rows[7].overclaim_examples[1],LIME agrees with SHAP.
+rows[7].figure_ids[0],figN01_lime_stability
+rows[7].note,"Stability and correctness are different properties: a method can be perfectly reproducible and still rank features differently from every other method. Measured on a single row, so treat the magnitude as indicative."
+rows[7].metric,attribution sign consistency; Spearman rank correlation with occlusion
+rows[7].statistical_test,repeated runs across three seeds at each perturbation count; pre-declared 0.80 threshold
+rows[7].evidence_artifact[0],research_artifacts/research_angles/exp_n01_lime_stability.csv
+rows[7].evidence_artifact[1],research_artifacts/statistics/xai_sanity.csv
+rows[7].table_ids[0],table10_xai_agreement
+rows[7].table_ids[1],table17_xai_sanity
+rows[7].table_ids[2],table15_xai_cost
+rows[8].id,CLAIM-10
+rows[8].claim,Applying an integrity-risk exposure cap under a fixed equal-weight research policy reduces daily 5% CVaR on the evaluation sample.
+rows[8].status,SUPPORTED
+rows[8].scope,SYNTHETIC_VALIDATION
+rows[8].evidence,"CVaR -0.03641 to -0.03121, difference +0.00520 (95% CI +0.00256 to +0.00785, p 0.0005, moving-block bootstrap). Maximum drawdown improves by 0.0596 but is NOT significant (p 0.412). Total return is 1.56 percentage points worse: the opportunity cost."
+rows[8].dataset,validation split
+rows[8].experiment,"capital consequence, control vs treatment"
+rows[8].limitations[0],L-04
+rows[8].limitations[1],L-01
+rows[8].limitations[2],L-11
+rows[8].overclaim_examples[0],AEGIS reduces portfolio risk.
+rows[8].overclaim_examples[1],The gate improves returns.
+rows[8].overclaim_examples[2],Investors should cap exposure using integrity risk.
+rows[8].figure_ids[0],fig19_capital
+rows[8].figure_ids[1],fig20_cvar
+rows[8].figure_ids[2],fig21_drawdown
+rows[8].note,"Return levels are meaningless here because injected episodes are adverse by construction; only the control-treatment difference is interpretable. This is a measurement, not advice."
+rows[8].metric,daily 5% CVaR
+rows[8].statistical_test,moving-block bootstrap over the evaluation sample
+rows[8].evidence_artifact[0],research_artifacts/statistics/capital_consequence.json
+rows[8].evidence_artifact[1],research_artifacts/statistics/capital_significance.csv
+rows[8].table_ids[0],table12_capital_consequence
+rows[8].table_ids[1],table12b_capital_significance
+rows[9].id,CLAIM-11
+rows[9].claim,The research pipeline reproduces bit-identically from a recorded seed.
+rows[9].status,SUPPORTED
+rows[9].scope,ENGINEERING
+rows[9].evidence,"A full re-execution reproduced all 32 ablation arms and 31 statistical tests with a maximum absolute difference of 0.000e+00, including 600-resample cluster bootstraps."
+rows[9].dataset,n/a
+rows[9].experiment,verification re-run of scripts/run_experiments.py
+rows[9].limitations[0],L-03
+rows[9].overclaim_examples[0],The system is production ready.
+rows[9].figure_ids,
+rows[9].note,"An engineering property, not a scientific finding."
+rows[9].metric,maximum absolute difference between two executions
+rows[9].statistical_test,exact comparison; no estimation involved
+rows[9].evidence_artifact[0],research_artifacts/manifests/dataset_build.json
+rows[9].table_ids[0],table03_model_configuration
+rows[10].id,CLAIM-12
+rows[10].claim,"The product builds and serves every route from exported artifacts alone, with the values it displays identical to those the research pipeline produced."
+rows[10].status,SUPPORTED
+rows[10].scope,ENGINEERING
+rows[10].evidence,"tsc --noEmit passes over 35 files; ESLint clean; next build prerenders 204 pages including 162 instrument routes and 17 limitation routes; all 20 checked routes return HTTP 200 with server-rendered content; six sampled values match their source artifacts exactly (AUPRC 0.941166 -> 0.941, minimum detectable effect 0.000185); no model call occurs in the request path."
+rows[10].dataset,exported bundles in public/data/
+rows[10].experiment,EXP-L03-1
+rows[10].limitations[0],L-03
+rows[10].overclaim_examples[0],The product is deployed on Vercel.
+rows[10].overclaim_examples[1],The system is production-ready.
+rows[10].figure_ids,
+rows[10].note,"Local build and serve only. No Vercel deployment has been performed, so cold starts and edge caching are unmeasured. Reaching this state exposed a real defect: the exporter emitted bare NaN, which is invalid JSON and silently blanked a page in the browser while every Python test passed. NOT ARTIFACT-BACKED: an earlier revision of this claim quoted p50 latency 5.9-10.0 ms and p95 17.1-32.9 ms over 20 samples per route. Those figures were observed during a local serve and no artifact carries them, so they are recorded here as an observation and removed from the evidence. The transparency card names the same gap."
+rows[10].metric,"route status, prerendered page count, request latency"
+rows[10].statistical_test,exact comparison of displayed values against source artifacts; 20 latency samples per route
+rows[10].evidence_artifact[0],outputs/product/06_verify_routes/route_verification.json
+rows[10].evidence_artifact[1],outputs/product/02_typecheck
+rows[10].evidence_artifact[2],outputs/product/03_lint
+rows[10].table_ids[0],table16_operational
+rows[11].id,CLAIM-14
+rows[11].claim,"Diluting a real training set with copula-generated rows above roughly a quarter of its size reduces AUPRC on real validation rows, and the reduction tracks lost interaction structure rather than distributional distance."
+rows[11].status,NOT_SUPPORTED
+rows[11].scope,VALIDATION
+rows[11].evidence,"REAL ONLY 0.9390 (sd 0.0020) against REAL + SYNTHETIC 0.3870 (sd 0.0266), a difference of -0.5521 against a 0.0088 seed noise floor. The share sweep reads 0.9412 at 0 percent, 0.9439 at 10, 0.9429 at 25, 0.9076 at 50, 0.3856 at 75 and 0.3613 at 81. Five candidate mechanisms are not supported: mean KS 0.0028, positive-rate ratio 1.01, mean pairwise correlation error 0.0216, effective-rank ratio 1.11, zero out-of-range values, and no memorisation at a nearest-neighbour distance ratio of 1.42. The supported mechanism is interaction loss: a tree ensemble separates real from generated rows at AUC 0.9639 while a linear model reaches 0.4952."
+rows[11].dataset,"panel-features shard, 9,351 real training rows and up to 40,000 generated rows; scored on 3,855 real validation rows"
+rows[11].experiment,CORPUS-03 real vs synthetic; CORPUS-05 degradation diagnosis
+rows[11].limitations[0],N-09
+rows[11].limitations[1],L-04
+rows[11].limitations[2],L-19
+rows[11].limitations[3],L-12
+rows[11].overclaim_examples[0],Synthetic data works when the marginals match.
+rows[11].overclaim_examples[1],Augmentation improves the model at any share.
+rows[11].overclaim_examples[2],Synthetic augmentation always degrades performance.
+rows[11].figure_ids[0],figR03_synthetic_ratio_sweep
+rows[11].figure_ids[1],figC01_synthetic_augmentation
+rows[11].note,"The research question this supports is conditional: under what conditions does synthetic augmentation improve or degrade performance. One condition is now measured — at or below a 25 percent share the difference is inside the seed noise floor on this task. The result is preserved rather than tuned away, and the mechanism is measured rather than asserted."
+rows[11].metric,AUPRC on real validation rows
+rows[11].statistical_test,"three paired seeds against a 0.0088 seed noise floor; a share sweep at 0/10/25/50/75/81 percent; six candidate mechanisms measured, decided by the AUC gap between a tree ensemble and a linear discriminator"
+rows[11].evidence_artifact[0],outputs/corpus/real_vs_synthetic.json
+rows[11].evidence_artifact[1],outputs/corpus/synthetic_ratio_sweep.json
+rows[11].evidence_artifact[2],outputs/corpus/05_synthetic_degradation/diagnosis.json
+rows[11].table_ids[0],table09_synthetic_augmentation
+rows[11].table_ids[1],table09b_synthetic_mechanisms
+rows[11].table_ids[2],table13_statistical_significance
+rows[12].id,CLAIM-25
+rows[12].claim,"On the fifth of validation sessions with the highest realised volatility, the integrity-risk estimate reads lower than on the evaluation split as a whole."
+rows[12].status,SUPPORTED
+rows[12].scope,VALIDATION
+rows[12].evidence,"Mean estimate 0.1823 on the stratum against 0.2384 on the whole split: a difference of -0.0561 (95% CI -0.0960 to -0.0097, paired cluster bootstrap over instruments, p 0.010). The sign holds in all three model seeds with a spread of 0.0009, and under all five block subsets."
+rows[12].dataset,"NSE cash panel with injected episodes, validation split; the stratum is the top quintile by 21-session realised volatility"
+rows[12].experiment,SC-MKT-VOL against SC-MKT-A; SCENARIO-02
+rows[12].limitations[0],L-04
+rows[12].limitations[1],L-01
+rows[12].limitations[2],L-12
+rows[12].overclaim_examples[0],Volatility does not matter to the risk estimate.
+rows[12].overclaim_examples[1],The model always reads calm markets as riskier.
+rows[12].figure_ids,
+rows[12].note,"An observed stratum, not a simulation: these sessions occurred and no row was altered. The reading is that the estimate is not a volatility proxy, which is worth knowing because a risk score that rose with volatility would be measuring the wrong thing."
+rows[12].metric,mean integrity-risk estimate
+rows[12].statistical_test,"paired cluster bootstrap over instruments, 400 resamples; repeated across three model seeds and five block subsets"
+rows[12].evidence_artifact[0],outputs/scenario/scenario_comparison.csv
+rows[12].evidence_artifact[1],outputs/scenario/scenario_uncertainty.csv
+rows[12].evidence_artifact[2],outputs/scenario/scenario_robustness.csv
+rows[12].evidence_artifact[3],outputs/scenario/scenario_ablation.csv
+rows[12].table_ids[0],table14_scenario_comparison
+rows[12].table_ids[1],table15_scenario_uncertainty
+rows[13].id,CLAIM-26
+rows[13].claim,The integrity-risk estimate responds far more to a shift in what the narrative channel reports than to that channel being unavailable altogether.
+rows[13].status,SUPPORTED
+rows[13].scope,VALIDATION
+rows[13].evidence,A two-standard-deviation negative shift across the text block moves the mean estimate by -0.0464 (95% CI -0.0503 to -0.0413). Clearing the same block and its coverage flag entirely moves it by -0.0064 (95% CI -0.0103 to -0.0018). Both intervals exclude zero and the first effect is roughly seven times the second.
+rows[13].dataset,"NSE cash panel with injected episodes, validation split"
+rows[13].experiment,SC-MKT-SENT and SC-MKT-NOTEXT against SC-MKT-A; SCENARIO-03
+rows[13].limitations[0],L-24
+rows[13].limitations[1],L-04
+rows[13].limitations[2],L-05
+rows[13].overclaim_examples[0],The sentiment shock would have prevented the episode.
+rows[13].overclaim_examples[1],The intervention caused the estimate to fall.
+rows[13].figure_ids,
+rows[13].note,Neither condition occurred. The comparison is informative because the combination layer withholds a channel it cannot see but weights a channel that reports something: a uniform shift is a stronger assumption than an outage and produces a correspondingly larger effect.
+rows[13].metric,mean integrity-risk estimate
+rows[13].statistical_test,"paired cluster bootstrap over instruments on the same instrument-days, 400 resamples, one fitted model scoring both the altered and the unaltered rows"
+rows[13].evidence_artifact[0],outputs/scenario/scenario_comparison.csv
+rows[13].evidence_artifact[1],outputs/scenario/scenario_uncertainty.csv
+rows[13].table_ids[0],table14_scenario_comparison
+rows[13].table_ids[1],table15_scenario_uncertainty
+rows[14].id,CLAIM-27
+rows[14].claim,"Tightening the declared exposure cap reduces the simulated daily tail loss further than the baseline policy on identical scored sessions, and gives up more simulated return to do it."
+rows[14].status,PARTIAL
+rows[14].scope,VALIDATION
+rows[14].evidence,"Simulated reduction in the daily 5% tail loss of 0.006682 of the notional against 0.005199 under the baseline policy (95% CI 0.004022 to 0.009444, p 0.0033, first model seed). On a declared notional research base of 100,000,000 rupees that is 6.68 lakh against 5.20 lakh. Simulated total return given up rises from 0.0164 to 0.0406, and mean allowed exposure falls from 0.826 to 0.778."
+rows[14].dataset,"validation split, scored once and evaluated under two declared policies"
+rows[14].experiment,SC-MKT-THRESH against SC-MKT-A; SCENARIO-04
+rows[14].limitations[0],L-24
+rows[14].limitations[1],L-04
+rows[14].limitations[2],L-11
+rows[14].overclaim_examples[0],The tighter policy recovered 6.68 lakh rupees.
+rows[14].overclaim_examples[1],The scenario proves the tighter cap is the better rule.
+rows[14].figure_ids,
+rows[14].note,"Marked PARTIAL because a policy comparison isolates a decision rule and nothing else: it says what the tail would have looked like under that rule on those rows, not what any institution should do. The notional is declared and arbitrary, and scales every currency figure linearly. No capital was at risk and no instruction is produced for any person."
+rows[14].metric,"simulated reduction in the daily 5% tail loss, as a fraction of a declared notional"
+rows[14].statistical_test,"moving-block bootstrap, 21-session blocks, 2000 resamples, on the paired daily net-return series of the two policies"
+rows[14].evidence_artifact[0],outputs/scenario/scenario_money.csv
+rows[14].evidence_artifact[1],outputs/scenario/scenario_comparison.csv
+rows[14].table_ids[0],table16_scenario_money
+rows[14].table_ids[1],table14_scenario_comparison
+rows[15].id,CLAIM-28
+rows[15].claim,"Every scenario effect keeps the sign it had in each seed, and eight of fourteen exceed 1.96 times their own seed spread."
+rows[15].status,SUPPORTED
+rows[15].scope,VALIDATION
+rows[15].evidence,"14 scenarios re-run across three seeds each: 14 of 14 keep the sign of their effect in every seed, and 8 of 14 have an effect larger than 1.96 times their own seed standard deviation. The six that do not include both processing-delay conditions and the four policy comparisons, whose scores are identical across conditions by construction."
+rows[15].dataset,NSE validation split; declared synthetic transaction fixture
+rows[15].experiment,SCENARIO-07 robustness sweep
+rows[15].limitations[0],L-12
+rows[15].limitations[1],L-24
+rows[15].overclaim_examples[0],Scenario analysis always reproduces.
+rows[15].overclaim_examples[1],The seed does not matter to a scenario conclusion.
+rows[15].figure_ids,
+rows[15].note,"Two sources of variation, reported separately and never pooled: a model seed and a fixture generator seed answer different questions. A stable sign is a weaker property than an effect exceeding its spread, and both are reported because a reader needs both."
+rows[15].metric,sign stability and effect size relative to seed spread
+rows[15].statistical_test,each scenario re-run across three model seeds on the market track and three generator seeds on the transaction track; an effect is counted as exceeding its spread at 1.96 standard deviations
+rows[15].evidence_artifact[0],outputs/scenario/scenario_robustness.csv
+rows[15].table_ids[0],table15_scenario_uncertainty
+rows[16].id,CLAIM-29
+rows[16].claim,"The transaction-risk interface is complete and executes on a declared synthetic fixture, because none of five candidate corpora satisfied all six acceptance requirements."
+rows[16].status,BLOCKED
+rows[16].scope,VALIDATION
+rows[16].evidence,"0 of 5 candidates qualify. IEEE-CIS and ULB Credit Card Fraud carry human labels but obfuscated features, so no scenario assumption can be stated about any feature; PaySim is simulator output; institutional records are neither public nor licensed; NPCI publishes aggregates rather than records. The fixture is 6,000 rows across 400 accounts with a declared 14.7% elevated rate and a label rule written into the artifact."
+rows[16].dataset,declared synthetic transaction fixture; no qualifying corpus exists
+rows[16].experiment,SCENARIO-08 corpus search and interface
+rows[16].limitations[0],L-23
+rows[16].overclaim_examples[0],The platform performs transaction fraud detection.
+rows[16].overclaim_examples[1],Real transactions analysed by this system.
+rows[16].figure_ids,
+rows[16].note,"The same position this project takes wherever a licence-clear corpus is absent, for the same reason. What is refused is the substitution: no general-purpose dataset is relabelled as a payments corpus, and every transaction number in the project carries the fixture caveat."
+rows[16].metric,number of candidate corpora satisfying six acceptance requirements
+rows[16].statistical_test,"requirement-by-requirement assessment of each candidate; no estimation, and no substitute corpus admitted"
+rows[16].evidence_artifact[0],outputs/scenario/transaction_corpus_search.json
+rows[16].table_ids[0],table17_transaction_provenance
+meta.version,claims-v1
+meta.n_claims,29
+meta.by_status.SUPPORTED,19
+meta.by_status.NOT_SUPPORTED,4
+meta.by_status.PARTIAL,4
+meta.by_status.BLOCKED,2
+meta.by_scope.SYNTHETIC_VALIDATION,9
+meta.by_scope.ANALYTIC,1
+meta.by_scope.ENGINEERING,3
+meta.by_scope.VALIDATION,16
+meta.n_holdout_claims,0

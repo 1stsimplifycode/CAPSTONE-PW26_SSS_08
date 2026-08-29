@@ -1,0 +1,14 @@
+key,value
+rows,16558
+columns,119
+instruments,182
+date_range[0],2015-04-07
+date_range[1],2026-08-14
+duplicate_keys,0
+split_sizes.train,9351
+split_sizes.validation,3855
+split_sizes.holdout,3352
+positive_rate,0.22291339533760116
+all_null_columns[0],regime_p4
+all_null_columns[1],regime_p5
+coverage_report_available,True

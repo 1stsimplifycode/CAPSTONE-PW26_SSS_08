@@ -1,0 +1,67 @@
+21:16:58  [stats-15] 13206 rows in train+validation, 3352 held frozen and untouched
+21:16:58  [input] degrading the evaluation signal; the model is fitted once on clean data
+21:17:09        clean reference auprc 0.9412
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:17:17          gaussian  sev 0.05  auprc 0.7895  (-0.1516)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:17:25          gaussian  sev 0.10  auprc 0.6249  (-0.3163)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:17:35          gaussian  sev 0.25  auprc 0.4360  (-0.5051)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:17:44          gaussian  sev 0.50  auprc 0.3723  (-0.5689)
+21:17:54          dropout   sev 0.05  auprc 0.9206  (-0.0206)
+21:18:04          dropout   sev 0.10  auprc 0.9051  (-0.0361)
+21:18:14          dropout   sev 0.25  auprc 0.8259  (-0.1152)
+21:18:24          dropout   sev 0.50  auprc 0.6941  (-0.2471)
+21:18:35          stale     sev 0.05  auprc 0.9373  (-0.0039)
+21:18:45          stale     sev 0.10  auprc 0.9338  (-0.0073)
+21:18:55          stale     sev 0.25  auprc 0.9144  (-0.0268)
+21:19:05          stale     sev 0.50  auprc 0.8937  (-0.0474)
+21:19:14          outliers  sev 0.05  auprc 0.8617  (-0.0794)
+21:19:24          outliers  sev 0.10  auprc 0.8011  (-0.1400)
+21:19:34          outliers  sev 0.25  auprc 0.6844  (-0.2568)
+21:19:44          outliers  sev 0.50  auprc 0.5714  (-0.3698)
+21:19:44  [missingness] taking each block offline
+21:20:23          text            offline 100%  auprc 0.8171  (-0.1240)
+21:20:53          image           offline 100%  auprc 0.9409  (-0.0003)
+21:21:22          audio           offline 100%  auprc 0.9410  (-0.0002)
+21:21:51          video           offline 100%  auprc 0.9403  (-0.0008)
+21:22:21          market          offline 100%  auprc 0.8278  (-0.1134)
+21:22:51          microstructure  offline 100%  auprc 0.9411  (-0.0001)
+21:23:20          regime          offline 100%  auprc 0.9407  (-0.0005)
+21:23:50          propagation     offline 100%  auprc 0.9411  (-0.0001)
+21:23:50  [training size] symbol-level learning curve
+21:24:04           10% of symbols (16)  auprc 0.6166
+21:24:23           25% of symbols (40)  auprc 0.8839
+21:24:45           50% of symbols (80)  auprc 0.9161
+21:25:12           75% of symbols (121)  auprc 0.9355
+21:25:22          100% of symbols (161)  auprc 0.9412
+21:25:22  [period] expanding-window transfer forward in time
+21:25:27          fold 1  train<=2017-01-19  eval 2017-01-20..2018-10-15  auprc 0.7919
+21:25:34          fold 2  train<=2018-10-15  eval 2018-10-16..2020-07-16  auprc 0.8979
+21:25:43          fold 3  train<=2020-07-16  eval 2020-07-17..2022-04-06  auprc 0.9308
+21:25:53          fold 4  train<=2022-04-06  eval 2022-04-07..2023-12-29  auprc 0.9444
+21:25:53  [instrument] transfer to disjoint tickers
+21:26:03          group 1  43 held-out symbols  auprc 0.9292
+21:26:13          group 2  43 held-out symbols  auprc 0.9431
+21:26:22          group 3  43 held-out symbols  auprc 0.9580
+21:26:32          group 4  42 held-out symbols  auprc 0.9330
+21:26:32    worst degradation: gaussian all at 0.50 -> auprc 0.3723 (-0.5689)
+21:26:32    instrument transfer: 4 folds, auprc 0.9408 (0.9292 - 0.9580)
+21:26:32    period transfer: 4 folds, auprc 0.8913 (0.7919 - 0.9444)
+21:26:34  done in 576s -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\15_robustness_generalization
+==========================================================================
+STATS-15  Robustness and generalization
+  canonical : research/evaluation/robustness.py, scripts/run_robustness_generalization.py
+  adapter   : scripts.stages.stats:robustness_generalization
+  wrapper   : WRAPS_EXISTING
+==========================================================================
+  OK  (577.7s)
+  54 robustness rows, 8 generalization rows; worst degradation gaussian at 0.50 (auprc 0.3723); period transfer auprc 0.8913, instrument transfer auprc 0.9408; 3352 holdout rows untouched
+  -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\15_robustness_generalization\robustness.csv
+  -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\15_robustness_generalization\generalization.csv
+  -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\15_robustness_generalization\run.json

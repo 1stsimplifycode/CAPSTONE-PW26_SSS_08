@@ -1,0 +1,181 @@
+{
+  "generated_at": "2026-08-23T04:35:36.950798+00:00",
+  "rows": [
+    {
+      "id": "STATS-01",
+      "index": 1,
+      "category": "STATS",
+      "name": "Data and integrity profile",
+      "slug": "data_integrity_profile",
+      "route": "/stats/data-integrity",
+      "icon": "\u25a4",
+      "product_name": "What the data contains",
+      "product_question": "Is the data underneath every other number complete enough to build on?"
+    },
+    {
+      "id": "STATS-02",
+      "index": 2,
+      "category": "STATS",
+      "name": "Universe and survivorship statistics",
+      "slug": "universe_survivorship",
+      "route": "/stats/universe",
+      "icon": "\u25ce",
+      "product_name": "Which instruments are covered",
+      "product_question": "How much does the research universe turn over, and what does that mean for a result read as applying to a stable index?"
+    },
+    {
+      "id": "STATS-03",
+      "index": 3,
+      "category": "STATS",
+      "name": "Descriptive and distributional statistics",
+      "slug": "descriptive_distributions",
+      "route": "/stats/distributions",
+      "icon": "\u2211",
+      "product_name": "How the numbers behave",
+      "product_question": "Which features actually vary, and which are so degenerate that any importance attributed to them should be discounted?"
+    },
+    {
+      "id": "STATS-04",
+      "index": 4,
+      "category": "STATS",
+      "name": "Market and microstructure-proxy statistics",
+      "slug": "market_microstructure",
+      "route": "/stats/microstructure",
+      "icon": "\u2317",
+      "product_name": "Liquidity and trading conditions",
+      "product_question": "How much microstructure information do daily proxies retain, and what is provably absent?"
+    },
+    {
+      "id": "STATS-05",
+      "index": 5,
+      "category": "STATS",
+      "name": "Regime statistics",
+      "slug": "regime_statistics",
+      "route": "/stats/regimes",
+      "icon": "\u25d1",
+      "product_name": "Market regimes",
+      "product_question": "Are the detected regimes stable and well-populated enough for a regime-conditioned result to be interpretable?"
+    },
+    {
+      "id": "STATS-06",
+      "index": 6,
+      "category": "STATS",
+      "name": "Dependence and propagation statistics",
+      "slug": "dependence_propagation",
+      "route": "/stats/propagation",
+      "icon": "\u2b21",
+      "product_name": "How instruments move together",
+      "product_question": "Do cross-instrument co-movement features carry information beyond the instrument's own series?"
+    },
+    {
+      "id": "STATS-07",
+      "index": 7,
+      "category": "STATS",
+      "name": "Tail and extreme-risk statistics",
+      "slug": "tail_extreme_risk",
+      "route": "/stats/tail-risk",
+      "icon": "\u25e4",
+      "product_name": "Extreme moves",
+      "product_question": "What does the tail of the realised return distribution look like over the rows this system scores?"
+    },
+    {
+      "id": "STATS-08",
+      "index": 8,
+      "category": "STATS",
+      "name": "Episode and event statistics",
+      "slug": "episode_event_statistics",
+      "route": "/stats/episodes",
+      "icon": "\u26a1",
+      "product_name": "Unusual market events",
+      "product_question": "How many integrity episodes exist, how intense are they, and how are they distributed across instruments?"
+    },
+    {
+      "id": "STATS-09",
+      "index": 9,
+      "category": "STATS",
+      "name": "Leakage and split verification",
+      "slug": "leakage_verification",
+      "route": "/stats/leakage",
+      "icon": "\u26e8",
+      "product_name": "Timing integrity",
+      "product_question": "Does any feature, split or threshold use information that was not available at the time of the decision?"
+    },
+    {
+      "id": "STATS-10",
+      "index": 10,
+      "category": "STATS",
+      "name": "Validation and verification metrics",
+      "slug": "validation_verification",
+      "route": "/stats/validation",
+      "icon": "\u2713",
+      "product_name": "How accurate the signal is",
+      "product_question": "How often is the model right, how often is it wrong, and in which direction?"
+    },
+    {
+      "id": "STATS-11",
+      "index": 11,
+      "category": "STATS",
+      "name": "Calibration and uncertainty",
+      "slug": "calibration_uncertainty",
+      "route": "/stats/calibration",
+      "icon": "\u25d4",
+      "product_name": "How confident the signal is",
+      "product_question": "When the model reports a high score, is it right that often?"
+    },
+    {
+      "id": "STATS-12",
+      "index": 12,
+      "category": "STATS",
+      "name": "Error analysis",
+      "slug": "error_analysis",
+      "route": "/stats/errors",
+      "icon": "\u2716",
+      "product_name": "Where the signal gets it wrong",
+      "product_question": "What kind of rows does the model get wrong, and is the error concentrated anywhere?"
+    },
+    {
+      "id": "STATS-13",
+      "index": 13,
+      "category": "STATS",
+      "name": "Baseline comparison",
+      "slug": "baseline_comparison",
+      "route": "/stats/baselines",
+      "icon": "\u2696",
+      "product_name": "Compared with simpler methods",
+      "product_question": "Does the evidence stack outperform a simple statistical detector on the same rows and the same metric?"
+    },
+    {
+      "id": "STATS-14",
+      "index": 14,
+      "category": "STATS",
+      "name": "Ablation study",
+      "slug": "ablation_study",
+      "route": "/stats/ablation",
+      "icon": "\u25eb",
+      "product_name": "What each component contributes",
+      "product_question": "Which components carry the result, and which could be removed without changing it?"
+    },
+    {
+      "id": "STATS-15",
+      "index": 15,
+      "category": "STATS",
+      "name": "Robustness and generalization",
+      "slug": "robustness_generalization",
+      "route": "/stats/robustness",
+      "icon": "\u2298",
+      "product_name": "What happens when data degrades",
+      "product_question": "How much does performance fall when features are noisy, stale, missing, or when there is less training data?"
+    },
+    {
+      "id": "STATS-16",
+      "index": 16,
+      "category": "STATS",
+      "name": "Multi-seed and statistical significance",
+      "slug": "multiseed_significance",
+      "route": "/stats/multi-seed",
+      "icon": "\u229b",
+      "product_name": "What counts as a real difference",
+      "product_question": "Is an observed difference between two arms bigger than what re-seeding alone produces?"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+key,value
+returncode,0
+summary,11 passed in 3.10s
+suite,tests/leakage (L1-L6)
+interpretation,"A non-zero return code invalidates every downstream result, which is why this suite is blocking in CI."

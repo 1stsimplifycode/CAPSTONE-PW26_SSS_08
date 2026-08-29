@@ -1,0 +1,52 @@
+key,value
+seed,20260818
+dataset,market_dataset.parquet
+n_rows_used,13206
+n_rows_frozen_and_unused,3352
+robustness_rows,54
+worst_degradation.family,input
+worst_degradation.corruption,gaussian
+worst_degradation.target,all
+worst_degradation.severity,0.5
+worst_degradation.auprc,0.3723033719132681
+worst_degradation.degradation,0.5688626588260002
+generalization_rows,8
+instrument_transfer.n_folds,4
+instrument_transfer.auprc_mean,0.9408181852526962
+instrument_transfer.auprc_min,0.9291763227460724
+instrument_transfer.auprc_max,0.9579920961101677
+period_transfer.n_folds,4
+period_transfer.auprc_mean,0.8912525823338149
+period_transfer.auprc_min,0.7918816639570134
+period_transfer.auprc_max,0.9443707978421706
+dataset_transfer.status,BLOCKED
+dataset_transfer.reason,"Only one dataset exists in this project, so there is no second dataset to transfer to. This is reported rather than omitted: an absent row in a generalization table reads as an untested axis, and a fabricated one would be worse."
+dataset_transfer.what_would_unblock_it,"A second panel built by the same feature pipeline over a different venue or instrument universe, with its own episode labels."
+adversarial_robustness,"NOT RUN. Every corruption here is random. An adversarial claim needs a threat model and an attacker who sees the detector, which is a different experiment."
+holdout_policy,"The frozen holdout was neither read nor scored. assert_no_holdout() raises on any frame carrying holdout rows, and every fit in this run passed through it."
+run_at,2026-08-27T22:20:56.619520+00:00
+git_commit,
+robustness_version,robustness-v1
+environment.python,"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+environment.executable,python.exe
+environment.platform,Windows-11-10.0.26200-SP0
+environment.processor,"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+environment.cpu_count,8
+environment.packages.numpy,2.5.2
+environment.packages.pandas,3.0.5
+environment.packages.scipy,1.18.0
+environment.packages.sklearn,1.9.0
+environment.packages.matplotlib,3.11.1
+environment.packages.statsmodels,0.14.6
+environment.packages.networkx,3.6.1
+environment.packages.shap,0.52.0
+environment.packages.pyarrow,25.0.1
+environment.packages.duckdb,1.5.5
+environment.packages.PIL,12.3.0
+environment.packages.soundfile,0.14.0
+environment.packages.imageio,2.37.4
+environment.node,v24.19.0
+environment.git_commit,
+environment.git_dirty,
+environment.timestamp,2026-08-27T22:20:59.411393+00:00
+elapsed_s,1056.1

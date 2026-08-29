@@ -1,0 +1,8 @@
+key,value
+rebalances,257
+distinct_members_ever,270
+members_per_rebalance_mean,50.0
+mean_entries_per_rebalance,2.58984375
+mean_exits_per_rebalance,2.58984375
+is_index_membership,False
+caveat,Point-in-time liquidity-proxy universe. Never the Nifty 50 (L-01).

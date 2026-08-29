@@ -1,0 +1,60 @@
+{
+  "metrics": {
+    "n": 3855,
+    "threshold": 0.3510382470491706,
+    "tp": 821,
+    "tn": 2862,
+    "fp": 53,
+    "fn": 119,
+    "n_positive": 940,
+    "n_negative": 2915,
+    "n_predicted_positive": 874,
+    "positive_rate": 0.2438391699092088,
+    "predicted_positive_rate": 0.22671854734111543,
+    "accuracy": 0.9553826199740597,
+    "balanced_accuracy": 0.9276112185686654,
+    "precision": 0.9393592677345538,
+    "recall": 0.8734042553191489,
+    "sensitivity": 0.8734042553191489,
+    "specificity": 0.9818181818181818,
+    "f1": 0.9051819184123484,
+    "mcc": 0.8770524948276859,
+    "mcc_denominator_zero": false,
+    "fpr": 0.01818181818181818,
+    "fnr": 0.12659574468085105,
+    "status": "OK"
+  },
+  "confusion_matrix": {
+    "predicted_no_episode": {
+      "actual_no_episode": 2862,
+      "actual_episode": 119
+    },
+    "predicted_episode": {
+      "actual_no_episode": 53,
+      "actual_episode": 821
+    }
+  },
+  "per_class": [
+    {
+      "class": 0,
+      "class_name": "no_episode",
+      "support": 2915,
+      "precision": 0.960080509896008,
+      "recall": 0.9818181818181818,
+      "f1": 0.9708276797829036
+    },
+    {
+      "class": 1,
+      "class_name": "episode",
+      "support": 940,
+      "precision": 0.9393592677345538,
+      "recall": 0.8734042553191489,
+      "f1": 0.9051819184123484
+    }
+  ],
+  "macro_f1": 0.938004799097626,
+  "weighted_f1": 0.9548206718222493,
+  "threshold_provenance": "The threshold must be supplied by the caller and must have been selected on the training split. Choosing it on the evaluation split would be threshold provenance leakage (L6).",
+  "threshold_source": "research_artifacts/experiment_reports/ablation__FULL_20260818/metrics.json",
+  "metrics_version": "metrics-v2"
+}

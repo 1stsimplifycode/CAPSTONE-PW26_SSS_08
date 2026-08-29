@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [
+    {
+      "total_auprc": 0.815968,
+      "unique": 0.113076,
+      "redundant": 0.702892,
+      "conflict_rate": 0.028794,
+      "missing_rate": 4.3e-05,
+      "block": "market"
+    },
+    {
+      "total_auprc": null,
+      "unique": 0.000502,
+      "redundant": null,
+      "conflict_rate": null,
+      "missing_rate": 0.009339,
+      "block": "propagation"
+    },
+    {
+      "total_auprc": 0.816757,
+      "unique": 0.000178,
+      "redundant": 0.81658,
+      "conflict_rate": 0.151232,
+      "missing_rate": 0.0,
+      "block": "microstructure"
+    },
+    {
+      "total_auprc": null,
+      "unique": -0.005969,
+      "redundant": null,
+      "conflict_rate": null,
+      "missing_rate": 0.0,
+      "block": "regime"
+    }
+  ]
+}

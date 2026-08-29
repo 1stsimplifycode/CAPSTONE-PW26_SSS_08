@@ -1,0 +1,21 @@
+{
+  "rows": 16558,
+  "columns": 50,
+  "instruments": 182,
+  "date_range": [
+    "2015-04-07",
+    "2026-08-14"
+  ],
+  "duplicate_keys": 0,
+  "split_sizes": {
+    "train": 9351,
+    "validation": 3855,
+    "holdout": 3352
+  },
+  "positive_rate": 0.22291339533760116,
+  "all_null_columns": [
+    "regime_p4",
+    "regime_p5"
+  ],
+  "coverage_report_available": true
+}

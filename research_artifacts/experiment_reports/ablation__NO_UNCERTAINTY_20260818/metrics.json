@@ -1,0 +1,40 @@
+{
+  "detection": {
+    "n": 3855.0,
+    "positive_rate": 0.2438391699092088,
+    "auprc": 0.9480330186575128,
+    "auroc": 0.9672592241159081,
+    "brier": 0.10432882153674028,
+    "ece": 0.19337576163498374,
+    "threshold": 0.30257645755546764,
+    "precision": 0.9455388180764774,
+    "recall": 0.8680851063829788,
+    "f1": 0.9051580698835274,
+    "auprc_lift": 3.8879439222603316
+  },
+  "temporal": {
+    "n_true_windows": 36,
+    "n_pred_windows": 42,
+    "n_matched": 17,
+    "detection_rate": 0.4722222222222222,
+    "false_alarm_windows": 25,
+    "mean_lead_time": -8.117647058823529,
+    "median_lead_time": -8.0,
+    "mean_onset_error": 12.235294117647058,
+    "mean_abs_onset_error": 13.058823529411764,
+    "mean_resolution_error": -0.14285714285714285,
+    "mean_temporal_iou": 0.4292083685849722,
+    "mean_duration_error": -12.357142857142858,
+    "premature_resolution_rate": 0.23529411764705882,
+    "delayed_resolution_rate": 0.5294117647058824
+  },
+  "operational": {
+    "fit_seconds": 13.389686499998788,
+    "predict_seconds": 0.7199497000001429,
+    "rows": 3855,
+    "throughput_rows_per_s": 5354.540740831248,
+    "latency_ms_per_row": 0.18675738002597742,
+    "peak_memory_mb": null
+  },
+  "status": "OK"
+}

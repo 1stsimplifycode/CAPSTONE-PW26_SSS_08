@@ -1,0 +1,17 @@
+week,title,question,route
+1,What the evidence base is made of,"Before any result: what rows exist, how completely are they covered, and how large is each split?",/weeks/1
+2,Which instruments the analysis covers,"Is the instrument universe point-in-time, and how did its membership change?",/weeks/2
+3,Distributions and feature behaviour,"What do the numeric distributions look like, and which features cannot vary on the rows selected?",/weeks/3
+4,Microstructure and liquidity proxies,"What do the liquidity and microstructure proxies show, and which quantities does this data source simply not express?",/weeks/4
+5,Regime statistics,"How are regimes distributed over the sample, and how thin is the smallest of them?",/weeks/5
+6,Dependence and propagation,"How does movement propagate across instruments, and how strong is the typical association?",/weeks/6
+7,Tails and extreme risk,"How heavy are the tails on your slice, and how deep did the drawdowns get?",/weeks/7
+8,Episode and event statistics,How are the injected episodes distributed across instruments and sessions?,/weeks/8
+9,Leakage verification,Can information from after a decision time reach a feature?,/weeks/9
+10,Validation metrics at a threshold you choose,What do the validation metrics say at a threshold you choose?,/weeks/10
+11,Calibration and uncertainty,Are the scores calibrated at the bin count you choose?,/weeks/11
+12,Error analysis,"Where does the scoring fail, and what kind of failure is each mistake?",/weeks/12
+13,Baseline comparison,"How do the baselines compare, and is the full stack better than something simpler?",/weeks/13
+14,Ablation study,"Which components carry the result, and how much does removing each one cost?",/weeks/14
+15,Robustness and generalisation,"What survives perturbation, and how much quality is lost when the inputs degrade?",/weeks/15
+16,Seeds and significance,How much of the difference between arms is seed noise?,/weeks/16

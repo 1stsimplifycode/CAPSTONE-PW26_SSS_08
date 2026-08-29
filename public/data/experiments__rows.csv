@@ -1,0 +1,15 @@
+experimentId,arm,status,auprc,auroc,f1,ece,ciLow,ciHigh,combiner,blocks
+ablation,FULL,OK,0.941166,0.965057,0.905182,0.122698,0.918782,0.96004,regime_corrected,"market,microstructure,regime,propagation"
+ablation,MARKET_ONLY,OK,0.815968,0.869856,0.728717,0.021634,0.766741,0.863297,regime_corrected,market
+ablation,MARKET_MICRO,OK,0.816757,0.87026,0.726043,0.022011,0.767729,0.864213,regime_corrected,"market,microstructure"
+ablation,NO_MARKET,OK,0.82809,0.871969,0.758944,0.090965,0.784199,0.866351,regime_corrected,"microstructure,regime,propagation"
+ablation,NO_MICROSTRUCTURE,OK,0.940988,0.96483,0.905785,0.120616,0.918428,0.959885,regime_corrected,"market,regime,propagation"
+ablation,NO_REGIME,OK,0.947135,0.967123,0.904185,0.174522,0.927429,0.963757,static_attention,"market,microstructure,propagation"
+ablation,NO_UNCERTAINTY,OK,0.948033,0.967259,0.905158,0.193376,0.928372,0.96437,static_attention,"market,microstructure,regime,propagation"
+ablation,NO_PROPAGATION,OK,0.940664,0.96481,0.905182,0.117784,0.91808,0.95969,regime_corrected,"market,microstructure,regime"
+ablation,COMBINER_EARLY,OK,0.947741,0.965417,0.905345,0.241815,0.926985,0.963131,early,"market,microstructure,regime,propagation"
+ablation,COMBINER_LATE,OK,0.947741,0.965417,0.905345,0.241815,0.926985,0.963131,late,"market,microstructure,regime,propagation"
+ablation,COMBINER_STATIC,OK,0.948033,0.967259,0.905158,0.193376,0.928372,0.96437,static_attention,"market,microstructure,regime,propagation"
+ablation,COMBINER_REGIME_INHERITED,OK,0.948033,0.967259,0.905158,0.193376,0.928372,0.96437,regime_inherited,"market,microstructure,regime,propagation"
+ablation,COMBINER_REGIME_CORRECTED,OK,0.941166,0.965057,0.905182,0.122698,0.918782,0.96004,regime_corrected,"market,microstructure,regime,propagation"
+ablation,COMBINER_UNCERTAINTY,OK,0.945468,0.962946,0.907955,0.063066,0.925597,0.961075,uncertainty,"market,microstructure,regime,propagation"

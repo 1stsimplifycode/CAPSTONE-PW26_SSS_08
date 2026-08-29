@@ -1,0 +1,6 @@
+coverage,status,note,block
+0.9996,OK,,market
+1.0,OK,daily-aggregate proxies only; depth/OFI/VPIN NOT MEASURED (L-02),microstructure
+1.0,OK,,regime
+0.985,OK,statistical co-movement only (L-07),propagation
+0.0,NOT MEASURED,NSE does not publish historical L2 depth openly (L-02),microstructure (true order book)

@@ -1,0 +1,45 @@
+key,value
+thresholds_version,thresholds-v1
+features[0],realised_variance
+false_alarm_budget.alpha,0.01
+false_alarm_budget.rationale,"Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate."
+false_alarm_budget.min_calibration,200
+budget_declared_before_fitting,True
+method,conformal empirical quantile (distribution-free)
+thresholds.realised_variance.feature,realised_variance
+thresholds.realised_variance.method,conformal empirical quantile
+thresholds.realised_variance.distribution_free,True
+thresholds.realised_variance.budget.alpha,0.01
+thresholds.realised_variance.budget.rationale,"Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate."
+thresholds.realised_variance.budget.min_calibration,200
+thresholds.realised_variance.threshold,0.001333700970992161
+thresholds.realised_variance.direction,upper
+thresholds.realised_variance.n_calibration,1559
+thresholds.realised_variance.order_statistic_index,1545
+thresholds.realised_variance.realised_false_alarm_rate,0.008980115458627326
+thresholds.realised_variance.coverage,0.9910198845413727
+thresholds.realised_variance.fitted_at,2026-08-25T13:24:57.527826+00:00
+thresholds.realised_variance.gaussian_threshold,0.0008084893098736515
+thresholds.realised_variance.gaussian_realised_rate,0.023733162283515075
+applied_to.rows,1559
+applied_to.anomalies,14
+applied_to.realised_rate,0.008980115458627326
+stress_gate_threshold.feature,stress_score
+stress_gate_threshold.method,conformal empirical quantile
+stress_gate_threshold.distribution_free,True
+stress_gate_threshold.budget.alpha,0.01
+stress_gate_threshold.budget.rationale,"Alarms are read by a person. At ~250 sessions a year, alpha=0.01 is two to three alarms per instrument per year: rare enough to be worth opening, frequent enough not to miss a regime change for years. Chosen from review capacity, not from the resulting detection rate."
+stress_gate_threshold.budget.min_calibration,200
+stress_gate_threshold.threshold,6.613877393039332
+stress_gate_threshold.direction,upper
+stress_gate_threshold.n_calibration,1559
+stress_gate_threshold.order_statistic_index,1545
+stress_gate_threshold.realised_false_alarm_rate,0.008980115458627326
+stress_gate_threshold.coverage,0.9910198845413727
+stress_gate_threshold.fitted_at,2026-08-25T13:24:57.403557+00:00
+stress_gate_threshold.gaussian_threshold,4.754190877941412
+stress_gate_threshold.gaussian_realised_rate,0.040410519563822966
+features_in_state_vector[0],realised_variance
+features_in_state_vector[1],price_impact_lambda
+features_in_state_vector[2],amihud
+features_in_state_vector[3],arrival_fano

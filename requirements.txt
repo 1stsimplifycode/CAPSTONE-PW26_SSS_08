@@ -1,0 +1,24 @@
+# Research track. Versions are the ones the reported results were produced with;
+# see research_artifacts/manifests/ for the exact environment of any given run.
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+statsmodels==0.14.6
+networkx==3.6.1
+pyarrow==25.0.1
+duckdb==1.5.5
+shap==0.52.0
+Pillow==12.3.0
+soundfile==0.14.0
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+PyYAML==6.0.3
+requests==2.32.5
+pytest==9.1.1
+
+# Deliberately NOT pinned here (see docs/LIMITATIONS.md L-08): torch, transformers,
+# librosa, opencv. Tier-2 and Tier-3 model evaluation is an offline research activity and
+# its absence is reported as NOT RUN rather than substituted.
+pypdf>=4.0

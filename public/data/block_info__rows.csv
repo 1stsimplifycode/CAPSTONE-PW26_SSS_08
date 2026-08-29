@@ -1,0 +1,5 @@
+total_auprc,unique,redundant,conflict_rate,missing_rate,block
+0.815968,0.113076,0.702892,0.028794,4.3e-05,market
+,0.000502,,,0.009339,propagation
+0.816757,0.000178,0.81658,0.151232,0.0,microstructure
+,-0.005969,,,0.0,regime

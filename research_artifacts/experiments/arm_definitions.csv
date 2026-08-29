@@ -1,0 +1,9 @@
+arm,kind,blocks,combiner,dropped_columns,hypothesis
+FULL,reference,"market,microstructure,regime,propagation",regime_corrected,0,the complete evidence stack detects injected integrity episodes better than any subset
+MARKET_ONLY,block,market,regime_corrected,0,
+MARKET_MICRO,block,"market,microstructure",regime_corrected,0,
+NO_MARKET,block,"microstructure,regime,propagation",regime_corrected,0,removing market degrades detection
+NO_MICROSTRUCTURE,block,"market,regime,propagation",regime_corrected,0,removing microstructure degrades detection
+NO_REGIME,component,"market,microstructure,propagation",static_attention,0,regime conditioning improves combination (RQ9)
+NO_UNCERTAINTY,component,"market,microstructure,regime,propagation",static_attention,0,uncertainty-aware weighting reduces false positives (RQ8)
+NO_PROPAGATION,component,"market,microstructure,regime",regime_corrected,0,cross-instrument propagation improves early detection (RQ7)

@@ -1,0 +1,18 @@
+key,value
+experiment_id,ablation
+hypothesis,arm MARKET_MICRO vs FULL
+arm,MARKET_MICRO
+blocks[0],market
+blocks[1],microstructure
+dataset_path,market_dataset.parquet
+train_split,train
+eval_split,validation
+seed,20260818
+baseline,FULL
+metrics[0],auprc
+metrics[1],auroc
+metrics[2],f1
+metrics[3],brier
+metrics[4],ece
+state_config,
+notes,

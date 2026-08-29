@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [
+    {
+      "coverage": 0.9996,
+      "status": "OK",
+      "note": null,
+      "block": "market"
+    },
+    {
+      "coverage": 1.0,
+      "status": "OK",
+      "note": "daily-aggregate proxies only; depth/OFI/VPIN NOT MEASURED (L-02)",
+      "block": "microstructure"
+    },
+    {
+      "coverage": 1.0,
+      "status": "OK",
+      "note": null,
+      "block": "regime"
+    },
+    {
+      "coverage": 0.985,
+      "status": "OK",
+      "note": "statistical co-movement only (L-07)",
+      "block": "propagation"
+    },
+    {
+      "coverage": 0.0,
+      "status": "NOT MEASURED",
+      "note": "NSE does not publish historical L2 depth openly (L-02)",
+      "block": "microstructure (true order book)"
+    }
+  ]
+}

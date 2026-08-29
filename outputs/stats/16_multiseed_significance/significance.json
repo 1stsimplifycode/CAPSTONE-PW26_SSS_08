@@ -1,0 +1,143 @@
+{
+  "n_arms": 32,
+  "n_seeds": 10,
+  "seeds": [
+    20260818,
+    20260819,
+    20260820,
+    20260821,
+    20260822,
+    20260823,
+    20260824,
+    20260825,
+    20260826,
+    20260827
+  ],
+  "metric": "auprc",
+  "reference_arm": "FULL",
+  "n_fits": 320,
+  "n_fits_ok": 320,
+  "seed_noise_floor": {
+    "metric": "auprc",
+    "pooled_seed_sd": 0.0031649384142427624,
+    "noise_floor_95": 0.008772761705815516,
+    "n_arms": 32,
+    "n_seeds": 10,
+    "interpretation": "A difference between two arms smaller than the 95% floor (0.0088 auprc) is within what re-seeding alone produces, and is reported as not established."
+  },
+  "differences_surviving_correction": [
+    {
+      "arm": "MARKET_MICRO",
+      "mean_difference": -0.12496702091935999,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": 0.11619425921354447
+    },
+    {
+      "arm": "MARKET_ONLY",
+      "mean_difference": -0.12571074778467678,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": 0.11693798607886126
+    },
+    {
+      "arm": "NO_MARKET",
+      "mean_difference": -0.11043253044697061,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": 0.1016597687411551
+    },
+    {
+      "arm": "NO_MICROSTRUCTURE",
+      "mean_difference": -0.00030379527824860866,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": -0.008468966427566907
+    },
+    {
+      "arm": "NO_PROPAGATION",
+      "mean_difference": -0.0005600172815223847,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": -0.008212744424293131
+    },
+    {
+      "arm": "NO_REGIME",
+      "mean_difference": 0.006721497994429271,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": -0.0020512637113862453
+    },
+    {
+      "arm": "NO_UNCERTAINTY",
+      "mean_difference": 0.008112086954365072,
+      "p_value": 0.0020998950052497373,
+      "adjusted_p": 0.0021698915054247287,
+      "abs_difference_vs_noise_floor": -0.0006606747514504435
+    }
+  ],
+  "differences_within_seed_noise": [],
+  "within_run_intervals": [
+    {
+      "arm": "FULL",
+      "seed": 20260818,
+      "statistic": "auprc",
+      "point": 0.9411660307392683,
+      "ci_low": 0.9187817132525292,
+      "ci_high": 0.9600404089906721,
+      "n_clusters": 198,
+      "note": "percentile bootstrap over 600 resamples, resampling whole 'cluster' clusters with replacement to respect within-cluster dependence"
+    },
+    {
+      "arm": "NO_UNCERTAINTY",
+      "seed": 20260818,
+      "statistic": "auprc",
+      "point": 0.9480330186575128,
+      "ci_low": 0.9283715191356874,
+      "ci_high": 0.964369502354716,
+      "n_clusters": 198,
+      "note": "percentile bootstrap over 600 resamples, resampling whole 'cluster' clusters with replacement to respect within-cluster dependence"
+    }
+  ],
+  "minimum_detectable_effect": {
+    "status": "OK",
+    "n_clusters": 198,
+    "minimum_detectable_effect": 0.0054385887036974695,
+    "observed_difference": -0.0069131293026917185,
+    "informative": true,
+    "interpretation": "A non-significant difference smaller than the minimum detectable effect is uninformative, not evidence of no effect.",
+    "compared": "FULL vs COMBINER_STATIC"
+  },
+  "interpretation": "Every previously reported arm difference was a single run. A difference smaller than the seed noise floor above is not evidence that one arm is better; it is evidence that the pipeline is stochastic. Differences are reported both ways rather than filtered, so the ones that dissolve stay visible.",
+  "holdout_policy": "Validation only. Repeating a measurement on the frozen holdout across ten seeds would be ten looks at the data the freeze exists to protect.",
+  "run_at": "2026-08-19T21:03:55.844974+00:00",
+  "git_commit": "fb8a9fb0970aa3cf7baaf67a01a67ac95f0e2cca",
+  "multiseed_version": "multiseed-v1",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\abcom\\Downloads\\AEGIS-MARKET\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "cpu_count": 8,
+    "packages": {
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "scipy": "1.18.0",
+      "sklearn": "1.9.0",
+      "matplotlib": "3.11.1",
+      "statsmodels": "0.14.6",
+      "networkx": "3.6.1",
+      "shap": "0.52.0",
+      "pyarrow": "25.0.1",
+      "duckdb": "1.5.5",
+      "PIL": "12.3.0",
+      "soundfile": "0.14.0",
+      "imageio": "2.37.4"
+    },
+    "node": null,
+    "git_commit": "fb8a9fb0970aa3cf7baaf67a01a67ac95f0e2cca",
+    "git_dirty": true,
+    "timestamp": "2026-08-19T21:03:57.119007+00:00"
+  },
+  "elapsed_s": 1638.3
+}

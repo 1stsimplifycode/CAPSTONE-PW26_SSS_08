@@ -1,0 +1,13 @@
+id,required_data
+EXP-L01-1,"[""point-in-time index membership""]"
+EXP-L02-1,"[""licence-clear Level-2 sample""]"
+EXP-L04-1,"[""adjudicated incident labels""]"
+EXP-L05-1,"[""human-labelled financial speech""]"
+EXP-L06-1,"[""licence-clear financial speech corpus""]"
+EXP-L07-1,"[""sector or ownership mapping"", ""contagion-aware episode generator or real incidents""]"
+EXP-L08-1,"[""installed model weights""]"
+EXP-L09-1,"[""licence-clear financial image corpus""]"
+EXP-L11-1,"[""a completed freeze""]"
+EXP-L13-1,"[""point-in-time fundamentals with disclosure timestamps""]"
+EXP-L13-2,"[""point-in-time fundamentals with disclosure timestamps""]"
+EXP-N05-1,"[""contagion-aware generator (implementable now)""]"

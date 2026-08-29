@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-08-23T04:35:36.950798+00:00",
+  "meta": {
+    "n": 11
+  },
+  "rows": [
+    {
+      "table": "table04_baseline_comparison",
+      "available": true,
+      "caption": null,
+      "source": "research_artifacts/tables",
+      "rows": null,
+      "path": "research_artifacts/tables/table04_baseline_comparison.csv",
+      "git_commit": null,
+      "columns": [
+        "model",
+        "status",
+        "n",
+        "positive_rate",
+        "auprc",
+        "auroc",
+        "brier",
+        "ece",
+        "threshold",
+        "precision",
+        "recall",
+        "f1",
+        "auprc_lift"
+      ]
+    },
+    {
+      "table": "table05b_ablation_statistics",
+      "available": true,
+      "caption": null,
+      "source": "research_artifacts/tables",
+      "rows": null,
+      "path": "research_artifacts/tables/table05b_ablation_statistics.csv",
+      "git_commit": null,
+      "columns": [
+        "arm",
+        "comparison",
+        "delta_auprc",
+        "p_value",
+        "ci_low",
+        "ci_high",
+        "test",
+        "description",
+        "adjusted_p",
+        "significant_fdr_5pct"
+      ]
+    },
+    {
+      "table": "table06_multiseed",
+      "available": true,
+      "caption": "STATS track: AUPRC across 10 seeds per ablation arm. Pooled seed sd 0.00316; 95% noise floor 0.00877.",
+      "source": "outputs/stats/16_multiseed_significance/seed_summary.csv",
+      "rows": 20,
+      "path": "outputs/paper_tables/table06_multiseed.csv",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "columns": [
+        "arm",
+        "n_seeds",
+        "mean",
+        "sd",
+        "min",
+        "max",
+        "range",
+        "ci_low",
+        "ci_high"
+      ]
+    },
+    {
+      "table": "table10_error_analysis",
+      "available": true,
+      "caption": "Per-class recall for the full full-stack arm, with the class each is most often confused into. Leave-one-actor-out, seed 0.",
+      "source": "computed in scripts/generate_paper_tables.py from the cached feature blocks",
+      "rows": 8,
+      "path": "outputs/paper_tables/table10_error_analysis.csv",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "columns": [
+        "true_class",
+        "support",
+        "recall",
+        "most_confused_with",
+        "confusions_into_that_class",
+        "mean_confidence"
+      ]
+    },
+    {
+      "table": "table10b_confidence_bands",
+      "available": true,
+      "caption": "Accuracy within confidence quintiles. A positive confidence-minus-accuracy in the top band is where a reader is most likely to be misled, because those are the confident errors.",
+      "source": "computed in scripts/generate_paper_tables.py",
+      "rows": 5,
+      "path": "outputs/paper_tables/table10b_confidence_bands.csv",
+      "git_commit": "d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b",
+      "columns": [
+        "confidence_band",
+        "n",
+        "accuracy",
+        "mean_confidence",
+        "confidence_minus_accuracy"
+      ]
+    }
+  ]
+}

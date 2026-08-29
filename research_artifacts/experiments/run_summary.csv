@@ -1,0 +1,33 @@
+key,value
+run_at,2026-08-18T18:19:57.945040+00:00
+dataset,market_dataset.parquet
+eval_split,validation
+n_train,9351
+n_eval,3855
+positive_rate_eval,0.2438391699092088
+n_arms,32
+n_arms_ok,32
+n_arms_failed,0
+bootstrap_resamples,600
+environment.python,"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+environment.executable,C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Scripts\python.exe
+environment.platform,Windows-11-10.0.26200-SP0
+environment.processor,"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+environment.cpu_count,8
+environment.packages.numpy,2.5.2
+environment.packages.pandas,3.0.5
+environment.packages.scipy,1.18.0
+environment.packages.sklearn,1.9.0
+environment.packages.matplotlib,3.11.1
+environment.packages.statsmodels,0.14.6
+environment.packages.networkx,3.6.1
+environment.packages.shap,0.52.0
+environment.packages.pyarrow,25.0.1
+environment.packages.duckdb,1.5.5
+environment.packages.PIL,12.3.0
+environment.packages.soundfile,0.14.0
+environment.packages.imageio,2.37.4
+environment.node,
+environment.git_commit,8774260d10598ac24607a03326727e9f56c05c25
+environment.git_dirty,True
+environment.timestamp,2026-08-18T18:19:58.023190+00:00

@@ -1,0 +1,16 @@
+key,value
+fano_factor,42321.604717010196
+nb_dispersion_k,3.1562096489010694
+overdispersed,True
+model_selected,negative_binomial
+n_symbols,50
+n_sessions,646
+median_daily_trades,118969.30185758515
+source,cash_panel.trades
+computed_at,2026-08-25T13:24:56.995507+00:00
+basis,DERIVED_FROM_EXCHANGE_DATA
+variance_inflation,42321.604717010196
+sd_inflation,205.72215417161613
+artifact_version,count-events-v1
+written_at,2026-08-25T13:24:56.996719+00:00
+consumed_by,research.detection.count_events.CountEventDetector

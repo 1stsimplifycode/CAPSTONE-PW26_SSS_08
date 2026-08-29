@@ -1,0 +1,25 @@
+{
+  "propagation_features_declared": [
+    "prop_stress",
+    "prop_stress_max",
+    "prop_n_neighbours",
+    "prop_mean_abs_corr",
+    "prop_disagreement"
+  ],
+  "present_in_dataset": [
+    "prop_stress",
+    "prop_stress_max",
+    "prop_n_neighbours",
+    "prop_mean_abs_corr",
+    "prop_disagreement"
+  ],
+  "mean_non_null_fraction": 0.9850223456939243,
+  "per_feature_mean": {
+    "prop_stress": 0.09087403202244383,
+    "prop_stress_max": 0.6879075847349637,
+    "prop_n_neighbours": 7.629123237277744,
+    "prop_mean_abs_corr": 0.46338802783320354,
+    "prop_disagreement": 0.24428902459491303
+  },
+  "caveat": "Statistical co-movement, not causal propagation (L-07)."
+}

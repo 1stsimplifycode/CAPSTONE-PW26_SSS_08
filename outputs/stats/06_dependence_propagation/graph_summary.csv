@@ -1,0 +1,18 @@
+key,value
+propagation_features_declared[0],prop_stress
+propagation_features_declared[1],prop_stress_max
+propagation_features_declared[2],prop_n_neighbours
+propagation_features_declared[3],prop_mean_abs_corr
+propagation_features_declared[4],prop_disagreement
+present_in_dataset[0],prop_stress
+present_in_dataset[1],prop_stress_max
+present_in_dataset[2],prop_n_neighbours
+present_in_dataset[3],prop_mean_abs_corr
+present_in_dataset[4],prop_disagreement
+mean_non_null_fraction,0.9850223456939243
+per_feature_mean.prop_stress,0.09087403202244383
+per_feature_mean.prop_stress_max,0.6879075847349637
+per_feature_mean.prop_n_neighbours,7.629123237277744
+per_feature_mean.prop_mean_abs_corr,0.46338802783320354
+per_feature_mean.prop_disagreement,0.24428902459491303
+caveat,"Statistical co-movement, not causal propagation (L-07)."

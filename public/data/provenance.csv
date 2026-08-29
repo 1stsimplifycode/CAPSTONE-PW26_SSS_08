@@ -1,0 +1,17 @@
+key,value
+generated_at,2026-08-23T04:35:34.526981+00:00
+rows[0].source,NSE daily cash bhavcopy
+rows[0].licence,NSE public archive; see docs/DATA_LICENSING.md
+rows[0].coverage,2005-01-03 .. 2026-08-14
+rows[0].status,USED
+rows[0].block,market
+rows[1].source,Historical Nifty-50 membership
+rows[1].licence,no licence-clear source located
+rows[1].coverage,n/a
+rows[1].status,NOT OBTAINED (limitation L-01)
+rows[1].block,universe
+rows[2].source,NSE order-book depth
+rows[2].licence,not published openly
+rows[2].coverage,n/a
+rows[2].status,NOT MEASURED (limitation L-02)
+rows[2].block,microstructure

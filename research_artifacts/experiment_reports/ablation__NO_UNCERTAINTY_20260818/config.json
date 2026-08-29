@@ -1,0 +1,28 @@
+{
+  "experiment_id": "ablation",
+  "hypothesis": "uncertainty-aware weighting reduces false positives (RQ8)",
+  "arm": "NO_UNCERTAINTY",
+  "blocks": [
+    "market",
+    "microstructure",
+    "regime",
+    "propagation"
+  ],
+  "combination_rule": "static_attention",
+  "dataset_path": "market_dataset.parquet",
+  "train_split": "train",
+  "eval_split": "validation",
+  "seed": 20260818,
+  "baseline": "FULL",
+  "metrics": [
+    "auprc",
+    "auroc",
+    "f1",
+    "brier",
+    "ece"
+  ],
+  "state_config": {},
+  "notes": [
+    "uncertainty is still reported, it is simply not used for weighting"
+  ]
+}

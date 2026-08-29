@@ -1,0 +1,56 @@
+21:04:21  [stats-15] 13206 rows in train+validation, 3352 held frozen and untouched
+21:04:21  [input] degrading the evaluation signal; the model is fitted once on clean data
+21:04:33        clean reference auprc 0.9412
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:04:42          gaussian  sev 0.05  auprc 0.7895  (-0.1516)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:04:51          gaussian  sev 0.10  auprc 0.6249  (-0.3163)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:05:01          gaussian  sev 0.25  auprc 0.4360  (-0.5051)
+C:\Users\abcom\Downloads\AEGIS-MARKET\.venv\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+21:05:11          gaussian  sev 0.50  auprc 0.3723  (-0.5689)
+21:05:21          dropout   sev 0.05  auprc 0.9206  (-0.0206)
+21:05:31          dropout   sev 0.10  auprc 0.9051  (-0.0361)
+21:05:41          dropout   sev 0.25  auprc 0.8259  (-0.1152)
+21:05:51          dropout   sev 0.50  auprc 0.6941  (-0.2471)
+21:06:01          stale     sev 0.05  auprc 0.9373  (-0.0039)
+21:06:11          stale     sev 0.10  auprc 0.9338  (-0.0073)
+21:06:21          stale     sev 0.25  auprc 0.9144  (-0.0268)
+21:06:31          stale     sev 0.50  auprc 0.8937  (-0.0474)
+21:06:41          outliers  sev 0.05  auprc 0.8617  (-0.0794)
+21:06:51          outliers  sev 0.10  auprc 0.8011  (-0.1400)
+21:07:01          outliers  sev 0.25  auprc 0.6844  (-0.2568)
+21:07:11          outliers  sev 0.50  auprc 0.5714  (-0.3698)
+21:07:11  [missingness] taking each block offline
+21:07:51          text            offline 100%  auprc 0.8171  (-0.1240)
+21:08:22          image           offline 100%  auprc 0.9409  (-0.0003)
+21:08:52          audio           offline 100%  auprc 0.9410  (-0.0002)
+21:09:22          video           offline 100%  auprc 0.9403  (-0.0008)
+21:09:52          market          offline 100%  auprc 0.8278  (-0.1134)
+21:10:22          microstructure  offline 100%  auprc 0.9411  (-0.0001)
+21:10:52          regime          offline 100%  auprc 0.9407  (-0.0005)
+21:11:21          propagation     offline 100%  auprc 0.9411  (-0.0001)
+21:11:21  [training size] symbol-level learning curve
+21:11:35           10% of symbols (16)  auprc 0.6166
+21:11:55           25% of symbols (40)  auprc 0.8839
+21:12:19           50% of symbols (80)  auprc 0.9161
+21:12:46           75% of symbols (121)  auprc 0.9355
+21:12:56          100% of symbols (161)  auprc 0.9412
+21:12:56  [period] expanding-window transfer forward in time
+21:13:02          fold 1  train<=2017-01-19  eval 2017-01-20..2018-10-15  auprc 0.7919
+21:13:09          fold 2  train<=2018-10-15  eval 2018-10-16..2020-07-16  auprc 0.8979
+21:13:18          fold 3  train<=2020-07-16  eval 2020-07-17..2022-04-06  auprc 0.9308
+21:13:28          fold 4  train<=2022-04-06  eval 2022-04-07..2023-12-29  auprc 0.9444
+21:13:28  [instrument] transfer to disjoint tickers
+21:13:39          group 1  43 held-out symbols  auprc 0.9292
+21:13:49          group 2  43 held-out symbols  auprc 0.9431
+21:13:58          group 3  43 held-out symbols  auprc 0.9580
+21:14:08          group 4  42 held-out symbols  auprc 0.9330
+21:14:08    worst degradation: gaussian all at 0.50 -> auprc 0.3723 (-0.5689)
+21:14:08    instrument transfer: 4 folds, auprc 0.9408 (0.9292 - 0.9580)
+21:14:08    period transfer: 4 folds, auprc 0.8913 (0.7919 - 0.9444)
+21:14:10  done in 589s -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\15_robustness_generalization

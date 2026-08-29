@@ -1,0 +1,20 @@
+key,value
+experiment_id,ablation
+hypothesis,uncertainty-aware weighting reduces false positives (RQ8)
+arm,NO_UNCERTAINTY
+blocks[4],market
+blocks[5],microstructure
+blocks[6],regime
+blocks[7],propagation
+dataset_path,market_dataset.parquet
+train_split,train
+eval_split,validation
+seed,20260818
+baseline,FULL
+metrics[0],auprc
+metrics[1],auroc
+metrics[2],f1
+metrics[3],brier
+metrics[4],ece
+state_config,
+notes[0],"uncertainty is still reported, it is simply not used for weighting"

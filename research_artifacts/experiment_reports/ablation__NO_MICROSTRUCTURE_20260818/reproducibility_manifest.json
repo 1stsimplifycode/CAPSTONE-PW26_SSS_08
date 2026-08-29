@@ -1,0 +1,60 @@
+{
+  "experiment_id": "ablation",
+  "run_id": "ablation__NO_MICROSTRUCTURE_20260818",
+  "seed": 20260818,
+  "config": {
+    "experiment_id": "ablation",
+    "hypothesis": "removing microstructure degrades detection",
+    "arm": "NO_MICROSTRUCTURE",
+    "blocks": [
+      "market",
+      "regime",
+      "propagation"
+    ],
+    "combination_rule": "regime_corrected",
+    "dataset_path": "market_dataset.parquet",
+    "train_split": "train",
+    "eval_split": "validation",
+    "seed": 20260818,
+    "baseline": "FULL",
+    "metrics": [
+      "auprc",
+      "auroc",
+      "f1",
+      "brier",
+      "ece"
+    ],
+    "state_config": {},
+    "notes": []
+  },
+  "dataset_version": null,
+  "dataset_hash": null,
+  "model_versions": {
+    "risk_model": "aegis-risk-v1"
+  },
+  "xai_versions": {},
+  "feature_version": "dataset-v1",
+  "git_commit": "8774260d10598ac24607a03326727e9f56c05c25",
+  "git_dirty": true,
+  "python_version": "3.12.10",
+  "node_version": null,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "statsmodels": "0.14.6",
+    "networkx": "3.6.1",
+    "shap": "0.52.0",
+    "pyarrow": "25.0.1",
+    "duckdb": "1.5.5",
+    "PIL": "12.3.0",
+    "soundfile": "0.14.0",
+    "imageio": "2.37.4"
+  },
+  "timestamp": "2026-08-18T18:06:35.257566+00:00",
+  "notes": [],
+  "config_hash": "b727cfccda4340a2a54752f00b225e25f2c6188c41887246164033abc47f591b"
+}

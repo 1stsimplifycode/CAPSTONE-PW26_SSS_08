@@ -1,0 +1,21 @@
+key,value
+n,3855
+mean,0.000754921275421148
+total_return,0.7992910900517769
+vol_annual,0.4225503877683942
+downside_vol,0.3980538341521992
+var,-0.032004804970057255
+cvar,-0.05207553756274829
+max_drawdown,-0.9737931368158315
+worst_day,-0.8954033771106942
+series,next-session return of the scored instrument-days
+n_scored_rows,3855
+n_rows_with_forward_return,3855
+note,"Unconditional tail statistics of the realised return over the scored rows. This is the input distribution the exposure gate acts on, not the result of applying it, and no allocation or position size is produced anywhere in this module."
+corporate_action_suspects.threshold_abs_return,0.5
+corporate_action_suspects.n_rows,1
+corporate_action_suspects.rows[0].symbol,TATASTEEL
+corporate_action_suspects.rows[0].date,2022-07-27
+corporate_action_suspects.rows[0].fwd_ret,-0.8954033771106942
+corporate_action_suspects.worst_day_excluding_suspects,-0.19937260369466714
+corporate_action_suspects.caveat,"Prices are unadjusted for splits and bonuses. Rows above the threshold are almost certainly corporate actions rather than returns, and max_drawdown and worst_day above are contaminated by them. Tracked as KI-06; the metric is reported unmodified so it stays comparable with the existing capital-consequence path, which builds its return series the same way."

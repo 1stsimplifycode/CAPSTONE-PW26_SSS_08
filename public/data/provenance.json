@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [
+    {
+      "source": "NSE daily cash bhavcopy",
+      "licence": "NSE public archive; see docs/DATA_LICENSING.md",
+      "coverage": "2005-01-03 .. 2026-08-14",
+      "status": "USED",
+      "block": "market"
+    },
+    {
+      "source": "Historical Nifty-50 membership",
+      "licence": "no licence-clear source located",
+      "coverage": "n/a",
+      "status": "NOT OBTAINED (limitation L-01)",
+      "block": "universe"
+    },
+    {
+      "source": "NSE order-book depth",
+      "licence": "not published openly",
+      "coverage": "n/a",
+      "status": "NOT MEASURED (limitation L-02)",
+      "block": "microstructure"
+    }
+  ]
+}

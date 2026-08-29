@@ -1,0 +1,28 @@
+20:36:38  [stats-16] 32 arms x 10 seeds on 3855 validation rows
+20:36:38        320 fits across 7 worker processes
+20:38:08          20/320 fits, 20 OK, mean auprc 0.6845
+20:39:40          40/320 fits, 40 OK, mean auprc 0.7437
+20:41:34          60/320 fits, 60 OK, mean auprc 0.7627
+20:42:48          80/320 fits, 80 OK, mean auprc 0.7448
+20:44:31          100/320 fits, 100 OK, mean auprc 0.7656
+20:46:13          120/320 fits, 120 OK, mean auprc 0.7631
+20:47:29          140/320 fits, 140 OK, mean auprc 0.7549
+20:49:29          160/320 fits, 160 OK, mean auprc 0.7745
+20:50:35          180/320 fits, 180 OK, mean auprc 0.7646
+20:52:06          200/320 fits, 200 OK, mean auprc 0.7685
+20:54:00          220/320 fits, 220 OK, mean auprc 0.7718
+20:55:16          240/320 fits, 240 OK, mean auprc 0.7655
+20:57:04          260/320 fits, 260 OK, mean auprc 0.7719
+20:58:46          280/320 fits, 280 OK, mean auprc 0.7703
+21:00:07          300/320 fits, 300 OK, mean auprc 0.7660
+21:01:54          320/320 fits, 320 OK, mean auprc 0.7750
+21:01:55    320/320 fits succeeded
+21:01:55      COMBINER_STATIC            auprc 0.9474 +/- 0.0015  [0.9449, 0.9503]  range 0.0054
+21:01:55      COMBINER_REGIME_INHERITED  auprc 0.9474 +/- 0.0015  [0.9449, 0.9503]  range 0.0054
+21:01:55      NO_UNCERTAINTY           auprc 0.9474 +/- 0.0015  [0.9449, 0.9503]  range 0.0054
+21:01:55      COMBINER_LATE              auprc 0.9472 +/- 0.0015  [0.9448, 0.9497]  range 0.0048
+21:01:55      NO_REGIME                auprc 0.9460 +/- 0.0016  [0.9429, 0.9488]  range 0.0059
+21:01:55      COMBINER_UNCERTAINTY       auprc 0.9452 +/- 0.0010  [0.9438, 0.9467]  range 0.0029
+21:02:09    pooled seed sd 0.00316; 95% noise floor 0.00877 auprc
+21:02:09    30 of 31 arm differences survive BH correction at 0.05
+21:03:57  done in 1638s -> C:\Users\abcom\Downloads\AEGIS-MARKET\outputs\stats\16_multiseed_significance

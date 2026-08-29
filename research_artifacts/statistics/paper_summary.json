@@ -1,0 +1,120 @@
+{
+  "run_id": "paper_20260819T101248Z",
+  "generated_at": "2026-08-19T10:14:57.386437+00:00",
+  "figures": {
+    "MAIN": 38,
+    "SUPPLEMENTARY": 10,
+    "total": 48
+  },
+  "tables": 19,
+  "not_generated": 0,
+  "detection_full_stack": {
+    "n": 3855.0,
+    "positive_rate": 0.2438391699092088,
+    "auprc": 0.9411660307392683,
+    "auroc": 0.9650571147038429,
+    "brier": 0.07134809576450829,
+    "ece": 0.12269750280082656,
+    "threshold": 0.3510382470491706,
+    "precision": 0.9393592677345538,
+    "recall": 0.8734042553191489,
+    "f1": 0.9051819184123484,
+    "auprc_lift": 3.8597819664892334
+  },
+  "temporal": {
+    "n_true_windows": 36,
+    "n_pred_windows": 56,
+    "n_matched": 33,
+    "detection_rate": 0.9166666666666666,
+    "false_alarm_windows": 23,
+    "mean_lead_time": -8.454545454545455,
+    "median_lead_time": -10.0,
+    "mean_onset_error": 12.393939393939394,
+    "mean_abs_onset_error": 13.181818181818182,
+    "mean_resolution_error": 4.0476190476190474,
+    "mean_temporal_iou": 0.3912575437895692,
+    "mean_duration_error": -6.619047619047619,
+    "premature_resolution_rate": 0.030303030303030304,
+    "delayed_resolution_rate": 0.5757575757575758
+  },
+  "xai": {
+    "sanity_all_passed": false,
+    "note": "attributions are computed on a single-model surrogate fitted to the same features, because KernelSHAP and LIME require one f(x) over a flat feature vector; the surrogate reaches AUPRC 0.9355 against the fused model's 0.9412",
+    "methods_run": [
+      "occlusion",
+      "kernel_shap",
+      "lime",
+      "counterfactual"
+    ],
+    "not_applicable": {
+      "deep_shap": "requires a differentiable deep network; the risk model is tree-based",
+      "grad_cam": "requires convolutional feature maps; no CNN is used",
+      "guided_grad_cam": "requires a CNN",
+      "tcav": "requires a differentiable network with concept activation vectors",
+      "deeplift": "requires a differentiable deep network",
+      "tree_shap": "the per-block learners are wrapped in a probability calibrator, so the tree structure is not directly exposed; KernelSHAP is used instead and this substitution is reported"
+    }
+  },
+  "capital": {
+    "control": {
+      "n": 493,
+      "mean": -0.0006690185422705703,
+      "total_return": -0.3141033916233211,
+      "vol_annual": 0.21822951462296022,
+      "downside_vol": 0.18078348502441705,
+      "var": -0.026044457512601853,
+      "cvar": -0.03641004834118846,
+      "max_drawdown": -0.5336291427017821,
+      "worst_day": -0.09554918142208332
+    },
+    "treatment": {
+      "n": 493,
+      "mean": -0.0007419147950017275,
+      "total_return": -0.32971710564584067,
+      "vol_annual": 0.18585769600645288,
+      "downside_vol": 0.15609027460259844,
+      "var": -0.02000602520393453,
+      "cvar": -0.031211297286837515,
+      "max_drawdown": -0.4739798675800362,
+      "worst_day": -0.09144347963924482
+    },
+    "delta": {
+      "mean": -7.289625273115721e-05,
+      "total_return": -0.015613714022519543,
+      "vol_annual": -0.03237181861650734,
+      "downside_vol": -0.0246932104218186,
+      "var": 0.006038432308667324,
+      "cvar": 0.005198751054350945,
+      "max_drawdown": 0.05964927512174589,
+      "worst_day": 0.004105701782838506
+    },
+    "opportunity_cost_total_return": 0.015613714022519543,
+    "mean_cap": 0.8281399907066479
+  },
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\abcom\\Downloads\\AEGIS-MARKET\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "cpu_count": 8,
+    "packages": {
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "scipy": "1.18.0",
+      "sklearn": "1.9.0",
+      "matplotlib": "3.11.1",
+      "statsmodels": "0.14.6",
+      "networkx": "3.6.1",
+      "shap": "0.52.0",
+      "pyarrow": "25.0.1",
+      "duckdb": "1.5.5",
+      "PIL": "12.3.0",
+      "soundfile": "0.14.0",
+      "imageio": "2.37.4"
+    },
+    "node": null,
+    "git_commit": "8774260d10598ac24607a03326727e9f56c05c25",
+    "git_dirty": true,
+    "timestamp": "2026-08-19T10:14:57.457349+00:00"
+  }
+}

@@ -1,0 +1,999 @@
+key,value
+generated_at,2026-08-23T04:35:34.526981+00:00
+rows[0].id,L-01
+rows[0].title,Point-in-time index membership unavailable
+rows[0].category,LICENSING
+rows[0].severity,BOUNDS_ALL_CLAIMS
+rows[0].description,"No licence-clear, point-in-time Nifty-50 constituent history was located. The research universe is a point-in-time liquidity proxy: the top 50 symbols by trailing median traded value at each monthly rebalance, estimated only from sessions strictly preceding the rebalance."
+rows[0].why_it_exists,"No free source with redistribution rights was found. Reconstructing one from secondary web sources would be unverifiable, and inventing one is prohibited."
+rows[0].current_status,NOT_MEASURED
+rows[0].current_substitute,Point-in-time liquidity-proxy universe (survivorship-safe)
+rows[0].invalidated_claims[0],Any statement of the form 'results on the Nifty 50'.
+rows[0].invalidated_claims[1],Like-for-like comparison against index-level literature.
+rows[0].still_valid[0],"The universe is survivorship-safe by construction: 257 rebalances, 270 distinct members ever selected for a 50-name universe, 2.59 entries and 2.59 exits per rebalance."
+rows[0].still_valid[1],Every instrument-day used was genuinely liquid at that time.
+rows[0].research_questions[0].id,RQ-L01-A
+rows[0].research_questions[0].question,How sensitive are full-stack integrity-event results to the choice of universe construction?
+rows[0].research_questions[0].limitation_id,L-01
+rows[0].research_questions[0].status,OPEN_QUESTION
+rows[0].research_questions[0].experiments[0].id,EXP-L01-1
+rows[0].research_questions[0].experiments[0].hypothesis,Event prevalence and block contribution differ materially between a liquidity-proxy universe and true point-in-time index membership.
+rows[0].research_questions[0].experiments[0].independent_variable,universe construction rule
+rows[0].research_questions[0].experiments[0].dependent_variable,"AUPRC, lead time, block contribution, event prevalence"
+rows[0].research_questions[0].experiments[0].control,point-in-time liquidity proxy (current)
+rows[0].research_questions[0].experiments[0].treatment,licence-clear point-in-time index membership
+rows[0].research_questions[0].experiments[0].dataset,NSE cash panel 2005-2026 + injected episodes
+rows[0].research_questions[0].experiments[0].evaluation_period,"validation split, identical for both arms"
+rows[0].research_questions[0].experiments[0].metrics[0],auprc
+rows[0].research_questions[0].experiments[0].metrics[1],auroc
+rows[0].research_questions[0].experiments[0].metrics[2],lead_time
+rows[0].research_questions[0].experiments[0].metrics[3],false_alarm_rate
+rows[0].research_questions[0].experiments[0].metrics[4],block_contribution
+rows[0].research_questions[0].experiments[0].metrics[5],ece
+rows[0].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap on episodes
+rows[0].research_questions[0].experiments[0].expected_interpretation,A small delta would support the proxy as an adequate stand-in; a large delta would mean universe construction is a confound that the literature should control for.
+rows[0].research_questions[0].experiments[0].threats_to_validity[0],Membership history itself may contain vendor errors.
+rows[0].research_questions[0].experiments[0].threats_to_validity[1],"Injected episodes are placed by the generator, so prevalence differences partly reflect universe size, not market reality."
+rows[0].research_questions[0].experiments[0].status,BLOCKED
+rows[0].research_questions[0].experiments[0].required_data[0],point-in-time index membership
+rows[0].research_questions[0].experiments[0].result_artifact,
+rows[0].research_questions[0].current_evidence,"Only one universe has been evaluated, so sensitivity is unmeasured."
+rows[0].research_questions[0].what_remains_unresolved,Whether universe choice changes block importance ordering.
+rows[0].research_questions[1].id,RQ-L01-B
+rows[0].research_questions[1].question,Does a liquidity-proxy universe systematically over- or under-represent the instruments where integrity events actually concentrate?
+rows[0].research_questions[1].limitation_id,L-01
+rows[0].research_questions[1].status,BLOCKED
+rows[0].research_questions[1].experiments,
+rows[0].research_questions[1].current_evidence,Requires real incident labels; see L-04.
+rows[0].research_questions[1].what_remains_unresolved,Everything.
+rows[0].required_data[0],"Licence-clear point-in-time NSE index constituent history with effective dates and change reasons (additions, removals, symbol changes)."
+rows[0].future_validation,Re-run the full ablation suite on true point-in-time membership and report the delta against the liquidity proxy.
+rows[0].forbidden_phrasings[0],on the Nifty 50
+rows[0].forbidden_phrasings[1],Nifty-50 results
+rows[0].forbidden_phrasings[2],index constituents
+rows[0].scope_note,"Universe: point-in-time liquidity proxy, not the Nifty 50."
+rows[1].id,L-02
+rows[1].title,True market microstructure not measured
+rows[1].category,DATA
+rows[1].severity,SCOPES_A_CLAIM
+rows[1].description,"NSE does not publish historical Level-2 depth openly. Order-book imbalance, signed order-flow imbalance, VPIN, cancellation behaviour and execution aggression are emitted as NaN with a stated reason and appear as NOT MEASURED in the coverage table."
+rows[1].why_it_exists,The data is not published openly at any price the project can pay.
+rows[1].current_status,NOT_MEASURED
+rows[1].current_substitute,"Four daily-aggregate proxies: average trade size, its z-score, trade-count z-score, turnover-per-trade z-score."
+rows[1].invalidated_claims[0],"Any claim about order-book dynamics, liquidity provision or predatory order behaviour."
+rows[1].invalidated_claims[1],Any claim that the 'microstructure' ablation arm tests true microstructure.
+rows[1].still_valid[0],The proxies are computed from real trade counts and real turnover.
+rows[1].still_valid[1],"Their contribution was measured: removing them changes AUPRC by 0.0002 (95% CI -0.000006 to 0.0004), not significant at 5% FDR."
+rows[1].research_questions[0].id,RQ-L02-A
+rows[1].research_questions[0].question,How much of the integrity-event information carried by true order-book features is retained by daily-aggregate proxies?
+rows[1].research_questions[0].limitation_id,L-02
+rows[1].research_questions[0].status,BLOCKED
+rows[1].research_questions[0].experiments[0].id,EXP-L02-1
+rows[1].research_questions[0].experiments[0].hypothesis,Daily-aggregate proxies retain a measurable but minority share of the detection information available from Level-2 features.
+rows[1].research_questions[0].experiments[0].independent_variable,microstructure feature source
+rows[1].research_questions[0].experiments[0].dependent_variable,AUPRC on a matched instrument-date subset
+rows[1].research_questions[0].experiments[0].control,market features + daily proxies
+rows[1].research_questions[0].experiments[0].treatment,market features + true Level-2 features
+rows[1].research_questions[0].experiments[0].dataset,matched subset with Level-2 coverage
+rows[1].research_questions[0].experiments[0].evaluation_period,whatever window the Level-2 sample covers
+rows[1].research_questions[0].experiments[0].metrics[0],auprc
+rows[1].research_questions[0].experiments[0].metrics[1],auroc
+rows[1].research_questions[0].experiments[0].metrics[2],lead_time
+rows[1].research_questions[0].experiments[0].metrics[3],permutation_importance
+rows[1].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap on the matched subset
+rows[1].research_questions[0].experiments[0].expected_interpretation,"If the proxy arm approaches the Level-2 arm, the proxy is an adequate substitute at daily resolution; if not, the negligible proxy contribution measured here is an artefact of resolution rather than evidence about microstructure."
+rows[1].research_questions[0].experiments[0].threats_to_validity[0],A short Level-2 window may not span enough episodes.
+rows[1].research_questions[0].experiments[0].threats_to_validity[1],"Matched subsets are small, so power is limited (see L-12)."
+rows[1].research_questions[0].experiments[0].status,BLOCKED
+rows[1].research_questions[0].experiments[0].required_data[0],licence-clear Level-2 sample
+rows[1].research_questions[0].experiments[0].result_artifact,
+rows[1].research_questions[0].current_evidence,"The proxies contribute negligibly on their own (delta 0.0002, not significant), which is consistent either with the proxies being weak *or* with microstructure being uninformative here. The current evidence cannot separate those two explanations."
+rows[1].research_questions[0].what_remains_unresolved,Which of the two explanations holds.
+rows[1].required_data[0],"A licence-clear Level-2 sample: order-book snapshots or message-level data for a subset of instruments and dates, aligned to the panel."
+rows[1].future_validation,Calibrate the daily proxies against a small true Level-2 sample and report the information retained.
+rows[1].forbidden_phrasings[0],order book
+rows[1].forbidden_phrasings[1],order-flow imbalance
+rows[1].forbidden_phrasings[2],VPIN
+rows[1].forbidden_phrasings[3],depth
+rows[1].scope_note,Microstructure: daily-aggregate proxies only; true depth NOT MEASURED.
+rows[2].id,L-03
+rows[2].title,Product build verified; deployment not performed
+rows[2].category,ENGINEERING
+rows[2].severity,ENGINEERING_ONLY
+rows[2].description,"RESOLVED in iteration 3. Node.js 24.19.0 was installed and the application now typechecks, lints and builds: 35 files checked by tsc with zero errors, ESLint clean, 204 pages prerendered including all 162 instrument routes and 17 limitation routes, and every route verified to return HTTP 200 with server-rendered content. What remains unverified is deployment to Vercel itself, which is a hosting step rather than a build property."
+rows[2].why_it_exists,"Originally: no Node.js runtime existed in the authoring environment. That is no longer the case, so the build half of this limitation is discharged."
+rows[2].current_status,MEASURED
+rows[2].current_substitute,
+rows[2].invalidated_claims[0],"'The product is deployed' remains unsupported: it builds and serves locally, but no Vercel deployment has been performed."
+rows[2].still_valid[0],tsc --noEmit passes over all 35 project files.
+rows[2].still_valid[1],next build prerenders 204 pages with no error.
+rows[2].still_valid[2],"Every route returns HTTP 200 with server-rendered content, checked route by route against the running production server."
+rows[2].still_valid[3],Artifact-to-page value parity holds: numbers reported by the pipeline appear unchanged in the served HTML.
+rows[2].research_questions[0].id,RQ-L03-A
+rows[2].research_questions[0].question,Can a static-artifact architecture preserve exact research results while serving them from a serverless frontend?
+rows[2].research_questions[0].limitation_id,L-03
+rows[2].research_questions[0].status,PARTIAL
+rows[2].research_questions[0].experiments[0].id,EXP-L03-1
+rows[2].research_questions[0].experiments[0].hypothesis,"Exported JSON bundles render identical values to the source artifacts, with page latency dominated by transfer rather than computation."
+rows[2].research_questions[0].experiments[0].independent_variable,delivery path (direct artifact vs exported bundle)
+rows[2].research_questions[0].experiments[0].dependent_variable,"value parity, p95 page latency"
+rows[2].research_questions[0].experiments[0].control,values read directly from research_artifacts/
+rows[2].research_questions[0].experiments[0].treatment,values read from public/data/ in the deployed app
+rows[2].research_questions[0].experiments[0].dataset,current export
+rows[2].research_questions[0].experiments[0].evaluation_period,n/a
+rows[2].research_questions[0].experiments[0].metrics[0],value_parity
+rows[2].research_questions[0].experiments[0].metrics[1],p95_latency_ms
+rows[2].research_questions[0].experiments[0].metrics[2],bundle_bytes
+rows[2].research_questions[0].experiments[0].statistical_test,exact equality check; latency percentiles
+rows[2].research_questions[0].experiments[0].expected_interpretation,"Any parity failure is a bug in the export, not a research finding."
+rows[2].research_questions[0].experiments[0].threats_to_validity[0],Network variance dominates latency measurement.
+rows[2].research_questions[0].experiments[0].threats_to_validity[1],"Local measurement excludes cold starts and edge caching, which are precisely what a hosted deployment would stress."
+rows[2].research_questions[0].experiments[0].status,MEASURED
+rows[2].research_questions[0].experiments[0].required_data,
+rows[2].research_questions[0].experiments[0].result_artifact,"iteration 3: parity verified across 6 values; p50 5.9-10.0 ms, p95 17.1-32.9 ms over 20 samples per route"
+rows[2].research_questions[0].current_evidence,"Both halves are now measured. Research side: a full re-run reproduced all 32 arms and 31 statistical tests to 0.000e+00 maximum absolute difference. Delivery side: every checked value renders in the served HTML identical to its source artifact (AUPRC 0.941166 -> 0.941, minimum detectable effect 0.000185 -> 0.000185), and p95 latency over 20 samples per route is 17-33 ms locally with no computation in the request path. The export step was found to emit bare NaN, which is invalid JSON and silently blanked a page; that is fixed and now tested."
+rows[2].research_questions[0].what_remains_unresolved,"Behaviour on Vercel specifically: cold starts, edge caching and artifact freshness under a real deployment."
+rows[2].required_data,
+rows[2].future_validation,Deploy to Vercel and re-measure latency against the local baseline recorded in EXP-L03-1.
+rows[2].forbidden_phrasings[0],deploys on Vercel
+rows[2].forbidden_phrasings[1],is deployed
+rows[2].forbidden_phrasings[2],deployment verified
+rows[2].scope_note,Product: builds and serves locally; not deployed to Vercel.
+rows[3].id,L-04
+rows[3].title,Episode labels are synthetic
+rows[3].category,DATA
+rows[3].severity,BOUNDS_ALL_CLAIMS
+rows[3].description,"No open, labelled corpus of NSE market-integrity incidents exists. Synthetic episodes are injected into the real price panel: phase-structured intensity profiles perturb returns, volume, turnover and trade counts, with a matched text corpus."
+rows[3].why_it_exists,"None exists publicly, and labelling real companies as subjects of manipulation by inference would be both fabrication and defamation."
+rows[3].current_status,MEASURED
+rows[3].current_substitute,Injected episodes with generator/detector isolation
+rows[3].invalidated_claims[0],Every detection metric describes behaviour on injected episodes.
+rows[3].invalidated_claims[1],No number in this repository is evidence that the system detects real-world market manipulation.
+rows[3].still_valid[0],"Generator parameters are structurally isolated from every detector, asserted by an AST-level test."
+rows[3].still_valid[1],"Background days are drawn from the same symbols and the same calendar as episode days, so neither symbol identity nor date is the label."
+rows[3].still_valid[2],"Features are recomputed from the modified bars, so a detector sees only data."
+rows[3].research_questions[0].id,RQ-L04-A
+rows[3].research_questions[0].question,How well does a detector trained on injected episodes transfer to expert-adjudicated real incidents?
+rows[3].research_questions[0].limitation_id,L-04
+rows[3].research_questions[0].status,BLOCKED
+rows[3].research_questions[0].experiments[0].id,EXP-L04-1
+rows[3].research_questions[0].experiments[0].hypothesis,A detector fitted on injected episodes retains above-chance AUPRC on adjudicated real incidents without refitting.
+rows[3].research_questions[0].experiments[0].independent_variable,evaluation corpus (synthetic vs real)
+rows[3].research_questions[0].experiments[0].dependent_variable,"AUPRC, lead time, false-alarm rate"
+rows[3].research_questions[0].experiments[0].control,evaluation on held-out injected episodes
+rows[3].research_questions[0].experiments[0].treatment,evaluation on adjudicated real incidents
+rows[3].research_questions[0].experiments[0].dataset,NSE panel + adjudicated incident labels
+rows[3].research_questions[0].experiments[0].evaluation_period,whatever the label corpus covers
+rows[3].research_questions[0].experiments[0].metrics[0],auprc
+rows[3].research_questions[0].experiments[0].metrics[1],auprc_lift
+rows[3].research_questions[0].experiments[0].metrics[2],lead_time
+rows[3].research_questions[0].experiments[0].metrics[3],false_alarm_rate
+rows[3].research_questions[0].experiments[0].metrics[4],ece
+rows[3].research_questions[0].experiments[0].statistical_test,cluster bootstrap on incidents; DeLong on AUROC
+rows[3].research_questions[0].experiments[0].expected_interpretation,"Transfer above the real-corpus base rate would be the first genuine evidence for the method. Transfer at chance would show the injected episodes are the wrong generative model, which is itself a publishable methodological finding."
+rows[3].research_questions[0].experiments[0].threats_to_validity[0],Adjudicated incidents are themselves a biased sample: only detected incidents get adjudicated.
+rows[3].research_questions[0].experiments[0].threats_to_validity[1],"Real incident base rates are far lower than the injected 22%, so AUPRC is not comparable across corpora without the base rate."
+rows[3].research_questions[0].experiments[0].status,BLOCKED
+rows[3].research_questions[0].experiments[0].required_data[0],adjudicated incident labels
+rows[3].research_questions[0].experiments[0].result_artifact,
+rows[3].research_questions[0].current_evidence,"No real labels exist, so transfer is entirely unmeasured."
+rows[3].research_questions[0].what_remains_unresolved,The central question of the whole project.
+rows[3].research_questions[1].id,RQ-L04-B
+rows[3].research_questions[1].question,"Which synthetic episode properties most strongly determine detector performance, and is that dependence itself informative?"
+rows[3].research_questions[1].limitation_id,L-04
+rows[3].research_questions[1].status,OPEN_QUESTION
+rows[3].research_questions[1].experiments[0].id,EXP-L04-2
+rows[3].research_questions[1].experiments[0].hypothesis,"Detection performance is monotone in peak intensity and episode duration, and degrades sharply below a discoverable intensity floor."
+rows[3].research_questions[1].experiments[0].independent_variable,episode peak intensity and duration
+rows[3].research_questions[1].experiments[0].dependent_variable,per-episode detection and lead time
+rows[3].research_questions[1].experiments[0].control,episodes in the lowest intensity quartile
+rows[3].research_questions[1].experiments[0].treatment,episodes in the highest intensity quartile
+rows[3].research_questions[1].experiments[0].dataset,current injected episodes
+rows[3].research_questions[1].experiments[0].evaluation_period,validation split
+rows[3].research_questions[1].experiments[0].metrics[0],detection_rate
+rows[3].research_questions[1].experiments[0].metrics[1],lead_time
+rows[3].research_questions[1].experiments[0].metrics[2],peak_score
+rows[3].research_questions[1].experiments[0].statistical_test,cluster bootstrap across episodes; rank correlation
+rows[3].research_questions[1].experiments[0].expected_interpretation,An intensity floor tells a future study what magnitude of real event this architecture could plausibly see at all.
+rows[3].research_questions[1].experiments[0].threats_to_validity[0],"Intensity is a generator parameter, so the relationship is partly definitional; only the *shape* and the floor are informative."
+rows[3].research_questions[1].experiments[0].status,OPEN_QUESTION
+rows[3].research_questions[1].experiments[0].required_data,
+rows[3].research_questions[1].experiments[0].result_artifact,
+rows[3].research_questions[1].current_evidence,"Runnable now: the generator exposes duration, peak intensity, return kappa, volume kappa, censoring and text noise fraction, and each episode's realised parameters are recorded."
+rows[3].research_questions[1].what_remains_unresolved,Whether the dependence generalises to real incidents.
+rows[3].required_data[0],"Expert-adjudicated or regulator-published incident labels for NSE instruments, with dates and instrument identifiers."
+rows[3].future_validation,"Train on injected episodes, evaluate on adjudicated real incidents, and report the transfer gap."
+rows[3].forbidden_phrasings[0],detects manipulation
+rows[3].forbidden_phrasings[1],real manipulation
+rows[3].forbidden_phrasings[2],detected fraud
+rows[3].forbidden_phrasings[3],real-world detection
+rows[3].scope_note,Labels: synthetic episodes injected into real prices.
+rows[4].id,L-07
+rows[4].title,"Propagation graph is statistical, not economic"
+rows[4].category,METHODOLOGICAL
+rows[4].severity,SCOPES_A_CLAIM
+rows[4].description,"Edges are trailing 126-session return correlations above 0.25, estimated strictly before each decision date. No sector, ownership or supply-chain structure is used."
+rows[4].why_it_exists,No licence-clear NSE sector or ownership mapping was located.
+rows[4].current_status,MEASURED
+rows[4].current_substitute,Correlation graph with neighbour-stress features
+rows[4].invalidated_claims[0],"Any claim that an edge is an economic, sectoral or causal relationship."
+rows[4].still_valid[0],Edges are point-in-time correct: the graph for date t uses only sessions before t.
+rows[4].still_valid[1],The contribution was measured: 0.0005 AUPRC (95% CI 0.0002-0.0009).
+rows[4].research_questions[0].id,RQ-L07-A
+rows[4].research_questions[0].question,"Does statistical co-movement provide sufficient relational information for integrity-event propagation, or is richer graph semantics required?"
+rows[4].research_questions[0].limitation_id,L-07
+rows[4].research_questions[0].status,PARTIAL
+rows[4].research_questions[0].experiments[0].id,EXP-L07-1
+rows[4].research_questions[0].experiments[0].hypothesis,A semantically grounded graph increases propagation-feature contribution above the correlation graph's 0.0005.
+rows[4].research_questions[0].experiments[0].independent_variable,graph construction
+rows[4].research_questions[0].experiments[0].dependent_variable,incremental AUPRC of the propagation block
+rows[4].research_questions[0].experiments[0].control,trailing return correlation (current)
+rows[4].research_questions[0].experiments[0].treatment,sector / ownership / news-entity graph
+rows[4].research_questions[0].experiments[0].dataset,NSE panel + relational mapping
+rows[4].research_questions[0].experiments[0].evaluation_period,validation split
+rows[4].research_questions[0].experiments[0].metrics[0],incremental_auprc
+rows[4].research_questions[0].experiments[0].metrics[1],lead_time
+rows[4].research_questions[0].experiments[0].metrics[2],neighbour_precision
+rows[4].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap
+rows[4].research_questions[0].experiments[0].expected_interpretation,"Because the injected episodes are generated per instrument with no cross-instrument mechanism, a *null* result here is expected and would say more about the generator than about propagation."
+rows[4].research_questions[0].experiments[0].threats_to_validity[0],"Decisive: the episode generator injects no genuine contagion, so this experiment is close to uninformative until real incidents or a contagion-aware generator exist."
+rows[4].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[4].research_questions[0].experiments[0].required_data[0],sector or ownership mapping
+rows[4].research_questions[0].experiments[0].required_data[1],contagion-aware episode generator or real incidents
+rows[4].research_questions[0].experiments[0].result_artifact,
+rows[4].research_questions[0].current_evidence,"The correlation graph contributes 0.0005 AUPRC: statistically significant, substantively negligible. This bounds how much a richer graph would have to add to matter."
+rows[4].research_questions[0].what_remains_unresolved,Whether the negligible contribution is the graph's fault or the task's.
+rows[4].required_data[0],"licence-clear sector, index-weight or ownership mapping"
+rows[4].future_validation,"Compare correlation, sector, ownership and news-entity graphs on identical folds."
+rows[4].forbidden_phrasings[0],causal
+rows[4].forbidden_phrasings[1],supply chain
+rows[4].forbidden_phrasings[2],sector propagation
+rows[4].forbidden_phrasings[3],contagion pathway
+rows[4].scope_note,Propagation: statistical co-movement only.
+rows[5].id,L-08
+rows[5].title,Tier-2 and Tier-3 models not run
+rows[5].category,COMPUTATIONAL
+rows[5].severity,BOUNDS_SOME_CLAIMS
+rows[5].description,"torch, transformers, librosa and OpenCV are deliberately not installed. Every transformer, CLIP-class, ASR and video-language entry in the model registry carries status NOT RUN and no metric is reported for any of them."
+rows[5].why_it_exists,Compute and environment constraints; the adapter interface exists.
+rows[5].current_status,NOT_RUN
+rows[5].current_substitute,"Tier-1 CPU-only, deterministic, fully inspectable stack"
+rows[5].invalidated_claims[0],Any claim about what a learned-embedding stack would achieve.
+rows[5].invalidated_claims[1],Any claim of comprehensive model coverage.
+rows[5].still_valid[0],The Tier-1 stack's numbers are real and reproduce bit-identically.
+rows[5].still_valid[1],Tier-1 explanations are exact rather than approximate for the text channel.
+rows[5].research_questions[0].id,RQ-L08-A
+rows[5].research_questions[0].question,"How much additional research value does a higher-capacity full-stack model provide over an interpretable Tier-1 baseline, once calibration, latency, memory and explanation stability are counted alongside AUPRC?"
+rows[5].research_questions[0].limitation_id,L-08
+rows[5].research_questions[0].status,NOT_RUN
+rows[5].research_questions[0].experiments[0].id,EXP-L08-1
+rows[5].research_questions[0].experiments[0].hypothesis,"Higher-capacity models improve AUPRC but degrade calibration and explanation stability, so the net research value is smaller than the headline metric suggests."
+rows[5].research_questions[0].experiments[0].independent_variable,model tier
+rows[5].research_questions[0].experiments[0].dependent_variable,"AUPRC, ECE, latency, memory, XAI sign consistency"
+rows[5].research_questions[0].experiments[0].control,Tier-1 gradient-boosted per-block stack
+rows[5].research_questions[0].experiments[0].treatment,Tier-2 transformer / CLIP-class stack
+rows[5].research_questions[0].experiments[0].dataset,current market panel
+rows[5].research_questions[0].experiments[0].evaluation_period,validation split
+rows[5].research_questions[0].experiments[0].metrics[0],auprc
+rows[5].research_questions[0].experiments[0].metrics[1],ece
+rows[5].research_questions[0].experiments[0].metrics[2],latency_ms
+rows[5].research_questions[0].experiments[0].metrics[3],peak_memory_mb
+rows[5].research_questions[0].experiments[0].metrics[4],sign_consistency
+rows[5].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap on AUPRC; paired t on latency
+rows[5].research_questions[0].experiments[0].expected_interpretation,"A capacity gain that costs calibration is a real trade-off, not an improvement, for a system whose output is a risk probability."
+rows[5].research_questions[0].experiments[0].threats_to_validity[0],"Tier-2 text models may have been pretrained on data overlapping the evaluation window, which the Tier-1 lexicon cannot be."
+rows[5].research_questions[0].experiments[0].status,NOT_RUN
+rows[5].research_questions[0].experiments[0].required_data[0],installed model weights
+rows[5].research_questions[0].experiments[0].result_artifact,
+rows[5].research_questions[0].current_evidence,"The Tier-1 baseline reaches AUPRC 0.9412 on injected episodes, which sets the bar a larger model must clear to justify its cost."
+rows[5].research_questions[0].what_remains_unresolved,The entire capacity-versus-cost trade-off.
+rows[5].required_data[0],model weights and a GPU or patience
+rows[5].future_validation,"Run the registry's Tier-2 entries and report performance, calibration, latency, memory and XAI compatibility together."
+rows[5].forbidden_phrasings[0],state of the art
+rows[5].forbidden_phrasings[1],best available model
+rows[5].forbidden_phrasings[2],all VLMs evaluated
+rows[5].scope_note,Models: Tier-1 only; Tier-2/3 NOT RUN.
+rows[6].id,L-10
+rows[6].title,Calibration is imperfect
+rows[6].category,EVALUATION
+rows[6].severity,SCOPES_A_CLAIM
+rows[6].description,"Expected calibration error for the full stack is 0.1227, materially above zero. The combination layer averages calibrated per-block scores, which does not itself guarantee a calibrated output."
+rows[6].why_it_exists,Averaging calibrated components does not preserve calibration.
+rows[6].current_status,MEASURED
+rows[6].current_substitute,"Reliability diagrams and ECE are published, not smoothed away"
+rows[6].invalidated_claims[0],Any use of the score as a literal probability without recalibration.
+rows[6].still_valid[0],Calibration is measured with equal-mass bins and reported per arm.
+rows[6].still_valid[1],"The uncertainty-weighted combination arm reaches ECE 0.0631, less than half the full stack's, at a cost of 0.0043 AUPRC. That trade-off is measured."
+rows[6].research_questions[0].id,RQ-L10-A
+rows[6].research_questions[0].question,"Does calibration degrade under block missingness and cross-block disagreement, and does coverage-aware recalibration recover it?"
+rows[6].research_questions[0].limitation_id,L-10
+rows[6].research_questions[0].status,OPEN_QUESTION
+rows[6].research_questions[0].experiments[0].id,EXP-L10-1
+rows[6].research_questions[0].experiments[0].hypothesis,ECE rises monotonically as coverage falls and as cross-block disagreement rises.
+rows[6].research_questions[0].experiments[0].independent_variable,coverage bucket and disagreement bucket
+rows[6].research_questions[0].experiments[0].dependent_variable,ECE and Brier within bucket
+rows[6].research_questions[0].experiments[0].control,"full-coverage, low-disagreement rows"
+rows[6].research_questions[0].experiments[0].treatment,reduced-coverage or high-disagreement rows
+rows[6].research_questions[0].experiments[0].dataset,current market panel
+rows[6].research_questions[0].experiments[0].evaluation_period,validation split
+rows[6].research_questions[0].experiments[0].metrics[0],ece
+rows[6].research_questions[0].experiments[0].metrics[1],brier
+rows[6].research_questions[0].experiments[0].metrics[2],auprc
+rows[6].research_questions[0].experiments[0].metrics[3],n_per_bucket
+rows[6].research_questions[0].experiments[0].statistical_test,cluster bootstrap CI on per-bucket ECE
+rows[6].research_questions[0].experiments[0].expected_interpretation,"If ECE is flat across coverage, the uncertainty estimate is already absorbing missingness; if it rises, coverage-aware calibration is warranted."
+rows[6].research_questions[0].experiments[0].threats_to_validity[0],Bucketing on a model output (disagreement) risks selection effects; coverage is exogenous and is the safer axis.
+rows[6].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[6].research_questions[0].experiments[0].required_data,
+rows[6].research_questions[0].experiments[0].result_artifact,
+rows[6].research_questions[0].current_evidence,"Runnable now. The dataset carries per-row coverage and the combination layer already emits a disagreement-based uncertainty, so ECE can be measured conditional on both."
+rows[6].research_questions[0].what_remains_unresolved,Whether recalibration helps or merely shifts the error.
+rows[6].required_data,
+rows[6].future_validation,"Post-hoc recalibration on the training split only, then re-measure on validation."
+rows[6].forbidden_phrasings[0],well calibrated
+rows[6].forbidden_phrasings[1],calibrated probability
+rows[6].scope_note,"Calibration: ECE 0.1227, imperfect."
+rows[7].id,L-11
+rows[7].title,Final holdout not evaluated
+rows[7].category,EVALUATION
+rows[7].severity,BOUNDS_ALL_CLAIMS
+rows[7].description,"The holdout split (2024-01-01 onward, 3,352 rows) is frozen and untouched. Every reported number is on validation (2022-01-01 to 2023-12-31)."
+rows[7].why_it_exists,"Deliberate methodological safeguard, not an omission: models, features, thresholds, combination, XAI methods and figure definitions must be frozen first."
+rows[7].current_status,FUTURE_VALIDATION
+rows[7].current_substitute,"Validation-split reporting, labelled as such everywhere"
+rows[7].invalidated_claims[0],No result in this release is an out-of-sample result in the strict sense.
+rows[7].still_valid[0],The freeze itself is evidence of experimental discipline and is verifiable: no code path reads the holdout split.
+rows[7].research_questions[0].id,RQ-L11-A
+rows[7].research_questions[0].question,Does the full-stack stack retain its validation-split advantage under a strict freeze-and-evaluate-once protocol on a later market era?
+rows[7].research_questions[0].limitation_id,L-11
+rows[7].research_questions[0].status,FUTURE_VALIDATION
+rows[7].research_questions[0].experiments[0].id,EXP-L11-1
+rows[7].research_questions[0].experiments[0].hypothesis,Holdout AUPRC falls relative to validation but stays above the market-only baseline.
+rows[7].research_questions[0].experiments[0].independent_variable,evaluation era
+rows[7].research_questions[0].experiments[0].dependent_variable,"AUPRC, ECE, block contribution ordering"
+rows[7].research_questions[0].experiments[0].control,validation split (2022-2023)
+rows[7].research_questions[0].experiments[0].treatment,holdout split (2024 onward)
+rows[7].research_questions[0].experiments[0].dataset,current market panel
+rows[7].research_questions[0].experiments[0].evaluation_period,"one execution, after freeze"
+rows[7].research_questions[0].experiments[0].metrics[0],auprc
+rows[7].research_questions[0].experiments[0].metrics[1],ece
+rows[7].research_questions[0].experiments[0].metrics[2],lead_time
+rows[7].research_questions[0].experiments[0].metrics[3],block_contribution
+rows[7].research_questions[0].experiments[0].statistical_test,cluster bootstrap; pre-registered direction
+rows[7].research_questions[0].experiments[0].expected_interpretation,A large drop would indicate the validation split leaked into model selection despite the protocol.
+rows[7].research_questions[0].experiments[0].threats_to_validity[0],Single execution means no variance estimate across protocol runs.
+rows[7].research_questions[0].experiments[0].threats_to_validity[1],"The holdout era has different market conditions, so era and generalisation are confounded."
+rows[7].research_questions[0].experiments[0].status,FUTURE_VALIDATION
+rows[7].research_questions[0].experiments[0].required_data[0],a completed freeze
+rows[7].research_questions[0].experiments[0].result_artifact,
+rows[7].research_questions[0].current_evidence,None by construction. That is the point.
+rows[7].research_questions[0].what_remains_unresolved,Temporal generalisation.
+rows[7].required_data,
+rows[7].future_validation,"Freeze every choice, then evaluate the holdout exactly once, then lock it."
+rows[7].forbidden_phrasings[0],out-of-sample
+rows[7].forbidden_phrasings[1],holdout result
+rows[7].forbidden_phrasings[2],generalises
+rows[7].scope_note,Split: validation. Holdout FROZEN and unevaluated.
+rows[8].id,L-12
+rows[8].title,Limited statistical power
+rows[8].category,EVALUATION
+rows[8].severity,BOUNDS_SOME_CLAIMS
+rows[8].description,"Episode counts are in the low hundreds (140 generated, 36 true windows in the validation split) and cluster-bootstrap intervals are correspondingly wide. Several ablation differences are not distinguishable from zero at 5% FDR."
+rows[8].why_it_exists,"Rare events are rare, and clustering costs effective sample size."
+rows[8].current_status,MEASURED
+rows[8].current_substitute,Cluster bootstrap with BH-FDR correction across the family
+rows[8].invalidated_claims[0],Any narrative built on a difference whose interval spans zero.
+rows[8].still_valid[0],"26 of 31 comparisons are significant at 5% FDR, and the five that are not are reported as not significant rather than dropped."
+rows[8].research_questions[0].id,RQ-L12-A
+rows[8].research_questions[0].question,"What effect size is detectable at the current episode count, and how many episodes would a null result need to be informative?"
+rows[8].research_questions[0].limitation_id,L-12
+rows[8].research_questions[0].status,OPEN_QUESTION
+rows[8].research_questions[0].experiments[0].id,EXP-L12-1
+rows[8].research_questions[0].experiments[0].hypothesis,"Bootstrap interval half-width scales approximately as the inverse square root of episode count, so the minimum detectable AUPRC difference at the current count is materially larger than the non-significant deltas observed."
+rows[8].research_questions[0].experiments[0].independent_variable,number of episodes resampled
+rows[8].research_questions[0].experiments[0].dependent_variable,bootstrap interval half-width; minimum detectable effect
+rows[8].research_questions[0].experiments[0].control,full episode set
+rows[8].research_questions[0].experiments[0].treatment,subsampled episode sets
+rows[8].research_questions[0].experiments[0].dataset,current per-arm per-row scores
+rows[8].research_questions[0].experiments[0].evaluation_period,validation split
+rows[8].research_questions[0].experiments[0].metrics[0],ci_half_width
+rows[8].research_questions[0].experiments[0].metrics[1],minimum_detectable_effect
+rows[8].research_questions[0].experiments[0].statistical_test,nested cluster bootstrap over subsample sizes
+rows[8].research_questions[0].experiments[0].expected_interpretation,"If the minimum detectable effect exceeds the observed microstructure delta, that non-significant result is uninformative rather than evidence of no effect."
+rows[8].research_questions[0].experiments[0].threats_to_validity[0],"Subsampling episodes changes the positive rate, which itself moves AUPRC; the curve must be read as relative, not absolute."
+rows[8].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[8].research_questions[0].experiments[0].required_data,
+rows[8].research_questions[0].experiments[0].result_artifact,
+rows[8].research_questions[0].current_evidence,"Runnable now: bootstrap interval width can be measured as a function of subsampled episode count, which yields an empirical power curve without any distributional assumption."
+rows[8].research_questions[0].what_remains_unresolved,"Nothing, once the curve is computed."
+rows[8].required_data[0],"more episodes, or real incidents"
+rows[8].future_validation,Report a power curve alongside every non-significant result.
+rows[8].forbidden_phrasings[0],no effect
+rows[8].forbidden_phrasings[1],proves
+rows[8].forbidden_phrasings[2],confirms
+rows[8].scope_note,Power: low-hundreds episode counts; wide intervals.
+rows[9].id,L-13
+rows[9].title,Company fundamentals are unavailable
+rows[9].category,DATA
+rows[9].severity,BOUNDS_ALL_CLAIMS
+rows[9].description,"Revenue growth, net debt, interest coverage, earnings, cash flow and profitability are absent from this repository. The NSE cash bhavcopy carries price, volume and trade counts only, and no fundamentals source was obtained. The domain framework this module implements is built around exactly these three quantities, so the lifecycle analysis runs without the signals a practitioner would actually monitor."
+rows[9].why_it_exists,"Point-in-time fundamentals with disclosure timestamps are needed to avoid look-ahead, and no licence-clear source with that property was located. Reported financials without a disclosure timestamp are unusable: applying a quarter's figures from the quarter end rather than the filing date leaks weeks of future information into every historical decision."
+rows[9].current_status,NOT_MEASURED
+rows[9].current_substitute,"The lifecycle framework runs over market, microstructure, regime, propagation and full-stack blocks. No fundamental proxy is substituted, because a price-derived stand-in for revenue growth would be a market signal wearing a fundamental label."
+rows[9].invalidated_claims[0],"Any statement that fundamental deterioration precedes, accompanies or follows a risk-state change."
+rows[9].invalidated_claims[1],"Any claim about revenue growth, net debt or interest coverage whatsoever."
+rows[9].invalidated_claims[2],"Any claim that the lifecycle analysis reflects the domain expert framework in full: it implements the temporal structure, not the fundamental inputs."
+rows[9].still_valid[0],"The lifecycle state model, change-point detection, transition extraction and stage-differential comparison are implemented and run on real market and full-stack evidence."
+rows[9].still_valid[1],"The framework accepts a fundamentals block without modification: adding one is a data task, not an architecture task."
+rows[9].research_questions[0].id,RQ-L13-A
+rows[9].research_questions[0].question,Do fundamental indicators provide statistically detectable changes in risk before market-level signals change?
+rows[9].research_questions[0].limitation_id,L-13
+rows[9].research_questions[0].status,BLOCKED
+rows[9].research_questions[0].experiments[0].id,EXP-L13-1
+rows[9].research_questions[0].experiments[0].hypothesis,"Fundamental change points precede market change points for the same instrument, so a fundamentals block would shift the median signal-ordering offset negative relative to the market block."
+rows[9].research_questions[0].experiments[0].independent_variable,signal block (fundamental vs market vs full-stack)
+rows[9].research_questions[0].experiments[0].dependent_variable,"offset of each block change point from the risk change point, in sessions"
+rows[9].research_questions[0].experiments[0].control,"market block ordering, already measured"
+rows[9].research_questions[0].experiments[0].treatment,fundamental block ordering
+rows[9].research_questions[0].experiments[0].dataset,NSE panel + point-in-time fundamentals
+rows[9].research_questions[0].experiments[0].evaluation_period,validation split
+rows[9].research_questions[0].experiments[0].metrics[0],median_offset
+rows[9].research_questions[0].experiments[0].metrics[1],share_leading
+rows[9].research_questions[0].experiments[0].metrics[2],n_instruments
+rows[9].research_questions[0].experiments[0].statistical_test,paired comparison of per-instrument offsets; sign test against zero
+rows[9].research_questions[0].experiments[0].expected_interpretation,"A negative median offset for fundamentals would support the expert premise. A zero or positive offset would indicate that by the time a filing lands, the market has already moved -- which is itself a publishable result about disclosure lag."
+rows[9].research_questions[0].experiments[0].threats_to_validity[0],"Fundamentals arrive quarterly and risk moves daily, so the sampling rates differ by roughly sixty to one; any offset is quantised by the reporting calendar."
+rows[9].research_questions[0].experiments[0].threats_to_validity[1],"Disclosure timestamps are frequently wrong in vendor data, and an error there manufactures exactly the lead this experiment looks for."
+rows[9].research_questions[0].experiments[0].status,BLOCKED
+rows[9].research_questions[0].experiments[0].required_data[0],point-in-time fundamentals with disclosure timestamps
+rows[9].research_questions[0].experiments[0].result_artifact,
+rows[9].research_questions[0].current_evidence,"The ordering machinery exists and has been run on the blocks that are available: only the microstructure proxies shift before the risk estimate, and they do so weakly. Whether fundamentals would lead is entirely unmeasured."
+rows[9].research_questions[0].what_remains_unresolved,The expert framework's central premise.
+rows[9].research_questions[1].id,RQ-L13-B
+rows[9].research_questions[1].question,Does combining fundamental deterioration with market and full-stack evidence improve detection of material risk-state transitions over market evidence alone?
+rows[9].research_questions[1].limitation_id,L-13
+rows[9].research_questions[1].status,BLOCKED
+rows[9].research_questions[1].experiments[0].id,EXP-L13-2
+rows[9].research_questions[1].experiments[0].hypothesis,A fundamentals block adds incremental AUPRC for material transition detection beyond market and full-stack evidence.
+rows[9].research_questions[1].experiments[0].independent_variable,presence of the fundamentals block
+rows[9].research_questions[1].experiments[0].dependent_variable,AUPRC for material transition within 10 sessions
+rows[9].research_questions[1].experiments[0].control,market + full-stack + regime + propagation
+rows[9].research_questions[1].experiments[0].treatment,the same plus fundamentals
+rows[9].research_questions[1].experiments[0].dataset,NSE panel + point-in-time fundamentals
+rows[9].research_questions[1].experiments[0].evaluation_period,validation split
+rows[9].research_questions[1].experiments[0].metrics[0],auprc
+rows[9].research_questions[1].experiments[0].metrics[1],incremental_auprc
+rows[9].research_questions[1].experiments[0].metrics[2],lead_time
+rows[9].research_questions[1].experiments[0].metrics[3],ece
+rows[9].research_questions[1].experiments[0].statistical_test,paired cluster bootstrap over instruments
+rows[9].research_questions[1].experiments[0].expected_interpretation,Read against the minimum detectable effect for this sample: an increment below roughly 0.0002 would be unresolvable here regardless of its p-value.
+rows[9].research_questions[1].experiments[0].threats_to_validity[0],"Fundamentals are near-constant between filings, so a model can exploit them as an instrument identifier rather than as a signal; the ablation must hold instrument identity fixed."
+rows[9].research_questions[1].experiments[0].status,BLOCKED
+rows[9].research_questions[1].experiments[0].required_data[0],point-in-time fundamentals with disclosure timestamps
+rows[9].research_questions[1].experiments[0].result_artifact,
+rows[9].research_questions[1].current_evidence,The transition-detection target and the stage-differential design are implemented and running; the fundamental arm cannot be built.
+rows[9].research_questions[1].what_remains_unresolved,Whether fundamentals add incremental information here.
+rows[9].required_data[0],"Point-in-time company fundamentals for the universe: revenue, net debt, interest coverage, earnings and cash flow, each carrying the disclosure timestamp separately from the financial period, so knowledge time can be set correctly."
+rows[9].future_validation,"Add the fundamentals block, re-run the stage-differential experiment, and report whether fundamental signals rank differently from market signals at entry versus at transitions."
+rows[9].forbidden_phrasings[0],revenue growth
+rows[9].forbidden_phrasings[1],net debt
+rows[9].forbidden_phrasings[2],interest coverage
+rows[9].forbidden_phrasings[3],fundamental deterioration
+rows[9].forbidden_phrasings[4],fundamentals show
+rows[9].scope_note,Fundamentals: NOT AVAILABLE. Lifecycle analysis excludes them.
+rows[10].id,L-14
+rows[10].title,Valuation measures are unavailable
+rows[10].category,DATA
+rows[10].severity,BOUNDS_SOME_CLAIMS
+rows[10].description,"P/E, P/B, EV/EBITDA and free-cash-flow yield cannot be computed: each needs an accounting quantity the dataset does not contain. Price alone is not a valuation."
+rows[10].why_it_exists,Follows directly from L-13; every ratio needs the denominator.
+rows[10].current_status,NOT_MEASURED
+rows[10].current_substitute,"None. No price-only quantity is presented as a valuation measure, because labelling a price ratio as valuation would misdescribe what it is."
+rows[10].invalidated_claims[0],"Any claim about valuation change, cheapness, richness or re-rating."
+rows[10].still_valid[0],"Price behaviour, volatility, liquidity and turnover are measured directly and are labelled as market signals rather than as valuation."
+rows[10].research_questions[0].id,RQ-L14-A
+rows[10].research_questions[0].question,Does valuation carry information about risk-state transitions beyond the price behaviour it is partly built from?
+rows[10].research_questions[0].limitation_id,L-14
+rows[10].research_questions[0].status,BLOCKED
+rows[10].research_questions[0].experiments,
+rows[10].research_questions[0].current_evidence,None; the block cannot be constructed.
+rows[10].research_questions[0].what_remains_unresolved,Everything.
+rows[10].required_data[0],"shares outstanding, earnings, book value, enterprise value and free cash flow, point-in-time"
+rows[10].future_validation,"Add the valuation block and test whether it carries information beyond the market block, which shares its price numerator."
+rows[10].forbidden_phrasings[0],valuation
+rows[10].forbidden_phrasings[1],P/E
+rows[10].forbidden_phrasings[2],overvalued
+rows[10].forbidden_phrasings[3],undervalued
+rows[10].forbidden_phrasings[4],re-rating
+rows[10].scope_note,Valuation: NOT AVAILABLE.
+rows[11].id,L-15
+rows[11].title,"Position lifecycle is hypothetical, not observed"
+rows[11].category,METHODOLOGICAL
+rows[11].severity,BOUNDS_SOME_CLAIMS
+rows[11].description,"No real position, holding period or investor decision is observed. The lifecycle framework segments each instrument's risk trajectory into ENTRY, HOLDING and RESOLUTION phases by position within an analysis window. Those are analytical phases over a risk estimate, not the phases of anyone's actual holding."
+rows[11].why_it_exists,"Observed holding periods would require position-level data from real investors, which does not exist here and would carry its own privacy constraints."
+rows[11].current_status,MEASURED
+rows[11].current_substitute,Window-position phases over the risk trajectory
+rows[11].invalidated_claims[0],"Any claim about what investors did, would have done, or should do."
+rows[11].invalidated_claims[1],Any claim that the phase boundaries correspond to real decision points.
+rows[11].still_valid[0],"The phases are defined mechanically and identically for every instrument, so a stage comparison is a comparison of like with like."
+rows[11].still_valid[1],"Nothing in the framework emits a reference price, target or position size to any surface."
+rows[11].research_questions[0].id,RQ-L15-A
+rows[11].research_questions[0].question,Does phase defined by window position behave differently from phase anchored on a risk-state change point?
+rows[11].research_questions[0].limitation_id,L-15
+rows[11].research_questions[0].status,OPEN_QUESTION
+rows[11].research_questions[0].experiments[0].id,EXP-L15-1
+rows[11].research_questions[0].experiments[0].hypothesis,The ranking of block importance by stage is stable whether stages are defined by window position or by distance from a detected change point.
+rows[11].research_questions[0].experiments[0].independent_variable,phase definition
+rows[11].research_questions[0].experiments[0].dependent_variable,per-block permutation importance ranking
+rows[11].research_questions[0].experiments[0].control,window-position phases
+rows[11].research_questions[0].experiments[0].treatment,change-point-relative phases
+rows[11].research_questions[0].experiments[0].dataset,current market panel
+rows[11].research_questions[0].experiments[0].evaluation_period,validation split
+rows[11].research_questions[0].experiments[0].metrics[0],spearman_between_rankings
+rows[11].research_questions[0].experiments[0].metrics[1],top3_overlap
+rows[11].research_questions[0].experiments[0].metrics[2],auprc
+rows[11].research_questions[0].experiments[0].statistical_test,Spearman correlation between importance vectors
+rows[11].research_questions[0].experiments[0].expected_interpretation,A low correlation would mean the stage-differential finding depends on an arbitrary definitional choice and should not be reported as a property of lifecycle stages.
+rows[11].research_questions[0].experiments[0].threats_to_validity[0],"Change-point-relative phases are defined using the risk series the model produces, so they are not independent of the model."
+rows[11].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[11].research_questions[0].experiments[0].required_data,
+rows[11].research_questions[0].experiments[0].result_artifact,
+rows[11].research_questions[0].current_evidence,Both segmentations are implemented: window-position phases and change-point-relative offsets. Comparing them directly is runnable and has not yet been run.
+rows[11].research_questions[0].what_remains_unresolved,Whether the stage-differential result is an artifact of how phase is defined.
+rows[11].required_data[0],"observed position-level holding data, if such a study were ever run with consent"
+rows[11].future_validation,Compare window-position phases against phases anchored on real entry dates if a consented dataset ever exists.
+rows[11].forbidden_phrasings[0],investors should
+rows[11].forbidden_phrasings[1],when to enter
+rows[11].forbidden_phrasings[2],when to exit
+rows[11].forbidden_phrasings[3],holding period returns
+rows[11].scope_note,"Lifecycle phases are analytical, not observed positions."
+rows[12].id,L-23
+rows[12].title,"No licence-clear, labelled, feature-interpretable transaction corpus"
+rows[12].category,LICENSING
+rows[12].severity,BOUNDS_SOME_CLAIMS
+rows[12].description,"The transaction-risk track executes on a declared synthetic development fixture. Five candidate corpora were assessed against six requirements and none satisfied all of them: IEEE-CIS and ULB Credit Card Fraud carry human labels but obfuscated features, so no scenario can name the feature it changes; PaySim is a simulator, so its labels are a property of that simulator; institutional records are neither public nor licensed; and NPCI publishes aggregates rather than records."
+rows[12].why_it_exists,"Labelled payment records identify people and businesses, so the corpora that exist publicly are either anonymised past the point where a feature can be named, or synthetic, or aggregate. The requirement that a scenario name the feature it changes is what most of them fail, and it is not negotiable: an assumption about an unnamed principal component cannot be stated."
+rows[12].current_status,BLOCKED
+rows[12].current_substitute,"A declared synthetic fixture whose label rule is written out in the artifact, so a reader can see exactly why any model scores well on it. Every transaction number in the project carries the fixture caveat."
+rows[12].invalidated_claims[0],"Any statement that this system detects, scores or ranks real transactions."
+rows[12].invalidated_claims[1],"Any accuracy, coverage or currency figure on the transaction track read as a measurement of a payments system."
+rows[12].still_valid[0],The interface is complete and runs unchanged on a frame plus a column mapping the day a qualifying corpus exists.
+rows[12].still_valid[1],"The scenario machinery, the intervals and the exposure accounting are the same code the market track uses, so the transaction track demonstrates the framework rather than a second implementation."
+rows[12].research_questions[0].id,RQ-L23-A
+rows[12].research_questions[0].question,Does the scenario framework behave the same way on observed transaction data as on the declared fixture?
+rows[12].research_questions[0].limitation_id,L-23
+rows[12].research_questions[0].status,BLOCKED
+rows[12].research_questions[0].experiments[0].id,EXP-L23-1
+rows[12].research_questions[0].experiments[0].hypothesis,Scenario effects measured on a qualifying transaction corpus keep the sign and rough magnitude they have on the declared fixture.
+rows[12].research_questions[0].experiments[0].independent_variable,corpus (declared fixture vs qualifying corpus)
+rows[12].research_questions[0].experiments[0].dependent_variable,scenario effect on the mean risk score and on elevated-value coverage
+rows[12].research_questions[0].experiments[0].control,the declared synthetic fixture
+rows[12].research_questions[0].experiments[0].treatment,a corpus meeting all six requirements
+rows[12].research_questions[0].experiments[0].dataset,fixture; qualifying transaction corpus
+rows[12].research_questions[0].experiments[0].evaluation_period,entity-disjoint split in both
+rows[12].research_questions[0].experiments[0].metrics[0],risk_mean
+rows[12].research_questions[0].experiments[0].metrics[1],elevated_value_coverage
+rows[12].research_questions[0].experiments[0].metrics[2],review_load
+rows[12].research_questions[0].experiments[0].metrics[3],auprc
+rows[12].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap over accounts
+rows[12].research_questions[0].experiments[0].expected_interpretation,"Matching signs would support the fixture as a development instrument. Diverging signs would establish that nothing measured on it transfers, which is the assumption currently made."
+rows[12].research_questions[0].experiments[0].threats_to_validity[0],"The fixture's label rule is linear in its features, so any scorer that is also linear will look better on it than on data with real structure."
+rows[12].research_questions[0].experiments[0].threats_to_validity[1],A real corpus has a base rate this fixture only declares.
+rows[12].research_questions[0].experiments[0].status,BLOCKED
+rows[12].research_questions[0].experiments[0].required_data[0],qualifying transaction corpus
+rows[12].research_questions[0].experiments[0].result_artifact,
+rows[12].research_questions[0].current_evidence,"None. The fixture's separability is manufactured by its own label rule, so nothing measured on it transfers."
+rows[12].research_questions[0].what_remains_unresolved,Everything about behaviour on real transaction data.
+rows[12].required_data[0],"Transaction-level records with investigation-derived labels, published feature semantics, an amount, an entity identifier, and a licence verifiable at download."
+rows[12].future_validation,"Re-run the transaction catalogue on a qualifying corpus and report the difference against the fixture, which is itself the interesting comparison."
+rows[12].forbidden_phrasings[0],detects fraudulent transactions
+rows[12].forbidden_phrasings[1],transaction fraud detection
+rows[12].forbidden_phrasings[2],real transactions analysed
+rows[12].forbidden_phrasings[3],payments system evaluation
+rows[12].scope_note,"Transaction track: declared synthetic fixture, not observed transactions."
+rows[13].id,L-24
+rows[13].title,Counterfactual simulation is not causal inference
+rows[13].category,METHODOLOGICAL
+rows[13].severity,BOUNDS_SOME_CLAIMS
+rows[13].description,"The Scenario Lab reports what a fitted model would have estimated had its inputs or its declared decision rule been different. That is a statement about the model under an assumption, not about what would have happened in the world. No scenario here carries an identification strategy, and none is reported as an effect of an intervention."
+rows[13].why_it_exists,"Re-scoring altered rows measures the model's sensitivity to those rows. Establishing that a real intervention would have produced the outcome additionally requires that the alteration correspond to the intervention, that nothing else move with it, and that the model remain valid under the altered distribution. None of the three is established here, and the third is unlikely: a two-sigma shift in every text feature at once is not a distribution the model was fitted on."
+rows[13].current_status,MEASURED
+rows[13].current_substitute,"Three simulation methods, named on every result. An observed stratum selects rows that occurred; a counterfactual alters rows under a stated assumption; a policy comparison changes a declared rule on identical evidence and is the only one of the three that isolates a decision."
+rows[13].invalidated_claims[0],Any statement that a scenario shows what an intervention would achieve.
+rows[13].invalidated_claims[1],"Any statement that a counterfactual outcome was observed, recovered or prevented."
+rows[13].invalidated_claims[2],Any causal reading of a difference between two scenarios.
+rows[13].still_valid[0],"The sensitivity of the model to each stated condition is measured, with an interval, on identical rows and one fitted model."
+rows[13].still_valid[1],"The policy comparison holds rows, model and scores fixed and changes only the declared rule, so its difference is attributable to that rule under the declared policy."
+rows[13].research_questions[0].id,RQ-L24-A
+rows[13].research_questions[0].question,How far does a simulated counterfactual estimate sit from an effect estimated under an identification strategy?
+rows[13].research_questions[0].limitation_id,L-24
+rows[13].research_questions[0].status,OPEN_QUESTION
+rows[13].research_questions[0].experiments[0].id,EXP-L24-1
+rows[13].research_questions[0].experiments[0].hypothesis,A simulated counterfactual estimate and a difference-in-differences estimate of the same change agree in sign and to within their intervals.
+rows[13].research_questions[0].experiments[0].independent_variable,estimation strategy (simulation vs difference in differences)
+rows[13].research_questions[0].experiments[0].dependent_variable,estimated change in the outcome
+rows[13].research_questions[0].experiments[0].control,the simulated counterfactual estimate
+rows[13].research_questions[0].experiments[0].treatment,the identified estimate from a real policy change
+rows[13].research_questions[0].experiments[0].dataset,"the panel, plus a dated policy change with an unaffected comparison group"
+rows[13].research_questions[0].experiments[0].evaluation_period,windows either side of the change date
+rows[13].research_questions[0].experiments[0].metrics[0],estimated_change
+rows[13].research_questions[0].experiments[0].metrics[1],interval_overlap
+rows[13].research_questions[0].experiments[0].metrics[2],sign_agreement
+rows[13].research_questions[0].experiments[0].statistical_test,cluster bootstrap over instruments on both arms
+rows[13].research_questions[0].experiments[0].expected_interpretation,Agreement would support simulation as a cheap proxy for a question that usually needs an identification strategy. Disagreement would bound every counterfactual in this project to a statement about the model.
+rows[13].research_questions[0].experiments[0].threats_to_validity[0],"A dated market-structure change affects the comparison group too, so the parallel-trends assumption has to be argued rather than assumed."
+rows[13].research_questions[0].experiments[0].threats_to_validity[1],The simulated arm alters features the real change would move only indirectly.
+rows[13].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[13].research_questions[0].experiments[0].required_data,
+rows[13].research_questions[0].experiments[0].result_artifact,
+rows[13].research_questions[0].current_evidence,"None: no scenario in this project has an identification strategy, so the gap is unmeasured."
+rows[13].research_questions[0].what_remains_unresolved,The size and direction of the gap.
+rows[13].required_data[0],"An identification strategy: a natural experiment, an assignment mechanism, or an actual intervention with recorded outcomes."
+rows[13].future_validation,"Where a real policy change exists with a date and an unaffected comparison group, evaluate it as a difference in differences and report the gap against the simulated estimate."
+rows[13].forbidden_phrasings[0],the intervention caused
+rows[13].forbidden_phrasings[1],would have prevented
+rows[13].forbidden_phrasings[2],recovered
+rows[13].forbidden_phrasings[3],the scenario proves
+rows[13].forbidden_phrasings[4],causal effect of the policy
+rows[13].scope_note,"Scenario results are model behaviour under a stated assumption, not causal effects."
+rows[14].id,L-25
+rows[14].title,The NIFTY 50 series and the model evaluation window do not overlap
+rows[14].category,DATA
+rows[14].severity,BOUNDS_SOME_CLAIMS
+rows[14].description,"The verified NIFTY 50 index series covers 2024-07-08 to 2026-08-14, because that is where NSE's derivatives report begins carrying an underlying price. The model evaluation this project has already run covers 2022-01-03 to 2023-12-29. The two share zero sessions. The benchmark therefore cannot currently be used as a temporally aligned market variable alongside the existing model results, and no figure, statistic or scenario in this project combines them."
+rows[14].why_it_exists,"Two independent facts about coverage, neither of them a defect. NSE changed its bhavcopy format in July 2024; before that the report carries no index level at all, and reconstructing one from constituents or from futures would produce a number that is not the NIFTY 50. Separately, the evaluation split was fixed long before the index was ingested and is not moved to manufacture an overlap. The gap is the honest consequence of taking both sources as they are."
+rows[14].current_status,MEASURED
+rows[14].current_substitute,"The two are presented side by side and never merged. `research/data/alignment.py` computes the overlap on every request rather than storing a verdict, so the status is derived from the data and will change on its own when an overlapping source arrives. `require_alignment` raises where a caller attempts a combined result, and the Scenario Lab consults the same gate before offering one."
+rows[14].invalidated_claims[0],Any statement associating a NIFTY 50 movement with a model assessment.
+rows[14].invalidated_claims[1],Any claim that the model's risk signal describes the benchmark.
+rows[14].invalidated_claims[2],Any figure plotting model output against the index on a shared axis.
+rows[14].invalidated_claims[3],Any scenario whose result depends on both the index and the stored evaluation at once.
+rows[14].still_valid[0],"The NIFTY 50 series itself, over the sessions it covers."
+rows[14].still_valid[1],"Every model result, over the sessions it was evaluated on."
+rows[14].still_valid[2],"Market-context statements about evidence volume inside the index window: the text corpus and the assembled panel do overlap the index, at 521 and 507 shared sessions respectively."
+rows[14].still_valid[3],"Side-by-side presentation of the index and the model evidence, each labelled with the window it covers."
+rows[14].research_questions[0].id,RQ-L25-A
+rows[14].research_questions[0].question,Does the model's behaviour on the 2022-2023 evaluation window hold on sessions the verified index series covers?
+rows[14].research_questions[0].limitation_id,L-25
+rows[14].research_questions[0].status,OPEN_QUESTION
+rows[14].research_questions[0].experiments[0].id,EXP-L25-1
+rows[14].research_questions[0].experiments[0].hypothesis,Re-evaluating the fitted model on sessions inside the verified NIFTY 50 window yields detection metrics within the seed noise floor of the existing evaluation.
+rows[14].research_questions[0].experiments[0].independent_variable,evaluation period
+rows[14].research_questions[0].experiments[0].dependent_variable,"AUPRC, calibration error, block shares"
+rows[14].research_questions[0].experiments[0].control,the existing 2022-01-03 to 2023-12-29 evaluation
+rows[14].research_questions[0].experiments[0].treatment,an evaluation restricted to sessions inside 2024-07-08 to 2026-08-14
+rows[14].research_questions[0].experiments[0].dataset,"data/panel/market_dataset.parquet restricted to the index window; 2,728 instrument-sessions are available"
+rows[14].research_questions[0].experiments[0].evaluation_period,2024-07-08 to 2026-08-14
+rows[14].research_questions[0].experiments[0].metrics[0],auprc
+rows[14].research_questions[0].experiments[0].metrics[1],auroc
+rows[14].research_questions[0].experiments[0].metrics[2],ece
+rows[14].research_questions[0].experiments[0].metrics[3],block contribution share
+rows[14].research_questions[0].experiments[0].statistical_test,paired comparison against the multi-seed noise floor from STATS-16
+rows[14].research_questions[0].experiments[0].expected_interpretation,"A difference inside the noise floor would mean the existing results carry over to the index window. A difference beyond it would mean the two periods are not interchangeable, which is itself the finding."
+rows[14].research_questions[0].experiments[0].threats_to_validity[0],"The episode labels are injected, so a period difference may reflect the injection rather than the market."
+rows[14].research_questions[0].experiments[0].threats_to_validity[1],The frozen holdout must remain untouched by any re-run.
+rows[14].research_questions[0].experiments[0].threats_to_validity[2],Refitting rather than re-evaluating would confound period with training data.
+rows[14].research_questions[0].experiments[0].status,NOT_RUN
+rows[14].research_questions[0].experiments[0].required_data,
+rows[14].research_questions[0].experiments[0].result_artifact,
+rows[14].research_questions[0].current_evidence,None. The question cannot be asked of the current artifacts: they were evaluated on a period the index series does not reach.
+rows[14].research_questions[0].what_remains_unresolved,"Whether detection quality, calibration and block contribution are stable across the two periods."
+rows[14].research_questions[1].id,RQ-L25-B
+rows[14].research_questions[1].question,Is a licence-compatible NIFTY 50 series covering 2022-2023 obtainable?
+rows[14].research_questions[1].limitation_id,L-25
+rows[14].research_questions[1].status,OPEN_QUESTION
+rows[14].research_questions[1].experiments,
+rows[14].research_questions[1].current_evidence,"NSE Indices publishes historical index levels, but the archive this project ingests carries none before July 2024 and redistribution of the source is restricted."
+rows[14].research_questions[1].what_remains_unresolved,Whether a series covering the evaluation window can be obtained under terms compatible with this project's open-data requirement.
+rows[14].required_data[0],"Either a licence-compatible NIFTY 50 level series covering 2022-01-03 to 2023-12-29, or a model evaluation executed on sessions inside 2024-07-08 to 2026-08-14."
+rows[14].future_validation,"Nothing needs to be rewritten when either arrives. The alignment status is computed from the sessions each source holds, so ingesting an overlapping series moves this limitation from NOT_ALIGNED to PARTIAL or ALIGNED without a code change, and the combined-analysis gate opens on the same arithmetic."
+rows[14].forbidden_phrasings[0],nifty 50 risk score
+rows[14].forbidden_phrasings[1],the model's assessment of the nifty
+rows[14].forbidden_phrasings[2],index-level risk signal
+rows[14].forbidden_phrasings[3],nifty 50 was flagged
+rows[14].forbidden_phrasings[4],the benchmark's integrity score
+rows[14].scope_note,The NIFTY 50 series and the model evaluation cover different periods and share no sessions (L-25). Results about one say nothing about the other.
+rows[15].id,N-01
+rows[15].title,LIME explanations fail the declared stability threshold
+rows[15].category,UNRESOLVED_NEGATIVE_RESULT
+rows[15].severity,SCOPES_A_CLAIM
+rows[15].description,"LIME re-run under three seeds agrees on attribution sign for 0.780 of features, below the 0.80 threshold declared before the run. Its rank agreement with occlusion is -0.042."
+rows[15].why_it_exists,Local surrogate fitting is sensitive to the perturbation sample.
+rows[15].current_status,FAILED_SANITY_CHECK
+rows[15].current_substitute,"Occlusion and KernelSHAP, which pass"
+rows[15].invalidated_claims[0],Any claim resting on a LIME attribution.
+rows[15].still_valid[0],Occlusion and KernelSHAP pass sparsity and model-randomisation checks and agree with each other at rho 0.472.
+rows[15].still_valid[1],The threshold was declared before the run and was not lowered.
+rows[15].research_questions[0].id,RQ-N01-A
+rows[15].research_questions[0].question,"How stable are local surrogate explanations under full-stack financial models, and does stability trade against runtime?"
+rows[15].research_questions[0].limitation_id,N-01
+rows[15].research_questions[0].status,PARTIAL
+rows[15].research_questions[0].experiments[0].id,EXP-N01-1
+rows[15].research_questions[0].experiments[0].hypothesis,LIME sign consistency rises with perturbation count and crosses 0.80 before its runtime exceeds occlusion's.
+rows[15].research_questions[0].experiments[0].independent_variable,LIME perturbation sample size
+rows[15].research_questions[0].experiments[0].dependent_variable,"sign consistency, runtime"
+rows[15].research_questions[0].experiments[0].control,800 perturbations (current)
+rows[15].research_questions[0].experiments[0].treatment,1600 / 3200 / 6400 perturbations
+rows[15].research_questions[0].experiments[0].dataset,current market panel
+rows[15].research_questions[0].experiments[0].evaluation_period,"validation split, highest-risk rows"
+rows[15].research_questions[0].experiments[0].metrics[0],sign_consistency
+rows[15].research_questions[0].experiments[0].metrics[1],spearman_vs_occlusion
+rows[15].research_questions[0].experiments[0].metrics[2],seconds
+rows[15].research_questions[0].experiments[0].statistical_test,repeated runs across seeds; report mean and spread
+rows[15].research_questions[0].experiments[0].expected_interpretation,"If stability requires more runtime than occlusion, LIME has no remaining advantage for this model class."
+rows[15].research_questions[0].experiments[0].threats_to_validity[0],Stability measured on one row may not generalise across the score distribution.
+rows[15].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[15].research_questions[0].experiments[0].required_data,
+rows[15].research_questions[0].experiments[0].result_artifact,
+rows[15].research_questions[0].current_evidence,Measured: LIME 0.02 s and unstable; occlusion 0.46 s and stable; KernelSHAP 1.00 s and stable. The cheapest method is the unreliable one.
+rows[15].research_questions[0].what_remains_unresolved,"Whether more perturbations recover LIME's stability, and at what cost."
+rows[15].required_data,
+rows[15].future_validation,Increase perturbation count and re-measure; report the stability-versus-cost curve.
+rows[15].forbidden_phrasings[0],LIME shows
+rows[15].forbidden_phrasings[1],LIME confirms
+rows[15].scope_note,LIME: failed stability check; not used for any claim.
+rows[16].id,N-02
+rows[16].title,Regime conditioning reduces detection performance
+rows[16].category,UNRESOLVED_NEGATIVE_RESULT
+rows[16].severity,SCOPES_A_CLAIM
+rows[16].description,"The corrected regime-conditioned combination reaches AUPRC 0.9412 against static attention's 0.9480. Removing regime conditioning improves AUPRC by 0.0060 (95% CI 0.0022-0.0110, BH-adjusted p 0.0021)."
+rows[16].why_it_exists,"Measured, not yet explained."
+rows[16].current_status,NOT_SUPPORTED
+rows[16].current_substitute,Static attention performs better and is reported as the stronger arm
+rows[16].invalidated_claims[0],RQ9: that corrected regime-conditioned combination outperforms static combination.
+rows[16].still_valid[0],"The degeneracy result stands independently: the inherited formulation is algebraically identical to static attention, verified below 1e-12 and confirmed empirically to six decimals."
+rows[16].still_valid[1],The correction does what it claims mechanically: its weights vary by regime.
+rows[16].research_questions[0].id,RQ-N02-A
+rows[16].research_questions[0].question,Under what conditions does regime conditioning help or hurt full-stack integrity-event detection?
+rows[16].research_questions[0].limitation_id,N-02
+rows[16].research_questions[0].status,OPEN_QUESTION
+rows[16].research_questions[0].experiments[0].id,EXP-N02-1
+rows[16].research_questions[0].experiments[0].hypothesis,"The loss comes from variance inflation: per-regime parameters are fitted on too few episodes, so the corrected arm should recover as episodes per regime increase."
+rows[16].research_questions[0].experiments[0].independent_variable,episodes available per regime
+rows[16].research_questions[0].experiments[0].dependent_variable,AUPRC gap between corrected and static combination
+rows[16].research_questions[0].experiments[0].control,static attention
+rows[16].research_questions[0].experiments[0].treatment,corrected regime-conditioned combination
+rows[16].research_questions[0].experiments[0].dataset,"current dataset, subsampled by episode count"
+rows[16].research_questions[0].experiments[0].evaluation_period,validation split
+rows[16].research_questions[0].experiments[0].metrics[0],auprc_gap
+rows[16].research_questions[0].experiments[0].metrics[1],regime_weight_variance
+rows[16].research_questions[0].experiments[0].metrics[2],episodes_per_regime
+rows[16].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap at each subsample size
+rows[16].research_questions[0].experiments[0].expected_interpretation,A gap that shrinks with more episodes supports variance inflation; a flat gap points to redundancy between regime and market features instead.
+rows[16].research_questions[0].experiments[0].threats_to_validity[0],"Regime membership is itself estimated, so its error enters the treatment arm but not the control."
+rows[16].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[16].research_questions[0].experiments[0].required_data,
+rows[16].research_questions[0].experiments[0].result_artifact,
+rows[16].research_questions[0].current_evidence,"Measured inputs: k=4 regimes admitted under a pre-declared rule, bootstrap stability ARI 0.624, shuffle-null p 0.0164. The regimes are real but the conditioning costs performance."
+rows[16].research_questions[0].what_remains_unresolved,"Which of four candidate explanations holds: noisy regime labels, insufficient per-regime sample, variance inflation from extra parameters, or redundancy between regime and market features."
+rows[16].required_data,
+rows[16].future_validation,Test the candidate explanations below before concluding anything about regime-aware combination in general.
+rows[16].forbidden_phrasings[0],regime conditioning does not work
+rows[16].forbidden_phrasings[1],regimes are uninformative
+rows[16].scope_note,Regime conditioning: NOT SUPPORTED on this evaluation.
+rows[17].id,N-03
+rows[17].title,"Detection is late, not early"
+rows[17].category,UNRESOLVED_NEGATIVE_RESULT
+rows[17].severity,BOUNDS_SOME_CLAIMS
+rows[17].description,Median lead time is -10.0 sessions and mean -8.5: the system identifies injected episodes roughly two weeks after onset. Detection rate is 0.917 with 23 false-alarm windows against 36 true windows.
+rows[17].why_it_exists,"The state machine requires persistence above a threshold before opening a window, which trades latency for precision by construction."
+rows[17].current_status,NOT_SUPPORTED
+rows[17].current_substitute,None; the result stands
+rows[17].invalidated_claims[0],RQ5: that risk emergence is detected early.
+rows[17].still_valid[0],Detection itself is high: 33 of 36 windows matched.
+rows[17].still_valid[1],"The state machine's hysteresis parameters are the direct cause and are explicit, so the trade-off is tunable rather than mysterious."
+rows[17].research_questions[0].id,RQ-N03-A
+rows[17].research_questions[0].question,"What is the achievable frontier between detection lead time and precision, and do different blocks carry evidence at different lags?"
+rows[17].research_questions[0].limitation_id,N-03
+rows[17].research_questions[0].status,OPEN_QUESTION
+rows[17].research_questions[0].experiments[0].id,EXP-N03-1
+rows[17].research_questions[0].experiments[0].hypothesis,"Lowering the entry threshold buys lead time at a steep precision cost, and text evidence leads market evidence."
+rows[17].research_questions[0].experiments[0].independent_variable,state-machine entry threshold; block
+rows[17].research_questions[0].experiments[0].dependent_variable,lead time; precision; cross-correlation lag
+rows[17].research_questions[0].experiments[0].control,entry threshold 0.55 (current operating point)
+rows[17].research_questions[0].experiments[0].treatment,entry thresholds swept from 0.20 to 0.90
+rows[17].research_questions[0].experiments[0].dataset,current per-arm per-row scores
+rows[17].research_questions[0].experiments[0].evaluation_period,validation split
+rows[17].research_questions[0].experiments[0].metrics[0],median_lead_time
+rows[17].research_questions[0].experiments[0].metrics[1],precision
+rows[17].research_questions[0].experiments[0].metrics[2],false_alarm_rate
+rows[17].research_questions[0].experiments[0].metrics[3],peak_cross_correlation_lag
+rows[17].research_questions[0].experiments[0].statistical_test,cluster bootstrap CI at each threshold
+rows[17].research_questions[0].experiments[0].expected_interpretation,"A frontier that never reaches positive lead time at acceptable precision would mean the evidence itself is lagging, not the detector."
+rows[17].research_questions[0].experiments[0].threats_to_validity[0],"The injected episodes ramp gradually, so 'onset' is a generator convention rather than a sharp event; lead time is measured against that convention."
+rows[17].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[17].research_questions[0].experiments[0].required_data,
+rows[17].research_questions[0].experiments[0].result_artifact,
+rows[17].research_questions[0].current_evidence,"Runnable now. Both halves are computable from artifacts already on disk: sweeping the entry threshold traces the frontier, and cross-correlating each block score against the episode indicator gives block-specific lead/lag."
+rows[17].research_questions[0].what_remains_unresolved,Whether any operating point achieves positive lead time at useful precision.
+rows[17].required_data,
+rows[17].future_validation,Map the full precision-versus-lead-time frontier rather than reporting a single operating point.
+rows[17].forbidden_phrasings[0],early warning
+rows[17].forbidden_phrasings[1],early detection
+rows[17].forbidden_phrasings[2],detects before
+rows[17].scope_note,Timing: detection lags onset by a median 10 sessions.
+rows[18].id,N-04
+rows[18].title,Uncertainty-aware combination does not beat static combination
+rows[18].category,UNRESOLVED_NEGATIVE_RESULT
+rows[18].severity,SCOPES_A_CLAIM
+rows[18].description,"The uncertainty-weighted combination arm reaches AUPRC 0.9455 against static attention's 0.9480, a difference of -0.0043 whose interval spans zero (p 0.303, not significant)."
+rows[18].why_it_exists,"Measured, not yet explained."
+rows[18].current_status,NOT_SUPPORTED
+rows[18].current_substitute,Static attention
+rows[18].invalidated_claims[0],RQ8: that uncertainty-aware combination reduces false positives.
+rows[18].still_valid[0],The same arm reaches ECE 0.0631 against the full stack's 0.1227: the best calibration of any arm. Judged on AUPRC alone it looks like a failure; judged on calibration it is the best arm in the family.
+rows[18].research_questions[0].id,RQ-N04-A
+rows[18].research_questions[0].question,"When does uncertainty-aware combination improve reliability rather than discrimination, and is AUPRC the wrong metric for judging it?"
+rows[18].research_questions[0].limitation_id,N-04
+rows[18].research_questions[0].status,PARTIAL
+rows[18].research_questions[0].experiments[0].id,EXP-N04-1
+rows[18].research_questions[0].experiments[0].hypothesis,The uncertainty-weighted arm dominates on selective risk at low coverage even though it does not dominate on AUPRC.
+rows[18].research_questions[0].experiments[0].independent_variable,combination rule
+rows[18].research_questions[0].experiments[0].dependent_variable,selective risk at coverage levels; ECE; AUPRC
+rows[18].research_questions[0].experiments[0].control,static attention
+rows[18].research_questions[0].experiments[0].treatment,uncertainty-weighted combination
+rows[18].research_questions[0].experiments[0].dataset,current per-arm per-row scores
+rows[18].research_questions[0].experiments[0].evaluation_period,validation split
+rows[18].research_questions[0].experiments[0].metrics[0],selective_risk
+rows[18].research_questions[0].experiments[0].metrics[1],coverage
+rows[18].research_questions[0].experiments[0].metrics[2],ece
+rows[18].research_questions[0].experiments[0].metrics[3],auprc
+rows[18].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap at each coverage level
+rows[18].research_questions[0].experiments[0].expected_interpretation,"Dominance on selective risk would mean the arm should be preferred wherever abstention is allowed, and that reporting AUPRC alone hid a real advantage."
+rows[18].research_questions[0].experiments[0].threats_to_validity[0],"Selective risk and the uncertainty used for abstention come from the same model, so the comparison flatters any arm whose uncertainty is merely self-consistent."
+rows[18].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[18].research_questions[0].experiments[0].required_data,
+rows[18].research_questions[0].experiments[0].result_artifact,
+rows[18].research_questions[0].current_evidence,"Measured: AUPRC -0.0043 (not significant), ECE 0.0631 versus 0.1227. The two metrics disagree about which arm is better, which is itself the finding."
+rows[18].research_questions[0].what_remains_unresolved,Whether the calibration advantage survives on selective-risk and coverage metrics.
+rows[18].required_data,
+rows[18].future_validation,"Evaluate on selective risk and coverage, where the arm's calibration advantage should show up if it is real."
+rows[18].forbidden_phrasings[0],uncertainty combination improves
+rows[18].forbidden_phrasings[1],reduces false positives
+rows[18].scope_note,Uncertainty combination: no AUPRC advantage; best calibration.
+rows[19].id,N-05
+rows[19].title,Propagation contribution is negligible
+rows[19].category,UNRESOLVED_NEGATIVE_RESULT
+rows[19].severity,SCOPES_A_CLAIM
+rows[19].description,"Removing the propagation block changes AUPRC by 0.0005 (95% CI 0.0002-0.0009, BH-adjusted p 0.0021): statistically significant, substantively negligible."
+rows[19].why_it_exists,"The episode generator injects episodes independently per instrument, so there is no cross-instrument contagion mechanism for propagation features to recover."
+rows[19].current_status,NOT_SUPPORTED
+rows[19].current_substitute,None
+rows[19].invalidated_claims[0],RQ7: that propagation improves early detection.
+rows[19].still_valid[0],"The propagation features are correctly computed and point-in-time: 98.5% coverage, mean 7.6 neighbours per instrument-day."
+rows[19].still_valid[1],"The near-null result is the *expected* outcome given the generator, which makes it a working negative control rather than a disappointment."
+rows[19].research_questions[0].id,RQ-N05-A
+rows[19].research_questions[0].question,Is the negligible propagation contribution a property of the method or an artefact of an episode generator with no contagion?
+rows[19].research_questions[0].limitation_id,N-05
+rows[19].research_questions[0].status,OPEN_QUESTION
+rows[19].research_questions[0].experiments[0].id,EXP-N05-1
+rows[19].research_questions[0].experiments[0].hypothesis,"With correlated multi-instrument episodes injected along graph edges, the propagation block's contribution rises materially above 0.0005."
+rows[19].research_questions[0].experiments[0].independent_variable,episode generator contagion structure
+rows[19].research_questions[0].experiments[0].dependent_variable,incremental AUPRC of the propagation block
+rows[19].research_questions[0].experiments[0].control,independent per-instrument episodes (current)
+rows[19].research_questions[0].experiments[0].treatment,episodes propagated along the correlation graph with a lag
+rows[19].research_questions[0].experiments[0].dataset,NSE panel + contagion-aware generator
+rows[19].research_questions[0].experiments[0].evaluation_period,validation split
+rows[19].research_questions[0].experiments[0].metrics[0],incremental_auprc
+rows[19].research_questions[0].experiments[0].metrics[1],lead_time
+rows[19].research_questions[0].experiments[0].metrics[2],neighbour_precision
+rows[19].research_questions[0].experiments[0].statistical_test,paired cluster bootstrap
+rows[19].research_questions[0].experiments[0].expected_interpretation,A rise would confirm the features work and the current null is a generator artefact. No rise would indict the features.
+rows[19].research_questions[0].experiments[0].threats_to_validity[0],Injecting contagion along the same graph the detector uses makes the test partly circular; the generator must use a different edge set from the detector.
+rows[19].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[19].research_questions[0].experiments[0].required_data[0],contagion-aware generator (implementable now)
+rows[19].research_questions[0].experiments[0].result_artifact,
+rows[19].research_questions[0].current_evidence,"The generator is documented to place episodes independently per instrument, so the null is predicted a priori."
+rows[19].research_questions[0].what_remains_unresolved,The method's behaviour under genuine contagion.
+rows[19].required_data[0],"a contagion-aware episode generator, or real incidents"
+rows[19].future_validation,Re-evaluate after adding correlated multi-instrument episodes to the generator.
+rows[19].forbidden_phrasings[0],propagation improves detection
+rows[19].forbidden_phrasings[1],contagion detected
+rows[19].scope_note,Propagation: negligible contribution under an independent-episode generator.
+rows[20].id,N-07
+rows[20].title,Signal conflict predicts forward change only through the risk level
+rows[20].category,UNRESOLVED_NEGATIVE_RESULT
+rows[20].severity,SCOPES_A_CLAIM
+rows[20].description,"Rows where the blocks disagree with the fused estimate show a forward material-change rate of 0.976 against 0.480 where they agree: an unconditional difference of +0.496 that looks like a strong result and is not one. Conflict is defined against the same 0.5 threshold that separates the MODERATE and ELEVATED risk bands, so a row can only register conflict when the fused estimate is already near or above that line. The coupling is so tight that only one risk decile out of ten contains enough rows both with and without conflict to compare at all, and within that decile the difference is -0.005."
+rows[20].why_it_exists,"The conflict definition and the risk-band definition share a threshold. Mean risk is 0.610 on conflicting rows against 0.124 on agreeing ones, so the two groups are not comparable populations and the unconditional contrast is a restatement of the risk level."
+rows[20].current_status,NOT_SUPPORTED
+rows[20].current_substitute,"The risk-stratified figure, which is the only interpretable one: -0.005, resting on the single risk decile that has adequate cells on both sides."
+rows[20].invalidated_claims[0],That disagreement between blocks anticipates a change in the risk profile.
+rows[20].invalidated_claims[1],That signal conflict is a usable early indicator of anything.
+rows[20].invalidated_claims[2],Any unconditional comparison of conflicting against agreeing rows.
+rows[20].still_valid[0],"The agreement, conflict and dominance measures are computed correctly and describe what the blocks are doing at a point in time."
+rows[20].still_valid[1],"The stratified analysis is implemented and reports which strata had enough rows in both cells rather than pooling silently over the ones that did not: only one of ten deciles qualifies, and that is itself the result."
+rows[20].research_questions[0].id,RQ-N07-A
+rows[20].research_questions[0].question,Does block disagreement carry information about forward risk change under a definition that does not share a threshold with the risk bands?
+rows[20].research_questions[0].limitation_id,N-07
+rows[20].research_questions[0].status,OPEN_QUESTION
+rows[20].research_questions[0].experiments[0].id,EXP-N07-1
+rows[20].research_questions[0].experiments[0].hypothesis,"A rank-based disagreement measure, which has no threshold to share with the band edges, retains a non-zero within-stratum association with forward material change."
+rows[20].research_questions[0].experiments[0].independent_variable,disagreement definition (threshold vs rank)
+rows[20].research_questions[0].experiments[0].dependent_variable,pooled within-risk-stratum difference in forward material-change rate
+rows[20].research_questions[0].experiments[0].control,the current threshold-based conflict measure
+rows[20].research_questions[0].experiments[0].treatment,rank disagreement across block scores
+rows[20].research_questions[0].experiments[0].dataset,current lifecycle cohort
+rows[20].research_questions[0].experiments[0].evaluation_period,validation + holdout
+rows[20].research_questions[0].experiments[0].metrics[0],pooled_within_stratum_difference
+rows[20].research_questions[0].experiments[0].metrics[1],n_strata_usable
+rows[20].research_questions[0].experiments[0].statistical_test,stratified difference with cluster bootstrap over instruments
+rows[20].research_questions[0].experiments[0].expected_interpretation,"A non-zero within-stratum difference would mean disagreement carries information the current measure hides. A second null would establish the negative result properly, since it would no longer be attributable to the definition."
+rows[20].research_questions[0].experiments[0].threats_to_validity[0],"Every disagreement measure is a function of the same block scores that produce the risk estimate, so some coupling to the risk level is unavoidable and stratification can only remove the part that is monotone in risk."
+rows[20].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[20].research_questions[0].experiments[0].required_data,
+rows[20].research_questions[0].experiments[0].result_artifact,
+rows[20].research_questions[0].current_evidence,"Under the current threshold-shared definition, -0.005 within the one usable risk stratum against +0.496 unconditionally. The confound accounts for the whole unconditional effect."
+rows[20].research_questions[0].what_remains_unresolved,Whether any disagreement measure survives stratification.
+rows[20].required_data[0],"A conflict definition whose threshold is not the risk-band edge: for instance disagreement measured against each block own operating point, or a rank-based definition with no threshold at all."
+rows[20].future_validation,"Redefine conflict against a threshold independent of the band edges and re-run the stratified comparison. If the within-stratum difference stays near zero under a definition that cannot be confounded this way, the negative result is a property of the measure rather than of its construction."
+rows[20].forbidden_phrasings[0],conflict predicts
+rows[20].forbidden_phrasings[1],disagreement anticipates
+rows[20].forbidden_phrasings[2],conflict is an early warning
+rows[20].forbidden_phrasings[3],block disagreement signals
+rows[20].scope_note,Signal conflict: no association with forward change once the risk level is held fixed.
+rows[21].id,N-09
+rows[21].title,Synthetic augmentation degrades real-data performance despite low distributional distance
+rows[21].category,UNRESOLVED_NEGATIVE_RESULT
+rows[21].severity,BOUNDS_SOME_CLAIMS
+rows[21].description,"Training on real rows alone reaches AUPRC 0.9390 on real validation rows. Adding 40000 copula-generated rows to 9351 real ones drops it to 0.3870, a difference of -0.5521 against a seed noise floor of 0.0088. A share sweep places the collapse between 50% and 75% synthetic: 0.9412 at 0%, 0.9439 at 10%, 0.9429 at 25%, 0.9076 at 50%, 0.3856 at 75%."
+rows[21].why_it_exists,"Six candidate mechanisms were measured and five are not supported: mean KS distance 0.0028, positive-rate ratio 1.01, mean pairwise correlation error 0.0216, effective-rank ratio 1.11, zero out-of-range values and no memorisation. The supported mechanism is interaction loss: a tree ensemble separates real from generated rows at AUC 0.9639 while a linear model reaches 0.4952, and that 0.4687 gap is dependence structure beyond second order that a Gaussian copula cannot carry."
+rows[21].current_status,NOT_SUPPORTED
+rows[21].current_substitute,Synthetic rows are confined to the training split and are 6.1% of the corpus. The test split is real-only and the builder refuses to place a generated row in any evaluation split.
+rows[21].invalidated_claims[0],Any statement that synthetic augmentation improves performance here.
+rows[21].invalidated_claims[1],Any use of distributional distance alone as evidence that generated data is safe to train on.
+rows[21].still_valid[0],"The generator reproduces marginals, rank correlation, class balance and feature range closely, and does not memorise the training rows."
+rows[21].still_valid[1],Shares at or below 25% are harmless on this task within the seed noise floor.
+rows[21].research_questions[0].id,RQ-N09-A
+rows[21].research_questions[0].question,Under what conditions does synthetic augmentation improve rather than degrade predictive performance?
+rows[21].research_questions[0].limitation_id,N-09
+rows[21].research_questions[0].status,PARTIAL
+rows[21].research_questions[0].experiments[0].id,EXP-N09-1
+rows[21].research_questions[0].experiments[0].hypothesis,"Real-data AUPRC under augmentation rises monotonically as the tree-versus-linear discriminator gap of the generator falls, at a fixed synthetic share."
+rows[21].research_questions[0].experiments[0].independent_variable,"generator class, ordered by discriminator gap"
+rows[21].research_questions[0].experiments[0].dependent_variable,AUPRC on real validation rows
+rows[21].research_questions[0].experiments[0].control,"the Gaussian copula generator, discriminator gap 0.4687"
+rows[21].research_questions[0].experiments[0].treatment,generators carrying higher-order dependence
+rows[21].research_questions[0].experiments[0].dataset,"the panel-features shard, real validation rows for scoring"
+rows[21].research_questions[0].experiments[0].evaluation_period,"validation split, unchanged between arms"
+rows[21].research_questions[0].experiments[0].metrics[0],auprc
+rows[21].research_questions[0].experiments[0].metrics[1],discriminator_auc_trees
+rows[21].research_questions[0].experiments[0].metrics[2],discriminator_auc_linear
+rows[21].research_questions[0].experiments[0].metrics[3],interaction_gap
+rows[21].research_questions[0].experiments[0].statistical_test,paired comparison across seeds against the 0.0088 seed noise floor
+rows[21].research_questions[0].experiments[0].expected_interpretation,A monotone relation would establish interaction fidelity as the variable that decides whether augmentation helps. A flat relation would mean the discriminator gap is a symptom rather than the mechanism.
+rows[21].research_questions[0].experiments[0].threats_to_validity[0],"A richer generator may also memorise more, so the memorisation check has to be re-run for each arm."
+rows[21].research_questions[0].experiments[0].threats_to_validity[1],"Discriminator AUC depends on the discriminator's own capacity, so the same family must be used across arms."
+rows[21].research_questions[0].experiments[0].status,OPEN_QUESTION
+rows[21].research_questions[0].experiments[0].required_data,
+rows[21].research_questions[0].experiments[0].result_artifact,
+rows[21].research_questions[0].current_evidence,"One condition is measured: a share at or below 25% is harmless, and the harm above it tracks a generator that reproduces marginals but not interactions."
+rows[21].research_questions[0].what_remains_unresolved,"Whether a generator that closes the discriminator gap also closes the performance gap, which would establish interaction fidelity as the operative variable rather than a correlate."
+rows[21].required_data,
+rows[21].future_validation,Repeat with a generator that carries higher-order dependence and test whether the discriminator gap and the performance drop move together.
+rows[21].forbidden_phrasings[0],synthetic data works
+rows[21].forbidden_phrasings[1],augmentation improves the model
+rows[21].forbidden_phrasings[2],the generator is high fidelity
+rows[21].scope_note,Synthetic augmentation: measured to degrade real-data AUPRC above a 25% share on this task.
+meta.version,limitations-v1
+meta.n_limitations,25
+meta.n_negative_findings,10
+meta.n_research_questions,39
+meta.n_experiment_specs,36
+meta.n_runnable_now,19
+meta.n_blocked_by_data,17
+meta.by_category.LICENSING,4
+meta.by_category.DATA,6
+meta.by_category.ENGINEERING,1
+meta.by_category.EVALUATION,7
+meta.by_category.METHODOLOGICAL,5
+meta.by_category.COMPUTATIONAL,2
+meta.by_category.UNRESOLVED_NEGATIVE_RESULT,10
+meta.by_status.NOT_MEASURED,7
+meta.by_status.MEASURED,15
+meta.by_status.NOT_RUN,1
+meta.by_status.FUTURE_VALIDATION,1
+meta.by_status.BLOCKED,2
+meta.by_status.FAILED_SANITY_CHECK,1
+meta.by_status.NOT_SUPPORTED,8

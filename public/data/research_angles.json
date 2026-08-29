@@ -1,0 +1,661 @@
+{
+  "generated_at": "2026-08-23T04:35:34.526981+00:00",
+  "rows": [],
+  "meta": {
+    "run_at": "2026-08-19T10:08:10.068616+00:00",
+    "registry_version": "limitations-v1",
+    "runnable_specs": [
+      "EXP-L03-1",
+      "EXP-L04-2",
+      "EXP-L10-1",
+      "EXP-L12-1",
+      "EXP-L15-1",
+      "EXP-N01-1",
+      "EXP-N02-1",
+      "EXP-N03-1",
+      "EXP-N04-1",
+      "EXP-N06-1",
+      "EXP-N07-1"
+    ],
+    "blocked_specs": [
+      {
+        "id": "EXP-L01-1",
+        "required_data": [
+          "point-in-time index membership"
+        ]
+      },
+      {
+        "id": "EXP-L02-1",
+        "required_data": [
+          "licence-clear Level-2 sample"
+        ]
+      },
+      {
+        "id": "EXP-L04-1",
+        "required_data": [
+          "adjudicated incident labels"
+        ]
+      },
+      {
+        "id": "EXP-L05-1",
+        "required_data": [
+          "human-labelled financial speech"
+        ]
+      },
+      {
+        "id": "EXP-L06-1",
+        "required_data": [
+          "licence-clear financial speech corpus"
+        ]
+      },
+      {
+        "id": "EXP-L07-1",
+        "required_data": [
+          "sector or ownership mapping",
+          "contagion-aware episode generator or real incidents"
+        ]
+      },
+      {
+        "id": "EXP-L08-1",
+        "required_data": [
+          "installed model weights"
+        ]
+      },
+      {
+        "id": "EXP-L09-1",
+        "required_data": [
+          "licence-clear financial image corpus"
+        ]
+      },
+      {
+        "id": "EXP-L11-1",
+        "required_data": [
+          "a completed freeze"
+        ]
+      },
+      {
+        "id": "EXP-L13-1",
+        "required_data": [
+          "point-in-time fundamentals with disclosure timestamps"
+        ]
+      },
+      {
+        "id": "EXP-L13-2",
+        "required_data": [
+          "point-in-time fundamentals with disclosure timestamps"
+        ]
+      },
+      {
+        "id": "EXP-N05-1",
+        "required_data": [
+          "contagion-aware generator (implementable now)"
+        ]
+      }
+    ],
+    "results": {
+      "block_information_decomposition": {
+        "analysis": "block_information_decomposition",
+        "status": "MEASURED",
+        "rows": [
+          {
+            "block": "text",
+            "total_auprc": 0.7972770695173795,
+            "unique": 0.12391345488938821,
+            "redundant": 0.6733636146279913,
+            "redundant_raw": 0.6733636146279913,
+            "conflict_rate": 0.11621271076523995,
+            "missing_rate": 0.2645914396887159,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.8172525758498801
+          },
+          {
+            "block": "market",
+            "total_auprc": 0.8159680652866335,
+            "unique": 0.11307635028975815,
+            "redundant": 0.7028917149968753,
+            "redundant_raw": 0.7028917149968753,
+            "conflict_rate": 0.028793774319066146,
+            "missing_rate": 4.3233895374084064e-05,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.8280896804495101
+          },
+          {
+            "block": "video",
+            "total_auprc": 0.2565711639851413,
+            "unique": 0.0011153993427714948,
+            "redundant": 0.2554557646423698,
+            "redundant_raw": 0.2554557646423698,
+            "conflict_rate": 0.1496757457846952,
+            "missing_rate": 0.0,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9400506313964968
+          },
+          {
+            "block": "image",
+            "total_auprc": 0.23728928233179827,
+            "unique": 0.0007706333041878066,
+            "redundant": 0.23651864902761047,
+            "redundant_raw": 0.23651864902761047,
+            "conflict_rate": 0.1496757457846952,
+            "missing_rate": 0.0,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9403953974350805
+          },
+          {
+            "block": "audio",
+            "total_auprc": 0.2573348819167252,
+            "unique": 0.0006299085999716958,
+            "redundant": 0.2567049733167535,
+            "redundant_raw": 0.2567049733167535,
+            "conflict_rate": 0.1496757457846952,
+            "missing_rate": 0.0,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9405361221392966
+          },
+          {
+            "block": "propagation",
+            "total_auprc": null,
+            "unique": 0.0005021297835191563,
+            "redundant": null,
+            "redundant_raw": null,
+            "conflict_rate": null,
+            "missing_rate": 0.009338521400778177,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9406639009557491
+          },
+          {
+            "block": "microstructure",
+            "total_auprc": 0.8167574436825774,
+            "unique": 0.0001776567565408005,
+            "redundant": 0.8165797869260366,
+            "redundant_raw": 0.8165797869260366,
+            "conflict_rate": 0.15123216601815823,
+            "missing_rate": 0.0,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9409883739827275
+          },
+          {
+            "block": "regime",
+            "total_auprc": null,
+            "unique": -0.005968570430001874,
+            "redundant": null,
+            "redundant_raw": null,
+            "conflict_rate": null,
+            "missing_rate": 0.0,
+            "auprc_full": 0.9411660307392683,
+            "auprc_without": 0.9471346011692702
+          }
+        ],
+        "caveat": "Operational decomposition in AUPRC, not a formal partial information decomposition. The regime and propagation blocks are derived from the same price series the market block reads, so their low unique is expected by construction."
+      },
+      "EXP-N03-1": {
+        "experiment": "EXP-N03-1",
+        "status": "MEASURED",
+        "n_thresholds": 12,
+        "any_positive_lead_operating_point": false,
+        "best_positive_lead_point": null,
+        "frontier_range": {
+          "median_lead_time_min": -10.0,
+          "median_lead_time_max": 0.0,
+          "window_precision_min": 0.3835616438356164,
+          "window_precision_max": 0.6530612244897959
+        },
+        "block_lead_lag": [
+          {
+            "block": "text",
+            "peak_lag_sessions": 0,
+            "peak_correlation": 0.7461753885662576,
+            "correlation_at_zero": 0.7461753885662576,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "coincident"
+          },
+          {
+            "block": "image",
+            "peak_lag_sessions": -10,
+            "peak_correlation": 0.054595643588233704,
+            "correlation_at_zero": 0.006066296570493417,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "lags the episode indicator"
+          },
+          {
+            "block": "audio",
+            "peak_lag_sessions": -1,
+            "peak_correlation": 0.10206481935275409,
+            "correlation_at_zero": 0.09599198345724647,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "lags the episode indicator"
+          },
+          {
+            "block": "video",
+            "peak_lag_sessions": -13,
+            "peak_correlation": 0.08713984812288422,
+            "correlation_at_zero": 0.04411929952185809,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "lags the episode indicator"
+          },
+          {
+            "block": "market",
+            "peak_lag_sessions": -5,
+            "peak_correlation": 0.7209747195235715,
+            "correlation_at_zero": 0.7055777125481345,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "lags the episode indicator"
+          },
+          {
+            "block": "microstructure",
+            "peak_lag_sessions": 7,
+            "peak_correlation": 0.10762626178498681,
+            "correlation_at_zero": 0.09282210771553308,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "leads the episode indicator"
+          },
+          {
+            "block": "regime",
+            "peak_lag_sessions": -15,
+            "peak_correlation": 0.02176874266517494,
+            "correlation_at_zero": -0.001901519633433803,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "lags the episode indicator"
+          },
+          {
+            "block": "propagation",
+            "peak_lag_sessions": 0,
+            "peak_correlation": 0.11918998450746235,
+            "correlation_at_zero": 0.11918998450746235,
+            "n_instruments": 35,
+            "status": "OK",
+            "interpretation": "coincident"
+          }
+        ],
+        "lifecycle": {
+          "status": "OK",
+          "n_true": 36,
+          "n_pred": 56,
+          "n_matched": 33,
+          "onset": {
+            "task": "onset",
+            "n": 33,
+            "mean_error_days": 11.787878787878787,
+            "median_error_days": 13.0,
+            "mean_abs_error_days": 12.575757575757576,
+            "within_3_days": 0.06060606060606061,
+            "status": "OK"
+          },
+          "resolution": {
+            "task": "resolution",
+            "n": 17,
+            "mean_error_days": 4.235294117647059,
+            "median_error_days": 5.0,
+            "mean_abs_error_days": 5.294117647058823,
+            "within_3_days": 0.23529411764705882,
+            "status": "OK"
+          },
+          "note": "Peak timing is not scored separately: the injected schedule places a peak phase but the detector's peak is the argmax of a noisy score, so a peak-timing error would mostly measure score noise."
+        }
+      },
+      "EXP-L10-1": {
+        "experiment": "EXP-L10-1",
+        "status": "MEASURED",
+        "ece_slope_vs_coverage": null,
+        "coverage_measurable": false,
+        "coverage_note": "Coverage takes only five distinct values on this dataset (median 1.0), so the ECE-versus-coverage relationship is NOT MEASURABLE here. It becomes measurable once blocks are genuinely absent for a meaningful share of rows.",
+        "ece_slope_vs_uncertainty": 0.6384679962017102,
+        "by_coverage": [
+          {
+            "bucket_low": 0.75,
+            "bucket_high": 0.75,
+            "n": 4,
+            "ece": null,
+            "brier": null,
+            "auprc": null,
+            "status": "INSUFFICIENT DATA"
+          },
+          {
+            "bucket_low": 0.8680555555555556,
+            "bucket_high": 0.8680555555555556,
+            "n": 1,
+            "ece": null,
+            "brier": null,
+            "auprc": null,
+            "status": "INSUFFICIENT DATA"
+          },
+          {
+            "bucket_low": 0.875,
+            "bucket_high": 0.875,
+            "n": 1047,
+            "ece": 0.08079361242206319,
+            "brier": 0.0640814792778687,
+            "auprc": 0.7463041032044294,
+            "status": "OK"
+          },
+          {
+            "bucket_low": 0.9930555555555556,
+            "bucket_high": 0.9930555555555556,
+            "n": 2,
+            "ece": null,
+            "brier": null,
+            "auprc": null,
+            "status": "INSUFFICIENT DATA"
+          },
+          {
+            "bucket_low": 1.0,
+            "bucket_high": 1.0,
+            "n": 2801,
+            "ece": 0.15284338944833686,
+            "brier": 0.07421723432111221,
+            "auprc": 0.9688814675504547,
+            "status": "OK"
+          }
+        ],
+        "by_uncertainty": [
+          {
+            "bucket_low": 0.020430946350964912,
+            "bucket_high": 0.06854340637164878,
+            "n": 771,
+            "ece": 0.0835336495329373,
+            "brier": 0.03779343943027303,
+            "auprc": 0.20628078353540855,
+            "status": "OK"
+          },
+          {
+            "bucket_low": 0.06854340637164878,
+            "bucket_high": 0.08067387690272348,
+            "n": 771,
+            "ece": 0.08714666072454096,
+            "brier": 0.02606346785025785,
+            "auprc": 0.18374647629457921,
+            "status": "OK"
+          },
+          {
+            "bucket_low": 0.08067387690272348,
+            "bucket_high": 0.12100516826616574,
+            "n": 771,
+            "ece": 0.07660951804445681,
+            "brier": 0.05076054912764175,
+            "auprc": 0.1919698896334968,
+            "status": "OK"
+          },
+          {
+            "bucket_low": 0.12100516826616574,
+            "bucket_high": 0.31328334554233706,
+            "n": 771,
+            "ece": 0.1055162767510585,
+            "brier": 0.07545417631726241,
+            "auprc": 0.817170301085927,
+            "status": "OK"
+          },
+          {
+            "bucket_low": 0.31328334554233706,
+            "bucket_high": 0.5494933653282733,
+            "n": 771,
+            "ece": 0.32730351966778237,
+            "brier": 0.16666884609710644,
+            "auprc": 0.9886872838415657,
+            "status": "OK"
+          }
+        ],
+        "interpretation_rule": "A positive slope against uncertainty means calibration degrades exactly where the model says it is unsure, which is the expected and desirable pattern. A flat slope against coverage means the uncertainty estimate is already absorbing missingness."
+      },
+      "EXP-N04-1": {
+        "experiment": "EXP-N04-1",
+        "status": "MEASURED",
+        "coverage_levels": 9,
+        "levels_where_uncertainty_arm_better": 9,
+        "mean_risk_delta": -0.03845447147280174,
+        "dominates": true,
+        "table": [
+          {
+            "coverage": 1.0,
+            "selective_risk_static": 0.15927367055771724,
+            "selective_risk_unc": 0.05525291828793774,
+            "risk_delta": -0.1040207522697795
+          },
+          {
+            "coverage": 0.9,
+            "selective_risk_static": 0.13346785817238396,
+            "selective_risk_unc": 0.03574517151916979,
+            "risk_delta": -0.09772268665321418
+          },
+          {
+            "coverage": 0.8,
+            "selective_risk_static": 0.060635538261997406,
+            "selective_risk_unc": 0.03437094682230869,
+            "risk_delta": -0.026264591439688713
+          },
+          {
+            "coverage": 0.7,
+            "selective_risk_static": 0.035211267605633804,
+            "selective_risk_unc": 0.030763528539659007,
+            "risk_delta": -0.004447739065974798
+          },
+          {
+            "coverage": 0.6,
+            "selective_risk_static": 0.03415477734543882,
+            "selective_risk_unc": 0.021184608733246867,
+            "risk_delta": -0.012970168612191954
+          },
+          {
+            "coverage": 0.5,
+            "selective_risk_static": 0.033731188375713546,
+            "selective_risk_unc": 0.01608718214841723,
+            "risk_delta": -0.017644006227296317
+          },
+          {
+            "coverage": 0.4,
+            "selective_risk_static": 0.03437094682230869,
+            "selective_risk_unc": 0.014915693904020753,
+            "risk_delta": -0.019455252918287938
+          },
+          {
+            "coverage": 0.3,
+            "selective_risk_static": 0.04238754325259515,
+            "selective_risk_unc": 0.01643598615916955,
+            "risk_delta": -0.025951557093425604
+          },
+          {
+            "coverage": 0.2,
+            "selective_risk_static": 0.04928664072632944,
+            "selective_risk_unc": 0.011673151750972763,
+            "risk_delta": -0.03761348897535668
+          }
+        ],
+        "note": "Selective risk uses each arm's own uncertainty to rank rows, so an arm whose uncertainty is merely self-consistent can look good here. Read alongside the ECE comparison, not instead of it."
+      },
+      "EXP-L12-1": {
+        "experiment": "EXP-L12-1",
+        "status": "MEASURED",
+        "comparisons": [
+          {
+            "arm": "NO_MICROSTRUCTURE",
+            "prior_label": "not significant at 5% FDR",
+            "minimum_detectable_effect": 0.00018476420763115638,
+            "observed_difference": 0.0001760346661397655,
+            "informative": false,
+            "scaling_exponent": -0.5894307474747319,
+            "clusters_needed_for_0.002": 3.954137174836953,
+            "multiple_of_current": 0.019970389771903803
+          },
+          {
+            "arm": "NO_PROPAGATION",
+            "prior_label": "significant but negligible",
+            "minimum_detectable_effect": 0.00030391218406289604,
+            "observed_difference": 0.0005060965493809411,
+            "informative": true,
+            "scaling_exponent": -0.7205169425306336,
+            "clusters_needed_for_0.002": 12.756848918756466,
+            "multiple_of_current": 0.06442852989270942
+          },
+          {
+            "arm": "NO_AFFECTIVE",
+            "prior_label": "significant and large",
+            "minimum_detectable_effect": 0.026191388608172383,
+            "observed_difference": 0.0883703864607796,
+            "informative": true,
+            "scaling_exponent": -0.49355042972138236,
+            "clusters_needed_for_0.002": 34548.83889064187,
+            "multiple_of_current": 174.48908530627207
+          }
+        ]
+      },
+      "EXP-L04-2": {
+        "experiment": "EXP-L04-2",
+        "status": "MEASURED",
+        "n_episodes": 36,
+        "spearman_intensity_vs_max_score": 0.28094235935784134,
+        "spearman_duration_vs_max_score": 0.19986163011500463,
+        "detection_rate_low_intensity_quartile": 1.0,
+        "detection_rate_high_intensity_quartile": 1.0,
+        "intensity_floor_note": "Peak intensity is a generator parameter, so a positive correlation is partly definitional. The informative quantity is the detection rate in the lowest quartile: it bounds the magnitude of event this architecture could see at all."
+      },
+      "EXP-N02-1": {
+        "experiment": "EXP-N02-1",
+        "status": "MEASURED",
+        "gap_trend_per_cluster": 5.100593910281225e-06,
+        "gap_shrinks_with_sample": true,
+        "episodes_per_regime_validation": {
+          "0": 36,
+          "1": 33,
+          "2": 33,
+          "3": 17
+        },
+        "curve": [
+          {
+            "fraction": 0.3,
+            "n_clusters": 59,
+            "mean_difference": -0.007929492973052954,
+            "ci_low": -0.024352935960388497,
+            "ci_high": 0.0007850642006654333,
+            "half_width": 0.012569000080526966,
+            "minimum_detectable_effect": 0.012569000080526966,
+            "n_resamples": 250,
+            "status": "OK"
+          },
+          {
+            "fraction": 0.5,
+            "n_clusters": 99,
+            "mean_difference": -0.006728123118234374,
+            "ci_low": -0.013380847562647378,
+            "ci_high": -0.0007470855863300648,
+            "half_width": 0.006316880988158657,
+            "minimum_detectable_effect": 0.006316880988158657,
+            "n_resamples": 250,
+            "status": "OK"
+          },
+          {
+            "fraction": 0.7,
+            "n_clusters": 139,
+            "mean_difference": -0.007015055590908462,
+            "ci_low": -0.013821080184655448,
+            "ci_high": -0.0014865288584834035,
+            "half_width": 0.0061672756630860226,
+            "minimum_detectable_effect": 0.0061672756630860226,
+            "n_resamples": 250,
+            "status": "OK"
+          },
+          {
+            "fraction": 0.85,
+            "n_clusters": 168,
+            "mean_difference": -0.006993383994347324,
+            "ci_low": -0.012668208046396576,
+            "ci_high": -0.0019287147623809362,
+            "half_width": 0.00536974664200782,
+            "minimum_detectable_effect": 0.00536974664200782,
+            "n_resamples": 250,
+            "status": "OK"
+          },
+          {
+            "fraction": 1.0,
+            "n_clusters": 198,
+            "mean_difference": -0.006963433545535221,
+            "ci_low": -0.014013724815589925,
+            "ci_high": -0.0026797490694117905,
+            "half_width": 0.005666987873089067,
+            "minimum_detectable_effect": 0.005666987873089067,
+            "n_resamples": 250,
+            "status": "OK"
+          }
+        ],
+        "interpretation_rule": "A gap that closes as clusters increase supports variance inflation from per-regime parameters. A flat gap points instead to redundancy between the regime block and the market block."
+      },
+      "EXP-N01-1": {
+        "experiment": "EXP-N01-1",
+        "status": "MEASURED",
+        "occlusion_seconds": 0.5166426000068896,
+        "crosses_threshold_at": 6400,
+        "cost_at_crossing_seconds": 0.1690222666657064,
+        "cheaper_than_occlusion_at_crossing": true,
+        "table": [
+          {
+            "n_perturbations": 400,
+            "sign_consistency": 0.7697594501718213,
+            "passes_threshold": false,
+            "spearman_vs_occlusion": 0.25984903398058234,
+            "seconds_per_run": 0.022425000002840534
+          },
+          {
+            "n_perturbations": 800,
+            "sign_consistency": 0.7835051546391752,
+            "passes_threshold": false,
+            "spearman_vs_occlusion": 0.05845435019572223,
+            "seconds_per_run": 0.03402036667102948
+          },
+          {
+            "n_perturbations": 1600,
+            "sign_consistency": 0.7903780068728523,
+            "passes_threshold": false,
+            "spearman_vs_occlusion": -0.054347657677012655,
+            "seconds_per_run": 0.06554403333575465
+          },
+          {
+            "n_perturbations": 3200,
+            "sign_consistency": 0.7903780068728523,
+            "passes_threshold": false,
+            "spearman_vs_occlusion": 0.003562361082695303,
+            "seconds_per_run": 0.07554876666593675
+          },
+          {
+            "n_perturbations": 6400,
+            "sign_consistency": 0.8041237113402062,
+            "passes_threshold": true,
+            "spearman_vs_occlusion": -0.018469344024534762,
+            "seconds_per_run": 0.1690222666657064
+          }
+        ]
+      }
+    },
+    "environment": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "executable": ".venv/Scripts/python.exe",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+      "cpu_count": 8,
+      "packages": {
+        "numpy": "2.5.2",
+        "pandas": "3.0.5",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "matplotlib": "3.11.1",
+        "statsmodels": "0.14.6",
+        "networkx": "3.6.1",
+        "shap": "0.52.0",
+        "pyarrow": "25.0.1",
+        "duckdb": "1.5.5",
+        "PIL": "12.3.0",
+        "soundfile": "0.14.0",
+        "imageio": "2.37.4"
+      },
+      "node": null,
+      "git_commit": "8774260d10598ac24607a03326727e9f56c05c25",
+      "git_dirty": true,
+      "timestamp": "2026-08-19T10:08:11.852260+00:00"
+    },
+    "elapsed_s": 84.7
+  }
+}

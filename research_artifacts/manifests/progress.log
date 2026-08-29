@@ -1,0 +1,61 @@
+22:03:23  [stats-15] 13206 rows in train+validation, 3352 held frozen and untouched
+22:03:23  [input] degrading the evaluation signal; the model is fitted once on clean data
+22:03:41        clean reference auprc 0.9412
+22:03:53          gaussian  sev 0.05  auprc 0.7895  (-0.1516)
+22:04:07          gaussian  sev 0.10  auprc 0.6249  (-0.3163)
+22:04:20          gaussian  sev 0.25  auprc 0.4360  (-0.5051)
+22:04:33          gaussian  sev 0.50  auprc 0.3723  (-0.5689)
+22:04:46          dropout   sev 0.05  auprc 0.9206  (-0.0206)
+22:04:59          dropout   sev 0.10  auprc 0.9051  (-0.0361)
+22:05:13          dropout   sev 0.25  auprc 0.8259  (-0.1152)
+22:05:26          dropout   sev 0.50  auprc 0.6941  (-0.2471)
+22:05:37          stale     sev 0.05  auprc 0.9373  (-0.0039)
+22:05:50          stale     sev 0.10  auprc 0.9338  (-0.0073)
+22:06:02          stale     sev 0.25  auprc 0.9144  (-0.0268)
+22:06:15          stale     sev 0.50  auprc 0.8937  (-0.0474)
+22:06:28          outliers  sev 0.05  auprc 0.8617  (-0.0794)
+22:06:41          outliers  sev 0.10  auprc 0.8011  (-0.1400)
+22:06:59          outliers  sev 0.25  auprc 0.6844  (-0.2568)
+22:07:17          outliers  sev 0.50  auprc 0.5714  (-0.3698)
+22:07:17  [missingness] taking each block offline
+22:08:45          text            offline 100%  auprc 0.8171  (-0.1240)
+22:10:11          image           offline 100%  auprc 0.9409  (-0.0003)
+22:11:10          audio           offline 100%  auprc 0.9410  (-0.0002)
+22:12:15          video           offline 100%  auprc 0.9403  (-0.0008)
+22:13:06          market          offline 100%  auprc 0.8278  (-0.1134)
+22:13:57          microstructure  offline 100%  auprc 0.9411  (-0.0001)
+22:15:01          regime          offline 100%  auprc 0.9407  (-0.0005)
+22:15:55          propagation     offline 100%  auprc 0.9411  (-0.0001)
+22:15:55  [training size] symbol-level learning curve
+22:16:17           10% of symbols (16)  auprc 0.6166
+22:16:47           25% of symbols (40)  auprc 0.8839
+22:17:35           50% of symbols (80)  auprc 0.9161
+22:18:19           75% of symbols (121)  auprc 0.9355
+22:18:42          100% of symbols (161)  auprc 0.9412
+22:18:42  [period] expanding-window transfer forward in time
+22:18:56          fold 1  train<=2017-01-19  eval 2017-01-20..2018-10-15  auprc 0.7919
+22:19:15          fold 2  train<=2018-10-15  eval 2018-10-16..2020-07-16  auprc 0.8979
+22:19:33          fold 3  train<=2020-07-16  eval 2020-07-17..2022-04-06  auprc 0.9308
+22:19:51          fold 4  train<=2022-04-06  eval 2022-04-07..2023-12-29  auprc 0.9444
+22:19:51  [instrument] transfer to disjoint tickers
+22:20:11          group 1  43 held-out symbols  auprc 0.9292
+22:20:28          group 2  43 held-out symbols  auprc 0.9431
+22:20:43          group 3  43 held-out symbols  auprc 0.9580
+22:20:56          group 4  42 held-out symbols  auprc 0.9330
+22:20:56    worst degradation: gaussian all at 0.50 -> auprc 0.3723 (-0.5689)
+22:20:56    instrument transfer: 4 folds, auprc 0.9408 (0.9292 - 0.9580)
+22:20:56    period transfer: 4 folds, auprc 0.8913 (0.7919 - 0.9444)
+22:20:59  done in 1056s -> C:\Users\abcom\Downloads\AEGIS-MARKET-STATISTICS\outputs\stats\15_robustness_generalization
+22:21:36  [stats-16] 32 arms x 10 seeds on 3855 validation rows
+22:21:36        320 fits across 7 worker processes
+22:23:58          20/320 fits, 20 OK, mean auprc 0.6845
+22:26:05          40/320 fits, 40 OK, mean auprc 0.7437
+22:28:39          60/320 fits, 60 OK, mean auprc 0.7627
+22:31:48          80/320 fits, 80 OK, mean auprc 0.7448
+22:34:54          100/320 fits, 100 OK, mean auprc 0.7656
+22:39:35          120/320 fits, 120 OK, mean auprc 0.7631
+22:41:52          140/320 fits, 140 OK, mean auprc 0.7549
+22:44:42          160/320 fits, 160 OK, mean auprc 0.7745
+22:45:41          180/320 fits, 180 OK, mean auprc 0.7646
+22:47:13          200/320 fits, 200 OK, mean auprc 0.7685
+23:52:36          220/320 fits, 220 OK, mean auprc 0.7718

@@ -1,0 +1,5 @@
+key,value
+max_abs_weight_difference,1.1102230246251565e-16
+mean_abs_weight_difference,9.70162666156212e-18
+n_rows,3855
+conclusion,the inherited regime term cancels under softmax normalisation; the formulation is algebraically identical to static attention

@@ -1,0 +1,107 @@
+key,value
+generated_at,2026-08-23T04:35:36.950798+00:00
+meta.n,17
+rows[0].figure,fig05_risk_window
+rows[0].available,True
+rows[0].url,/figures/fig05_risk_window.png
+rows[0].caption,Generated figure; caption recorded in the paper package.
+rows[0].source_data,
+rows[0].source_dir,research_artifacts/figures
+rows[0].git_commit,
+rows[0].bytes,152318
+rows[1].figure,fig06_universe
+rows[1].available,True
+rows[1].url,/figures/fig06_universe.png
+rows[1].caption,Generated figure; caption recorded in the paper package.
+rows[1].source_data,
+rows[1].source_dir,research_artifacts/figures
+rows[1].git_commit,
+rows[1].bytes,177274
+rows[2].figure,fig07_regimes
+rows[2].available,True
+rows[2].url,/figures/fig07_regimes.png
+rows[2].caption,Generated figure; caption recorded in the paper package.
+rows[2].source_data,
+rows[2].source_dir,research_artifacts/figures
+rows[2].git_commit,
+rows[2].bytes,239437
+rows[3].figure,fig12b_regime_degeneracy
+rows[3].available,True
+rows[3].url,/figures/fig12b_regime_degeneracy.png
+rows[3].caption,Generated figure; caption recorded in the paper package.
+rows[3].source_data,
+rows[3].source_dir,research_artifacts/figures
+rows[3].git_commit,
+rows[3].bytes,211282
+rows[4].figure,fig13_precision_recall
+rows[4].available,True
+rows[4].url,/figures/fig13_precision_recall.png
+rows[4].caption,Generated figure; caption recorded in the paper package.
+rows[4].source_data,
+rows[4].source_dir,research_artifacts/figures
+rows[4].git_commit,
+rows[4].bytes,89182
+rows[5].figure,fig14_calibration
+rows[5].available,True
+rows[5].url,/figures/fig14_calibration.png
+rows[5].caption,Generated figure; caption recorded in the paper package.
+rows[5].source_data,
+rows[5].source_dir,research_artifacts/figures
+rows[5].git_commit,
+rows[5].bytes,96987
+rows[6].figure,fig18_propagation
+rows[6].available,True
+rows[6].url,/figures/fig18_propagation.png
+rows[6].caption,Generated figure; caption recorded in the paper package.
+rows[6].source_data,
+rows[6].source_dir,research_artifacts/figures
+rows[6].git_commit,
+rows[6].bytes,208333
+rows[7].figure,fig20_cvar
+rows[7].available,True
+rows[7].url,/figures/fig20_cvar.png
+rows[7].caption,Generated figure; caption recorded in the paper package.
+rows[7].source_data,
+rows[7].source_dir,research_artifacts/figures
+rows[7].git_commit,
+rows[7].bytes,40022
+rows[8].figure,fig21_drawdown
+rows[8].available,True
+rows[8].url,/figures/fig21_drawdown.png
+rows[8].caption,Generated figure; caption recorded in the paper package.
+rows[8].source_data,
+rows[8].source_dir,research_artifacts/figures
+rows[8].git_commit,
+rows[8].bytes,150065
+rows[9].figure,figR04_stats_input_robustness
+rows[9].available,True
+rows[9].url,/figures/figR04_stats_input_robustness.png
+rows[9].caption,AUPRC under each input degradation. Noise is the worst failure and a stale feed the mildest; a single robustness number would hide the distinction.
+rows[9].source_data,outputs/stats/15_robustness_generalization/robustness.csv
+rows[9].source_dir,outputs/research_figures
+rows[9].git_commit,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b
+rows[9].bytes,86803
+rows[10].figure,figR05_stats_learning_curve
+rows[10].available,True
+rows[10].url,/figures/figR05_stats_learning_curve.png
+rows[10].caption,"Learning curve over training-set size, subsampled by instrument rather than by row because rows from one instrument are not independent."
+rows[10].source_data,outputs/stats/15_robustness_generalization/robustness.csv
+rows[10].source_dir,outputs/research_figures
+rows[10].git_commit,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b
+rows[10].bytes,63142
+rows[11].figure,figR06_stats_generalization
+rows[11].available,True
+rows[11].url,/figures/figR06_stats_generalization.png
+rows[11].caption,Forward-in-time transfer rises across folds as history accumulates; transfer to disjoint instruments is close to in-sample performance.
+rows[11].source_data,outputs/stats/15_robustness_generalization/generalization.csv
+rows[11].source_dir,outputs/research_figures
+rows[11].git_commit,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b
+rows[11].bytes,47806
+rows[12].figure,figR07_seed_variability
+rows[12].available,True
+rows[12].url,/figures/figR07_seed_variability.png
+rows[12].caption,"Mean AUPRC over ten seeds with the observed range, for the strongest arms. The spread is what a single-run difference has to exceed."
+rows[12].source_data,outputs/stats/16_multiseed_significance/seed_table.csv
+rows[12].source_dir,outputs/research_figures
+rows[12].git_commit,d7c5bc78efb55d30b90efca5b4e7e5e075f89a8b
+rows[12].bytes,84373
