@@ -1,0 +1,86 @@
+# Render Blueprint — AEGIS-MARKET-STATISTICS (CAPSTONE-PW26_SSS_08)
+#
+# Two services:
+#   aegis-backend : the Python execution service (backend/server.py)
+#   aegis-web     : the Next.js interface, which proxies to it via app/api/aegis/[...path]
+#
+# Commit this as render.yaml at the repo root, then: Render Dashboard -> New -> Blueprint.
+#
+# After the FIRST deploy you must fill two values by hand (both are marked sync: false):
+#   aegis-web     AEGIS_BACKEND_URL   -> https://aegis-backend-XXXX.onrender.com
+#   aegis-backend AEGIS_ALLOWED_ORIGINS -> https://aegis-web-XXXX.onrender.com
+# Render only knows the generated URLs after the services exist.
+
+services:
+  # ---------------------------------------------------------------- backend
+  - type: web
+    name: aegis-backend
+    runtime: python
+    region: singapore          # swap to oregon/frankfurt if your workspace prefers
+    plan: free                 # newer workspaces name this 0.5c-512mb
+    branch: main
+    autoDeploy: true
+
+    # The guard matters: data/panel/cash_panel.{parquet,csv} are Git-LFS tracked
+    # (see .gitattributes). If the build host checks out LFS pointers instead of the
+    # real files, every live module that reads the cash panel fails at request time
+    # with a confusing parquet error. Fail loudly at BUILD time instead.
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      python - <<'PY'
+      import pathlib, sys
+      p = pathlib.Path("data/panel/cash_panel.parquet")
+      if not p.exists():
+          sys.exit("MISSING: data/panel/cash_panel.parquet")
+      if p.stat().st_size < 10_000:
+          sys.exit(
+              "GIT-LFS POINTER, not the real file: %s is only %d bytes. "
+              "Render did not materialise LFS objects. De-LFS the panel files or "
+              "fetch them in the build step." % (p, p.stat().st_size)
+          )
+      print("panel OK: %.1f MB" % (p.stat().st_size / 1e6))
+      PY
+
+    # backend/server.py defaults to 127.0.0.1:8787. Render requires 0.0.0.0:$PORT.
+    # The CLI flags override the AEGIS_BACKEND_HOST/PORT env vars, and $PORT is
+    # expanded by the shell here (it would NOT be expanded inside an envVars value).
+    startCommand: python -m backend.server --host 0.0.0.0 --port $PORT
+
+    healthCheckPath: /api/health   # VERIFY against backend/server.py's router before relying on this
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11           # pyproject requires >=3.12; Render now defaults to 3.14.x,
+                                 # which the pinned numpy/pandas wheels were not resolved against
+      - key: AEGIS_BACKEND_TOKEN
+        generateValue: true      # Render mints a random secret; aegis-web reads the same one
+      - key: AEGIS_ALLOWED_ORIGINS
+        sync: false              # set to the aegis-web URL after first deploy
+      - key: PYTHONUNBUFFERED
+        value: "1"               # so research/core/progress.py Ticker output reaches Render logs
+
+  # --------------------------------------------------------------- frontend
+  - type: web
+    name: aegis-web
+    runtime: node
+    region: singapore          # must match the backend's region if you later use private networking
+    plan: free
+    branch: main
+    autoDeploy: true
+
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start   # next start; binds 0.0.0.0 and honours $PORT
+
+    envVars:
+      - key: NODE_VERSION
+        value: "20"               # package.json engines: node >=20
+      - key: AEGIS_BACKEND_URL
+        sync: false               # https://aegis-backend-XXXX.onrender.com
+      - key: AEGIS_BACKEND_TOKEN
+        fromService:
+          name: aegis-backend
+          type: web
+          envVarKey: AEGIS_BACKEND_TOKEN
+      - key: AEGIS_BACKEND_TIMEOUT_MS
+        value: "180000"           # default is 120000; a free-tier cold start alone costs ~60s
