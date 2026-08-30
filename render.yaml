@@ -1,0 +1,99 @@
+# Render Blueprint — AEGIS-MARKET-STATISTICS (CAPSTONE-PW26_SSS_08)
+#
+# SCOPE: Capstone Phase-3 Review 1 — the statistics carve-out only.
+#
+#   aegis-stats-api : the Python execution service (backend/server.py)
+#   aegis-stats-web : the Next.js interface, which proxies to it
+#                     via app/api/aegis/[...path]/route.ts
+#
+# These two are FRONTEND and BACKEND, not "stats" and "multimodal". Both are the
+# stats side. The names are scoped to `stats` deliberately, so the combined Review 3
+# system can take the unqualified `aegis-api` / `aegis-web` names without a rename.
+#
+# ROADMAP NOTE — read before adding a third service at Review 2/3.
+# The multimodal (text + audio) work should NOT become its own Render service.
+# BlockCombiner weighs calibrated per-block scores IN-PROCESS, and a zero-coverage
+# block gets zero weight. Splitting modalities across services turns the Review 3
+# merge into a distributed-systems problem: cross-service latency inside a scoring
+# call, partial-failure semantics, and coverage flags that would depend on whether
+# an HTTP request succeeded. Add the affect/text/audio blocks to FEATURE_BLOCKS in
+# THIS service instead, and raise its plan. The audio/image dependencies
+# (soundfile, Pillow, imageio, imageio-ffmpeg) are already pinned in requirements.txt.
+#
+# CHANGED in this revision: the API buildCommand is now a single line. The previous
+# version used a multi-line `python - <<'PY'` heredoc to guard against Git-LFS
+# pointer files; if Render collapses that YAML block the heredoc breaks and the
+# build fails for reasons unrelated to this project. The guard now lives in
+# scripts/render_build_check.py — commit that file, confirm this deploy goes green,
+# then switch to the buildCommand marked WITH GUARD below.
+#
+# After the FIRST successful deploy, fill two values by hand (both sync: false) —
+# Render appends a random suffix to URLs, so they are not knowable in advance:
+#   aegis-stats-web  AEGIS_BACKEND_URL     -> https://aegis-stats-api-XXXX.onrender.com
+#   aegis-stats-api  AEGIS_ALLOWED_ORIGINS -> https://aegis-stats-web-XXXX.onrender.com
+# Do AEGIS_BACKEND_URL first; it is the only one that is load-bearing.
+
+services:
+  # ------------------------------------------------------------ backend (API)
+  - type: web
+    name: aegis-stats-api
+    runtime: python
+    region: singapore          # swap to oregon/frankfurt if your workspace prefers
+    plan: free                 # newer workspaces name this 0.5c-512mb
+    branch: main
+    autoDeploy: true
+
+    # MINIMAL — use this to get a green deploy and a clean, purely-pip build log.
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+
+    # WITH GUARD — switch to this once the minimal build succeeds AND you have
+    # committed scripts/render_build_check.py. It fails the BUILD if the Git-LFS
+    # tracked panel files (data/panel/cash_panel.{parquet,csv}, see .gitattributes)
+    # were checked out as pointers, instead of letting every live module that reads
+    # the cash panel die at request time with an opaque parquet error.
+    # buildCommand: pip install --upgrade pip && pip install -r requirements.txt && python scripts/render_build_check.py
+
+    # backend/server.py defaults to 127.0.0.1:8787. Render requires 0.0.0.0:$PORT.
+    # The CLI flags override the AEGIS_BACKEND_HOST/PORT env vars, and $PORT is
+    # expanded by the shell here (it would NOT be expanded inside an envVars value).
+    startCommand: python -m backend.server --host 0.0.0.0 --port $PORT
+
+    # VERIFIED against backend/server.py: the router registers
+    #   ("GET", re.compile(r"^/api/health$"), "health")
+    healthCheckPath: /api/health
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11           # pyproject requires >=3.12; Render now defaults to 3.14.x,
+                                 # which the pinned numpy/pandas wheels were not resolved against
+      - key: AEGIS_BACKEND_TOKEN
+        generateValue: true      # Render mints a random secret; aegis-stats-web reads the same one
+      - key: AEGIS_ALLOWED_ORIGINS
+        sync: false              # set to the aegis-stats-web URL after first deploy
+      - key: PYTHONUNBUFFERED
+        value: "1"               # so research/core/progress.py Ticker output reaches Render logs
+
+  # ----------------------------------------------------------- frontend (web)
+  - type: web
+    name: aegis-stats-web
+    runtime: node
+    region: singapore          # must match the API's region if you later use private networking
+    plan: free
+    branch: main
+    autoDeploy: true
+
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start   # next start; binds 0.0.0.0 and honours $PORT
+
+    envVars:
+      - key: NODE_VERSION
+        value: "20"               # package.json engines: node >=20
+      - key: AEGIS_BACKEND_URL
+        sync: false               # https://aegis-stats-api-XXXX.onrender.com
+      - key: AEGIS_BACKEND_TOKEN
+        fromService:
+          name: aegis-stats-api
+          type: web
+          envVarKey: AEGIS_BACKEND_TOKEN
+      - key: AEGIS_BACKEND_TIMEOUT_MS
+        value: "180000"           # default is 120000; a free-tier cold start alone costs ~60s
