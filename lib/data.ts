@@ -80,8 +80,45 @@ export interface Bundle<T> {
   note?: string;
 }
 
-// Read one exported file.
+/**
+ * Parsed bundles are cached for the life of the process.
+ *
+ * `public/data/*.json` is written by the export step and never changes during a request,
+ * so re-reading and re-parsing per request buys nothing and costs a great deal:
+ * `market.json` is 9.2 MB, parsing it costs several times that in heap, and `/markets`
+ * is a dynamic route. On a 512 MB instance that aborts V8 outright — the deployed service
+ * exited 134 (SIGABRT) doing exactly this.
+ *
+ * The Promise, not the resolved value, is what gets cached: two concurrent requests for
+ * the same bundle then share one parse instead of racing to do it twice.
+ *
+ * A failed read is deliberately NOT cached — an artifact absent now may exist after the
+ * next export, and a page should not be told "missing" for the life of the process.
+ *
+ * Callers must treat `rows` as read-only; every accessor below already copies before
+ * sorting or filtering. Set AEGIS_DISABLE_BUNDLE_CACHE=1 to pick up edits without a
+ * restart while developing.
+ */
+const BUNDLE_CACHE = new Map<string, Promise<Bundle<unknown>>>();
+const BUNDLE_CACHE_DISABLED = process.env.AEGIS_DISABLE_BUNDLE_CACHE === '1';
+
 async function readJson<T>(file: string): Promise<Bundle<T>> {
+  if (BUNDLE_CACHE_DISABLED) return readJsonUncached<T>(file);
+
+  const hit = BUNDLE_CACHE.get(file);
+  if (hit) return hit as Promise<Bundle<T>>;
+
+  const pending = readJsonUncached<T>(file).then((bundle) => {
+    if (!bundle.dataAvailable) BUNDLE_CACHE.delete(file);
+    return bundle;
+  }) as Promise<Bundle<unknown>>;
+
+  BUNDLE_CACHE.set(file, pending);
+  return pending as Promise<Bundle<T>>;
+}
+
+// Read one exported file.
+async function readJsonUncached<T>(file: string): Promise<Bundle<T>> {
   try {
     // Read the file as text, in the utf8 alphabet so any language survives.
     const raw = await fs.readFile(path.join(DATA_DIR, file), 'utf8');

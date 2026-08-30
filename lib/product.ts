@@ -459,7 +459,27 @@ const TIMEOUT_MS = Number(process.env.AEGIS_BACKEND_TIMEOUT_MS ?? 8000);
 
 // Where the live service is, if it is configured at all.
 function backendBase(): string | null {
-  const raw = process.env.AEGIS_BACKEND_URL?.trim();
+  /**
+   * Deliberately a DIFFERENT variable from the one the module-execution proxy uses.
+   *
+   * The product read models this file asks for — `market/overview`, `market/attention`,
+   * `indices/{id}`, `indices/{id}/series`, `indices/{id}/context`, `evidence/{id}` — are
+   * served by `backend/product.py` in the parent AEGIS-MARKET repository. The backend in
+   * THIS repository is the statistics carve-out: `backend/server.py` registers only
+   * `/api/health`, `/api/catalogue`, `/api/modules`, `/api/modules/{id}` and
+   * `POST /api/modules/{id}/run`. Every product call therefore 404s.
+   *
+   * The fallback handles that correctly — `fromBackend` returns null on a non-ok response
+   * exactly as it does on a timeout, and the caller serves the snapshot with an honest
+   * `source: 'snapshot'` label. Nothing is wrong on screen. But each product page render
+   * still pays for one to four round trips that cannot succeed, fills the backend log with
+   * 404s, and keeps a free instance awake against its monthly hour budget.
+   *
+   * So: leave AEGIS_PRODUCT_BACKEND_URL unset here and the product pages read the snapshot
+   * directly. Set it when a backend that actually implements these routes is deployed —
+   * `AEGIS_BACKEND_URL` continues to point at the module-execution service either way.
+   */
+  const raw = process.env.AEGIS_PRODUCT_BACKEND_URL?.trim();
   if (!raw) return null;
   try {
     const url = new URL(raw);
