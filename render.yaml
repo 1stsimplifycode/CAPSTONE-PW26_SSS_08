@@ -72,9 +72,21 @@ services:
     # expanded by the shell here (it would NOT be expanded inside an envVars value).
     startCommand: python -m backend.server --host 0.0.0.0 --port $PORT
 
-    # VERIFIED against backend/server.py: the router registers
-    #   ("GET", re.compile(r"^/api/health$"), "health")
-    healthCheckPath: /api/health
+    # NO healthCheckPath — deliberately.
+    #
+    # The route exists: server.py registers ("GET", r"^/api/health$", "health").
+    # But _authorised() gates EVERY route on the AEGIS_BACKEND_TOKEN bearer, and
+    # Render's health checker sends no Authorization header. Enabling the health
+    # check therefore produces an endless run of
+    #     "GET /api/health HTTP/1.1" 401 -
+    # and the deploy fails with "Timed Out" even though the service is healthy and
+    # its port was detected. Render falls back to port detection, which works.
+    #
+    # To turn the health check back on, first exempt the health handler from auth
+    # in backend/server.py — let _dispatch() skip the _authorised() call when the
+    # matched handler is "health" — then uncomment the line below. Health is not a
+    # secret; every other route stays behind the token.
+    # healthCheckPath: /api/health
 
     envVars:
       - key: PYTHON_VERSION
